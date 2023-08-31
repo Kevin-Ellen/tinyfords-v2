@@ -1,32 +1,31 @@
 // src > admin > lib > templates > adminLandingPage.js - Landing page for admin panel
 
-import {adminGitHubCarData} from '../adminGitHub';
+import {adminGitHubGetCarData} from '../adminGitHub';
 
 const properties = [
-  {'key': 'id', 'value': 'ID'},
-  {'key': 'name', 'value': 'Name'},
-  {'key': 'make', 'value': 'Make'},
-  {'key': 'brand', 'value': 'Brand'},
-  {'key': 'code', 'value': 'Code'},
-  {'key': 'base', 'value': 'Base'},
-  {'key': 'type', 'value': 'Type'},
-  {'key': 'hasCase', 'value': 'Has case'},
-  {'key': 'hasPhoto', 'value': 'Has photo'},
-  {'key': 'added', 'value': 'Added'},
-  {'key': 'quantity', 'value': 'Quantity'}
+  {key: 'id', value: 'ID'},
+  {key: 'name', value: 'Name'},
+  {key: 'make', value: 'Make'},
+  {key: 'brand', value: 'Brand'},
+  {key: 'code', value: 'Code'},
+  {key: 'base', value: 'Base'},
+  {key: 'type', value: 'Type'},
+  {key: 'hasCase', value: 'Has case'},
+  {key: 'hasPhoto', value: 'Has photo'},
+  {key: 'added', value: 'Added'},
+  {key: 'addedBy', value: 'Added by'},
+  {key: 'quantity', value: 'Quantity'}
 ];
 
 const adminLandingPage = async () => {
 
-  const carsData = await adminGitHubCarData();
-
-
+  const carsData = await adminGitHubGetCarData();
 
   const html = `
     <table>
       ${tableHeader()}
       <tbody>
-        ${tableEntries(carsData)}
+        ${tableEntries(carsData.data)}
       </tbody>
     </table>`;
 

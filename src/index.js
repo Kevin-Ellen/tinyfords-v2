@@ -2,6 +2,9 @@
 
 import adminIndex from './admin/adminIndex';
 
+
+import outputRobotsTxt from './lib/output/outputRobotsTxt';
+
 addEventListener('fetch', event => {
   const url = new URL(event.request.url);
   
@@ -14,5 +17,13 @@ addEventListener('fetch', event => {
 
 
 const handleRequest = async (request) => {
+
+  const url = new URL(request.url);
+  
+  switch (url.pathname){
+    case '/robots.txt': return outputRobotsTxt(url);
+  }
+  
+  
   return new Response('hello Ford');
 }
