@@ -1,4 +1,5 @@
 .DS_Store
+*.vars
 wrangler.toml
 package-lock.json
 

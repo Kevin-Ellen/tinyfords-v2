@@ -10,6 +10,7 @@
     "hasCase": true,
     "hasPhoto": true,
     "added": "2023-01-08",
+    "addedBy": "Kevin",
     "quantity": 1
   },
   {
@@ -23,6 +24,7 @@
     "hasCase": false,
     "hasPhoto": true,
     "added": "2023-01-08",
+    "addedBy": "Kevin",
     "quantity": 1
   },
   {
@@ -36,6 +38,7 @@
     "hasCase": false,
     "hasPhoto": true,
     "added": "2023-01-08",
+    "addedBy": "Kevin",
     "quantity": 1
   },
   {
@@ -49,6 +52,7 @@
     "hasCase": false,
     "hasPhoto": true,
     "added": "2023-01-08",
+    "addedBy": "Kevin",
     "quantity": 1
   },
   {
@@ -62,6 +66,7 @@
     "hasCase": true,
     "hasPhoto": true,
     "added": "2023-01-08",
+    "addedBy": "Kevin",
     "quantity": 1
   }
 ]
