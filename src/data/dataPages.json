@@ -1,4 +1,6 @@
-{
+
+[
+  {
     "name": "Home",
     "slug": "/",
     "h1": "My small cars collection",
@@ -38,26 +40,26 @@
     "attributes":[
       {
         "key": "name",
-        "name": "Name",
+        "name": "Name"
       },{
         "key": "make",
-        "name": "Make",
+        "name": "Make"
       },{
         "key": "code",
-        "name": "Code",
+        "name": "Code"
       },{
         "key": "base",
-        "name": "Base",
+        "name": "Base"
       },{
         "key": "added",
-        "name": "Added",
+        "name": "Added"
       }
     ],
     "socialMedia": {
       "title": "🔥 Hot Wheels: Check Out Our Collection!",
       "description": "Get revved up for our collection of sweet Hot Wheels die-cast cars!",
       "image": "social-media-hot-wheels"
-    },
+    }
   },{
     "name": "Matchbox",
     "slug": "/matchbox",
@@ -77,19 +79,19 @@
     "attributes":[
       {
         "key": "name",
-        "name": "Name",
+        "name": "Name"
       },{
         "key": "make",
-        "name": "Make",
+        "name": "Make"
       },{
         "key": "code",
-        "name": "Code",
+        "name": "Code"
       },{
         "key": "base",
-        "name": "Base",
+        "name": "Base"
       },{
         "key": "added",
-        "name": "Added",
+        "name": "Added"
       }
     ],
     "socialMedia": {
@@ -116,25 +118,25 @@
     "attributes":[
       {
         "key": "name",
-        "name": "Name",
+        "name": "Name"
       },{
         "key": "make",
-        "name": "Make",
+        "name": "Make"
       },{
         "key": "code",
-        "name": "Code",
+        "name": "Code"
       },{
         "key": "added",
-        "name": "Added",
+        "name": "Added"
       },{
         "key": "brand",
         "name": "Brand"
-      },
+      }
     ],
     "socialMedia": {
       "title": "🚗 Non-Hot Wheels & Matchbox: View Our Unique Rides",
       "description": "Discover rare and unique die-cast cars that aren't Hot Wheels or Matchbox.",
-      "image": "social-media-other",
+      "image": "social-media-other"
     }
   },{
     "name": "Duplicates",
@@ -267,7 +269,7 @@
     "slug": "/offline",
     "h1": "Offline",
     "metadata":{
-      "title": "Page is not available - Offline browsing - Tiny Fords",
+      "title": "Page is not available - Offline browsing - Tiny Fords"
     },
     "status": 200,
     "template": "offline",
@@ -276,7 +278,7 @@
     "xmlSitemap": false,
     "footer":false,
     "breadcrumbList": ["Home"],
-    "breadcrumbs": [],
+    "breadcrumbs": []
   },{
     "name": "Page not found! :(",
     "h1": "Not found :(",
@@ -287,6 +289,6 @@
     "xmlSitemap": false,
     "footer":false,
     "breadcrumbList": ["Home"],
-    "breadcrumbs": [],
+    "breadcrumbs": []
   }
-];
+]
