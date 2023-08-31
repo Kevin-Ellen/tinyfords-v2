@@ -1,0 +1,10 @@
+.DS_Store
+wrangler.toml
+package-lock.json
+
+/.vscode
+/node_modules/
+/temp
+
+/worker
+/dist
