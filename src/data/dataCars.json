@@ -104,8 +104,8 @@
       "folderName": "hotwheels",
       "shortName": "hw"
     },
-    "base": "dwf31",
-    "code": "k17",
+    "code": "dwf31",
+    "base": "k17",
     "type": "long",
     "hasCase": false,
     "hasPhoto": true,
