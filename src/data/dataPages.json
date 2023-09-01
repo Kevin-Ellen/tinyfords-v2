@@ -14,7 +14,6 @@
     "footer":true,
     "xmlSitemap": true,
     "breadcrumbList": ["Home"],
-    "breadcrumbs": [],
     "socialMedia": {
       "title": "🚗 Ford Die-Cast Collection at Tiny Fords",
       "description": "Drive into the world of Ford die-cast cars with Tiny Fords! Hot Wheels, Matchbox and more, all in one place.",
@@ -35,7 +34,6 @@
     "xmlSitemap": true,
     "footer":true,
     "breadcrumbList": ["Home", "All", "Hot Wheels"],
-    "breadcrumbs": [],
     "attributes":[
       {
         "key": "name",
@@ -74,7 +72,6 @@
     "xmlSitemap": true,
     "footer":true,
     "breadcrumbList": ["Home", "All", "Matchbox"],
-    "breadcrumbs": [],
     "attributes":[
       {
         "key": "name",
@@ -113,7 +110,6 @@
     "xmlSitemap": true,
     "footer":true,
     "breadcrumbList": ["Home", "All", "Other"],
-    "breadcrumbs": [],
     "attributes":[
       {
         "key": "name",
@@ -152,7 +148,6 @@
     "xmlSitemap": false,
     "footer":false,
     "breadcrumbList": ["Home", "All", "Duplicates"],
-    "breadcrumbs": [],
     "socialMedia": {
       "title": "🔁 Trade or Buy: Check Out Our Duplicate Collection",
       "description": "Don't miss out on the chance to upgrade your collection with our duplicate die-cast cars for trade or sale.",
@@ -173,7 +168,6 @@
     "xmlSitemap": true,
     "footer":true,
     "breadcrumbList": ["Home", "All"],
-    "breadcrumbs": [],
     "socialMedia": {
       "title": "🚗 Our Ultimate Die-Cast Destination: Tiny Fords",
       "description": "Browse every car in our die-cast collection at Tiny Fords.",
@@ -194,7 +188,6 @@
     "xmlSitemap": false,
     "footer":false,
     "breadcrumbList": ["Home", "About", "Contact"],
-    "breadcrumbs": [],
     "socialMedia": {
       "title": "📞 Get in Touch with Tiny Fords",
       "description": "Reach out to us through our contact page, we'd love to hear from you!",
@@ -215,7 +208,6 @@
     "xmlSitemap": false,
     "footer":true,
     "breadcrumbList": ["Home", "About", "How to find the toy number"],
-    "breadcrumbs": [],
     "socialMedia": {
       "title": "🔍 Find Your Favorite Cars in a Snap",
       "description": "Quickly find the die-cast cars you love (and in our collection) with our easy search tips.",
@@ -236,7 +228,6 @@
     "xmlSitemap": true,
     "footer":true,
     "breadcrumbList": ["Home", "About"],
-    "breadcrumbs": [],
     "socialMedia": {
       "title": "🚗 Tiny Fords: The Story Behind Our Die-Cast Obsession",
       "description": "Learn the story behind why we created Tiny Fords and our die-cast car collection.",
@@ -257,7 +248,6 @@
     "xmlSitemap": false,
     "footer":false,
     "breadcrumbList": ["Home", "About"],
-    "breadcrumbs": [],
     "socialMedia": {
       "title": "🚗 [to do]]",
       "description": "[to do]]",
