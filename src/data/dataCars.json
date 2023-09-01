@@ -9,8 +9,8 @@
       "folderName": "hotwheels",
       "shortName": "hw"
     },
-    "code": "r04",
-    "base": "hcw87",
+    "code": "hcw87",
+    "base": "r04",
     "type": "long",
     "hasCase": true,
     "hasPhoto": true,
@@ -85,8 +85,8 @@
       "folderName": "hotwheels",
       "shortName": "hw"
     },
-    "code": "n37",
-    "base": "grp18",
+    "code": "grp18",
+    "base": "n37",
     "type": "long",
     "hasCase": true,
     "hasPhoto": true,
@@ -104,8 +104,8 @@
       "folderName": "hotwheels",
       "shortName": "hw"
     },
-    "code": "dwf31",
-    "base": "k17",
+    "base": "dwf31",
+    "code": "k17",
     "type": "long",
     "hasCase": false,
     "hasPhoto": true,
