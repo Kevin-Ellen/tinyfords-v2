@@ -1,5 +1,7 @@
 // src > admin > lib > adminGitHub.js - All GH processes
 
+import {base64Decode} from '../../lib/utils/utilsMisc';
+
 const apiKey = GITHUB_API_KEY;
 const REPO_OWNER = 'Kevin-Ellen';
 const REPO_NAME = 'tinyfords-v2';
@@ -18,7 +20,7 @@ export const adminGitHubGetCarData = async () => {
 
   const data = await response.json();
 
-  const decoded = atob(data.content);
+  const decoded = base64Decode(data.content);
 
   const fileContent = JSON.parse(decodeURIComponent(decoded));
 

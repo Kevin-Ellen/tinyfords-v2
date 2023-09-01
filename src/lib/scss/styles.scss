@@ -1,0 +1,26 @@
+// src > lib > scss > styles.scss - Where everything is pulled together
+
+@use 'base/_reset';
+@use 'base/_typography';
+@use 'base/_base';
+
+@use 'layout/_header';
+@use 'layout/_footer';
+@use 'layout/_breadcrumbs';
+// @use 'layout/grid';
+
+@use 'fragments/_content';
+@use 'fragments/_grid';
+
+// @use 'components/buttons';
+// @use 'components/cards';
+// // ... more components
+
+// @use 'pages/home';
+// @use 'pages/about';
+// // ... more page-specific styles
+
+// @use 'themes/theme';
+
+// // Optional: Vendor styles
+// @use 'vendors/bootstrap';

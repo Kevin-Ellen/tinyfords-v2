@@ -1,0 +1,52 @@
+// src > lib > scss > abstracts > variables - all variables
+
+@use "sass:map";
+
+$fonts: (
+  body: ('Montserrat Alternates', sans-serif),
+  headings: ('Quicksand', sans-serif),
+);
+
+$spacing: (
+  max-width: 1200px,
+  padding:16px,
+);
+
+$screen-width:500px;
+
+$baseHeading: 2.4rem;
+
+$colours:(
+  primary: rgba(237, 34, 40,1),
+  secondary: rgb(248, 238, 37),
+  tertiary: rgb(0, 84, 144),
+
+  base: (
+    background: rgba(black, 0.02),
+    text: black,
+    link: black,
+    link-hover: rgba(black, 0.5),
+    accent: white,
+  ),
+  navigation:(
+    background: white,
+  ),
+  footer:(
+    background: black,
+    text: white,
+    link: white,
+    link-hover: rgba(black, 0.5),
+    accent: white,
+  ),
+  cards: (
+    background: white,
+  ),
+  pagination: (
+    background: white,
+    hover: rgba(black, 0.1),
+  ),
+  content: (
+    background: white,
+  ),
+
+);

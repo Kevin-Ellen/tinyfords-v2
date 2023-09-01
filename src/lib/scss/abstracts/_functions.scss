@@ -1,0 +1,10 @@
+// src > lib > scss > abstracts > functions.scss - Helper functions
+
+@use "sass:map";
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+      $map: map-get($map, $key);
+  }
+  @return $map;
+}

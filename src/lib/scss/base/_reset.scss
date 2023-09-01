@@ -1,0 +1,59 @@
+// src > lib > scss > base > reset.scss - To reset everything
+
+@use "sass:map";
+
+@use '../abstracts/_variables' as v;
+@use '../abstracts/_functions.scss' as f;
+@use '../abstracts/_mixins.scss' as m;
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding and margin */
+body,
+h1, h2, h3, h4, h5, h6,
+p, pre,
+blockquote, figure,
+dl, dd, ol, ul,
+form, fieldset, legend,
+button, input, select, textarea {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  text-align: left;
+  background-color: #fff;
+}
+
+/* Set core image defaults */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for form elements */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Remove all animations and transitions for people who prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
