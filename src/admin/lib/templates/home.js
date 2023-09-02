@@ -4,7 +4,7 @@ import fragmentContent from '../../../lib/fragments/content';
 
 import { quickLogin } from '../utils/misc';
 
-const templateAdminHome = (request, isAuthenticated=false) => {
+const templateAdminHome = (request, options) => {
   
   const content = [
     `<h1>Admin panel</h1>`,
@@ -21,7 +21,7 @@ const templateAdminHome = (request, isAuthenticated=false) => {
 
   
 
-  return isAuthenticated ?  sections :  quickLogin(request) || sections;
+  return options.isAuthenticated ?  sections :  quickLogin(request) || sections;
 }
 export default templateAdminHome;
 

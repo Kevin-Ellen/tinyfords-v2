@@ -2,9 +2,9 @@
 
 import { isLoggedIn } from '../utils/misc';
 
-const pageHead = (request,isAuthenticated=false) => {
+const pageHead = (request,options) => {
 
-  const links = isLoggedIn(request) || isAuthenticated ? [
+  const links = isLoggedIn(request) || options.isAuthenticated ? [
     {
       name: 'Admin home',
       slug: '/admin'

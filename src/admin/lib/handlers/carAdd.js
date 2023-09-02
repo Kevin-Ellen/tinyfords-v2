@@ -17,7 +17,7 @@ const handlerCarAdd = async (request) => {
 
   dataCarsAll.data.push(newCar);
 
-  const response = adminGitHubSubmitCarsData(dataCarsAll.data, dataCarsAll.sha);
+  const response = await adminGitHubSubmitCarsData(dataCarsAll.data, dataCarsAll.sha);
 
   console.log(response);
 
@@ -26,8 +26,6 @@ const handlerCarAdd = async (request) => {
   }else{
     return new Response(response.message);
   }
-
-  return new Response('car add');
 }
 export default handlerCarAdd;
 

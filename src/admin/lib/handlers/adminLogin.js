@@ -45,7 +45,9 @@ const handlerAdminLogin = async (request) => {
 export default handlerAdminLogin;
 
 const showAdmin = (cookie, request) => {
-  let content = handlerAdminTemplate(request,true);
+  let content = handlerAdminTemplate(request,{
+    isAuthenticated: true
+  });
 
   // Ensure content is wrapped in a Response object if not already
   if (!(content instanceof Response)) {

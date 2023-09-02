@@ -25,7 +25,9 @@ const handlerTemplate = async (request, isAuthenticated=false) => {
     case '/admin':
     case '/admin/add-car':
       return new Response(
-        await createPage(pageNames[url.pathname], request, isAuthenticated),
+        await createPage(pageNames[url.pathname], request, {
+          isAuthenticated: true,
+        }),
         {
           status:200,
           headers: {
@@ -41,7 +43,11 @@ const handlerTemplate = async (request, isAuthenticated=false) => {
 
 export default handlerTemplate;
 
-const createPage = async (templateName,request, isAuthenticated=false) => {
+const createPage = async (templateName,request, options = {}) => {
+  const {
+    isAuthenticated = false,
+    feedback = null
+  } = options;
 
   const templates = {
     home: templateHome,
