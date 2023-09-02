@@ -1,6 +1,6 @@
 // src > index.js - entry point
 
-import adminIndex from './admin/adminIndex';
+import indexAdmin from './admin/indexAdmin';
 
 import handlerStatic from './lib/handlers/handlerStatic';
 import handlerTemplate from './lib/handlers/handlerTemplate';
@@ -9,7 +9,7 @@ addEventListener('fetch', event => {
   const url = new URL(event.request.url);
   
   if (url.pathname.startsWith('/admin')) {
-    event.respondWith(adminIndex(event.request));
+    event.respondWith(indexAdmin(event.request));
   }else{
     event.respondWith(handleRequest(event.request));
   }
@@ -21,17 +21,17 @@ const handleRequest = async (request) => {
   const url = new URL(request.url);
   url.params = new URLSearchParams(url.search);
 
-  const arr = [
-    '/hotwheels/images',
-    '/matchbox/images',
-    '/other/images',
-    '/icons',
-    '/favicon.ico',
-    '/social-media/images',
-    '/fonts/',
-  ];
+  // const arr = [
+  //   '/hotwheels/images',
+  //   '/matchbox/images',
+  //   '/other/images',
+  //   '/icons',
+  //   '/favicon.ico',
+  //   '/social-media/images',
+  //   '/fonts/',
+  // ];
 
-  if (arr.some(item => url.pathname.startsWith(item))) {
+  if((url.pathname.startsWith('/images/')) || (url.pathname.startsWith('/fonts/'))){
     return handlerStatic(url) || handlerError();
   }
 

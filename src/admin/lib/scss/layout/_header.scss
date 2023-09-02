@@ -1,0 +1,228 @@
+// src > lib > scss > layout > header.scss - Everything up to the content
+
+@use "sass:map";
+
+@use '../abstracts/_variables' as v;
+@use '../abstracts/_functions.scss' as f;
+@use '../abstracts/_mixins.scss' as m;
+
+.siteHeader{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  max-width: map.get(v.$spacing, 'max-width');
+  background: f.map-deep-get(v.$colours, navigation, 'background');
+
+  .siteHeaderContainer{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr auto auto;
+    grid-auto-rows: 0;
+    align-items: center;
+    margin: map.get(v.$spacing, padding) calc(1.5 * map.get(v.$spacing, padding));
+
+    @include m.desktop{
+      grid-template-rows: 1fr auto;
+
+      .siteNavMenu{
+        grid-column: 1/2;
+      }
+    }
+
+    .siteNavName{
+      font-family: map.get(v.$fonts, headings);
+      font-weight:600;
+      font-size:1.5rem;
+      margin:0;
+      grid-column: 2/3;
+      text-align:center;
+
+      a:hover{
+        text-decoration:none;
+      }
+    }
+    .siteNavRight{
+      display:flex;
+      justify-content: flex-end;
+      gap: map.get(v.$spacing, 'padding');
+      
+  
+      .noNetwork{
+        align-self: center;
+        fill: map-get(v.$colours,primary);
+      }
+    }
+      
+    .siteNavLabel{
+      width: 40px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      border-radius: 50%;
+      transition:all 0.3s;
+  
+      &[for="siteNavBox"]{
+        grid-column: 1 / 2;
+
+        @include m.desktop{
+          display:none;
+        }
+      }
+      &[for="siteSearch"]{
+        border-radius:50%;
+        fill: map-get(v.$colours, secondary);
+        background: black;
+        grid-column: 3 / 3;
+        justify-self: right;
+
+        &:hover{
+          background: map-get(v.$colours, tertiary);
+          transition:all 0.3s;
+        }
+      }
+    }
+  }
+  
+
+  .siteNavBox{
+    display: none;
+
+    & ~ .siteNavMenu{
+      height:0;
+      max-height:0;
+      transition:all 0.5s;
+      
+      @include m.desktop{
+        height: auto;
+        max-height: revert;
+      }
+    }
+
+    &:checked ~ .siteNavMenu{
+      height:auto;
+      max-height:100vh;
+      margin-top: map.get(v.$spacing, padding);
+
+      @include m.desktop{
+        height: auto;
+        max-height: revert;
+      }
+    }
+    & ~ .siteSearch{
+      height:0;
+      max-height:0;
+      transition:all 0.5s;
+      grid-column: 1/4;
+      grid-row: 3/4;
+
+      @include m.desktop{
+        grid-row: 2/3;
+      }
+    }
+    &[id='siteSearch']:checked ~ .siteSearch{
+      height:auto;
+      max-height:100vh;
+      transition:all 0.5s;
+    }
+  }
+  .siteSearch{
+    background: f.map-deep-get(v.$colours, navigation, 'background');
+    display:flex;
+    justify-content:flex-end;
+    overflow: hidden;
+
+    .searchBar{
+      margin:map.get(v.$spacing, padding) 0;
+      flex-grow: 1;
+      display:flex;
+      flex-wrap:nowrap;
+      overflow: hidden;
+      border-radius: 9px;
+      max-width: 500px;
+      border: 1px solid rgba(0,0,0,0.4);
+
+      input[type='text'],
+      input[type='search']{
+        background: white;
+        height:35px;
+      }
+    
+      input[type='text'],
+      input[type='search'],
+      button{
+        border:none;
+        font-family: map.get(v.$fonts, 'body');
+      }
+      input[type='text'],
+      input[type='search']{
+        flex-grow: 1;
+        border:none;
+        padding-left:5px;
+      }
+      button{
+        transition:all 0.3s;
+        display:flex;
+        align-items:center;
+        justify-content: space-around;
+        background: black;
+        width:35px;
+    
+        &:hover{
+          background: map-get(v.$colours, primary);
+        }
+    
+        svg{
+          height: 60%;
+          fill: map-get(v.$colours, secondary);
+        }
+      }
+    }
+  }
+
+  .siteNavMenu{
+    overflow:hidden;
+    grid-column: 1/4;
+
+    @include m.desktop{
+      overflow:revert;
+      grid-row: 1/2;
+      grid-column: 1/2;
+    }
+  
+    .mainMenu{
+      @include m.removeListStyle;
+      @include m.desktop{
+        font-size:0.8rem;
+      }
+      
+      li a{
+        padding: map.get(v.$spacing, padding);
+        display:block;
+        @include m.linkStyle;
+
+        @include m.desktop{
+          border:none;
+          padding: map.get(v.$spacing, padding) calc(map.get(v.$spacing, padding) / 2);
+        }
+      }
+      &:not(:last-of-type) a{
+        border-bottom:1.5px solid black;
+        @include m.desktop{
+          border:none;
+        }
+      }
+      &:nth-of-type(1) a{
+        border-top:1.5px solid black;
+        @include m.desktop{
+          border:none;
+        }
+      }
+      @include m.desktop{
+        display:flex;
+        align-items: center;
+      }
+    }
+  }
+}

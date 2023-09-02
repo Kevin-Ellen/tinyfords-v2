@@ -27,18 +27,18 @@ const documentHead = (pageData, allPageData) => {
         <meta property="og:locale" content="en_GB" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Tiny Fords">
-        ${pageData.status===200 && pageData.template!=='offline'? 
+        ${pageData.status===200 && pageData.template!=='offline' && pageData.template!=='admin'? 
           `<meta name="description" content="${pageData.metadata.description}" />
           <link rel="canonical" href="${pageData.canonical}" />
           <meta property="og:title" content="${pageData.socialMedia.title}" />
           <meta property="og:description" content="${pageData.socialMedia.description}" />
           <meta property="og:url" content="${pageData.canonical}" />
-          <meta property="og:image" content="${pageData.url.protocol}//${pageData.url.host}/social-media/images/4080-2142/${pageData.socialMedia.image}-4080-2142.jpg" />
+          <meta property="og:image" content="${pageData.url.protocol}//${pageData.url.host}/images/social-media/4080-2142/${pageData.socialMedia.image}-4080-2142.jpg" />
           <meta property="og:image:width" content="4080" />
           <meta property="og:image:height" content="2142" />
           <meta property="og:image:type" content="image/jpeg">
 
-          <meta property="og:image" content="${pageData.url.protocol}//${pageData.url.host}/social-media/images/256/${pageData.socialMedia.image}-256.jpg" />
+          <meta property="og:image" content="${pageData.url.protocol}//${pageData.url.host}/images/social-media/256/${pageData.socialMedia.image}-256.jpg" />
           <meta property="og:image:width" content="256" />
           <meta property="og:image:height" content="256" />
           <meta property="og:image:type" content="image/jpeg">
@@ -47,22 +47,22 @@ const documentHead = (pageData, allPageData) => {
           <meta name="twitter:creator" content="@kevin_ellen_" />
           <meta name="twitter:title" content="${pageData.socialMedia.title}" />
           <meta name="twitter:description" ontent="${pageData.socialMedia.description}" />
-          <meta name="twitter:image" content="${pageData.url.protocol}//${pageData.url.host}/social-media/images/4080-2142/${pageData.socialMedia.imageName}-4080-2142.jpg" />
+          <meta name="twitter:image" content="${pageData.url.protocol}//${pageData.url.host}/images/social-media/4080-2142/${pageData.socialMedia.imageName}-4080-2142.jpg" />
           ` 
         : ''}
-        <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
         <link rel="apple-touch-icon" sizes="144x144" href="//iconsapple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
         <link rel="manifest" href="/manifest.json">
         <meta name="msapplication-TileColor" content="#005490">
         <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">

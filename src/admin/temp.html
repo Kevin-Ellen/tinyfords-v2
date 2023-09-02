@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <link rel="preload" href="/fonts/montserratalternates/v17/mFTiWacfw6zH4dthXcyms1lPpC8I_b0juU0xQIXFB7xG-GNxkg.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/fonts/montserratalternates/v17/mFTiWacfw6zH4dthXcyms1lPpC8I_b0juU0xNIPFB7xG-GNxkg.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/fonts/quicksand/v30/6xKtdSZaM9iE8KbpRA_hK1QNYuDyPw.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="stylesheet" href="lib/css/stylesAdmin.css">
+        <title>Tiny Fords - Admin panel</title>
+        <meta name="theme-color" content="#005490f">
+      </head>
+      <body>,<header role="banner" class="siteHeader">
+    <div class="siteHeaderContainer">
+
+      <label class="siteNavLabel" for="siteNavBox">
+        <svg viewBox="0 0 100 80" width="25" height="25">
+          <rect width="100" height="20" rx="10"></rect>
+          <rect y="30" width="100" height="20" rx="10"></rect>
+          <rect y="60" width="100" height="20" rx="10"></rect>
+        </svg>
+        <span class="a11y">Open main menu</span>
+      </label>
+
+      <p class="siteNavName"><a href="/">Tiny Fords</a></p>
+
+      <input type="checkbox" class="siteNavBox" id="siteNavBox">
+      <nav class="siteNavMenu" role="navigation" aria-label="Main menu">
+        <ul class="mainMenu">
+          <a href="/">Back to public home</a>
+        </ul>
+      </nav>
+    </div>
+  </header>,<nav class="breadcrumbsContainer" aria-label="breadcrumb">
+      <ul class="breadcrumbs">
+        <li><a href="/">Public home</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href="/admin">Admin home</a></li>
+      </ul>
+    </nav>,<main>
+      <section class="fragmentContent adminLogin">
+        <h1>Login</h1>
+        <div class="loginContainer">
+          <form action="/admin/login" method="post" class="loginForm">
+            <div class="inputGroup">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required>
+            </div>
+  
+            <div class="inputGroup">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+            </div>
+  
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      </section>
+  </main>,
+    <footer class="siteFooter">
+      <h2>Thanks for visiting Tiny Fords</h2>
+      <p>Here at Tiny Fords, we're passionate about Ford die-cast cars, and we're thrilled to share our collection with you. This non-commercial site is a labor of love, created by Kevin Ellen to keep track of his collection and avoid buying duplicates. We're proud to say it was made in 2023, using a Cloudflare Worker on a free account. We hope you've enjoyed exploring our collection and we look forward to your next visit! Don't forget to check out the contact page if you have any question or feedback. Thank you for choosing Tiny Fords.</p>
+    </footer>
+  ,</body>
+  </html>

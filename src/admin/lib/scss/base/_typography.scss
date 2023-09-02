@@ -1,0 +1,62 @@
+// src > lib > scss > base > typography.scss - Default typography
+
+@use "sass:map";
+
+@use '../abstracts/_variables' as v;
+@use '../abstracts/_functions.scss' as f;
+@use '../abstracts/_mixins.scss' as m;
+
+@font-face {
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserratalternates/v17/mFTiWacfw6zH4dthXcyms1lPpC8I_b0juU0xQIXFB7xG-GNxkg.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserratalternates/v17/mFTiWacfw6zH4dthXcyms1lPpC8I_b0juU0xNIPFB7xG-GNxkg.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/quicksand/v30/6xKtdSZaM9iE8KbpRA_hK1QNYuDyPw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+  font-family: map.get(v.$fonts, 'body');
+  font-size: 18px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  line-height: 23px;
+}
+
+h1 {
+  font-size: v.$baseHeading;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: map.get(v.$fonts, 'headings');
+    line-height:1em;
+  }
+}
+
+@for $i from 2 through 6 {
+  h#{$i} {
+    font-size: calc(v.$baseHeading - (v.$baseHeading * ($i - 1)*(6/100)));
+  }
+}
+
+p{
+  margin-bottom: 1em;
+}

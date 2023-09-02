@@ -6,16 +6,20 @@
     "brand": "Hot Wheels",
     "category":{
       "name": "Hot Wheels",
-      "folderName": "hotwheels",
-      "shortName": "hw"
+      "folder": "hotwheels",
+      "short": "hw"
     },
     "code": "hcw87",
     "base": "r04",
-    "type": "long",
-    "hasCase": true,
+    "case": {
+      "type": "long",
+      "status": true
+    },
     "hasPhoto": true,
-    "addedDate": "2023-01-08",
-    "addedBy": "Kevin",
+    "addedDetails":{
+      "date": "2023-01-08",
+      "by": "Kevin"
+    },
     "quantity": 1
   },
   {
@@ -25,92 +29,20 @@
     "brand": "wilko",
     "category":{
       "name": "Other",
-      "folderName": "other",
-      "shortName": "ot"
+      "folder": "other",
+      "short": "ot"
     },
     "code": null,
     "base": null,
-    "type": null,
-    "hasCase": false,
-    "hasPhoto": true,
-    "addedDate": "2023-01-08",
-    "addedBy": "Kevin",
-    "quantity": 1
-  },
-  {
-    "id": 3,
-    "name": "'67 Mustang Custom 'Eleanor'",
-    "make": "Ford",
-    "brand": "LootCrate",
-    "category":{
-      "name": "Other",
-      "folderName": "other",
-      "shortName": "ot"
+    "case": {
+      "type": "other",
+      "status": null
     },
-    "code": null,
-    "base": null,
-    "type": null,
-    "hasCase": false,
     "hasPhoto": true,
-    "addedDate": "2023-01-08",
-    "addedBy": "Kevin",
-    "quantity": 1
-  },
-  {
-    "id": 4,
-    "name": "Subaru Impreza",
-    "make": "Subaru",
-    "brand": "Tesco",
-    "category":{
-      "name": "Other",
-      "folderName": "other",
-      "shortName": "ot"
+    "addedDetails":{
+      "date": "2023-01-08",
+      "by": "Kevin"
     },
-    "code": null,
-    "base": null,
-    "type": null,
-    "hasCase": false,
-    "hasPhoto": true,
-    "addedDate": "2023-01-08",
-    "addedBy": "Kevin",
-    "quantity": 1
-  },
-  {
-    "id": 5,
-    "name": "'08 Ford Focus",
-    "make": "Ford",
-    "brand": "Hot Wheels",
-    "category":{
-      "name": "Hot Wheels",
-      "folderName": "hotwheels",
-      "shortName": "hw"
-    },
-    "code": "grp18",
-    "base": "n37",
-    "type": "long",
-    "hasCase": true,
-    "hasPhoto": true,
-    "addedDate": "2023-01-08",
-    "addedBy": "Kevin",
-    "quantity": 1
-  },
-  {
-    "id": 6,
-    "name": "'09 Ford Focus RS",
-    "make": "Ford",
-    "brand": "Hot Wheels",
-    "category":{
-      "name": "Hot Wheels",
-      "folderName": "hotwheels",
-      "shortName": "hw"
-    },
-    "code": "dwf31",
-    "base": "k17",
-    "type": "long",
-    "hasCase": false,
-    "hasPhoto": true,
-    "addedDate": "2023-08-31",
-    "addedBy": "Kevin",
     "quantity": 1
   }
 ]

@@ -28,7 +28,7 @@ const createGrid = (data) => {
 }
 
 const createCard = (car) => {
-  const imageUrl = `/${car.category.folderName}/images/front-250/${car.code}-front-250.jpg`;
+  const imageUrl = `/images/${car.category.folderName}/front-250/${car.category.shortName}-${car.code || car.id}-front-250.jpg`;
 
   return `
     <div class="fragmentGridCard">

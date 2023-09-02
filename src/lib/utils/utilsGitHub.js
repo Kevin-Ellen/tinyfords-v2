@@ -39,6 +39,18 @@ export const utilGitHubGetAllCarsData = async () => {
   return fetchFromGitHub(FILE_PATH.allCars);
 }
 
-export const utilGitHubGetCarImage = async (pathName) => {
-  return fetchFromGitHub(pathName);
+export const utilGitHubGetImage = async (path) => {
+  const response = await fetch(BASE_URL + path, {
+    headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'User-Agent': 'tinyfords-v2-app',
+        'Accept': 'application/vnd.github.3.raw'
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error(`GitHub API returned ${response.status}: ${response.statusText}`);
+  }
+
+  return response.blob();
 }

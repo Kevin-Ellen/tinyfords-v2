@@ -10,22 +10,19 @@ const templateHome = async (pageData, allPageData) => {
 
   const allCars = await utilGitHubGetAllCarsData();
 
-  const contentArray = [
+  const content = [
     `<h1>${pageData.h1}</h1>`,
     `<p>Welcome to Tiny Fords, the website of a Ford die-cast car enthusiast. Here, you'll find my collection of Hot Wheels, Matchbox, and other small scale models of your many Ford cars. Our easy-to-use website makes it simple to navigate and find the cars, this is mainly so we can avoid buying duplicates and keep our collection up-to-date. Let's dive in and explore the collection together!</p>`,
     `<p>Currently there are <strong>${allCars.length}</strong> items within the various collections!</p>`
-  ];
+  ].join('');
 
   const latestCars = await utilGetLatestCars(allCars,14);
-
-  const sections = [
+  
+  return sections = [
     `<main>`,
-      fragmentContent(contentArray.join('')),
+      fragmentContent(content),
       fragmentGrid('Latest additions',2,latestCars),
     `<main>`,
-  ]
-
-  
-  return sections.join('');
+  ].join('');
 }
 export default templateHome;
