@@ -1,42 +1,78 @@
 // src > admin > lib > carAdd.js - Adding a car :)
 
-import {adminGitHubGetCarData, adminGitHubSubmitCarData} from './adminGitHub';
+import { adminGitHubGetCarsData, adminGitHubSubmitCarsData } from "../services/github";
+
+import { getUniqueCarCategories, getUniqueCarCaseTypes } from "../../../lib/utils/dataCars";
 
 const handlerCarAdd = async (request) => {
   const formData = await request.formData();
-
-  const fullCarResponse = await adminGitHubGetCarData();
-  const currentCars = fullCarResponse.data;
-
-  const newId = Math.max(...currentCars.map(car => car.id))+1;
-  const currentDate = new Date();
-  const timestamp = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')}`;
+  const formDataObject = Object.fromEntries(formData.entries());
 
 
-  const newCar = {
-    id: newId,
-    name: formData.get('name'),
-    make: formData.get('make'),
-    brand: formData.get('brand'),
-    code: formData.get('code'),
-    base: formData.get('base'),
-    type: formData.get('type'),
-    hasCase: formData.get('hasCase') === 'true',
-    hasPhoto: formData.has('hasPhoto'),
-    added: timestamp,
-    addedBy: ADMIN_NAME,
-    quantity: parseInt(formData.get('quantity')),
+  const dataCarsAll = await adminGitHubGetCarsData();
+
+  const newCar = transformEntryToCar(formDataObject, dataCarsAll.data);
+
+  console.log(newCar);
+
+  dataCarsAll.data.push(newCar);
+
+  const response = adminGitHubSubmitCarsData(dataCarsAll.data, dataCarsAll.sha);
+
+  console.log(response);
+
+  if (response.success) {
+    return new Response(response.message);
+  }else{
+    return new Response(response.message);
   }
 
-  currentCars.push(newCar);
-
-  const updateResponse = await adminGitHubSubmitCarData(currentCars, fullCarResponse.sha);
-
-  if (updateResponse.success) {
-      return new Response(updateResponse.message, { status: 200 });
-  } else {
-      return new Response(`Error: ${updateResponse.message}`, { status: 400 });
-  }
-
+  return new Response('car add');
 }
 export default handlerCarAdd;
+
+const transformEntryToCar = (entry, dataCarsAll) => {
+
+  const caseDetail = getUniqueCarCaseTypes(dataCarsAll).find(cases => cases.type === entry.caseType);
+  const categoryDetail = getUniqueCarCategories(dataCarsAll).find(cat => cat.short === entry.category);
+
+  if (entry.category === 'ot') {
+    entry.brand = entry.brand;
+  } else {
+    entry.brand = categoryDetail.name;
+  }
+
+  const statusMap = {
+    'true': true,
+    'false': false
+  };
+  const status = statusMap[entry.hasCase] !== undefined ? statusMap[entry.hasCase] : null;
+
+  const hasPhoto = entry.hasPhoto === 'on';
+
+
+  return {
+    id: parseInt(entry.id, 10),
+    name: entry.name,
+    make: entry.make,
+    brand: entry.brand,
+    categoryDetails: {
+      name: categoryDetail.name,
+      folder: categoryDetail.folder,
+      short: categoryDetail.short
+    },
+    code: entry.code==="null" ? null : entry.code,
+    base: entry.base==="null" ? null : entry.base,
+    caseDetails: {
+      type: caseDetail.type,
+      name: caseDetail.name,
+      status: status
+    },
+    quantity: parseInt(entry.quantity, 10),
+    addedDetails:{
+      date: new Date().toISOString().split('T')[0],
+      by: ADMIN_NAME
+    },
+    hasPhoto: hasPhoto,
+  };
+};

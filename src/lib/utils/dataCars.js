@@ -12,10 +12,10 @@ export const utilDataCarsLatest = async (data,number) => {
 
 export const getUniqueCarCategories = (data) => {
   const uniqueCategoriesMap = data.reduce((acc, car) => {
-    const { short, name } = car.categoryDetails;
+    const { short, name, folder } = car.categoryDetails;
     
     if (!acc[short]) {
-      acc[short] = { short, name };
+      acc[short] = { short, name, folder };
     }
     
     return acc;

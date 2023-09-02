@@ -1,6 +1,6 @@
 // src > admin > lib > adminGitHub.js - All GH processes
 
-import {base64Decode} from '../../lib/utils/misc';
+import {base64Decode} from '../../../lib/utils/misc';
 
 const apiKey = GITHUB_API_KEY;
 const REPO_OWNER = 'Kevin-Ellen';
@@ -9,7 +9,7 @@ const FILE_PATH = 'src/data/cars.json';
 
 const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`;
 
-export const adminGitHubGetCarData = async () => {
+export const adminGitHubGetCarsData = async () => {
   const response = await fetch(url, {
     headers: {
         'Authorization': `Bearer ${apiKey}`,
@@ -31,7 +31,7 @@ export const adminGitHubGetCarData = async () => {
   };
 }
 
-export const adminGitHubSubmitCarData = async (data, sha) => {
+export const adminGitHubSubmitCarsData = async (data, sha) => {
   const updatedContentBase64 = btoa(JSON.stringify(data));
   
   const response = await fetch(url, {
@@ -54,5 +54,4 @@ export const adminGitHubSubmitCarData = async (data, sha) => {
   } else {
     return { success: false, message: responseData.message };
   }
-
 }

@@ -5,6 +5,8 @@ import handlerTemplate from './lib/handlers/template';
 import handlerAdminLogin from './lib/handlers/adminLogin';
 import handlerAdminLogout from './lib/handlers/adminLogout';
 
+import handlerCarAdd from './lib/handlers/carAdd';
+
 const indexAdmin = async (request) => {
   const url = new URL(request.url);
 
@@ -24,7 +26,7 @@ const indexAdmin = async (request) => {
     case 'POST':
       switch (url.pathname){
         case '/admin': return handlerAdminLogin(request);
-        // case '/admin/add-car': return handleCarAdd(request);
+        case '/admin/add-car': return handlerCarAdd(request);
 
         default: return new Response('not done yet');
       }

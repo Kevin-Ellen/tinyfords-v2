@@ -2,7 +2,7 @@
 
 import { servicesGithubDataCarsAll } from '../../../lib/services/github';
 
-import { getUniqueCarCategories } from '../../../lib/utils/dataCars';
+import { getUniqueCarCategories, getUniqueCarCaseTypes } from '../../../lib/utils/dataCars';
 
 const fragmentFormCarAdd = async () => {
 
@@ -10,12 +10,16 @@ const fragmentFormCarAdd = async () => {
   
   const categories = getUniqueCarCategories(dataCarsAll).map(category => `<option value="${category.short}">${category.name}</option>`).join('');
 
+  const cases = getUniqueCarCaseTypes(dataCarsAll).map(caseDetail => `<option value="${caseDetail.type}">${caseDetail.name}</option>`).join('');
+
 
   const html = `<section class="fragmentContent adminCenter">
     <h1>Add car</h1>
     <div class="formContainer">
 
       <form action="/admin/add-car" method="post" class="adminForm">
+
+      <input type="hidden" name="id" id="id" value="${Math.max(...dataCarsAll.map(car => car.id))+1}">
 
         <div class="inputGroup">
           <label for="code">Code:</label>
@@ -40,8 +44,19 @@ const fragmentFormCarAdd = async () => {
         <div class="inputGroup">
           <label for="category">Category:</label>
           <select id="category" name="category">
+            <option value="" selected disabled>Select a category</option>
             ${categories}
           </select>
+        </div>
+
+        <div class="inputGroup">
+          <label for="brand">Brand:</label>
+          <input type="text" id="brand" name="brand">
+        </div>
+
+        <div class="inputGroup">
+          <label for="hasPhoto">Photo is online:</label>
+          <input type="checkbox" id="hasPhoto" name="hasPhoto">
         </div>
 
         <fieldset class="inputGroup">
@@ -49,8 +64,8 @@ const fragmentFormCarAdd = async () => {
         
           <label for="caseType">Case Type:</label>
           <select id="caseType" name="caseType">
-            <option value="type1">Type 1</option>
-            <option value="type2">Type 2</option>
+            <option value="" selected disabled>Select a type</option>
+            ${cases}
           </select>
           
           <div class="radioGroup">
@@ -63,7 +78,7 @@ const fragmentFormCarAdd = async () => {
 
             <div class="radioEntry">
               <label for="no">No</label>
-              <input type="radio" id="no" name="hasCase" value="false">
+              <input type="radio" id="no" name="hasCase" value="false" checked>
             </div>
             
             <div class="radioEntry">
@@ -72,6 +87,12 @@ const fragmentFormCarAdd = async () => {
             </div>
           </div>
         </fieldset>
+
+        <div class="inputGroup">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+        </div>
+
         <button type="submit">Add car</button>
       </form>
     </div>
