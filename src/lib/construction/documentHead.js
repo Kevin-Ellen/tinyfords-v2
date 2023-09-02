@@ -2,13 +2,13 @@
 
 import css from '../css/styles.css';
 
-const documentHead = (pageData, allPageData) => {
-  if(pageData.status===200 && pageData.template!=='offline'){
+const documentHead = (dataPageCurrent, dataPageAll) => {
+  if(dataPageCurrent.status===200 && dataPageCurrent.template!=='offline'){
   
-    pageData.canonical = `${pageData.url.protocol}//${pageData.url.host}${pageData.slug}`;
+    dataPageCurrent.canonical = `${dataPageCurrent.url.protocol}//${dataPageCurrent.url.host}${dataPageCurrent.slug}`;
 
-    if(pageData.template==='collection' && pageData.url.params.get('page') && pageData.url.params.get('page')!=1){
-      pageData.canonical += `?page=${pageData.url.params.get('page')}`;
+    if(dataPageCurrent.template==='collection' && dataPageCurrent.url.params.get('page') && dataPageCurrent.url.params.get('page')!=1){
+      dataPageCurrent.canonical += `?page=${dataPageCurrent.url.params.get('page')}`;
     }
   }
 
@@ -23,31 +23,31 @@ const documentHead = (pageData, allPageData) => {
         <style>
           ${css}
         </style>
-        <title>${pageData.metadata.title}</title>
+        <title>${dataPageCurrent.metadata.title}</title>
         <meta property="og:locale" content="en_GB" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Tiny Fords">
-        ${pageData.status===200 && pageData.template!=='offline' && pageData.template!=='admin'? 
-          `<meta name="description" content="${pageData.metadata.description}" />
-          <link rel="canonical" href="${pageData.canonical}" />
-          <meta property="og:title" content="${pageData.socialMedia.title}" />
-          <meta property="og:description" content="${pageData.socialMedia.description}" />
-          <meta property="og:url" content="${pageData.canonical}" />
-          <meta property="og:image" content="${pageData.url.protocol}//${pageData.url.host}/images/social-media/4080-2142/${pageData.socialMedia.image}-4080-2142.jpg" />
+        ${dataPageCurrent.status===200 && dataPageCurrent.template!=='offline' && dataPageCurrent.template!=='admin'? 
+          `<meta name="description" content="${dataPageCurrent.metadata.description}" />
+          <link rel="canonical" href="${dataPageCurrent.canonical}" />
+          <meta property="og:title" content="${dataPageCurrent.socialMedia.title}" />
+          <meta property="og:description" content="${dataPageCurrent.socialMedia.description}" />
+          <meta property="og:url" content="${dataPageCurrent.canonical}" />
+          <meta property="og:image" content="${dataPageCurrent.url.protocol}//${dataPageCurrent.url.host}/images/social-media/4080-2142/${dataPageCurrent.socialMedia.image}-4080-2142.jpg" />
           <meta property="og:image:width" content="4080" />
           <meta property="og:image:height" content="2142" />
           <meta property="og:image:type" content="image/jpeg">
 
-          <meta property="og:image" content="${pageData.url.protocol}//${pageData.url.host}/images/social-media/256/${pageData.socialMedia.image}-256.jpg" />
+          <meta property="og:image" content="${dataPageCurrent.url.protocol}//${dataPageCurrent.url.host}/images/social-media/256/${dataPageCurrent.socialMedia.image}-256.jpg" />
           <meta property="og:image:width" content="256" />
           <meta property="og:image:height" content="256" />
           <meta property="og:image:type" content="image/jpeg">
 
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:creator" content="@kevin_ellen_" />
-          <meta name="twitter:title" content="${pageData.socialMedia.title}" />
-          <meta name="twitter:description" ontent="${pageData.socialMedia.description}" />
-          <meta name="twitter:image" content="${pageData.url.protocol}//${pageData.url.host}/images/social-media/4080-2142/${pageData.socialMedia.imageName}-4080-2142.jpg" />
+          <meta name="twitter:title" content="${dataPageCurrent.socialMedia.title}" />
+          <meta name="twitter:description" ontent="${dataPageCurrent.socialMedia.description}" />
+          <meta name="twitter:image" content="${dataPageCurrent.url.protocol}//${dataPageCurrent.url.host}/images/social-media/4080-2142/${dataPageCurrent.socialMedia.imageName}-4080-2142.jpg" />
           ` 
         : ''}
         <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">

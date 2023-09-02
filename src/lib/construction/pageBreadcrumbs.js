@@ -1,9 +1,9 @@
 // src > lib > construction > pageBreadcrumbs.js - bredacrumbs
 
-const pageBreadcrumbs = (pageData, allPageData) => {
-  if(!pageData.breadcrumbList){ return;}
+const pageBreadcrumbs = (dataPageCurrent, dataPageAll) => {
+  if(!dataPageCurrent.breadcrumbList){ return `<nav class="breadcrumbsContainer" aria-label="breadcrumb"></nav>`;}
 
-  const breadcrumbs = pageData.breadcrumbList.map((obj, index, arr) => {
+  const breadcrumbs = dataPageCurrent.breadcrumbList.map((obj, index, arr) => {
     const isLastItem = index === arr.length - 1;
     return `
         <li ${isLastItem ? 'aria-current="page"' : ''}>

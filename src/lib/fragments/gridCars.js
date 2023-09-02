@@ -1,24 +1,22 @@
-// src > lib > fragments > fragmentCarsGrid.js
+// src > lib > fragments > gridCars.js
 
-const fragmentCarsGrid = (heading,headingLevel,data) => {
+const fragmentGridCars = (heading,headingLevel,dataCars) => {
 
   const levelNumber = Number(headingLevel);
   headingLevel = !isNaN(levelNumber) ? Math.min(6, Math.max(2, Math.round(levelNumber))) : 2;
 
-  console.log(data);
-
   const html = `<section>
     <h${headingLevel}>${heading}</h${headingLevel}>
-    ${createGrid(data)}
+    ${createGrid(dataCars)}
   </section>`;
   return html;
 }
 
-export default fragmentCarsGrid;
+export default fragmentGridCars;
 
-const createGrid = (data) => {
+const createGrid = (dataCars) => {
 
-  const cards = data.map(createCard).join('');
+  const cards = dataCars.map(createCard).join('');
 
   const html = `<div class="fragmentCarsGrid">
     ${cards}
@@ -28,7 +26,7 @@ const createGrid = (data) => {
 }
 
 const createCard = (car) => {
-  const imageUrl = `/images/${car.category.folder}/front-250/${car.category.short}-${car.code || car.id}-front-250.jpg`;
+  const imageUrl = `/images/${car.categoryDetails.folder}/front-250/${car.categoryDetails.short}-${car.code || car.id}-front-250.jpg`;
 
   return `
     <div class="fragmentGridCard">

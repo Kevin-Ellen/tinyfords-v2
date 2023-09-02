@@ -1,8 +1,8 @@
-// src > lib > utils > handlerStatic.js
+// src > lib > utils > static.js
 
-import outputRobotsTxt from '../output/outputRobotsTxt';
+import outputRobotsTxt from '../output/robotsTxt';
 
-import { utilGitHubGetImage } from '../utils/utilsGitHub';
+import { servicesGithubImageGetter } from '../services/github';
 
 const handlerStatic = (url) => {
 
@@ -57,7 +57,7 @@ const routerFonts = async (url) => {
 }
 
 const imageRouter = async (url) => {
-  const imageBlob = await utilGitHubGetImage(url.pathname);
+  const imageBlob = await servicesGithubImageGetter(url.pathname);
   const response = new Response(imageBlob);
 
   const fileExtension = url.pathname.split('.').pop().toLowerCase();

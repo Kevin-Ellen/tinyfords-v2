@@ -1,8 +1,8 @@
-// src > lib > construction > pageAdminHead.js - Everything on top
+// src > lib > construction > pageHead.js - Everything on top
 
-import { isLoggedIn } from '../utils/utilsAdmin';
+import { isLoggedIn } from '../utils/misc';
 
-const pageAdminHead = (request) => {
+const pageHead = (request) => {
 
   const links = isLoggedIn(request) ? [
     {
@@ -45,4 +45,4 @@ const pageAdminHead = (request) => {
   </header>`;
   return html;
 }
-export default pageAdminHead;
+export default pageHead;

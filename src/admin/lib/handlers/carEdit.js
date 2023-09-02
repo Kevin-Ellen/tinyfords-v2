@@ -1,4 +1,4 @@
-// src > admin > lib > adminHandleEditCar.js - find and deal with the car
+// src > admin > lib > carEdit.js - find and deal with the car
 
 import {adminGitHubGetCarData} from './adminGitHub';
 

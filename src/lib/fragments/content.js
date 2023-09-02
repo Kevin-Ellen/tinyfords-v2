@@ -1,4 +1,4 @@
-// src > lib > fragments > fragmentContent.js
+// src > lib > fragments > content.js
 
 const fragmentContent = (content) => {
   const html = `<section class="fragmentContent">

@@ -1,4 +1,4 @@
-// src > lib > templates > templateHome.js - Homepage template
+// src > lib > templates > home.js - Homepage template
 
 import fragmentContent from '../fragments/fragmentContent';
 import fragmentCarsGrid from '../fragments/fragmentCarsGrid';

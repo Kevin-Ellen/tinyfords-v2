@@ -7,8 +7,8 @@ const REPO_OWNER = 'Kevin-Ellen';
 const REPO_NAME = 'tinyfords-v2';
 const BASE_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/`;
 const FILE_PATH = {
-  allPages: 'src/data/dataPages.json',
-  allCars:  'src/data/dataCars.json',
+  allPages: 'src/data/pages.json',
+  allCars:  'src/data/cars.json',
 };
 
 const fetchFromGitHub = async (path) => {
@@ -31,15 +31,15 @@ const fetchFromGitHub = async (path) => {
   return JSON.parse(decoded);
 }
 
-export const utilGitHubGetAllPagesData = async () => {
+export const servicesGithubDataPageAll = async () => {
   return fetchFromGitHub(FILE_PATH.allPages);
 }
 
-export const utilGitHubGetAllCarsData = async () => {
+export const servicesGithubDataCarsAll = async () => {
   return fetchFromGitHub(FILE_PATH.allCars);
 }
 
-export const utilGitHubGetImage = async (path) => {
+export const servicesGithubImageGetter = async (path) => {
   const response = await fetch(BASE_URL + path, {
     headers: {
         'Authorization': `Bearer ${apiKey}`,

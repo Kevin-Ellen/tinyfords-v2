@@ -1,11 +1,11 @@
-// src > admin > lib > templates > formAdminLogin.js - Login form etc
+// src > admin > lib > fragments > formAdminLogin.js - Admin login form
 
-const formAdminLogin = () => {
+const fragmentFormAdminLogin = () => {
   const html = `
     <section class="fragmentContent adminLogin">
       <h1>Login</h1>
       <div class="loginContainer">
-        <form action="/admin/login" method="post" class="loginForm">
+        <form action="/admin" method="post" class="loginForm">
           <div class="inputGroup">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
@@ -25,4 +25,4 @@ const formAdminLogin = () => {
   return html;
 }
 
-export default formAdminLogin;
+export default fragmentFormAdminLogin;

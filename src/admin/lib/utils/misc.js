@@ -1,18 +1,21 @@
-// src > admin > lib > adminTools.js - Quick tools for admin
+// src > admin > lib > utils < misc.js - Quick tools for admin
 
-import formAdminLogin from "../fragments/formAdminLogin";
+import fragmentFormAdminLogin from "../fragments/formAdminLogin";
 
 export const isLoggedIn = (request) => {
   const cookieString = request.headers.get('Cookie');
+
+  console.log(`Cookie string: ${cookieString}`);
+
   return cookieString && cookieString.includes('admin-authenticated=true');
 }
 
 export const quickLogin = (request) => {
-  if(isLoggedIn(request)){ return; }
+  if(isLoggedIn(request)){ return false; }
 
   return [
     '<main>',
-      formAdminLogin(),
+      fragmentFormAdminLogin(),
     '</main>',
   ].join('');
 }

@@ -1,8 +1,8 @@
-// src > admin > lib > adminHandleAddCar.js - Adding a car :)
+// src > admin > lib > carAdd.js - Adding a car :)
 
 import {adminGitHubGetCarData, adminGitHubSubmitCarData} from './adminGitHub';
 
-const adminHandleAddCar = async (request) => {
+const handlerCarAdd = async (request) => {
   const formData = await request.formData();
 
   const fullCarResponse = await adminGitHubGetCarData();
@@ -38,8 +38,5 @@ const adminHandleAddCar = async (request) => {
       return new Response(`Error: ${updateResponse.message}`, { status: 400 });
   }
 
-
-
-
 }
-export default adminHandleAddCar;
+export default handlerCarAdd;

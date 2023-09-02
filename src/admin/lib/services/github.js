@@ -1,11 +1,11 @@
 // src > admin > lib > adminGitHub.js - All GH processes
 
-import {base64Decode} from '../../lib/utils/utilsMisc';
+import {base64Decode} from '../../lib/utils/misc';
 
 const apiKey = GITHUB_API_KEY;
 const REPO_OWNER = 'Kevin-Ellen';
 const REPO_NAME = 'tinyfords-v2';
-const FILE_PATH = 'src/data/dataCars.json';
+const FILE_PATH = 'src/data/cars.json';
 
 const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`;
 

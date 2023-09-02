@@ -1,4 +1,4 @@
-// src > lib > utils > miscTools.js - small tools
+// src > lib > utils > misc.js - small tools
 
 /**
  * Decodes a base64 encoded string, taking into account special characters.

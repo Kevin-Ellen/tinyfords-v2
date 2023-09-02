@@ -1,8 +1,8 @@
 // src > lib > construction > pageHead.js - Everything on top
 
-const pageHead = (pageData, allPageData) => {
+const pageHead =  (dataPageCurrent, dataPageAll)  => {
 
-  const links = allPageData
+  const links = dataPageAll
     .filter(page => 
       page.status === 200 
       && page.active === true 

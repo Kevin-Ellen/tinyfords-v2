@@ -1,20 +1,12 @@
-// src > admin > lib > templates > adminAddCarForm.js - Form to add vehicles to the JSON
+// src > admin > lib > fragments > formCarAdd.js - Form to add vehicles to the JSON
 
-const adminAddCarForm = () => {
+const fragmentFormCarAdd = () => {
   const html = `
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Admin Login</title>
-      </head>
-      <body>
-        <form action="/admin/add/car" method="post">
-          <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-          </div>
+    <form action="/admin/add-car" method="post">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+      </div>
           
           <div>
             <label for="make">Make:</label>
@@ -67,8 +59,6 @@ const adminAddCarForm = () => {
             <input type="submit" value="Add Car">
           </div>
         </form>
-      </body>
-    </html>
   `;
 
   return new Response(html, {
@@ -79,4 +69,4 @@ const adminAddCarForm = () => {
   });
 }
 
-export default adminAddCarForm;
+export default fragmentFormCarAdd;

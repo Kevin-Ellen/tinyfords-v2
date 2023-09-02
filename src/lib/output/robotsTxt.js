@@ -1,4 +1,4 @@
-// src > lib > output > outputRobotsTxt.js
+// src > lib > output > robotsTxt.js
 
 const outputRobotsTxt = (url) => {
   return new Response(robotstxtcontent(url), {status: 200});

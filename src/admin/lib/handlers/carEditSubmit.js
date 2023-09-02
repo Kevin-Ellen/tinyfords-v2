@@ -1,4 +1,4 @@
-//src > admin > lib > adminHandleSubmitEdit.js
+//src > admin > lib > carEditSubmit.js
 
 import {adminGitHubGetCarData, adminGitHubSubmitCarData} from './adminGitHub';
 

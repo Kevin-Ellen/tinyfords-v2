@@ -1,8 +1,8 @@
-// src > admin > lib > construction > documentAdminHead.js
+// src > admin > lib > construction > documentHead.js
 
 import css from '../css/stylesAdmin.css';
 
-const documentAdminHead = () => {
+const documentHead = () => {
 
   html = `<!DOCTYPE html>
     <html lang="en">
@@ -23,4 +23,4 @@ const documentAdminHead = () => {
   return html;
 }
 
-export default documentAdminHead;
+export default documentHead;

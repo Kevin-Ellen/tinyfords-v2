@@ -1,6 +1,6 @@
-// src > admin > lib > construction > pageAdminBreadcrumbs.js - bredacrumbs
+// src > admin > lib > construction > pageBreadcrumbs.js - bredacrumbs
 
-const pageAdminBreadcrumbs = () => {
+const pageBreadcrumbs = () => {
 
     html = `<nav class="breadcrumbsContainer" aria-label="breadcrumb">
       <ul class="breadcrumbs">
@@ -12,4 +12,4 @@ const pageAdminBreadcrumbs = () => {
 
   return html;
 }
-export default pageAdminBreadcrumbs;
+export default pageBreadcrumbs;

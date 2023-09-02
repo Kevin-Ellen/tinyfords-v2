@@ -1,6 +1,6 @@
-// src > admin > lib > construction > pageAdminFooter.js
+// src > admin > lib > construction > pageFooter.js
 
-const pageAdminFooter = () => {
+const pageFooter = () => {
 
   return(`
     <footer class="siteFooter">
@@ -9,4 +9,4 @@ const pageAdminFooter = () => {
     </footer>
   `);
 }
-export default pageAdminFooter;
+export default pageFooter;

@@ -1,6 +1,6 @@
-// src > lib > utils > handlerTemplate.js
+// src > lib > utils > template.js
 
-import {utilGitHubGetAllPagesData} from '../utils/utilsGitHub';
+import {servicesGithubDataPageAll} from '../services/github';
 
 import documentHead from '../construction/documentHead';
 import documentEnd from '../construction/documentEnd';
@@ -13,20 +13,20 @@ import templateHome from '../templates/templateHome';
 
 
 const handlerTemplate = async (url) => {
-  const allPageData = await utilGitHubGetAllPagesData();
+  const dataPageAll = await servicesGithubDataPageAll();
 
   switch(url.pathname){
     case '/':
-      pageData = findPageData(url.pathname,allPageData);
-      pageData.url = url;
-      if (!pageData) {
+      const dataPageCurrent = findDataPageCurrent(url.pathname,dataPageAll);
+      dataPageCurrent.url = url;
+      if (!dataPage) {
         return new Response('Not Found',{status:404});
       }
 
-      pageData.breadcrumbList = generateBreadcrumbs(pageData, allPageData);
+      dataPageCurrent.breadcrumbList = generateBreadcrumbs(dataPageCurrent, dataPageAll);
 
       return new Response(
-        await createPage(pageData, allPageData),
+        await createPage(dataPageCurrent, dataPageAll),
         {
           status: 200,
           headers: {
@@ -39,15 +39,15 @@ const handlerTemplate = async (url) => {
 
 export default handlerTemplate;
 
-const findPageData = (slug,data) => {
-  return data.find(page => page.slug === slug) || false;
+const findDataPageCurrent = (slug,dataPageAll) => {
+  return dataPageAll.find(page => page.slug === slug) || false;
 }
 
-const generateBreadcrumbs = (pageData, allPageData) => {
+const generateBreadcrumbs = (dataPageCurrent, dataPageAll) => {
   // Iterate through each breadcrumb name in the breadcrumbList
-  return pageData.breadcrumbList.map((breadcrumbName, index) => {
+  return dataPageCurrent.breadcrumbList.map((breadcrumbName, index) => {
     // Find the page that matches the breadcrumb name
-    const breadcrumbPage = allPageData.find(page => page.name === breadcrumbName);
+    const breadcrumbPage = dataPageAll.find(page => page.name === breadcrumbName);
 
     // If a matching page is found, return a breadcrumb object, else return null
     if (breadcrumbPage) {
@@ -62,7 +62,7 @@ const generateBreadcrumbs = (pageData, allPageData) => {
   }).filter(item => item); // This filter removes any null values
 };
 
-const createPage = async (pageData, allPageData) => {
+const createPage = async (dataPageCurrent, dataPageAll) => {
 
   const templates = {
     home: templateHome,
@@ -72,13 +72,13 @@ const createPage = async (pageData, allPageData) => {
     documentHead,
     pageHead,
     pageBreadcrumbs,
-    templates[pageData.template],
+    templates[dataPageCurrent.template],
     pageFooter,
     documentEnd
   ];
 
   const resolvedSections = await Promise.all(
-    sections.map(section => section(pageData, allPageData))
+    sections.map(section => section(dataPageCurrent, dataPageAll))
   );
 
   return resolvedSections.join('');

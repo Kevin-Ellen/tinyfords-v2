@@ -1,6 +1,6 @@
 // src > lib > construction > documentEnd.js
 
-const documentEnd = (pageData, allPageData) => {
+const documentEnd = (dataPageCurrent, dataPageAll) => {
   html = `</body>
   </html>`;
 

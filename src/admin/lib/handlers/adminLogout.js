@@ -1,6 +1,6 @@
-// src > admin > lib > handleAdminLogout.js - Logic to logout
+// src > admin > lib > adminLogout.js - Logic to logout
 
-const handleAdminLogout = async (request) => {
+const handlerAdminLogout = async (request) => {
   const redirectTo = request.headers.get('Referer') || '/admin';
   return new Response(null, {
       status: 302, // Using 302 for temporary redirect
@@ -10,4 +10,4 @@ const handleAdminLogout = async (request) => {
       }
   });
 }
-export default handleAdminLogout;
+export default handlerAdminLogout;

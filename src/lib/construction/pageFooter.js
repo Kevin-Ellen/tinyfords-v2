@@ -1,8 +1,8 @@
 // src > lib > construction > pageFooter.js - Everything at the bottom
 
-const pageFooter = (pageData, allPageData) => {
+const pageFooter = (dataPageCurrent, dataPageAll) => {
 
-  const links = allPageData
+  const links = dataPageAll
   .filter(page => 
     page.status === 200 
     && page.active === true 
