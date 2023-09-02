@@ -3,8 +3,8 @@
 @use "sass:map";
 
 @use '../abstracts/_variables' as v;
-@use '../abstracts/_functions.scss' as f;
-@use '../abstracts/_mixins.scss' as m;
+@use '../abstracts/_functions' as f;
+@use '../abstracts/_mixins' as m;
 
 
 ::selection {

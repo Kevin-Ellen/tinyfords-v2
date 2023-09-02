@@ -1,6 +1,6 @@
 // src > lib > utils > utilGitHub.js - GitHub API request tools
 
-import {base64Decode} from './utilsMisc';
+import {base64Decode} from '../utils/misc';
 
 const apiKey = GITHUB_API_KEY;
 const REPO_OWNER = 'Kevin-Ellen';

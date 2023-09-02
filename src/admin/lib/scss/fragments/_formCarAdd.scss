@@ -2,9 +2,9 @@
 
 @use "sass:map";
 
-@use '../../../lib/scss/abstracts/_variables' as v;
-@use '../../../lib/scss/abstracts/_functions.scss' as f;
-@use '../../../lib/scss/abstracts/_mixins.scss' as m;
+@use '../../../../lib/scss/abstracts/_variables' as v;
+@use '../../../../lib/scss/abstracts/_functions' as f;
+@use '../../../../lib/scss/abstracts/_mixins' as m;
 
 $primary-color: #3498db;
 $secondary-color: #ecf0f1;

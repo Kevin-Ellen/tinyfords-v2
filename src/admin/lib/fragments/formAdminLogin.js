@@ -2,10 +2,10 @@
 
 const fragmentFormAdminLogin = () => {
   const html = `
-    <section class="fragmentContent adminLogin">
+    <section class="fragmentContent adminCenter">
       <h1>Login</h1>
-      <div class="loginContainer">
-        <form action="/admin" method="post" class="loginForm">
+      <div class="formContainer">
+        <form action="/admin" method="post" class="adminForm">
           <div class="inputGroup">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>

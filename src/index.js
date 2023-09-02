@@ -2,8 +2,8 @@
 
 import indexAdmin from './admin/indexAdmin';
 
-import handlerStatic from './lib/handlers/handlerStatic';
-import handlerTemplate from './lib/handlers/handlerTemplate';
+import handlerStatic from './lib/handlers/static';
+import handlerTemplate from './lib/handlers/template';
 
 addEventListener('fetch', event => {
   const url = new URL(event.request.url);

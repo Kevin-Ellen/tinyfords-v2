@@ -15,8 +15,6 @@ const handlerAdminLogin = async (request) => {
 
   if (submittedName === validName && submittedPassword === validPassword) {
 
-    console.log('SUCCESS!');
-
     const redirectTo = new URL(request.headers.get('Referer') || '/admin');
 
     const expiryDate = new Date();
@@ -24,16 +22,12 @@ const handlerAdminLogin = async (request) => {
 
     const cookie = `admin-authenticated=true; Expires=${expiryDate.toUTCString()}; HttpOnly; SameSite=Strict; Path=/admin;`;
 
-    console.log(`RedirectTo: ${redirectTo}`);
-    console.log(`isLoggedIn(): ${isLoggedIn(request)}`);
-
     if(redirectTo.pathname === '/admin' || isLoggedIn(request)){
-      console.log('show admin called');
       return showAdmin(cookie, request);
     }
 
     return new Response(null, {
-      status: 307,
+      status: 302,
       headers: {
         'Location': redirectTo,
         'Set-Cookie': cookie,
@@ -51,7 +45,6 @@ const handlerAdminLogin = async (request) => {
 export default handlerAdminLogin;
 
 const showAdmin = (cookie, request) => {
-  console.log('Called inside "showADmin()"');
   let content = handlerAdminTemplate(request,true);
 
   // Ensure content is wrapped in a Response object if not already

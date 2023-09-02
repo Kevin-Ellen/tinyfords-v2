@@ -1,0 +1,12 @@
+// src > lib > scss > base > base.scss - The simpler things in life
+
+@use "sass:map";
+
+@use '../../../../lib/scss/abstracts/_variables' as v;
+@use '../../../../lib/scss/abstracts/_functions' as f;
+@use '../../../../lib/scss/abstracts/_mixins' as m;
+
+
+.adminCenter h1{
+  text-align:center;
+}

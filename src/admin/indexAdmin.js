@@ -5,7 +5,7 @@ import handlerTemplate from './lib/handlers/template';
 import handlerAdminLogin from './lib/handlers/adminLogin';
 import handlerAdminLogout from './lib/handlers/adminLogout';
 
-const indexAdmin = (request) => {
+const indexAdmin = async (request) => {
   const url = new URL(request.url);
 
   switch (request.method){

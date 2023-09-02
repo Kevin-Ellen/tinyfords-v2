@@ -9,7 +9,7 @@ import pageHead from '../construction/pageHead';
 import pageBreadcrumbs from '../construction/pageBreadcrumbs';
 import pageFooter from '../construction/pageFooter';
 
-import templateHome from '../templates/templateHome';
+import templateHome from '../templates/home';
 
 
 const handlerTemplate = async (url) => {
@@ -19,7 +19,7 @@ const handlerTemplate = async (url) => {
     case '/':
       const dataPageCurrent = findDataPageCurrent(url.pathname,dataPageAll);
       dataPageCurrent.url = url;
-      if (!dataPage) {
+      if (!dataPageCurrent) {
         return new Response('Not Found',{status:404});
       }
 
@@ -79,7 +79,7 @@ const createPage = async (dataPageCurrent, dataPageAll) => {
 
   const resolvedSections = await Promise.all(
     sections.map(section => section(dataPageCurrent, dataPageAll))
-  );
+  )
 
   return resolvedSections.join('');
 }

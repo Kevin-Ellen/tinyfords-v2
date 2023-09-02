@@ -3,8 +3,8 @@
 @use "sass:map";
 
 @use '../abstracts/_variables' as v;
-@use '../abstracts/_functions.scss' as f;
-@use '../abstracts/_mixins.scss' as m;
+@use '../abstracts/_functions' as f;
+@use '../abstracts/_mixins' as m;
 
 .breadcrumbsContainer{
   margin:calc(36px + 3 * map.get(v.$spacing, padding)) calc(1.5 * map.get(v.$spacing, padding)) map.get(v.$spacing, padding);

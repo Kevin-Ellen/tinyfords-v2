@@ -39,24 +39,76 @@
         <li><a href="/admin">Admin home</a></li>
       </ul>
     </nav>,<main>
-      <section class="fragmentContent adminLogin">
-        <h1>Login</h1>
-        <div class="loginContainer">
-          <form action="/admin/login" method="post" class="loginForm">
-            <div class="inputGroup">
-              <label for="username">Username:</label>
-              <input type="text" id="username" name="username" required>
-            </div>
-  
-            <div class="inputGroup">
-              <label for="password">Password:</label>
-              <input type="password" id="password" name="password" required>
-            </div>
-  
-            <button type="submit">Login</button>
+      
+      <section class="fragmentContent adminCenter">
+        <h1>Add car</h1>
+      
+          <div class="formContainer">
+            <form action="/admin/add-car" method="post" class="adminForm">
+
+              <div class="inputGroup">
+                <label for="code">Code:</label>
+                <input type="text" id="code" name="code" required>
+              </div>
+              
+              <div class="inputGroup">
+                <label for="base">Base:</label>
+                <input type="text" id="base" name="base" required>
+              </div>
+
+              <div class="inputGroup">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+
+              <div class="inputGroup">
+                <label for="make">Make:</label>
+                <input type="text" id="make" name="make">
+              </div>
+
+              <div class="inputGroup">
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                  <option value="option1">Option 1</option>
+                  <option value="option2">Option 2</option>
+                </select>
+              </div>
+
+            <fieldset class="inputGroup">
+                <legend>Case Details</legend>
+      
+                <label for="caseType">Case Type:</label>
+                <select id="caseType" name="caseType">
+                    <option value="type1">Type 1</option>
+                    <option value="type2">Type 2</option>
+                    <!-- ... other options ... -->
+                </select>
+                <div class="radioGroup">
+                  <label>Has Case:</label>
+                  <div class="radioEntry">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="yes" name="hasCase" value="true">
+                  </div>
+      
+                  <div class="radioEntry">
+                    <label for="no">No</label>
+                    <input type="radio" id="no" name="hasCase" value="false">
+                  </div>
+                  <div class="radioEntry">
+                    <label for="na">N/A</label>
+                    <input type="radio" id="na" name="hasCase" value="null">
+                  </div>
+                </div>
+            </fieldset>
+            <button type="submit">Add car</button>
           </form>
         </div>
-      </section>
+        </div>
+        </section>
+
+
+
+
   </main>,
     <footer class="siteFooter">
       <h2>Thanks for visiting Tiny Fords</h2>

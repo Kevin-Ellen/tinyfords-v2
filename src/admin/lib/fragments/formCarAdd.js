@@ -1,72 +1,83 @@
 // src > admin > lib > fragments > formCarAdd.js - Form to add vehicles to the JSON
 
-const fragmentFormCarAdd = () => {
-  const html = `
-    <form action="/admin/add-car" method="post">
-      <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-      </div>
+import { servicesGithubDataCarsAll } from '../../../lib/services/github';
+
+import { getUniqueCarCategories } from '../../../lib/utils/dataCars';
+
+const fragmentFormCarAdd = async () => {
+
+  const dataCarsAll = await servicesGithubDataCarsAll();
+  
+  const categories = getUniqueCarCategories(dataCarsAll).map(category => `<option value="${category.short}">${category.name}</option>`).join('');
+
+
+  const html = `<section class="fragmentContent adminCenter">
+    <h1>Add car</h1>
+    <div class="formContainer">
+
+      <form action="/admin/add-car" method="post" class="adminForm">
+
+        <div class="inputGroup">
+          <label for="code">Code:</label>
+          <input type="text" id="code" name="code" required>
+        </div>
+
+        <div class="inputGroup">
+          <label for="base">Base:</label>
+          <input type="text" id="base" name="base" required>
+        </div>
+
+        <div class="inputGroup">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="inputGroup">
+          <label for="make">Make:</label>
+          <input type="text" id="make" name="make">
+        </div>
+
+        <div class="inputGroup">
+          <label for="category">Category:</label>
+          <select id="category" name="category">
+            ${categories}
+          </select>
+        </div>
+
+        <fieldset class="inputGroup">
+          <legend>Case Details</legend>
+        
+          <label for="caseType">Case Type:</label>
+          <select id="caseType" name="caseType">
+            <option value="type1">Type 1</option>
+            <option value="type2">Type 2</option>
+          </select>
           
-          <div>
-            <label for="make">Make:</label>
-            <input type="text" id="make" name="make">
-          </div>
-          
-          <div>
-            <label for="brand">Brand:</label>
-            <input type="text" id="brand" name="brand">
-          </div>
-          
-          <div>
-            <label for="code">Code:</label>
-            <input type="text" id="code" name="code">
-          </div>
-          
-          <div>
-            <label for="base">Base:</label>
-            <input type="text" id="base" name="base">
-          </div>
-          
-          <div>
-            <label for="type">Type:</label>
-            <input type="text" id="type" name="type">
-          </div>
-          
-          <div>
+          <div class="radioGroup">
             <label>Has Case:</label>
-            <input type="radio" id="hasCaseYes" name="hasCase" value="true">
-            <label for="hasCaseYes">Yes</label>
+            
+            <div class="radioEntry">
+              <label for="yes">Yes</label>
+              <input type="radio" id="yes" name="hasCase" value="true">
+            </div>
 
-            <input type="radio" id="hasCaseNo" name="hasCase" value="false" checked>
-            <label for="hasCaseNo">No</label>
-
-            <input type="radio" id="hasCaseNA" name="hasCase" value="null">
-            <label for="hasCaseNA">N/A</label>
+            <div class="radioEntry">
+              <label for="no">No</label>
+              <input type="radio" id="no" name="hasCase" value="false">
+            </div>
+            
+            <div class="radioEntry">
+              <label for="na">N/A</label>
+              <input type="radio" id="na" name="hasCase" value="null">
+            </div>
           </div>
+        </fieldset>
+        <button type="submit">Add car</button>
+      </form>
+    </div>
+  </section>`;
 
-          <div>
-            <label for="hasPhoto">Has Photo:</label>
-            <input type="checkbox" id="hasPhoto" name="hasPhoto" value="true">
-          </div>
-
-          <div>
-            <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" name="quantity" value="1" min="1">
-          </div>
-
-          <div>
-            <input type="submit" value="Add Car">
-          </div>
-        </form>
-  `;
-
-  return new Response(html, {
-    headers: {
-      'Content-Type': 'text/html',
-      'X-Robots-Tag': 'noindex'
-    }
-  });
+  return html;
 }
 
 export default fragmentFormCarAdd;

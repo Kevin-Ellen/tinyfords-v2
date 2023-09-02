@@ -11,7 +11,7 @@
     },
     "code": "hcw87",
     "base": "r04",
-    "case": {
+    "caseDetails": {
       "type": "long",
       "status": true
     },
@@ -34,7 +34,7 @@
     },
     "code": null,
     "base": null,
-    "case": {
+    "caseDetails": {
       "type": "other",
       "status": null
     },

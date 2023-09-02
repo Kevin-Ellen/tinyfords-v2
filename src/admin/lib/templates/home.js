@@ -1,12 +1,10 @@
 // src > admin > lib > templates > home.js - Landing page for admin
 
-import fragmentContent from '../../../lib/fragments/fragmentContent';
+import fragmentContent from '../../../lib/fragments/content';
 
 import { quickLogin } from '../utils/misc';
 
 const templateAdminHome = (request, isAuthenticated=false) => {
-
-  console.log(`Called from home: ${quickLogin(request)}`);
   
   const content = [
     `<h1>Admin panel</h1>`,
