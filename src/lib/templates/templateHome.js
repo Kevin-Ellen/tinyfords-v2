@@ -1,7 +1,7 @@
 // src > lib > templates > templateHome.js - Homepage template
 
 import fragmentContent from '../fragments/fragmentContent';
-import fragmentGrid from '../fragments/fragmentGrid';
+import fragmentCarsGrid from '../fragments/fragmentCarsGrid';
 
 import { utilGitHubGetAllCarsData } from '../utils/utilsGitHub';
 import { utilGetLatestCars } from '../utils/utilsCarData';
@@ -21,7 +21,7 @@ const templateHome = async (pageData, allPageData) => {
   return sections = [
     `<main>`,
       fragmentContent(content),
-      fragmentGrid('Latest additions',2,latestCars),
+      fragmentCarsGrid('Latest additions',2,latestCars),
     `<main>`,
   ].join('');
 }

@@ -6,7 +6,7 @@
 @use '../abstracts/_functions.scss' as f;
 @use '../abstracts/_mixins.scss' as m;
 
-.fragmentGrid{
+.fragmentCarsGrid{
   display: flex;
   gap: map.get(v.$spacing, padding);
   flex-wrap:wrap;

@@ -4,7 +4,7 @@
     "name": "'87 Ford Sierra Cosworth",
     "make": "Ford",
     "brand": "Hot Wheels",
-    "category":{
+    "categoryDetails":{
       "name": "Hot Wheels",
       "folder": "hotwheels",
       "short": "hw"
@@ -27,7 +27,7 @@
     "name": "Mustang GT",
     "make": "Ford",
     "brand": "wilko",
-    "category":{
+    "categoryDetails":{
       "name": "Other",
       "folder": "other",
       "short": "ot"

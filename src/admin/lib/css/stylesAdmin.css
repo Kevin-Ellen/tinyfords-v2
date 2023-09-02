@@ -515,30 +515,30 @@ main {
   margin: 16px 0 80px;
 }
 
-.fragmentGrid {
+.fragmentCarsGrid {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.fragmentGrid .fragmentGridCard {
+.fragmentCarsGrid .fragmentGridCard {
   border-top-right-radius: 8px;
   background: white;
   max-width: 150px;
   font-size: 0.8rem;
   overflow: hidden;
 }
-.fragmentGrid .fragmentGridCard img {
+.fragmentCarsGrid .fragmentGridCard img {
   width: 150px;
   height: 150px;
 }
-.fragmentGrid .fragmentGridCard .fragmentGridCardContent {
+.fragmentCarsGrid .fragmentGridCard .fragmentGridCardContent {
   list-style: none;
   padding: 0;
   margin: 0;
   padding: 8px;
 }
-.fragmentGrid .fragmentGridCard .fragmentGridCardContent h3 {
+.fragmentCarsGrid .fragmentGridCard .fragmentGridCardContent h3 {
   font-size: 1.2em;
   margin: 0 0 8px;
 }

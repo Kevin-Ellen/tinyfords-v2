@@ -1,6 +1,6 @@
-// src > lib > fragments > fragmentGrid.js
+// src > lib > fragments > fragmentCarsGrid.js
 
-const fragmentGrid = (heading,headingLevel,data) => {
+const fragmentCarsGrid = (heading,headingLevel,data) => {
 
   const levelNumber = Number(headingLevel);
   headingLevel = !isNaN(levelNumber) ? Math.min(6, Math.max(2, Math.round(levelNumber))) : 2;
@@ -14,13 +14,13 @@ const fragmentGrid = (heading,headingLevel,data) => {
   return html;
 }
 
-export default fragmentGrid;
+export default fragmentCarsGrid;
 
 const createGrid = (data) => {
 
   const cards = data.map(createCard).join('');
 
-  const html = `<div class="fragmentGrid">
+  const html = `<div class="fragmentCarsGrid">
     ${cards}
   </div>`;
 
@@ -28,7 +28,7 @@ const createGrid = (data) => {
 }
 
 const createCard = (car) => {
-  const imageUrl = `/images/${car.category.folderName}/front-250/${car.category.shortName}-${car.code || car.id}-front-250.jpg`;
+  const imageUrl = `/images/${car.category.folder}/front-250/${car.category.short}-${car.code || car.id}-front-250.jpg`;
 
   return `
     <div class="fragmentGridCard">
@@ -38,7 +38,7 @@ const createCard = (car) => {
         <li><strong>Make:</strong> ${car.make}</li>
         ${car.code ? `<li><strong>Code:</strong> ${car.code}</li>` : ''}
         ${car.base ? `<li><strong>Base:</strong> ${car.base}</li>` : ''}
-        <li><strong>Added:</strong> ${car.addedDate}</li>
+        <li><strong>Added:</strong> ${car.addedDetails.date}</li>
       </ul>
     </div>`;
 }
