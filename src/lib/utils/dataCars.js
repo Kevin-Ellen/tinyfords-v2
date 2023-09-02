@@ -26,10 +26,10 @@ export const getUniqueCarCategories = (data) => {
 
 export const getUniqueCarCaseTypes = (data) => {
   const uniqueCarCaseTypeMap = data.reduce((acc, car) => {
-    const { type } = car.caseDetails;
+    const { type, name } = car.caseDetails;
     
     if (!acc[type]) {
-      acc[type] = { type };
+      acc[type] = { type, name };
     }
     
     return acc;
