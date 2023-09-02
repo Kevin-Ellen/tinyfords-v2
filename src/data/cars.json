@@ -13,6 +13,7 @@
     "base": "r04",
     "caseDetails": {
       "type": "long",
+      "name": "Long",
       "status": true
     },
     "hasPhoto": true,
@@ -35,6 +36,7 @@
     "code": null,
     "base": null,
     "caseDetails": {
+      "name": "Other",
       "type": "other",
       "status": null
     },
