@@ -23,3 +23,17 @@ export const getUniqueCarCategories = (data) => {
 
   return Object.values(uniqueCategoriesMap);
 }
+
+export const getUniqueCarCaseTypes = (data) => {
+  const uniqueCarCaseTypeMap = data.reduce((acc, car) => {
+    const { type } = car.caseDetails;
+    
+    if (!acc[type]) {
+      acc[type] = { type };
+    }
+    
+    return acc;
+  }, {});
+
+  return Object.values(uniqueCarCaseTypeMap);
+}
