@@ -36,8 +36,8 @@
     "code": null,
     "base": null,
     "caseDetails": {
-      "id": "Other",
-      "type": "other",
+      "id": "other",
+      "name": "Other",
       "status": null
     },
     "hasPhoto": true,
