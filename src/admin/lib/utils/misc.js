@@ -16,3 +16,11 @@ export const quickLogin = (request) => {
     '</main>',
   ].join('');
 }
+
+export const getLastCarId = (data) => {
+  return Math.max(...data.map(car => car.id))+1;
+}
+
+export const doeValueExist = (dataArray, key, value) => {
+  return dataArray.some(item => item[key] === value);
+}

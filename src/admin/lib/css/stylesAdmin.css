@@ -691,3 +691,18 @@ main {
 .loginContainer .loginForm button:hover {
   background-color: #cb1116;
 }
+
+.carCard {
+  border: 1px solid #e0e0e0;
+  padding: 16px;
+  border-radius: 8px;
+  width: 300px;
+}
+.carCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.carCard ul li {
+  margin-bottom: 8px;
+}

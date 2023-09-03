@@ -7,33 +7,62 @@ import handlerAdminLogout from './lib/handlers/adminLogout';
 
 import handlerCarAdd from './lib/handlers/carAdd';
 
+
 const indexAdmin = async (request) => {
   const url = new URL(request.url);
-
+  
   switch (request.method){
     case 'GET':
       switch (url.pathname){
         case '/admin': 
         case '/admin/add-car':
-          return handlerTemplate(request);
+          return await handlerTemplate(request);
 
         case '/admin/logout':
           return handlerAdminLogout(request);
 
-        default: return new Response('not done yet');
+        default: 
+          return new Response('GET: not done yet');
       }
 
     case 'POST':
       switch (url.pathname){
         case '/admin': return handlerAdminLogin(request);
         case '/admin/add-car': return handlerCarAdd(request);
-
-        default: return new Response('not done yet');
+        
+        default:
+          return new Response('POST: not done yet');
       }
-    
+
     default:
       return new Response('Method not allowed', { status: 405 });
   }
 }
+
+//   switch (request.method){
+//     case 'GET':
+//       switch (url.pathname){
+//         case '/admin': 
+//         case '/admin/add-car':
+//           return await handlerTemplate(request);
+
+//         case '/admin/logout':
+//           return handlerAdminLogout(request);
+
+//         default: return new Response('not done yet');
+//       }
+
+//     case 'POST':
+//       switch (url.pathname){
+//         case '/admin': return handlerAdminLogin(request);
+//         case '/admin/add-car': return handlerCarAdd(request);
+
+//         default: return new Response('not done yet');
+//       }
+    
+//     default:
+//       return new Response('Method not allowed', { status: 405 });
+//   }
+// }
 
 export default indexAdmin;

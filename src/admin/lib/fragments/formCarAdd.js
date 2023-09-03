@@ -2,7 +2,7 @@
 
 import { servicesGithubDataCarsAll } from '../../../lib/services/github';
 
-import { getUniqueCarCategories, getUniqueCarCaseTypes } from '../../../lib/utils/dataCars';
+import { getUniqueCarCategories, getUniqueCarCaseTypes, getLastCarId } from '../../../lib/utils/dataCars';
 
 const fragmentFormCarAdd = async () => {
 
@@ -14,12 +14,12 @@ const fragmentFormCarAdd = async () => {
 
 
   const html = `<section class="fragmentContent adminCenter">
-    <h1>Add car</h1>
+    <h2>Add car form</h2>
     <div class="formContainer">
 
       <form action="/admin/add-car" method="post" class="adminForm">
 
-      <input type="hidden" name="id" id="id" value="${Math.max(...dataCarsAll.map(car => car.id))+1}">
+      <input type="hidden" name="id" id="id" value="${getLastCarId(dataCarsAll)}">
 
         <div class="inputGroup">
           <label for="code">Code:</label>

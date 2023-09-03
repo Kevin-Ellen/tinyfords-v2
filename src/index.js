@@ -21,16 +21,6 @@ const handleRequest = async (request) => {
   const url = new URL(request.url);
   url.params = new URLSearchParams(url.search);
 
-  // const arr = [
-  //   '/hotwheels/images',
-  //   '/matchbox/images',
-  //   '/other/images',
-  //   '/icons',
-  //   '/favicon.ico',
-  //   '/social-media/images',
-  //   '/fonts/',
-  // ];
-
   if((url.pathname.startsWith('/images/')) || (url.pathname.startsWith('/fonts/'))){
     return handlerStatic(url) || handlerError();
   }

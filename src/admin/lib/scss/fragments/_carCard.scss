@@ -1,0 +1,23 @@
+// src > lib > scss > fragments > _carCard.scss - Card with the car details
+
+@use "sass:map";
+
+@use '../../../../lib/scss/abstracts/_variables' as v;
+@use '../../../../lib/scss/abstracts/_functions' as f;
+@use '../../../../lib/scss/abstracts/_mixins' as m;
+
+.carCard {
+  border: 1px solid #e0e0e0;
+  padding: 16px;
+  border-radius: 8px;
+  width: 300px; 
+
+
+  ul{
+    @include m.removeListStyle;
+
+    li{
+      margin-bottom: 8px;
+    }
+  }
+}

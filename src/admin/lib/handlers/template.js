@@ -13,7 +13,7 @@ import templateHome from '../templates/home';
 import templateCarAdd from '../templates/carAdd';
 
 
-const handlerTemplate = async (request, isAuthenticated=false) => {
+const handlerTemplate = async (request, options = {}) => {
   const url = new URL(request.url);
 
   const pageNames = {
@@ -24,10 +24,9 @@ const handlerTemplate = async (request, isAuthenticated=false) => {
   switch(url.pathname){
     case '/admin':
     case '/admin/add-car':
+
       return new Response(
-        await createPage(pageNames[url.pathname], request, {
-          isAuthenticated: true,
-        }),
+        await createPage(pageNames[url.pathname], request, options),
         {
           status:200,
           headers: {
@@ -46,7 +45,11 @@ export default handlerTemplate;
 const createPage = async (templateName,request, options = {}) => {
   const {
     isAuthenticated = false,
-    feedback = null
+    feedback = {
+      success: null,
+      message: null,
+    },
+    data = null
   } = options;
 
   const templates = {
@@ -65,8 +68,8 @@ const createPage = async (templateName,request, options = {}) => {
 
   const resolvedSections = await Promise.all(
     sections.map(async section => {
-        const result = await section(request, isAuthenticated);
-        return Array.isArray(result) ? result.join('') : result;
+      const result = await section(request, options);
+      return Array.isArray(result) ? result.join('') : result;
     })
   );
 

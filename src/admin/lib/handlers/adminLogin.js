@@ -8,7 +8,8 @@ const validName = ADMIN_NAME;
 const validPassword = ADMIN_PASSWORD;
 
 
-const handlerAdminLogin = async (request) => {
+const handlerAdminLogin = async (request, options = {}) => {
+  
   const formData = await request.formData();
   const submittedName = formData.get('username');
   const submittedPassword = formData.get('password');
@@ -44,8 +45,8 @@ const handlerAdminLogin = async (request) => {
 }
 export default handlerAdminLogin;
 
-const showAdmin = (cookie, request) => {
-  let content = handlerAdminTemplate(request,{
+const showAdmin = async (cookie, request, ) => {
+  let content = await handlerAdminTemplate(request,{
     isAuthenticated: true
   });
 

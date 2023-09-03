@@ -1,8 +1,9 @@
 // src > admin > lib > carAdd.js - Adding a car :)
 
-import { adminGitHubGetCarsData, adminGitHubSubmitCarsData } from "../services/github";
+import { adminGitHubGetCarsData, adminGitHubSubmitCarsData } from '../services/github';
+import { getUniqueCarCategories, getUniqueCarCaseTypes, doeValueExist } from '../../../lib/utils/dataCars';
 
-import { getUniqueCarCategories, getUniqueCarCaseTypes } from "../../../lib/utils/dataCars";
+import handlerTemplate from './template';
 
 const handlerCarAdd = async (request) => {
   const formData = await request.formData();
@@ -13,19 +14,27 @@ const handlerCarAdd = async (request) => {
 
   const newCar = transformEntryToCar(formDataObject, dataCarsAll.data);
 
-  console.log(newCar);
+  if(doesKeyExist(dataCarsAll, 'id', newCar.id)){
+    return handlerTemplate(request,{
+      feedback: {
+        success: false,
+        message: 'Failed - ID already exists',
+      },
+      data:newCar
+    });
+  }
 
   dataCarsAll.data.push(newCar);
 
   const response = await adminGitHubSubmitCarsData(dataCarsAll.data, dataCarsAll.sha);
 
-  console.log(response);
-
-  if (response.success) {
-    return new Response(response.message);
-  }else{
-    return new Response(response.message);
-  }
+  return handlerTemplate(request,{
+    feedback: {
+      success: response.success,
+      message: response.message
+    },
+    data:newCar
+  });
 }
 export default handlerCarAdd;
 
@@ -74,3 +83,24 @@ const transformEntryToCar = (entry, dataCarsAll) => {
     hasPhoto: hasPhoto,
   };
 };
+
+// const showCarAdd = (request, request) => {
+//   let content = handlerAdminTemplate(request,{
+//     isAuthenticated: true
+//   });
+
+//   // Ensure content is wrapped in a Response object if not already
+//   if (!(content instanceof Response)) {
+//     content = new Response(content,{
+//       status:200,
+//       headers:{
+//         'x-robots-x': 'noindex',
+//         'Content-Type': 'text/html',
+//       }
+//     });
+//   }
+
+//   content.headers.set('Set-Cookie', cookie);
+
+//   return content;
+// }
