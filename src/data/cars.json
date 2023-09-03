@@ -5,14 +5,14 @@
     "make": "Ford",
     "brand": "Hot Wheels",
     "categoryDetails": {
+      "id": "hw",
       "name": "Hot Wheels",
-      "folder": "hotwheels",
-      "short": "hw"
+      "folder": "hotwheels"
     },
     "code": "hcw87",
     "base": "r04",
     "caseDetails": {
-      "type": "long",
+      "id": "long",
       "name": "Long",
       "status": true
     },
@@ -29,14 +29,14 @@
     "make": "Ford",
     "brand": "wilko",
     "categoryDetails": {
+      "id": "ot",
       "name": "Other",
-      "folder": "other",
-      "short": "ot"
+      "folder": "other"
     },
     "code": null,
     "base": null,
     "caseDetails": {
-      "name": "Other",
+      "id": "Other",
       "type": "other",
       "status": null
     },
@@ -53,14 +53,14 @@
     "make": "Ford",
     "brand": "LootCrate",
     "categoryDetails": {
+      "id": "ot",
       "name": "Other",
-      "folder": "other",
-      "short": "ot"
+      "folder": "other"
     },
     "code": null,
     "base": null,
     "caseDetails": {
-      "type": "other",
+      "id": "other",
       "name": "Other",
       "status": null
     },
@@ -77,14 +77,14 @@
     "make": "Subaru",
     "brand": "Tesco",
     "categoryDetails": {
+      "id": "ot",
       "name": "Other",
-      "folder": "other",
-      "short": "ot"
+      "folder": "other"
     },
     "code": null,
     "base": null,
     "caseDetails": {
-      "type": "other",
+      "id": "other",
       "name": "Other",
       "status": null
     },

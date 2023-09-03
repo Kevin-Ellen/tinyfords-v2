@@ -15,10 +15,9 @@ const fragmentFormCarAdd = async (options={}) => {
   const dataCarsAll = await servicesGithubDataCarsAll();
 
   const dataCar = utilCarConstruct(data, dataCarsAll);
-  console.log(dataCar);
 
-  const categories = generateOptions(getUniqueCarCategories(dataCarsAll), dataCar.categoryDetails.short, 'short', 'name');
-  const cases = generateOptions(getUniqueCarCaseTypes(dataCarsAll), dataCar.caseDetails.type, 'type', 'name');
+  const categories = generateOptions(getUniqueCarCategories(dataCarsAll), dataCar.categoryDetails.id, 'id', 'name');
+  const cases = generateOptions(getUniqueCarCaseTypes(dataCarsAll), dataCar.caseDetails.id, 'id', 'name');
 
   const html = `<section class="fragmentContent adminCenter">
     <h2>Add car form</h2>
@@ -55,7 +54,7 @@ const fragmentFormCarAdd = async (options={}) => {
 
         <div class="inputGroup">
           <label for="category">Category:</label>
-          <select id="category" name="category">
+          <select id="category" name="category" required>
             <option value="" selected disabled>Select a category</option>
             ${categories}
           </select>

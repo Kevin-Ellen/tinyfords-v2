@@ -4,15 +4,20 @@ import { getUniqueCarCaseTypes, getUniqueCarCategories } from "./dataCars";
 
 const utilCarConstruct = (data = {}, dataCarsAll = []) => {
 
+  const processedData = data ? processFormData(data) : {};
+
+  const newCar = {...templateCar, ...processedData};
+
   const caseDetail = getDetail(data, dataCarsAll, getUniqueCarCaseTypes, 'caseType', 'caseDetails');
   const categoryDetail = getDetail(data, dataCarsAll, getUniqueCarCategories, 'category', 'categoryDetails');
-  
-  const newCar = JSON.parse(JSON.stringify(templateCar));
+
+  console.log(categoryDetail);
 
   if (caseDetail) {newCar.caseDetails = caseDetail;}
   if (categoryDetail) {newCar.categoryDetails = categoryDetail;}
   newCar.hasPhoto = processHasPhoto(data.hasPhoto);
 
+  // console.log(newCar);
   return newCar;
 }
 
@@ -24,16 +29,16 @@ const templateCar = {
   make: '',
   brand: '',
   categoryDetails: {
+    id: '',
     name: '',
     folder: '',
-    short: ''
   },
   code: null,
   base: null,
   caseDetails: {
-    type: '',
+    id: '',
     name: '',
-    status: null
+    status: null,
   },
   quantity: 0,
   addedDetails: {
@@ -43,6 +48,12 @@ const templateCar = {
   hasPhoto: false,
 };
 
+const processFormData = (formData) => {
+  console.log(formData);
+  const processedData = formData;
+  return processedData;
+}
+
 const processHasPhoto = (value) => {
   if (value === 'on') return true;        // formData for checked checkbox
   if (value === true) return true;       // previously submitted data
@@ -51,6 +62,10 @@ const processHasPhoto = (value) => {
 }
 
 const getDetail = (entry, dataCarsAll, uniqueMethod, entryProperty, existingProperty) => {
+  console.log('Entry:', entry);
+  console.log('Entry Property Value:', entry[entryProperty]);
+  console.log('Existing Property Value:', entry[existingProperty]);
+
   if(!entry){ return false;}
   
   if(entry[existingProperty]){
@@ -58,9 +73,10 @@ const getDetail = (entry, dataCarsAll, uniqueMethod, entryProperty, existingProp
   }
 
   if(entry[entryProperty]){
-    return uniqueMethod(dataCarsAll).find(item => item.type === entry[entryProperty]);
+    const detail = uniqueMethod(dataCarsAll).find(item => item.type === entry[entryProperty]);
+    console.log('Found detail:', detail);
+    return detail;
   }
 
-  return undefined; // or whatever default value you want to return when there's no match
+  return undefined;
 }
-

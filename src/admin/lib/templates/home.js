@@ -5,7 +5,6 @@ import fragmentContent from '../../../lib/fragments/content';
 import { quickLogin } from '../utils/misc';
 
 const templateAdminHome = (request, options) => {
-  console.log(options);
   
   const content = [
     `<h1>Admin panel</h1>`,

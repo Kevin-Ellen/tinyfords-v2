@@ -6,6 +6,8 @@ import { duplicateChecker } from '../utils/misc';
 
 import handlerTemplate from './template';
 
+import utilCarConstruct from '../../../lib/utils/carConstruct';
+
 const handlerCarAdd = async (request) => {
   const formData = await request.formData();
   const formDataObject = Object.fromEntries(formData.entries());
@@ -13,12 +15,13 @@ const handlerCarAdd = async (request) => {
 
   const dataCarsAll = await adminGitHubGetCarsData();
 
-  const newCar = transformEntryToCar(formDataObject, dataCarsAll.data);
+  const newCar = utilCarConstruct(formDataObject, dataCarsAll.data);
+
 
   const dupeCheck = duplicateChecker(dataCarsAll.data, ['id', 'code'], newCar);
 
 
-  if (!dupeCheck.success){
+  //if (!dupeCheck.success){
     return handlerTemplate(request,{
       feedback: {
         success: false,
@@ -26,7 +29,7 @@ const handlerCarAdd = async (request) => {
       },
       data:newCar
     });
-  }
+  //}
 
   dataCarsAll.data.push(newCar);
 
