@@ -18,7 +18,7 @@ const templateAdminCarAdd = async (request, options = {}) => {
   const sections = [
     fragmentContent(contentTop),
     contentFeedback || null,
-    await fragmentFormCarAdd(),
+    await fragmentFormCarAdd(options),
   ].join('');
 
   return quickLogin(request) || sections;
@@ -26,8 +26,6 @@ const templateAdminCarAdd = async (request, options = {}) => {
 export default templateAdminCarAdd;
 
 const addedDetail = (options) => {
-  console.log(options);
-  // if(!options.feedback.success){ return `<h2>${options.feedback.message}</h2>`}
 
   const sections = [
     `<h2>${options.feedback.message}</h2>`,

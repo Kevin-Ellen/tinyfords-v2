@@ -576,6 +576,7 @@ main {
   border: 1px solid #e0e0e0;
   border-radius: 5px;
   transition: border-color 0.3s;
+  text-align: center;
 }
 .formContainer .adminForm .inputGroup input:focus,
 .formContainer .adminForm .inputGroup select:focus {
@@ -642,54 +643,6 @@ main {
 
 .adminCenter h1 {
   text-align: center;
-}
-
-.adminLogin h1 {
-  text-align: center;
-}
-
-.loginContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-.loginContainer .loginForm {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-.loginContainer .loginForm .inputGroup {
-  margin-bottom: 15px;
-}
-.loginContainer .loginForm .inputGroup label {
-  display: block;
-  margin-bottom: 5px;
-}
-.loginContainer .loginForm .inputGroup input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #e0e0e0;
-  border-radius: 5px;
-  transition: border-color 0.3s;
-}
-.loginContainer .loginForm .inputGroup input:focus {
-  border-color: #3498db;
-}
-.loginContainer .loginForm button {
-  width: 100%;
-  padding: 10px;
-  background-color: rgb(237, 34, 40);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.loginContainer .loginForm button:hover {
-  background-color: #cb1116;
 }
 
 .carCard {
