@@ -1,1 +1,98 @@
-[{"id":1,"name":"'87 Ford Sierra Cosworth","make":"Ford","brand":"Hot Wheels","categoryDetails":{"id":"hw","name":"Hot Wheels","folder":"hotwheels"},"code":"hcw87","base":"r04","caseDetails":{"id":"long","name":"Long","status":true},"hasPhoto":true,"addedDetails":{"date":"2023-01-08","by":"Kevin"},"quantity":1},{"id":2,"name":"Mustang GT","make":"Ford","brand":"wilko","categoryDetails":{"id":"ot","name":"Other","folder":"other"},"code":null,"base":null,"caseDetails":{"id":"other","name":"Other","status":null},"hasPhoto":true,"addedDetails":{"date":"2023-01-08","by":"Kevin"},"quantity":1},{"id":3,"name":"'67 Mustang Custom 'Eleanor'","make":"Ford","brand":"LootCrate","categoryDetails":{"id":"ot","name":"Other","folder":"other"},"code":null,"base":null,"caseDetails":{"id":"other","name":"Other","status":null},"quantity":1,"addedDetails":{"date":"2023-09-02","by":"Kevin"},"hasPhoto":true},{"id":4,"name":"Subaru Impreza","make":"Subaru","brand":"Tesco","categoryDetails":{"id":"ot","name":"Other","folder":"other"},"code":null,"base":null,"caseDetails":{"id":"other","name":"Other","status":null},"quantity":1,"addedDetails":{"date":"2023-09-03","by":"Kevin"},"hasPhoto":true},{"id":"5","name":"test-name","make":"test-make","brand":"test-brand","categoryDetails":{"id":1,"name":"'87 Ford Sierra Cosworth","make":"Ford","brand":"Hot Wheels","categoryDetails":{"id":"hw","name":"Hot Wheels","folder":"hotwheels"},"code":"hcw87","base":"r04","caseDetails":{"id":"long","name":"Long","status":true},"hasPhoto":true,"addedDetails":{"date":"2023-01-08","by":"Kevin"},"quantity":1},"code":"test-code","base":"test-base","caseDetails":{"id":2,"name":"Mustang GT","make":"Ford","brand":"wilko","categoryDetails":{"id":"ot","name":"Other","folder":"other"},"code":null,"base":null,"caseDetails":{"id":"other","name":"Other","status":null},"hasPhoto":true,"addedDetails":{"date":"2023-01-08","by":"Kevin"},"quantity":1},"quantity":"1","addedDetails":{"date":null,"by":""},"hasPhoto":true,"category":"hw","caseType":"other","hasCase":"null"}]
+[
+  {
+    "id": 1,
+    "name": "'87 Ford Sierra Cosworth",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hcw87",
+    "base": "r04",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-01-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 2,
+    "name": "Mustang GT",
+    "make": "Ford",
+    "brand": "wilko",
+    "categoryDetails": {
+      "id": "ot",
+      "name": "Other",
+      "folder": "other"
+    },
+    "code": null,
+    "base": null,
+    "caseDetails": {
+      "id": "other",
+      "name": "Other",
+      "status": null
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-01-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 3,
+    "name": "'67 Mustang Custom 'Eleanor'",
+    "make": "Ford",
+    "brand": "LootCrate",
+    "categoryDetails": {
+      "id": "ot",
+      "name": "Other",
+      "folder": "other"
+    },
+    "code": null,
+    "base": null,
+    "caseDetails": {
+      "id": "other",
+      "name": "Other",
+      "status": null
+    },
+    "quantity": 1,
+    "addedDetails": {
+      "date": "2023-09-02",
+      "by": "Kevin"
+    },
+    "hasPhoto": true
+  },
+  {
+    "id": 4,
+    "name": "Subaru Impreza",
+    "make": "Subaru",
+    "brand": "Tesco",
+    "categoryDetails": {
+      "id": "ot",
+      "name": "Other",
+      "folder": "other"
+    },
+    "code": null,
+    "base": null,
+    "caseDetails": {
+      "id": "other",
+      "name": "Other",
+      "status": null
+    },
+    "quantity": 1,
+    "addedDetails": {
+      "date": "2023-09-03",
+      "by": "Kevin"
+    },
+    "hasPhoto": true
+  }
+]

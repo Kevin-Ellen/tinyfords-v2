@@ -62,7 +62,7 @@ const fragmentFormCarAdd = async (options={}) => {
 
         <div class="inputGroup">
           <label for="brand">Brand:</label>
-          <input type="text" id="brand" name="brand" value="${dataCar.brand || ''}" required>
+          <input type="text" id="brand" name="brand" value="${dataCar.brand || ''}">
         </div>
 
         <div class="inputGroup">
@@ -74,7 +74,7 @@ const fragmentFormCarAdd = async (options={}) => {
           <legend>Case Details</legend>
         
           <label for="caseType">Case Type:</label>
-          <select id="caseType" name="caseType">
+          <select id="caseType" name="caseType" required>
             <option value="" selected disabled>Select a type</option>
             ${cases}
           </select>

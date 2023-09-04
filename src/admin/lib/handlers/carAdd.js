@@ -17,11 +17,10 @@ const handlerCarAdd = async (request) => {
 
   const newCar = utilCarConstruct(formDataObject, dataCarsAll.data);
 
-
   const dupeCheck = duplicateChecker(dataCarsAll.data, ['id', 'code'], newCar);
 
 
-  //if (!dupeCheck.success){
+  // if (!dupeCheck.success){
     return handlerTemplate(request,{
       feedback: {
         success: false,
@@ -29,7 +28,7 @@ const handlerCarAdd = async (request) => {
       },
       data:newCar
     });
-  //}
+  // }
 
   dataCarsAll.data.push(newCar);
 

@@ -1,6 +1,6 @@
 // src > lib > utils > carConstruct.js - Quick tools for creating a car
 
-import { getUniqueCarCaseTypes, getUniqueCarCategories } from "./dataCars";
+
 import { getCaseById, getCategoryById } from "./dataCars";
 
 const utilCarConstruct = (data = {}, dataCarsAll = []) => {
@@ -9,16 +9,19 @@ const utilCarConstruct = (data = {}, dataCarsAll = []) => {
 
   const processedData = data ? processFormData(data) : {};
 
-  console.log((processedData);
-
   const newCar = {...templateCar, ...processedData};
 
-  const caseDetail = getDetail(data, dataCarsAll, getCaseById, 'caseType', 'caseDetails');
-  const categoryDetail = getDetail(data, dataCarsAll, getCategoryById, 'category', 'categoryDetails');  
 
-  if (caseDetail) {newCar.caseDetails = caseDetail;}
-  if (categoryDetail) {newCar.categoryDetails = categoryDetail;}
+  newCar.caseDetails = getCaseById(dataCarsAll, processedData.caseType) || newCar.caseDetails;
+  newCar.categoryDetails = getCategoryById(dataCarsAll, processedData.category) || newCar.categoryDetails;
+
   newCar.hasPhoto = processHasPhoto(data.hasPhoto);
+
+  switch (newCar.categoryDetails.id){
+    case 'hw':
+    case 'mb':
+      newCar.brand = newCar.categoryDetails.name;break;
+  }
 
   console.log(newCar);
   return newCar;
@@ -61,21 +64,4 @@ const processHasPhoto = (value) => {
   if (value === true) return true;       // previously submitted data
   if (value === false) return false;     // previously submitted data
   return false;                          // default for all other cases
-}
-
-const getDetail = (entry, dataCarsAll, uniqueMethod, entryProperty, existingProperty) => {
-
-  console.log("dataCarsAll:", dataCarsAll);
-  
-  if (!entry) { return false; }
-  
-  if (entry[existingProperty]) {
-    return entry[existingProperty];
-  }
-
-  if (Array.isArray(dataCarsAll) && entry[entryProperty]) {
-    return uniqueMethod(dataCarsAll).find(item => item.id === entry[entryProperty]);
-  } 
-
-  return undefined; // or whatever default value you want to return when there's no match
 }

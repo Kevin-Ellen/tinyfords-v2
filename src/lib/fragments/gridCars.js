@@ -1,5 +1,7 @@
 // src > lib > fragments > gridCars.js
 
+import utilCarConstruct from '../utils/carConstruct';
+
 const fragmentGridCars = (heading,headingLevel,dataCars) => {
 
   const levelNumber = Number(headingLevel);
@@ -16,7 +18,8 @@ export default fragmentGridCars;
 
 const createGrid = (dataCars) => {
 
-  const cards = dataCars.map(createCard).join('');
+  const constructedCars = dataCars.map(utilCarConstruct);
+  const cards = constructedCars.map(createCard).join('');
 
   const html = `<div class="fragmentCarsGrid">
     ${cards}
@@ -26,7 +29,8 @@ const createGrid = (dataCars) => {
 }
 
 const createCard = (car) => {
-  const imageUrl = `/images/${car.categoryDetails.folder}/front-250/${car.categoryDetails.short}-${car.code || car.id}-front-250.jpg`;
+
+  const imageUrl = `/images/${car.categoryDetails.folder}/front-250/${car.categoryDetails.id}-${car.code || car.id}-front-250.jpg`;
 
   return `
     <div class="fragmentGridCard">

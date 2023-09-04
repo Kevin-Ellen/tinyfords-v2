@@ -37,9 +37,9 @@ export const getUniqueCarCaseTypes = (data) => {
 }
 
 export const getCaseById = (dataCarsAll, caseId) => {
-  return dataCarsAll.find(item => item.id === caseId);
+  return dataCarsAll.find(item => item.caseDetails.id === caseId);
 }
 
 export const getCategoryById = (dataCarsAll, categoryId) => {
-  return dataCarsAll.find(item => item.id === categoryId);
+  return dataCarsAll.find(item => item.categoryDetails.id === categoryId);
 }
