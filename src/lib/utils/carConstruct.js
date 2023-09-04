@@ -1,23 +1,26 @@
 // src > lib > utils > carConstruct.js - Quick tools for creating a car
 
 import { getUniqueCarCaseTypes, getUniqueCarCategories } from "./dataCars";
+import { getCaseById, getCategoryById } from "./dataCars";
 
 const utilCarConstruct = (data = {}, dataCarsAll = []) => {
 
+  
+
   const processedData = data ? processFormData(data) : {};
+
+  console.log((processedData);
 
   const newCar = {...templateCar, ...processedData};
 
-  const caseDetail = getDetail(data, dataCarsAll, getUniqueCarCaseTypes, 'caseType', 'caseDetails');
-  const categoryDetail = getDetail(data, dataCarsAll, getUniqueCarCategories, 'category', 'categoryDetails');
-
-  console.log(categoryDetail);
+  const caseDetail = getDetail(data, dataCarsAll, getCaseById, 'caseType', 'caseDetails');
+  const categoryDetail = getDetail(data, dataCarsAll, getCategoryById, 'category', 'categoryDetails');  
 
   if (caseDetail) {newCar.caseDetails = caseDetail;}
   if (categoryDetail) {newCar.categoryDetails = categoryDetail;}
   newCar.hasPhoto = processHasPhoto(data.hasPhoto);
 
-  // console.log(newCar);
+  console.log(newCar);
   return newCar;
 }
 
@@ -49,7 +52,6 @@ const templateCar = {
 };
 
 const processFormData = (formData) => {
-  console.log(formData);
   const processedData = formData;
   return processedData;
 }
@@ -62,21 +64,18 @@ const processHasPhoto = (value) => {
 }
 
 const getDetail = (entry, dataCarsAll, uniqueMethod, entryProperty, existingProperty) => {
-  console.log('Entry:', entry);
-  console.log('Entry Property Value:', entry[entryProperty]);
-  console.log('Existing Property Value:', entry[existingProperty]);
 
-  if(!entry){ return false;}
+  console.log("dataCarsAll:", dataCarsAll);
   
-  if(entry[existingProperty]){
+  if (!entry) { return false; }
+  
+  if (entry[existingProperty]) {
     return entry[existingProperty];
   }
 
-  if(entry[entryProperty]){
-    const detail = uniqueMethod(dataCarsAll).find(item => item.type === entry[entryProperty]);
-    console.log('Found detail:', detail);
-    return detail;
-  }
+  if (Array.isArray(dataCarsAll) && entry[entryProperty]) {
+    return uniqueMethod(dataCarsAll).find(item => item.id === entry[entryProperty]);
+  } 
 
-  return undefined;
+  return undefined; // or whatever default value you want to return when there's no match
 }

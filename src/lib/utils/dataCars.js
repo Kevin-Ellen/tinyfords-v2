@@ -4,18 +4,16 @@ import { multiSort } from './misc';
 
 
 export const utilDataCarsLatest = async (data,number) => {
-  
   const sortedCars = multiSort(data,['dateAdded', 'id'], { dateAdded: 'desc', id: 'desc' });
-
   return sortedCars.slice(0,number);
 }
 
 export const getUniqueCarCategories = (data) => {
   const uniqueCategoriesMap = data.reduce((acc, car) => {
-    const { short, name, folder } = car.categoryDetails;
+    const { id, name, folder } = car.categoryDetails;
     
-    if (!acc[short]) {
-      acc[short] = { short, name, folder };
+    if (!acc[id]) {
+      acc[id] = { id, name, folder };
     }
     
     return acc;
@@ -26,14 +24,22 @@ export const getUniqueCarCategories = (data) => {
 
 export const getUniqueCarCaseTypes = (data) => {
   const uniqueCarCaseTypeMap = data.reduce((acc, car) => {
-    const { type, name } = car.caseDetails;
+    const { id, name } = car.caseDetails;
     
-    if (!acc[type]) {
-      acc[type] = { type, name };
+    if (!acc[id]) {
+      acc[id] = { id, name };
     }
     
     return acc;
   }, {});
 
   return Object.values(uniqueCarCaseTypeMap);
+}
+
+export const getCaseById = (dataCarsAll, caseId) => {
+  return dataCarsAll.find(item => item.id === caseId);
+}
+
+export const getCategoryById = (dataCarsAll, categoryId) => {
+  return dataCarsAll.find(item => item.id === categoryId);
 }

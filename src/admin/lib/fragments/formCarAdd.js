@@ -16,9 +16,9 @@ const fragmentFormCarAdd = async (options={}) => {
 
   const dataCar = utilCarConstruct(data, dataCarsAll);
 
-  const categories = generateOptions(getUniqueCarCategories(dataCarsAll), dataCar.categoryDetails.id, 'id', 'name');
-  const cases = generateOptions(getUniqueCarCaseTypes(dataCarsAll), dataCar.caseDetails.id, 'id', 'name');
-
+  const categories = generateOptions(getUniqueCarCategories(dataCarsAll), dataCar.categoryDetails.id);
+  const cases = generateOptions(getUniqueCarCaseTypes(dataCarsAll), dataCar.caseDetails.id);
+  
   const html = `<section class="fragmentContent adminCenter">
     <h2>Add car form</h2>
     <div class="formContainer">
@@ -114,7 +114,7 @@ const fragmentFormCarAdd = async (options={}) => {
 
 export default fragmentFormCarAdd;
 
-const generateOptions = (items, selectedValue, valueProp, nameProp) => {
+const generateOptions = (items, selectedValue, valueProp = 'id', nameProp = 'name') => {
   return items.map(item => `
     <option value="${item[valueProp]}" ${item[valueProp] === selectedValue ? 'selected' : ''}>
       ${item[nameProp]}
