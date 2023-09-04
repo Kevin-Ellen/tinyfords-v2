@@ -21,6 +21,7 @@ const handlerCarAdd = async (request) => {
 
 
   // if (!dupeCheck.success){
+
     return handlerTemplate(request,{
       feedback: {
         success: false,
@@ -30,7 +31,11 @@ const handlerCarAdd = async (request) => {
     });
   // }
 
+  newCar.addedDetails.by = ADMIN_NAME;
+  newCar.addedDetails.date = new Date().toISOString().split('T')[0];
+
   dataCarsAll.data.push(newCar);
+
 
   const response = await adminGitHubSubmitCarsData(dataCarsAll.data, dataCarsAll.sha);
 

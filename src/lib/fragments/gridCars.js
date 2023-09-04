@@ -18,7 +18,7 @@ export default fragmentGridCars;
 
 const createGrid = (dataCars) => {
 
-  const constructedCars = dataCars.map(utilCarConstruct);
+  const constructedCars = dataCars.map(car => utilCarConstruct(car, dataCars));
   const cards = constructedCars.map(createCard).join('');
 
   const html = `<div class="fragmentCarsGrid">

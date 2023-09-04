@@ -23,6 +23,9 @@ export const getLastCarId = (data) => {
 
 export const duplicateChecker = (dataArray, keys, values) => {
   for (let key of keys) {
+    if (key === 'code' && values[key] === null) {
+      continue;
+    }
     if (dataArray.some(item => item[key] === values[key])) {
       return {
         success: false,

@@ -4,7 +4,6 @@ import { servicesGithubDataCarsAll } from '../../../lib/services/github';
 import { getUniqueCarCategories, getUniqueCarCaseTypes,  } from '../../../lib/utils/dataCars';
 
 import { getLastCarId, duplicateChecker } from '../utils/misc';
-// import { transformEntryToCar } from '../utils/cars';
 
 import utilCarConstruct from '../../../lib/utils/carConstruct';
 
@@ -14,7 +13,10 @@ const fragmentFormCarAdd = async (options={}) => {
 
   const dataCarsAll = await servicesGithubDataCarsAll();
 
-  const dataCar = utilCarConstruct(data, dataCarsAll);
+
+  const dataCar = (options && options.feedback && options.feedback.success) 
+    ? utilCarConstruct({}, dataCarsAll) 
+    : utilCarConstruct(data, dataCarsAll);
 
   const categories = generateOptions(getUniqueCarCategories(dataCarsAll), dataCar.categoryDetails.id);
   const cases = generateOptions(getUniqueCarCaseTypes(dataCarsAll), dataCar.caseDetails.id);
@@ -84,17 +86,17 @@ const fragmentFormCarAdd = async (options={}) => {
             
             <div class="radioEntry">
               <label for="yes">Yes</label>
-              <input type="radio" id="yes" name="hasCase" value="true" ${dataCar.caseDetails.status==true ? 'checked' : ''}}>
+              <input type="radio" id="yes" name="hasCase" value="true" ${dataCar.caseDetails.status===true ? 'checked' : ''}>
             </div>
 
             <div class="radioEntry">
               <label for="no">No</label>
-              <input type="radio" id="no" name="hasCase" value="false" ${dataCar.caseDetails.status==false || dataCar.caseDetails.status === undefined ? 'checked' : ''}>
+              <input type="radio" id="no" name="hasCase" value="false" ${dataCar.caseDetails.status===false || dataCar.caseDetails.status === undefined ? 'checked' : ''}>
             </div>
             
             <div class="radioEntry">
               <label for="na">N/A</label>
-              <input type="radio" id="na" name="hasCase" value="null" ${dataCar.caseDetails.status==null ? 'checked' : ''}>
+              <input type="radio" id="na" name="hasCase" value="null" ${dataCar.caseDetails.status===null ? 'checked' : ''}>
             </div>
           </div>
         </fieldset>
