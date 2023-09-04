@@ -29,6 +29,7 @@ const utilCarConstruct = (data = {}, dataCarsAll = []) => {
 
   delete newCar.hasCase;
   delete newCar.caseType;
+  delete newCar.category;
 
   console.log(newCar);
 
