@@ -4,26 +4,33 @@
 import { getCaseById, getCategoryById } from "./dataCars";
 
 const utilCarConstruct = (data = {}, dataCarsAll = []) => {
+  const processedData = processFormData(data);
 
-  const processedData = data ? processFormData(data) : {};
+  const newCar = {
+    ...templateCar,
+    ...processedData,
+    hasPhoto: processBooleanField(processedData.hasPhoto),
+    caseDetails: {
+      ...templateCar.caseDetails,
+      ...getCaseById(dataCarsAll, processedData.caseType),
+      status: processBooleanField(processedData.hasCase)
+    },
+    categoryDetails: getCategoryById(dataCarsAll, processedData.category) || templateCar.categoryDetails
+  };
 
-  const newCar = {...templateCar, ...processedData};
-
-
-  newCar.caseDetails = getCaseById(dataCarsAll, processedData.caseType) || newCar.caseDetails;
-  newCar.categoryDetails = getCategoryById(dataCarsAll, processedData.category) || newCar.categoryDetails;
-
-  switch (newCar.categoryDetails.id){
+  switch (newCar.categoryDetails.id) {
     case 'hw':
     case 'mb':
-      newCar.brand = newCar.categoryDetails.name;break;
+      newCar.brand = newCar.categoryDetails.name;
+      break;
+    default:
+      break;
   }
-
-  newCar.caseDetails.status = newCar.hasCase || newCar.caseDetails.status;
 
   delete newCar.hasCase;
   delete newCar.caseType;
-  delete newCar.hasCase;
+
+  console.log(newCar);
 
   return newCar;
 }
@@ -58,19 +65,17 @@ const templateCar = {
 const processFormData = (formData) => {
   const processedData = { ...formData }; // Create a shallow copy
 
-  const nullKeys = ['code', 'hasCase', 'base']; // Add any other keys that need to be checked here
+  const nullKeys = ['code', 'hasCase', 'base'];
   nullKeys.forEach(key => {
-    if (processedData[key] === "null") {
-      processedData[key] = null;
-    }
+      if (processedData.hasOwnProperty(key) && processedData[key] === "null") {
+          processedData[key] = null;
+      }
   });
-
 
   processedData.id = parseInt(processedData.id, 10);
   processedData.quantity = parseInt(processedData.quantity, 10);
 
   processedData.hasPhoto = processHasPhoto(processedData.hasPhoto);
-  processedData.hasCase = processHasCase(processedData.hasCase);
 
   return processedData;
 }
@@ -82,9 +87,9 @@ const processHasPhoto = (value) => {
   return false;                          // default for all other cases
 }
 
-const processHasCase = (value) => {
-  if(value === 'true') return true;
-  if(value === 'false') return true;
-  if(value === 'null') return null;
+const processBooleanField = (value) => {
+  if (['on', 'true'].includes(value)) return true;
+  if (value === 'false') return false;
+  if (value === 'null') return null;
   return value;
 }

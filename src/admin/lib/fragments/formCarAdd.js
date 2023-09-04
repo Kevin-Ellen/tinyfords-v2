@@ -1,22 +1,20 @@
 // src > admin > lib > fragments > formCarAdd.js - Form to add vehicles to the JSON
 
 import { servicesGithubDataCarsAll } from '../../../lib/services/github';
+import utilCarConstruct from '../../../lib/utils/carConstruct';
 import { getUniqueCarCategories, getUniqueCarCaseTypes,  } from '../../../lib/utils/dataCars';
 
 import { getLastCarId, duplicateChecker } from '../utils/misc';
 
-import utilCarConstruct from '../../../lib/utils/carConstruct';
-
 const fragmentFormCarAdd = async (options={}) => {
 
-  const data = options.data;
 
   const dataCarsAll = await servicesGithubDataCarsAll();
 
+  const dataCar = (!options.feedback || options.feedback.success ) ? utilCarConstruct({},dataCarsAll) : options.data;
 
-  const dataCar = (options && options.feedback && options.feedback.success) 
-    ? utilCarConstruct({}, dataCarsAll) 
-    : utilCarConstruct(data, dataCarsAll);
+  console.log(dataCar);
+
 
   const categories = generateOptions(getUniqueCarCategories(dataCarsAll), dataCar.categoryDetails.id);
   const cases = generateOptions(getUniqueCarCaseTypes(dataCarsAll), dataCar.caseDetails.id);

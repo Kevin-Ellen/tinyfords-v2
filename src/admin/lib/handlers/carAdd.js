@@ -20,8 +20,7 @@ const handlerCarAdd = async (request) => {
   const dupeCheck = duplicateChecker(dataCarsAll.data, ['id', 'code'], newCar);
 
 
-  // if (!dupeCheck.success){
-
+  if (!dupeCheck.success){
     return handlerTemplate(request,{
       feedback: {
         success: false,
@@ -29,7 +28,7 @@ const handlerCarAdd = async (request) => {
       },
       data:newCar
     });
-  // }
+  }
 
   newCar.addedDetails.by = ADMIN_NAME;
   newCar.addedDetails.date = new Date().toISOString().split('T')[0];
