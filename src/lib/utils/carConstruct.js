@@ -1,8 +1,20 @@
-// src > lib > utils > carConstruct.js - Quick tools for creating a car
+/**
+ * carConstruct.js
+ * 
+ * This module provides utility functions to construct car objects,
+ * process form data, and manage specific car-related tasks.
+ */
 
-
+// Importing required modules and utilities.
 import { getCaseById, getCategoryById } from "./dataCars";
 
+/**
+ * Construct a car object based on the given data and default templates.
+ * 
+ * @param {Array} dataCarsAll - The list of all cars data.
+ * @param {Object} data - The car data object to be processed.
+ * @returns {Object} - The constructed car object.
+ */
 const utilCarConstruct = (dataCarsAll = [], data = {}) => {
   const processedData = processFormData(data);
 
@@ -34,9 +46,9 @@ const utilCarConstruct = (dataCarsAll = [], data = {}) => {
 
   return newCar;
 }
-
 export default utilCarConstruct;
 
+// Template for default car structure.
 const templateCar = {
   id: null,
   name: '',
@@ -62,6 +74,12 @@ const templateCar = {
   hasPhoto: false,
 };
 
+/**
+ * Process form data to match the required format.
+ * 
+ * @param {Object} formData - The form data to be processed.
+ * @returns {Object} - The processed form data.
+ */
 const processFormData = (formData) => {
   const processedData = { ...formData }; // Create a shallow copy
 
@@ -80,6 +98,12 @@ const processFormData = (formData) => {
   return processedData;
 }
 
+/**
+ * Determine if the car has a photo based on the provided value.
+ * 
+ * @param {any} value - The value indicating the presence of a photo.
+ * @returns {boolean} - True if the car has a photo, false otherwise.
+ */
 const processHasPhoto = (value) => {
   if (value === 'on') return true;        // formData for checked checkbox
   if (value === true) return true;       // previously submitted data
@@ -87,6 +111,12 @@ const processHasPhoto = (value) => {
   return false;                          // default for all other cases
 }
 
+/**
+ * Convert the given value to its appropriate boolean representation.
+ * 
+ * @param {any} value - The value to be processed.
+ * @returns {boolean|null} - The processed boolean value or null.
+ */
 const processBooleanField = (value) => {
   if (['on', 'true'].includes(value)) return true;
   if (value === 'false') return false;

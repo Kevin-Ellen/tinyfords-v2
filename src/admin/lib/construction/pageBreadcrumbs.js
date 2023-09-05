@@ -19,5 +19,4 @@ const pageBreadcrumbs = () => {
 
   return html;
 }
-
 export default pageBreadcrumbs;

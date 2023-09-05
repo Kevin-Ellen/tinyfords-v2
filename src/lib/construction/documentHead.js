@@ -1,18 +1,35 @@
-// src > lib > construction > documentHead.js
+/**
+ * documentHead.js
+ * 
+ * This module exports a function that generates the opening part of an HTML document.
+ * This includes the DOCTYPE declaration, opening HTML and BODY tags, and the HEAD contents.
+ * The HEAD contains meta information, links to stylesheets, scripts, and other resources.
+ */
 
+// Importing the styles
 import css from '../css/styles.css';
 
+/**
+ * Generates the opening HTML markup for the page.
+ * 
+ * @param {Object} dataPageCurrent - Data specific to the current page.
+ * @param {Object} dataPageAll - Data that is common to all pages.
+ * @return {string} The opening HTML markup.
+ */
 const documentHead = (dataPageCurrent, dataPageAll) => {
-  if(dataPageCurrent.status===200 && dataPageCurrent.template!=='offline'){
-  
+  // If the current page status is 200 and the template is not offline or admin
+  if(dataPageCurrent.status === 200 && dataPageCurrent.template !== 'offline') {
+    // Set the canonical URL
     dataPageCurrent.canonical = `${dataPageCurrent.url.protocol}//${dataPageCurrent.url.host}${dataPageCurrent.slug}`;
 
-    if(dataPageCurrent.template==='collection' && dataPageCurrent.url.params.get('page') && dataPageCurrent.url.params.get('page')!=1){
+    // Append the page parameter if it's a collection and not the first page
+    if(dataPageCurrent.template === 'collection' && dataPageCurrent.url.params.get('page') && dataPageCurrent.url.params.get('page') != 1) {
       dataPageCurrent.canonical += `?page=${dataPageCurrent.url.params.get('page')}`;
     }
   }
 
-  html = `<!DOCTYPE html>
+  // Construct the HTML markup
+  const html = `
     <html lang="en">
       <head>
         <meta charset="utf-8">
@@ -66,11 +83,10 @@ const documentHead = (dataPageCurrent, dataPageAll) => {
         <link rel="manifest" href="/manifest.json">
         <meta name="msapplication-TileColor" content="#005490">
         <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
-        <meta name="theme-color" content="#005490f">
+        <meta name="theme-color" content="#005490">
       </head>
       <body>`;
 
   return html;
 }
-
 export default documentHead;

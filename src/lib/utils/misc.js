@@ -1,4 +1,9 @@
-// src > lib > utils > misc.js - small tools
+/**
+ * misc.js
+ * 
+ * This module provides utility functions for miscellaneous tasks 
+ * that may not fit into other, more specific utility modules.
+ */
 
 /**
  * Decodes a base64 encoded string, taking into account special characters.

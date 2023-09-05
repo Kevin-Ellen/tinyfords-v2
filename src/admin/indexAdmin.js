@@ -57,5 +57,4 @@ const indexAdmin = async (request) => {
   // If none of the above methods match, return method not allowed
   return new Response('Method not allowed', { status: 405 });
 }
-
 export default indexAdmin;

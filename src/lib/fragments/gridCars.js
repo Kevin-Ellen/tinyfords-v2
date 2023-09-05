@@ -1,8 +1,19 @@
-// src > lib > fragments > gridCars.js
+/**
+ * gridCars.js
+ * 
+ * This module provides functions to create a grid layout for cars. 
+ * The grid displays information about each car in a card format.
+ */
 
-import utilCarConstruct from '../utils/carConstruct';
-
-const fragmentGridCars = (heading,headingLevel,dataCars) => {
+/**
+ * Create an HTML grid of cars with a heading.
+ * 
+ * @param {string} heading - The main heading for the grid.
+ * @param {number|string} headingLevel - The heading level (e.g., 1 for h1, 2 for h2). Defaults to h2 if invalid.
+ * @param {Array} dataCars - The list of car data objects to display in the grid.
+ * @returns {string} - The constructed grid as an HTML string.
+ */
+const fragmentGridCars = (heading, headingLevel, dataCars) => {
 
   const levelNumber = Number(headingLevel);
   headingLevel = !isNaN(levelNumber) ? Math.min(6, Math.max(2, Math.round(levelNumber))) : 2;
@@ -13,13 +24,17 @@ const fragmentGridCars = (heading,headingLevel,dataCars) => {
   </section>`;
   return html;
 }
-
 export default fragmentGridCars;
 
+/**
+ * Generate the HTML for the grid of cars.
+ * 
+ * @param {Array} dataCars - The list of car data objects to display in the grid.
+ * @returns {string} - The HTML for the grid.
+ */
 const createGrid = (dataCars) => {
 
   const cards = dataCars.map(createCard).join('');
-
 
   const html = `<div class="fragmentCarsGrid">
     ${cards}
@@ -28,9 +43,15 @@ const createGrid = (dataCars) => {
   return html;
 }
 
+/**
+ * Generate the HTML for a single car card in the grid.
+ * 
+ * @param {Object} car - The car data object.
+ * @returns {string} - The HTML for the car card.
+ */
 const createCard = (car) => {
 
-  const imageUrl = `/images/${car.categoryDetails.folder}/front-250/${car.categoryDetails.id}-${car.code || car.id}-front-250.jpg`;
+  const imageUrl = createImgPath(car);
 
   return `
     <div class="fragmentGridCard">
@@ -43,4 +64,18 @@ const createCard = (car) => {
         <li><strong>Added:</strong> ${car.addedDetails.date}</li>
       </ul>
     </div>`;
+}
+
+/**
+ * Check if the car has a photo
+ * If not, use a placeholder
+ * If yes, display photo
+ * 
+ * @param {Object} car - The car data object.
+ * @returns {string} - image path
+ */
+const createImgPath = (car) => {
+  const file = car.hasPhoto ? `${car.categoryDetails.id}-${car.code || car.id}-front-250.jpg` : `coming-soon-front-250.jpg`;
+  const imageUrl = `/images/${car.categoryDetails.folder}/front-250/${file}`;
+  return imageUrl;
 }

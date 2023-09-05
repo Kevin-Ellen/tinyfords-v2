@@ -112,5 +112,4 @@ const fragmentFormCarSearch = async (options = {}) => {
 
   return html;
 }
-
 export default fragmentFormCarSearch;

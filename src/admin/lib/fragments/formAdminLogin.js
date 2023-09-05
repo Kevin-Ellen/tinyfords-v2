@@ -39,5 +39,4 @@ const fragmentFormAdminLogin = () => {
 
   return html;
 }
-
 export default fragmentFormAdminLogin;

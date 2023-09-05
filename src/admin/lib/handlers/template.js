@@ -54,8 +54,7 @@ const handlerTemplate = async (request, options = {}) => {
 
   // Default response if no template function matches the URL's pathname.
   return new Response('template Handler');
-};
-
+}
 export default handlerTemplate;
 
 /**

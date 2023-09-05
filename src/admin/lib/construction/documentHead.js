@@ -29,5 +29,4 @@ const documentHead = () => {
   
   return html;
 }
-
 export default documentHead;

@@ -58,7 +58,6 @@ const handlerAdminCarEdit = async (request, options) => {
 
   return carResponse(request, car, 'Car found', true, true);
 }
-
 export default handlerAdminCarEdit;
 
 /**

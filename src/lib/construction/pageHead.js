@@ -1,15 +1,23 @@
-// src > lib > construction > pageHead.js - Everything on top
+/**
+ * pageHead.js
+ * 
+ * This module provides the function to generate the head section of a webpage.
+ * The head section typically contains meta tags, links, and other necessary data that is placed within the <head> tags.
+ */
 
+/**
+ * Generates the HTML for the head section based on the given data.
+ * 
+ * @param {Object} dataPageCurrent - Data specific to the current page.
+ * @param {Array} dataPageAll - Array containing data for all pages.
+ * @return {string} The HTML markup for the head section.
+ */
 const pageHead =  (dataPageCurrent, dataPageAll)  => {
 
-  const links = dataPageAll
-    .filter(page => 
-      page.status === 200 
-      && page.active === true 
-      && page.mainNav === true)
-    .map(page => `<li><a href="${page.slug}">${page.name}</a></li>`)
-    .join('');
+  // Generate the links that should appear in the head section based on certain criteria.
+  const links = createLinks(dataPageAll);
 
+  // Construct the full HTML for the head section.
   const html = `<header role="banner" class="siteHeader">
     <div class="siteHeaderContainer">
 
@@ -56,3 +64,23 @@ const pageHead =  (dataPageCurrent, dataPageAll)  => {
   return html;
 }
 export default pageHead;
+
+/**
+ * Generates the HTML links that will be included in the footer.
+ * 
+ * @param {Array} data - Array containing data for all pages.
+ * @return {string} The HTML markup for the footer links.
+ */
+const createLinks = (data) => {
+  
+  // Filter the pages that should appear in the footer based on certain criteria
+  // and then map them to HTML links.
+  const entries = data.filter(page => 
+    page.status === 200 
+    && page.active === true 
+    && page.mainNav === true)
+  .map(page => `<li><a href="${page.slug}">${page.name}</a></li><li aria-hidden="true">/</li>`)
+  .join('');
+  
+  return entries;
+}

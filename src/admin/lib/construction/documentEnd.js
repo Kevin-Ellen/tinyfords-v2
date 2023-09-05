@@ -14,5 +14,4 @@ const documentEnd = () => {
   
   return html;
 }
-
 export default documentEnd;
