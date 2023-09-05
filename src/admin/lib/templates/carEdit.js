@@ -8,8 +8,6 @@ import { quickLogin } from '../utils/misc';
 
 const templateAdminCarEdit = async (request, options = {}) => {
 
-  console.log(options);
-
   if(!options.feedback.search){
     return await response(options);
   }
