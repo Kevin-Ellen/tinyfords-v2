@@ -1,17 +1,16 @@
-// lib > _lib_mixins.scss - all mixins
+@use 'sass:map'; // Importing map functions from SASS
 
-@use "sass:map";
+@use '_variables' as v; // Importing custom variables
+@use '_functions' as f; // Importing custom functions
 
-@use '_variables' as v;
-@use '_functions' as f;
-
-
+// Mixin to remove list styles for cleaner design
 @mixin removeListStyle{
   list-style: none;
   padding:0;
   margin:0;
 }
 
+// Mixin for link styling to ensure consistency across the site
 @mixin linkStyle{
   color: f.map-deep-get(v.$colours, base, link);
   text-decoration: none;
@@ -30,10 +29,12 @@
   }
 }
 
+// Mixin for adding rounded corners to the top of an element
 @mixin roundedTop{
   border-top-right-radius: calc(map.get(v.$spacing, padding) / 2);
 }
 
+// Mixin for desktop-specific styling
 @mixin desktop{
   @media only screen and (min-width: v.$screen-width){
     @content;

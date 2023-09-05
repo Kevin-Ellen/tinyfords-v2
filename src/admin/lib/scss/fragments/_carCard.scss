@@ -1,23 +1,85 @@
-// src > lib > scss > fragments > _carCard.scss - Card with the car details
-
-@use "sass:map";
-
+// Importing Sass utilities and abstracts
+@use 'sass:map';
 @use '../../../../lib/scss/abstracts/_variables' as v;
 @use '../../../../lib/scss/abstracts/_functions' as f;
 @use '../../../../lib/scss/abstracts/_mixins' as m;
 
-.carCard {
-  border: 1px solid #e0e0e0;
-  padding: 16px;
-  border-radius: 8px;
-  width: 300px; 
+.tableAdmin {
 
+  // Styles for table wrapper to enable horizontal scrolling
+  .tableWrapper {
+    overflow-x: auto;
+    margin: 20px 0;
+  }
 
-  ul{
-    @include m.removeListStyle;
+  // Main table styles
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
 
-    li{
-      margin-bottom: 8px;
+    // Styling table header
+    thead {
+      background-color: map-get(v.$colours, tertiary);
+      color: white;
+    }
+
+    // Styling table cells
+    th, td {
+      padding: 10px 20px;
+      border: 1px solid #e0e0e0;
+      text-align: center;
+
+      // Adjusting border-radius for the first and last cells
+      &:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+
+    // Styling table body
+    tbody {
+      tr {
+        // Alternating row background color for better readability
+        &:nth-child(even) {
+          background-color: #f7f7f7;
+        }
+
+        // Highlighting row on hover
+        &:hover {
+          background-color: rgba(map-get(v.$colours, secondary), 0.1);
+        }
+      }
+    }
+
+    // Making label display block
+    label {
+      display: block;
+    }
+  }
+
+  // Styles for the action buttons in the admin table
+  button {
+    padding: 10px;
+    background-color: map-get(v.$colours, primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px 0;
+
+    // Hover effect for the button
+    &:hover {
+      background-color: darken(map-get(v.$colours, primary), 10%);
     }
   }
 }

@@ -1,25 +1,31 @@
-// src > lib > scss > styles.scss - Where everything is pulled together
+// Main stylesheet - Central hub for all SCSS components
 
-@use 'base/_reset';
-@use 'base/_typography';
-@use 'base/_base';
+// Importing foundational styles
+@use 'base/_reset';           // Resetting default browser styles for consistency
+@use 'base/_typography';      // Default typography styles
+@use 'base/_base';            // Fundamental base styles for the entire site
 
-@use 'layout/_header';
-@use 'layout/_footer';
-@use 'layout/_breadcrumbs';
+// Importing layout styles
+@use 'layout/_header';        // Styles for the site header
+@use 'layout/_footer';        // Styles for the site footer
+@use 'layout/_breadcrumbs';   // Styles for breadcrumb navigation
 
-@use 'fragments/_content';
-@use 'fragments/_grid';
+// Importing fragment styles
+@use 'fragments/_content';    // Generic content block styles
+@use 'fragments/_grid';       // Grid system styles
 
-// @use 'components/buttons';
-// @use 'components/cards';
-// // ... more components
+// Commented out component imports (to be enabled as needed)
+// @use 'components/buttons';  // Button styles
+// @use 'components/cards';    // Card component styles
+// ... more components
 
-// @use 'pages/home';
-// @use 'pages/about';
-// // ... more page-specific styles
+// Commented out page-specific styles (to be enabled as needed)
+// @use 'pages/home';          // Home page-specific styles
+// @use 'pages/about';         // About page-specific styles
+// ... more page-specific styles
 
+// Commented out theme styles (to be enabled if multiple themes are used)
 // @use 'themes/theme';
 
-// // Optional: Vendor styles
-// @use 'vendors/bootstrap';
+// Optional: Importing third-party/vendor styles
+// @use 'vendors/bootstrap';   // Bootstrap framework styles (if used)

@@ -1,16 +1,9 @@
-/*
-@use '../../../../lib/scss/abstracts/_variables' as v;
-@use '../../../../lib/scss/abstracts/_functions' as f;
-@use '../../../../lib/scss/abstracts/_mixins' as m;
-*/
-/* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Remove default padding and margin */
 body,
 h1, h2, h3, h4, h5, h6,
 p, pre,
@@ -22,7 +15,6 @@ button, input, select, textarea {
   padding: 0;
 }
 
-/* Set core body defaults */
 body {
   font-family: sans-serif;
   font-size: 1rem;
@@ -32,26 +24,23 @@ body {
   background-color: #fff;
 }
 
-/* Set core image defaults */
 img {
   max-width: 100%;
   display: block;
 }
 
-/* Inherit fonts for form elements */
 button, input, select, textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
 
-/* Remove all animations and transitions for people who prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
   }
 }
 @font-face {
@@ -698,17 +687,54 @@ main {
   background-color: #cb1116;
 }
 
-.carCard {
+.tableAdmin .tableWrapper {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+.tableAdmin table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+}
+.tableAdmin table thead {
+  background-color: rgb(0, 84, 144);
+  color: white;
+}
+.tableAdmin table th, .tableAdmin table td {
+  padding: 10px 20px;
   border: 1px solid #e0e0e0;
-  padding: 16px;
-  border-radius: 8px;
-  width: 300px;
+  text-align: center;
 }
-.carCard ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.tableAdmin table th:first-child, .tableAdmin table td:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
-.carCard ul li {
-  margin-bottom: 8px;
+.tableAdmin table th:last-child, .tableAdmin table td:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.tableAdmin table tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+.tableAdmin table tbody tr:hover {
+  background-color: rgba(248, 238, 37, 0.1);
+}
+.tableAdmin table label {
+  display: block;
+}
+.tableAdmin button {
+  padding: 10px;
+  background-color: rgb(237, 34, 40);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 20px 0;
+}
+.tableAdmin button:hover {
+  background-color: #cb1116;
 }

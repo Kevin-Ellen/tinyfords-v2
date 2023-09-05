@@ -1,7 +1,6 @@
-// src > lib > scss > abstracts > functions.scss - Helper functions
+@use 'sass:map'; // Importing map functions from SASS
 
-@use "sass:map";
-
+// Function to retrieve deep nested values from maps
 @function map-deep-get($map, $keys...) {
   @each $key in $keys {
       $map: map-get($map, $key);

@@ -1,37 +1,40 @@
-// src > lib > scss > layout > breadcrumbs.scss - In the bread bin!
-
-@use "sass:map";
-
+// Importing necessary tools and abstracts
+@use 'sass:map';
 @use '../abstracts/_variables' as v;
 @use '../abstracts/_functions' as f;
 @use '../abstracts/_mixins' as m;
 
-.breadcrumbsContainer{
-  margin:calc(36px + 3 * map.get(v.$spacing, padding)) calc(1.5 * map.get(v.$spacing, padding)) map.get(v.$spacing, padding);
+// Main container for breadcrumbs
+.breadcrumbsContainer {
+  // Set margin with spacing variable
+  margin: calc(36px + 3 * map.get(v.$spacing, padding)) calc(1.5 * map.get(v.$spacing, padding)) map.get(v.$spacing, padding);
 
-  .breadcrumbs{
-    @include m.removeListStyle;
-    display:flex;
-    font-size:0.8rem;
+  // Styling for breadcrumb list
+  .breadcrumbs {
+    @include m.removeListStyle;               // Mixin to remove default list styles
+    display: flex;                            // Use flexbox for layout
+    font-size: 0.8rem;                        // Decrease font-size for breadcrumbs
 
-    li{
-
-      &:first-of-type a{
-        padding-left:0;
+    li {
+      // Remove left padding for the first breadcrumb
+      &:first-of-type a {
+        padding-left: 0;
       }
 
-      a{
-        @include m.linkStyle;
-        padding:0.5em;
+      a {
+        @include m.linkStyle;                 // Mixin for link styles
+        padding: 0.5em;                       // Padding for each breadcrumb
 
-        &[aria-current="page"]{
-          font-weight:600;
+        // Style for the current page breadcrumb
+        &[aria-current="page"] {
+          font-weight: 600;                   // Make current page breadcrumb bold
         }
       }
     }
   }
 
-  @include m.desktop{
-    margin:calc(80px + 3 * map.get(v.$spacing, padding)) calc(1.5 * map.get(v.$spacing, padding)) map.get(v.$spacing, padding);
+  // Increase top margin for desktop
+  @include m.desktop {
+    margin: calc(80px + 3 * map.get(v.$spacing, padding)) calc(1.5 * map.get(v.$spacing, padding)) map.get(v.$spacing, padding);
   }
 }

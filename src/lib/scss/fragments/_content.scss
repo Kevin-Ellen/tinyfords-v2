@@ -1,13 +1,12 @@
-// src > lib > scss > fragments > _content.scss - The simpler things in life
-
-@use "sass:map";
-
+// Importing necessary tools and abstracts
+@use 'sass:map';
 @use '../abstracts/_variables' as v;
 @use '../abstracts/_functions' as f;
 @use '../abstracts/_mixins' as m;
 
-.fragmentContent{
-  background: f.map-deep-get(v.$colours, content, 'background');
-  padding: 8px;
-  margin: 16px 0 80px;
+// Styling for content fragment
+.fragmentContent {
+  background: f.map-deep-get(v.$colours, content, 'background'); // Set background color from variables
+  padding: 8px; // Provide padding to content
+  margin: 16px 0 80px; // Set margin to position content
 }

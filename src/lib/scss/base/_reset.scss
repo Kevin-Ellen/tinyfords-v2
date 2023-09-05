@@ -1,19 +1,18 @@
-// src > lib > scss > base > reset.scss - To reset everything
+@use 'sass:map'; // Importing map functions from SASS
 
-@use "sass:map";
-
+// Importing abstracts for consistent styling
 @use '../abstracts/_variables' as v;
 @use '../abstracts/_functions' as f;
 @use '../abstracts/_mixins' as m;
 
-/* Box sizing rules */
+// Applying a universal box-sizing for predictable sizing methods
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Remove default padding and margin */
+// Resetting default padding and margin for common elements
 body,
 h1, h2, h3, h4, h5, h6,
 p, pre,
@@ -25,7 +24,7 @@ button, input, select, textarea {
   padding: 0;
 }
 
-/* Set core body defaults */
+// Setting foundational body styles
 body {
   font-family: sans-serif;
   font-size: 1rem;
@@ -35,25 +34,25 @@ body {
   background-color: #fff;
 }
 
-/* Set core image defaults */
+// Ensuring images are responsive by default
 img {
   max-width: 100%;
   display: block;
 }
 
-/* Inherit fonts for form elements */
+// Making sure form elements inherit font settings
 button, input, select, textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
 
-/* Remove all animations and transitions for people who prefer not to see them */
+// Removing all animations and transitions for those who prefer reduced motion
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
   }
 }

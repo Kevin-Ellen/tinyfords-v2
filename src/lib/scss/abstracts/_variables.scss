@@ -1,52 +1,54 @@
-// src > lib > scss > abstracts > variables - all variables
+@use 'sass:map'; // Importing map functions from SASS
 
-@use "sass:map";
-
+// Font families for the website
 $fonts: (
-  body: ('Montserrat Alternates', sans-serif),
-  headings: ('Quicksand', sans-serif),
+  body: ('Montserrat Alternates', sans-serif), // Body font
+  headings: ('Quicksand', sans-serif), // Headings font
 );
 
+// Spacing and layout variables
 $spacing: (
-  max-width: 1200px,
-  padding:16px,
+  max-width: 1200px, // Maximum width for responsive design
+  padding:16px, // Padding used in various design elements
 );
 
+// Breakpoint for desktop styling
 $screen-width:500px;
 
+// Base font size for headings
 $baseHeading: 2.4rem;
 
+// Color palette for the website
 $colours:(
-  primary: rgba(237, 34, 40,1),
-  secondary: rgb(248, 238, 37),
-  tertiary: rgb(0, 84, 144),
+  primary: rgba(237, 34, 40,1), // Main accent color
+  secondary: rgb(248, 238, 37), // Secondary color
+  tertiary: rgb(0, 84, 144), // Tertiary color
 
   base: (
-    background: rgba(black, 0.02),
-    text: black,
-    link: black,
-    link-hover: rgba(black, 0.5),
-    accent: white,
+    background: rgba(black, 0.02), // Base background color
+    text: black, // Base text color
+    link: black, // Base link color
+    link-hover: rgba(black, 0.5), // Hover state for base link
+    accent: white, // Accent color for base theme
   ),
   navigation:(
-    background: white,
+    background: white, // Navigation background color
   ),
   footer:(
-    background: black,
-    text: white,
-    link: white,
-    link-hover: rgba(black, 0.5),
-    accent: white,
+    background: black, // Footer background color
+    text: white, // Footer text color
+    link: white, // Footer link color
+    link-hover: rgba(black, 0.5), // Hover state for footer link
+    accent: white, // Accent color for footer
   ),
   cards: (
-    background: white,
+    background: white, // Card background color
   ),
   pagination: (
-    background: white,
-    hover: rgba(black, 0.1),
+    background: white, // Pagination background color
+    hover: rgba(black, 0.1), // Hover state for pagination
   ),
   content: (
-    background: white,
+    background: white, // Content area background color
   ),
-
 );

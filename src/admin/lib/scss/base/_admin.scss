@@ -1,12 +1,10 @@
-// src > lib > scss > base > base.scss - The simpler things in life
-
-@use "sass:map";
-
+// Importing Sass utilities and abstracts
+@use 'sass:map';
 @use '../../../../lib/scss/abstracts/_variables' as v;
 @use '../../../../lib/scss/abstracts/_functions' as f;
 @use '../../../../lib/scss/abstracts/_mixins' as m;
 
-
-.adminCenter{
-  text-align:center;
+// Styles for admin center alignment
+.adminCenter {
+  text-align: center;
 }

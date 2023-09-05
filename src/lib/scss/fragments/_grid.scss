@@ -1,36 +1,37 @@
-// src > lib > scss > fragments > _grind.scss - The responsive grid
-
-@use "sass:map";
-
+// Importing necessary tools and abstracts
+@use 'sass:map';
 @use '../abstracts/_variables' as v;
 @use '../abstracts/_functions' as f;
 @use '../abstracts/_mixins' as m;
 
-.fragmentCarsGrid{
-  display: flex;
-  gap: map.get(v.$spacing, padding);
-  flex-wrap:wrap;
-  justify-content:space-evenly;
+// Main responsive grid for car fragments
+.fragmentCarsGrid {
+  display: flex;                                // Use flexbox for layout
+  gap: map.get(v.$spacing, padding);            // Space between grid items
+  flex-wrap: wrap;                              // Allow items to wrap onto the next line
+  justify-content: space-evenly;                // Evenly distribute items in the grid
 
-  .fragmentGridCard{
-    @include m.roundedTop;
-    background: f.map-deep-get(v.$colours, cards, 'background');
-    max-width:150px;
-    font-size:0.8rem;
-    overflow:hidden;
+  // Individual grid card
+  .fragmentGridCard {
+    @include m.roundedTop;                      // Mixin to round the top corners
+    background: f.map-deep-get(v.$colours, cards, 'background'); // Set card background color
+    max-width: 150px;                           // Set maximum width of card
+    font-size: 0.8rem;                          // Decrease font-size for card content
+    overflow: hidden;                           // Hide overflow content
 
-    img{
-      width:150px;
-      height:150px;
+    img {
+      width: 150px;                             // Set width for images in the card
+      height: 150px;                            // Set height for images in the card
     }
 
-    .fragmentGridCardContent{
-      @include m.removeListStyle;
-      padding:calc(map.get(v.$spacing, padding) * 0.5);
+    // Content inside the grid card
+    .fragmentGridCardContent {
+      @include m.removeListStyle;               // Remove default list styles
+      padding: calc(map.get(v.$spacing, padding) * 0.5); // Add padding to card content
 
-      h3{
-        font-size:1.2em;
-        margin: 0 0 calc(map.get(v.$spacing, padding) * 0.5);
+      h3 {
+        font-size: 1.2em;                       // Increase font-size for h3 inside the card
+        margin: 0 0 calc(map.get(v.$spacing, padding) * 0.5); // Margin to space out the h3
       }
     }
   }

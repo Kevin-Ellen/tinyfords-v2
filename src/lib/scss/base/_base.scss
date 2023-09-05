@@ -1,17 +1,17 @@
-// src > lib > scss > base > base.scss - The simpler things in life
+@use 'sass:map'; // Importing map functions from SASS
 
-@use "sass:map";
-
+// Importing abstracts for consistent styling
 @use '../abstracts/_variables' as v;
 @use '../abstracts/_functions' as f;
 @use '../abstracts/_mixins' as m;
 
-
+// Customizing the text and background colors for selected text
 ::selection {
   color: map-get(v.$colours, primary);
   background: map-get(v.$colours, secondary);
 }
 
+// Setting global styles for the body element
 body {
   background: f.map-deep-get(v.$colours, base, 'background');
   max-width: 1200px;
@@ -19,6 +19,7 @@ body {
   color:f.map-deep-get(v.$colours, base, text);
 }
 
+// Accessibility class to visually hide content
 .a11y {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
@@ -30,16 +31,19 @@ body {
   width: 1px;
 }
 
+// Looping through heading elements to set consistent margins
 @for $i from 1 through 6 {
   h#{$i} {
     margin: calc(map.get(v.$spacing, padding) * 2.5) 0;
   }
 }
 
+// Global link styles and their visited state
 a, a:visited{
-  @include m.linkStyle;
+  @include m.linkStyle; // Applying link styles from mixins
 }
 
+// Main content container
 main{
   margin: map.get(v.$spacing, padding);
 }

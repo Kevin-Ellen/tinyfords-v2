@@ -1,37 +1,23 @@
-// src > lib > scss > styles.scss - Where everything is pulled together
+// Main admin stylesheet - Central hub for all SCSS components
 
-/*
-@use '../../../../lib/scss/abstracts/_variables' as v;
-@use '../../../../lib/scss/abstracts/_functions' as f;
-@use '../../../../lib/scss/abstracts/_mixins' as m;
-*/
+// Base imports for foundational styles
+@use '../../../lib/scss/base/_reset';      // Resetting default browser styles
+@use '../../../lib/scss/base/_typography'; // Typography styles
+@use '../../../lib/scss/base/_base';       // General base styles
 
-@use '../../../lib/scss/base/_reset';
-@use '../../../lib/scss/base/_typography';
-@use '../../../lib/scss/base/_base';
+// Layout components for major site sections
+@use '../../../lib/scss/layout/_header';      // Header styles
+@use '../../../lib/scss/layout/_footer';      // Footer styles
+@use '../../../lib/scss/layout/_breadcrumbs'; // Breadcrumb navigation styles
 
-@use '../../../lib/scss/layout/_header';
-@use '../../../lib/scss/layout/_footer';
-@use '../../../lib/scss/layout/_breadcrumbs';
+// Fragment components for reusable chunks of styling
+@use '../../../lib/scss/fragments/_content'; // Content styles
+@use '../../../lib/scss/fragments/_grid';    // Grid layout styles
 
-@use '../../../lib/scss/fragments/_content';
-@use '../../../lib/scss/fragments/_grid';
+// Styles specific to administrative sections
+@use 'base/_form';       // Form styling
+@use 'base/_admin';      // General admin styles
+@use 'base/_tableAdmin'; // Table styles for admin sections
 
-@use 'base/_form';
-@use 'base/_admin';
-@use 'base/_tableAdmin';
-@use 'fragments/_carCard';
-
-
-// @use 'components/buttons';
-// @use 'components/cards';
-// // ... more components
-
-// @use 'pages/home';
-// @use 'pages/about';
-// // ... more page-specific styles
-
-// @use 'themes/theme';
-
-// // Optional: Vendor styles
-// @use 'vendors/bootstrap';
+// Other fragments
+@use 'fragments/_carCard'; // Styling for individual car cards

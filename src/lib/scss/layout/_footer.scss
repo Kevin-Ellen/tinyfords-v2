@@ -1,41 +1,47 @@
-// src > lib > scss > layout > footer.scss - Everything at the bottom
-
-@use "sass:map";
-
+// Importing necessary tools and abstracts
+@use 'sass:map';
 @use '../abstracts/_variables' as v;
 @use '../abstracts/_functions' as f;
 @use '../abstracts/_mixins' as m;
 
-.siteFooter{
+// Main container for the site footer
+.siteFooter {
+  // Styling the footer background and padding
   background: f.map-deep-get(v.$colours, footer, 'background');
-  padding:map.get(v.$spacing, padding);
-  margin-top: calc(map.get(v.$spacing, padding) * 5);
-  color:f.map-deep-get(v.$colours, footer, text);
-  font-size: 0.8rem;
+  padding: map.get(v.$spacing, padding);
+  margin-top: calc(map.get(v.$spacing, padding) * 5); // Space from the content above
+  color: f.map-deep-get(v.$colours, footer, text); // Text color for the footer
+  font-size: 0.8rem; // Reduced font size for the footer content
 
-  h2{
-    font-size:1.05em;
+  // Slight size increase for footer headings
+  h2 {
+    font-size: 1.05em;
   }
 
-  .siteFooterLinks{
-    @include m.removeListStyle;
-    display: flex;
-    flex-wrap:wrap;
-    gap: calc(map.get(v.$spacing, padding) / 2);
-    margin:calc(map.get(v.$spacing, padding) * 2) 0;
-    padding: map.get(v.$spacing, padding) 0 ;
-    border-top: 1px solid f.map-deep-get(v.$colours, footer, accent);
-    li a{
-      color:f.map-deep-get(v.$colours, footer, text);
-      display:block;
-      text-decoration:none;
+  // Styling for the list of footer links
+  .siteFooterLinks {
+    @include m.removeListStyle; // Mixin to remove default list styles
+    display: flex; // Use flexbox for layout
+    flex-wrap: wrap; // Allow wrapping for the links
+    gap: calc(map.get(v.$spacing, padding) / 2); // Space between links
+    margin: calc(map.get(v.$spacing, padding) * 2) 0; // Margin for the list of links
+    padding: map.get(v.$spacing, padding) 0; // Padding for the list
+    border-top: 1px solid f.map-deep-get(v.$colours, footer, accent); // Separator line
 
-      &:visited{
-        color:f.map-deep-get(v.$colours, footer, text);
+    // Styling for each footer link
+    li a {
+      color: f.map-deep-get(v.$colours, footer, text); // Link color
+      display: block; // Each link takes full space
+      text-decoration: none; // Remove default link underline
+
+      // Keep the color consistent for visited links
+      &:visited {
+        color: f.map-deep-get(v.$colours, footer, text);
       }
 
-      &:hover{
-        text-decoration:underline;
+      // Add underline on hover for clarity
+      &:hover {
+        text-decoration: underline;
       }
     }
   }

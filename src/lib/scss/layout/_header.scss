@@ -1,59 +1,67 @@
-// src > lib > scss > layout > header.scss - Everything up to the content
-
-@use "sass:map";
-
+// Importing necessary tools and abstracts
+@use 'sass:map';
 @use '../abstracts/_variables' as v;
 @use '../abstracts/_functions' as f;
 @use '../abstracts/_mixins' as m;
 
-.siteHeader{
+// Main container for the site header
+.siteHeader {
+  // Full-width, fixed positioning, and other styling
   width: 100%;
   position: fixed;
   top: 0;
   max-width: map.get(v.$spacing, 'max-width');
   background: f.map-deep-get(v.$colours, navigation, 'background');
 
-  .siteHeaderContainer{
-    display:grid;
+  // The internal grid container for the header
+  .siteHeaderContainer {
+    // Defining grid properties
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr auto auto;
     grid-auto-rows: 0;
     align-items: center;
     margin: map.get(v.$spacing, padding) calc(1.5 * map.get(v.$spacing, padding));
 
-    @include m.desktop{
+    // Adjustments for desktop screens
+    @include m.desktop {
       grid-template-rows: 1fr auto;
 
-      .siteNavMenu{
+      .siteNavMenu {
         grid-column: 1/2;
       }
     }
 
-    .siteNavName{
+    // Site name styling
+    .siteNavName {
       font-family: map.get(v.$fonts, headings);
-      font-weight:600;
-      font-size:1.5rem;
-      margin:0;
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin: 0;
       grid-column: 2/3;
-      text-align:center;
+      text-align: center;
 
-      a:hover{
-        text-decoration:none;
+      // Hover effect for the site name link
+      a:hover {
+        text-decoration: none;
       }
     }
-    .siteNavRight{
-      display:flex;
+
+    // Styling for the right section of the navigation
+    .siteNavRight {
+      display: flex;
       justify-content: flex-end;
       gap: map.get(v.$spacing, 'padding');
-      
-  
-      .noNetwork{
+
+      // Network status icon
+      .noNetwork {
         align-self: center;
-        fill: map-get(v.$colours,primary);
+        fill: map-get(v.$colours, primary);
       }
     }
-      
-    .siteNavLabel{
+
+    // General navigation label styles
+    .siteNavLabel {
       width: 40px;
       text-align: center;
       display: flex;
@@ -61,119 +69,134 @@
       justify-content: center;
       height: 40px;
       border-radius: 50%;
-      transition:all 0.3s;
-  
-      &[for="siteNavBox"]{
+      transition: all 0.3s;
+
+      // Specific styles for the navigation box toggle label
+      &[for="siteNavBox"] {
         grid-column: 1 / 2;
 
-        @include m.desktop{
-          display:none;
+        @include m.desktop {
+          display: none;
         }
       }
-      &[for="siteSearch"]{
-        border-radius:50%;
+
+      // Specific styles for the search toggle label
+      &[for="siteSearch"] {
+        border-radius: 50%;
         fill: map-get(v.$colours, secondary);
         background: black;
         grid-column: 3 / 3;
         justify-self: right;
 
-        &:hover{
+        &:hover {
           background: map-get(v.$colours, tertiary);
-          transition:all 0.3s;
+          transition: all 0.3s;
         }
       }
     }
   }
-  
 
-  .siteNavBox{
+  // Styles for the navigation toggle boxes
+  .siteNavBox {
     display: none;
 
-    & ~ .siteNavMenu{
-      height:0;
-      max-height:0;
-      transition:all 0.5s;
-      
-      @include m.desktop{
+    & ~ .siteNavMenu {
+      height: 0;
+      max-height: 0;
+      transition: all 0.5s;
+
+      // Revert styles for desktop
+      @include m.desktop {
         height: auto;
         max-height: revert;
       }
     }
 
-    &:checked ~ .siteNavMenu{
-      height:auto;
-      max-height:100vh;
+    // Checked state for the navigation menu
+    &:checked ~ .siteNavMenu {
+      height: auto;
+      max-height: 100vh;
       margin-top: map.get(v.$spacing, padding);
 
-      @include m.desktop{
+      @include m.desktop {
         height: auto;
         max-height: revert;
       }
     }
-    & ~ .siteSearch{
-      height:0;
-      max-height:0;
-      transition:all 0.5s;
+
+    // Styles for the hidden search
+    & ~ .siteSearch {
+      height: 0;
+      max-height: 0;
+      transition: all 0.5s;
       grid-column: 1/4;
       grid-row: 3/4;
 
-      @include m.desktop{
+      @include m.desktop {
         grid-row: 2/3;
       }
     }
-    &[id='siteSearch']:checked ~ .siteSearch{
-      height:auto;
-      max-height:100vh;
-      transition:all 0.5s;
+
+    // Checked state for the search box
+    &[id='siteSearch']:checked ~ .siteSearch {
+      height: auto;
+      max-height: 100vh;
+      transition: all 0.5s;
     }
   }
-  .siteSearch{
+
+  // Styles for the search bar
+  .siteSearch {
     background: f.map-deep-get(v.$colours, navigation, 'background');
-    display:flex;
-    justify-content:flex-end;
+    display: flex;
+    justify-content: flex-end;
     overflow: hidden;
 
-    .searchBar{
-      margin:map.get(v.$spacing, padding) 0;
+    .searchBar {
+      margin: map.get(v.$spacing, padding) 0;
       flex-grow: 1;
-      display:flex;
-      flex-wrap:nowrap;
+      display: flex;
+      flex-wrap: nowrap;
       overflow: hidden;
       border-radius: 9px;
       max-width: 500px;
-      border: 1px solid rgba(0,0,0,0.4);
+      border: 1px solid rgba(0, 0, 0, 0.4);
+
+      // Input styles
+      input[type='text'],
+      input[type='search'] {
+        background: white;
+        height: 35px;
+      }
 
       input[type='text'],
-      input[type='search']{
-        background: white;
-        height:35px;
-      }
-    
-      input[type='text'],
       input[type='search'],
-      button{
-        border:none;
+      button {
+        border: none;
         font-family: map.get(v.$fonts, 'body');
       }
       input[type='text'],
-      input[type='search']{
+      input[type='search'] {
         flex-grow: 1;
-        border:none;
-        padding-left:5px;
+        border: none;
+        padding-left: 5px;
       }
-      button{
-        transition:all 0.3s;
-        display:flex;
-        align-items:center;
+
+      // Search button styles
+      button {
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
         justify-content: space-around;
         background: black;
-        width:35px;
-    
-        &:hover{
+        width: 35px;
+
+        &:hover {
           background: map-get(v.$colours, primary);
         }
-    
-        svg{
+
+        // Search icon
+        svg {
           height: 60%;
           fill: map-get(v.$colours, secondary);
         }
@@ -181,46 +204,56 @@
     }
   }
 
-  .siteNavMenu{
-    overflow:hidden;
+  // Styles for the navigation menu
+  .siteNavMenu {
+    overflow: hidden;
     grid-column: 1/4;
 
-    @include m.desktop{
-      overflow:revert;
+    // Adjustments for desktop screens
+    @include m.desktop {
+      overflow: revert;
       grid-row: 1/2;
       grid-column: 1/2;
     }
-  
-    .mainMenu{
+
+    // Main navigation styles
+    .mainMenu {
       @include m.removeListStyle;
-      @include m.desktop{
-        font-size:0.8rem;
+
+      @include m.desktop {
+        font-size: 0.8rem;
       }
-      
-      li a{
+
+      // Navigation link styles
+      li a {
         padding: map.get(v.$spacing, padding);
-        display:block;
+        display: block;
         @include m.linkStyle;
 
-        @include m.desktop{
-          border:none;
+        // Desktop-specific styles
+        @include m.desktop {
+          border: none;
           padding: map.get(v.$spacing, padding) calc(map.get(v.$spacing, padding) / 2);
         }
       }
-      &:not(:last-of-type) a{
-        border-bottom:1.5px solid black;
-        @include m.desktop{
-          border:none;
+
+      // Border for the first and last links
+      &:not(:last-of-type) a {
+        border-bottom: 1.5px solid black;
+        @include m.desktop {
+          border: none;
         }
       }
-      &:nth-of-type(1) a{
-        border-top:1.5px solid black;
-        @include m.desktop{
-          border:none;
+      &:nth-of-type(1) a {
+        border-top: 1.5px solid black;
+        @include m.desktop {
+          border: none;
         }
       }
-      @include m.desktop{
-        display:flex;
+
+      // Desktop-specific styles for the main menu
+      @include m.desktop {
+        display: flex;
         align-items: center;
       }
     }
