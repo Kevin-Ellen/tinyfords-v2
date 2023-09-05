@@ -26,16 +26,16 @@ export const duplicateChecker = (dataArray, keys, values) => {
     if (key === 'code' && values[key] === null) {
       continue;
     }
-    if (dataArray.some(item => item[key] === values[key])) {
+    if (dataArray.some(item => item[key] === values[key] && item.id !== values.id)) {
       return {
         success: false,
-        message: `Duplicate found for ${key} with value ${values[key]}`
+        message: `Duplicate found for <em>${key}</em> with value <em>${values[key]}</em>.`
       };
     }
   }
   return {
     success: true,
-    message: 'No duplicates found'
+    message: 'No duplicates found.'
   };
 }
 

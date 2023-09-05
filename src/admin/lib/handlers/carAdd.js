@@ -14,10 +14,9 @@ const handlerAdminCarAdd = async (request) => {
 
   const dataCarsAll = await adminGitHubGetCarsData();
 
-  const newCar = utilCarConstruct(formDataObject, dataCarsAll.data);
+  const newCar = utilCarConstruct(dataCarsAll.data, formDataObject);
 
   const dupeCheck = duplicateChecker(dataCarsAll.data, ['id', 'code'], newCar);
-
 
   if (!dupeCheck.success){
     return handlerTemplate(request,{

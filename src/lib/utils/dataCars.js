@@ -45,3 +45,7 @@ export const getCategoryById = (dataCarsAll, categoryId) => {
   if(!categoryId){return false;}
   return dataCarsAll.find(item => item.categoryDetails.id === categoryId).categoryDetails;
 }
+
+export const getCarById = (dataCarsAll, carId) => {
+  return dataCarsAll.find(car => car.id === parseInt(carId, 10));
+}

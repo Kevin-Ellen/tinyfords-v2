@@ -5,7 +5,7 @@ import { toolShapeSearchFormData, toolCarSearch } from '../../../lib/utils/searc
 
 import handlerTemplate from './template';
 
-const handlerAdminCarSearc = async (request) => {
+const handlerAdminCarSearch = async (request) => {
   const dataCarsAll = await servicesGithubDataCarsAll();
 
   const formData = await request.formData();
@@ -22,7 +22,7 @@ const handlerAdminCarSearc = async (request) => {
     data:filteredCars
   });
 }
-export default handlerAdminCarSearc;
+export default handlerAdminCarSearch;
 
 const getFeedbackMessage = (count) => {
   if (count === 0) return 'Found no cars';

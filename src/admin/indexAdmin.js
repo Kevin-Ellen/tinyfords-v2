@@ -6,7 +6,8 @@ import handlerAdminLogin from './lib/handlers/adminLogin';
 import handlerAdminLogout from './lib/handlers/adminLogout';
 
 import handlerAdminCarAdd from './lib/handlers/carAdd';
-import handlerAdminCarSearc from './lib/handlers/carSearch';
+import handlerAdminCarSearch from './lib/handlers/carSearch';
+import handlerAdminCarEdit from './lib/handlers/carEdit';
 
 
 const indexAdmin = async (request) => {
@@ -31,7 +32,8 @@ const indexAdmin = async (request) => {
       switch (url.pathname){
         case '/admin': return handlerAdminLogin(request);
         case '/admin/add-car': return handlerAdminCarAdd(request);
-        case '/admin/search-car': return handlerAdminCarSearc(request);
+        case '/admin/search-car': return handlerAdminCarSearch(request);
+        case '/admin/edit-car': return handlerAdminCarEdit(request);
         
         default:
           return new Response('POST: not done yet');

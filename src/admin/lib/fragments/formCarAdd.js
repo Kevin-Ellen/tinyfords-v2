@@ -8,7 +8,6 @@ import { getLastCarId, duplicateChecker } from '../utils/misc';
 
 const fragmentFormCarAdd = async (options={}) => {
 
-
   const dataCarsAll = await servicesGithubDataCarsAll();
 
   const dataCar = (!options.feedback || options.feedback.success ) ? utilCarConstruct({},dataCarsAll) : options.data;

@@ -11,6 +11,7 @@ import pageAFooter from '../construction/pageFooter';
 import templateHome from '../templates/home';
 import templateAdminCarAdd from '../templates/carAdd';
 import templateAdminCarSearch from '../templates/carSearch';
+import templateAdminCarEdit from '../templates/carEdit';
 
 
 const handlerTemplate = async (request, options = {}) => {
@@ -20,12 +21,14 @@ const handlerTemplate = async (request, options = {}) => {
     '/admin': 'home',
     '/admin/add-car': 'carAdd',
     '/admin/search-car': 'carSearch',
+    '/admin/edit-car': 'carEdit',
   }
 
   switch(url.pathname){
     case '/admin':
     case '/admin/add-car':
     case '/admin/search-car':
+    case '/admin/edit-car':
 
       return new Response(
         await createPage(pageNames[url.pathname], request, options),
@@ -58,6 +61,7 @@ const createPage = async (templateName,request, options = {}) => {
     home: templateHome,
     carAdd: templateAdminCarAdd,
     carSearch: templateAdminCarSearch,
+    carEdit: templateAdminCarEdit,
   }
 
   const sections = [

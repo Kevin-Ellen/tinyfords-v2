@@ -18,6 +18,10 @@ const fragmentFormCarSearch = async (options={}) => {
     <div class="formContainer">
       <form action="/admin/search-car" method="post" class="adminForm">
         <div class="inputGroup">
+          <label for="id">ID:</label>
+          <input type="number" min="0" id="id" name="id">
+        </div>
+        <div class="inputGroup">
           <label for="code">Code:</label>
           <input type="text" id="code" name="base">
         </div>

@@ -1,90 +1,126 @@
-// src > admin > lib > carEdit.js - find and deal with the car
+// src > admin > lib > handlers > carEdit.js - Find and deal with the car
 
-import {adminGitHubGetCarData} from './adminGitHub';
+import { getCarById } from '../../../lib/utils/dataCars';
+import { adminGitHubGetCarsData, adminGitHubSubmitCarsData } from '../services/github';
 
-const adminHandleEditCar = async (request) => {
+import { duplicateChecker } from '../utils/misc';
+
+import utilCarConstruct from '../../../lib/utils/carConstruct';
+
+
+import handlerTemplate from './template';
+
+
+const handlerAdminCarEdit = async (request, options) => {
+
+  const dataCarsAll = await adminGitHubGetCarsData();
+
   const formData = await request.formData();
-  const code = formData.get('code');
-
-  const fullCarResponse = await adminGitHubGetCarData();
-  const matchingCar = fullCarResponse.data.find(car => car.code === code);
+  const formDataObject = Object.fromEntries(formData.entries());
 
 
-  return (matchingCar) ? carFound(matchingCar) : carNotFound(code);
+  if(formDataObject.action=='editSubmit'){
+    const updatedCar = utilCarConstruct(dataCarsAll.data,formDataObject);
+
+    const dupeCheck = duplicateChecker(dataCarsAll.data, ['code'], updatedCar);
+
+    if (!dupeCheck.success){
+      return carResponse(request, updatedCar, `Fail: ${dupeCheck.message}`, false);
+    }
+
+    const changes = changeCheck(getCarById(dataCarsAll.data, updatedCar.id), updatedCar);
+
+    if(!changes){
+      return carResponse(request, updatedCar, 'Fail: No changes been found', false);
+    }
+
+    const response = await submitData(dataCarsAll, updatedCar);
+
+    if(!response.success){
+      return carResponse(request, updatedCar, `Fail: ${response.message}`, false);
+    }
+
+    return carResponse(request, updatedCar, 'Car changed successfully!', true);
+
+  }
+
+  const car = getCarById(dataCarsAll.data, formDataObject.carId);
+
+  if(!car){
+    return carResponse(request, {id:formDataObject.carId}, 'No car found', false);
+  }
+
+  return carResponse(request, car, 'Car found', true, true);
+
 }
 
-export default adminHandleEditCar;
+export default handlerAdminCarEdit;
 
-const carFound = (data) => {
-  return new Response(carEditForm(data), {
-    headers: { 'Content-Type': 'text/html' }
+const carResponse = (request, data, message, success, search = null) => {
+  return handlerTemplate(request, {
+    feedback: {
+      success: success,
+      message: message,
+      search: search,
+    },
+    data:data
   });
 }
 
-const carNotFound = (code) => {
-  return new Response(`The following code had no results: ${code}.`);
+const changeCheck = (oldCar, newCar) => {
+  for (let key in oldCar) {
+    if (key === 'addedDetails') continue;  // Skip addedDetails property
+
+    if (oldCar.hasOwnProperty(key) && newCar.hasOwnProperty(key)) {
+      if (typeof oldCar[key] === 'object' && oldCar[key] !== null && newCar[key] !== null) {
+        // If property is an object, do a deep comparison
+        if (changeCheck(oldCar[key], newCar[key])) {  // If there are changes in the nested object
+          return true;
+        }
+      } else if (oldCar[key] !== newCar[key]) {
+        return true;  // If there's a change in the current key-value pair
+      }
+    }
+  }
+  return false;  // No changes found
 }
 
-const carEditForm = (data) => {
-  return `<form action="/admin/edit/submit" method="post">
-    <div>
-      <p>ID: ${data.id}</p>
-      <input type="hidden" id="id" name="id" value="${data.id}">
-    </div>
-    <div>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" value="${data.name}">
-    </div>
+const findChanges = (oldCar, newCar) => {
+  let changes = {};
 
-    <div>
-      <label for="make">Make:</label>
-      <input type="text" id="make" name="make" value="${data.make}">
-    </div>
+  for (let key in oldCar) {
+    if (key === 'addedDetails') continue;  // Skip addedDetails property
+    if (oldCar.hasOwnProperty(key) && newCar.hasOwnProperty(key)) {
+      if (typeof oldCar[key] === 'object' && oldCar[key] !== null && newCar[key] !== null) {
+        // If property is an object, do a deep comparison
+        let innerChanges = findChanges(oldCar[key], newCar[key]);
+        if (Object.keys(innerChanges).length) {
+          changes[key] = innerChanges;
+        }
+      } else if (oldCar[key] !== newCar[key]) {
+        changes[key] = newCar[key];
+      }
+    }
+  }
 
-    <div>
-      <label for="brand">Brand:</label>
-      <input type="text" id="brand" name="brand" value="${data.brand}">
-    </div>
+  return changes;
+}
 
-    <div>
-      <label for="code">Code:</label>
-      <input type="text" id="code" name="code" value="${data.code}">
-    </div>
+const submitData = async(dataCarsAll, updatedCar) => {
+  // Remove the addedDetails field from updatedCar
+  delete updatedCar.addedDetails;
 
-    <div>
-      <label for="base">Base:</label>
-      <input type="text" id="base" name="base" value="${data.base}">
-    </div>
+  const updatedDataCarsAll = dataCarsAll.data.map(car => {
+    if (car.id === updatedCar.id) {
+      return {
+        ...car,          // Spread properties of the original car
+        ...updatedCar   // Overwrite with properties of updatedCar where they exist
+      };
+    }
+    return car;
+  });
 
-    <div>
-      <label for="type">Type:</label>
-      <input type="text" id="type" name="type" value="${data.type}">
-    </div>
+  const response = await adminGitHubSubmitCarsData(updatedDataCarsAll, dataCarsAll.sha);
 
-    <div>
-      <label>Has Case:</label>
-      <input type="radio" id="hasCaseYes" name="hasCase" value="true" ${(data.hasCase===true) ? 'checked' : ''}>
-      <label for="hasCaseYes">Yes</label>
-
-      <input type="radio" id="hasCaseNo" name="hasCase" value="false" ${(data.hasCase===false) ? 'checked' : ''}>
-      <label for="hasCaseNo">No</label>
-
-      <input type="radio" id="hasCaseNA" name="hasCase" value="null" ${(data.hasCase===null) ? 'checked' : ''}>
-      <label for="hasCaseNA">N/A</label>
-    </div>
-
-    <div>
-      <label for="hasPhoto">Has Photo:</label>
-      <input type="checkbox" id="hasPhoto" name="hasPhoto" value="true" ${data.hasPhoto ? 'checked' : ''}>
-    </div>
-
-    <div>
-      <label for="quantity">Quantity:</label>
-      <input type="number" id="quantity" name="quantity" value="${data.quantity}" min="1">
-    </div>
-
-    <div>
-      <input type="submit" value="Update Car">
-    </div>
-  </form>`;
+  return response;
 }

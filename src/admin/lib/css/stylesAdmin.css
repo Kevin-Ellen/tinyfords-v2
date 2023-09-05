@@ -642,8 +642,7 @@ main {
   background-color: #cb1116;
 }
 
-.adminCenter h1,
-.adminCenter h2 {
+.adminCenter {
   text-align: center;
 }
 

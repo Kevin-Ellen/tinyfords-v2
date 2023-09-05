@@ -3,7 +3,7 @@
 
 import { getCaseById, getCategoryById } from "./dataCars";
 
-const utilCarConstruct = (data = {}, dataCarsAll = []) => {
+const utilCarConstruct = (dataCarsAll = [], data = {}) => {
   const processedData = processFormData(data);
 
   const newCar = {
@@ -30,6 +30,7 @@ const utilCarConstruct = (data = {}, dataCarsAll = []) => {
   delete newCar.hasCase;
   delete newCar.caseType;
   delete newCar.category;
+  delete newCar.action;
 
   return newCar;
 }

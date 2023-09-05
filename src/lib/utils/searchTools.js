@@ -36,6 +36,10 @@ export const toolShapeSearchFormData = (dataCarsAll, data) => {
     ['category'].forEach(prop => delete data[prop]);
   }
 
+  if(data.id){
+    data.id = parseInt(data.id, 10);
+  }
+
   // Transfer other properties without change
   for (const key in data) {
     shapedData[key] = data[key];
@@ -46,7 +50,6 @@ export const toolShapeSearchFormData = (dataCarsAll, data) => {
     }
   }
 
-  console.log(shapedData);
   return shapedData;
 }
 
