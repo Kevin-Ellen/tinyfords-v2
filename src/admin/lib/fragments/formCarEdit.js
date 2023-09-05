@@ -1,26 +1,43 @@
-// src > admin > lib > fragments > formCarAdd.js - Form to add vehicles to the JSON
+/**
+ * formCarEdit.js
+ * 
+ * This module provides a fragment to construct the HTML for the form to edit existing vehicles in the JSON.
+ * The form contains various input fields, like code, base, name, make, category, etc. 
+ * It also utilizes helper functions to generate the dropdown options and to validate data.
+ */
 
+// External Dependencies
 import { servicesGithubDataCarsAll } from '../../../lib/services/github';
-import utilCarConstruct from '../../../lib/utils/carConstruct';
-import { getUniqueCarCategories, getUniqueCarCaseTypes,  } from '../../../lib/utils/dataCars';
+import { getUniqueCarCategories, getUniqueCarCaseTypes } from '../../../lib/utils/dataCars';
 
-const fragmentFormCarEdit = async (data,options={}) => {
-
+/**
+ * Constructs and returns the HTML for the edit car form.
+ * 
+ * The function takes in the data of the car to be edited and pre-fills the form.
+ * This makes it easier for the user to edit only the fields they want to change.
+ * The form also contains validations, like checking for duplicate codes.
+ *
+ * @param {Object} data - The data object containing the car details to be edited.
+ * @param {Object} options - Additional optional parameters.
+ * @return {string} - The constructed HTML string for the edit car form.
+ */
+const fragmentFormCarEdit = async (data, options = {}) => {
   const dataCarsAll = await servicesGithubDataCarsAll();
-
   const dataCar = {...data};
 
   const categories = generateOptions(getUniqueCarCategories(dataCarsAll), dataCar.categoryDetails.id);
   const cases = generateOptions(getUniqueCarCaseTypes(dataCarsAll), dataCar.caseDetails.id);
-  
-  const html = `<section class="fragmentContent adminCenter">
-    <h2>Edit car form</h2>
-    <div class="formContainer">
 
-      <form action="/admin/edit-car" method="post" class="adminForm">
+  const html = `
+    <!-- Edit Car Form Section -->
+    <section class="fragmentContent adminCenter">
+      <h2>Edit car form</h2>
+      <div class="formContainer">
+        <!-- Actual Form Begins -->
+        <form action="/admin/edit-car" method="post" class="adminForm">
 
-      <input type="hidden" name="id" id="id" value="${dataCar.id}">
-      <input type="hidden" name="action" id="formAction" value="editSubmit">
+        <input type="hidden" name="id" id="id" value="${dataCar.id}">
+        <input type="hidden" name="action" id="formAction" value="editSubmit">
 
         <div class="inputGroup">
           <p>ID: ${dataCar.id}</p>
@@ -109,6 +126,19 @@ const fragmentFormCarEdit = async (data,options={}) => {
 
 export default fragmentFormCarEdit;
 
+/**
+ * Generates the options for a dropdown based on the provided items.
+ * 
+ * This helper function is primarily used to generate options for dropdown menus.
+ * It takes in an array of items, and based on the properties provided, it constructs
+ * the options for the dropdown. It also checks which option should be pre-selected.
+ *
+ * @param {Array} items - The list of items from which the options are to be generated.
+ * @param {string} selectedValue - The value which should be pre-selected in the dropdown.
+ * @param {string} valueProp - The property of the item object which should be used as the value for the option.
+ * @param {string} nameProp - The property of the item object which should be used as the display name for the option.
+ * @return {string} - The constructed options string for a dropdown.
+ */
 const generateOptions = (items, selectedValue, valueProp = 'id', nameProp = 'name') => {
   return items.map(item => `
     <option value="${item[valueProp]}" ${item[valueProp] === selectedValue ? 'selected' : ''}>

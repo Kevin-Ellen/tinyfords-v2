@@ -1,16 +1,24 @@
-// src > admin > lib > handlers > carEdit.js - Find and deal with the car
+/**
+ * carEdit.js
+ * 
+ * This module provides logic for editing car details.
+ * It allows for finding a specific car by its ID, updating its details, and checking for changes.
+ */
 
+// External Dependencies
 import { getCarById } from '../../../lib/utils/dataCars';
 import { adminGitHubGetCarsData, adminGitHubSubmitCarsData } from '../services/github';
-
 import { duplicateChecker } from '../utils/misc';
-
 import utilCarConstruct from '../../../lib/utils/carConstruct';
-
-
 import handlerTemplate from './template';
 
-
+/**
+ * Handles the car editing request by updating the car data based on provided changes.
+ *
+ * @param {Request} request - The incoming request object with form data containing updated car details.
+ * @param {Object} options - Additional optional parameters.
+ * @return {Response} - The response to the car edit request, which may contain success or error messages.
+ */
 const handlerAdminCarEdit = async (request, options) => {
 
   const dataCarsAll = await adminGitHubGetCarsData();
@@ -18,10 +26,9 @@ const handlerAdminCarEdit = async (request, options) => {
   const formData = await request.formData();
   const formDataObject = Object.fromEntries(formData.entries());
 
-
   if(formDataObject.action=='editSubmit'){
+    
     const updatedCar = utilCarConstruct(dataCarsAll.data,formDataObject);
-
     const dupeCheck = duplicateChecker(dataCarsAll.data, ['code'], updatedCar);
 
     if (!dupeCheck.success){
@@ -41,7 +48,6 @@ const handlerAdminCarEdit = async (request, options) => {
     }
 
     return carResponse(request, updatedCar, 'Car changed successfully!', true);
-
   }
 
   const car = getCarById(dataCarsAll.data, formDataObject.carId);
@@ -51,11 +57,20 @@ const handlerAdminCarEdit = async (request, options) => {
   }
 
   return carResponse(request, car, 'Car found', true, true);
-
 }
 
 export default handlerAdminCarEdit;
 
+/**
+ * Wraps the car data and feedback message in a templated response.
+ *
+ * @param {Request} request - The incoming request object.
+ * @param {Object} data - The car data.
+ * @param {string} message - Feedback message for the action.
+ * @param {boolean} success - Indicates if the action was successful.
+ * @param {boolean} search - Indicates if this is a search response.
+ * @return {Response} - Templated response with car data and feedback.
+ */
 const carResponse = (request, data, message, success, search = null) => {
   return handlerTemplate(request, {
     feedback: {
@@ -67,6 +82,13 @@ const carResponse = (request, data, message, success, search = null) => {
   });
 }
 
+/**
+ * Checks for any changes between the old car data and the new data.
+ *
+ * @param {Object} oldCar - The original car data.
+ * @param {Object} newCar - The updated car data.
+ * @return {boolean} - Returns true if there are changes, false otherwise.
+ */
 const changeCheck = (oldCar, newCar) => {
   for (let key in oldCar) {
     if (key === 'addedDetails') continue;  // Skip addedDetails property
@@ -85,6 +107,13 @@ const changeCheck = (oldCar, newCar) => {
   return false;  // No changes found
 }
 
+/**
+ * Identifies the specific changes between the old car data and the new data.
+ *
+ * @param {Object} oldCar - The original car data.
+ * @param {Object} newCar - The updated car data.
+ * @return {Object} - Object detailing the specific changes.
+ */
 const findChanges = (oldCar, newCar) => {
   let changes = {};
 
@@ -106,6 +135,13 @@ const findChanges = (oldCar, newCar) => {
   return changes;
 }
 
+/**
+ * Submits the updated car data to the data set.
+ *
+ * @param {Array} dataCarsAll - The original list of cars.
+ * @param {Object} updatedCar - The car with updated details.
+ * @return {Object} - Response from the submission attempt.
+ */
 const submitData = async(dataCarsAll, updatedCar) => {
   // Remove the addedDetails field from updatedCar
   delete updatedCar.addedDetails;

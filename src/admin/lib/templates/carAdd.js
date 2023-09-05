@@ -1,12 +1,25 @@
-// src > admin > lib > templates > carAdd.js - Landing page to add the car
+/**
+ * carAdd.js
+ *
+ * This module provides the template for the "Add Car" page of the admin interface.
+ * It contains the logic for rendering the car addition form and displaying the details
+ * of a car that's just been added. The module also checks for a quick login status
+ * to determine what content to display.
+ */
 
+// External Dependencies
 import fragmentContent from '../../../lib/fragments/content';
 import fragmentFormCarAdd from '../fragments/formCarAdd';
-
 import { quickLogin } from '../utils/misc';
 
+/**
+ * Generates the HTML template for the "Add Car" admin page.
+ *
+ * @param {Request} request - The incoming request object.
+ * @param {Object} options - Additional optional parameters, including feedback and car details.
+ * @return {string} The HTML template of the "Add Car" page.
+ */
 const templateAdminCarAdd = async (request, options = {}) => {
-
   const contentTop = [
     `<h1>Add car</h1>`
   ];
@@ -25,17 +38,27 @@ const templateAdminCarAdd = async (request, options = {}) => {
 }
 export default templateAdminCarAdd;
 
+/**
+ * Constructs the HTML segment for displaying the details of the added car.
+ *
+ * @param {Object} options - Contains feedback and car details.
+ * @return {string} The HTML segment for the added car details.
+ */
 const addedDetail = (options) => {
-
   const sections = [
     `<h2>${options.feedback.message}</h2>`,
     createCarDetails(options.data),
   ].join('');
 
-
   return sections;
 }
 
+/**
+ * Constructs the HTML card for the details of a specific car.
+ *
+ * @param {Object} data - Contains the car details.
+ * @return {string} The HTML card displaying the car's details.
+ */
 const createCarDetails = (data) => {
   const html = `<h3>Car details</h3>
   <div class="carCard">
@@ -55,4 +78,3 @@ const createCarDetails = (data) => {
   </div>`;
   return html;
 }
-

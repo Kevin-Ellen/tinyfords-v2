@@ -1,10 +1,17 @@
-// src > admin > lib > construction > documentHead.js
+/**
+ * documentHead.js
+ * This module constructs the beginning part of an HTML document, including the `<head>` section.
+ */
 
 import css from '../css/stylesAdmin.css';
 
+/**
+ * Constructs and returns the initial section of an HTML document.
+ * This includes meta tags, preloaded fonts, and embedded CSS for the admin panel.
+ * @return {string} The initial section of an HTML document.
+ */
 const documentHead = () => {
-
-  html = `<!DOCTYPE html>
+  const html = `<!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="utf-8">
@@ -16,10 +23,10 @@ const documentHead = () => {
           ${css}
         </style>
         <title>Tiny Fords - Admin panel</title>
-        <meta name="theme-color" content="#005490f">
+        <meta name="theme-color" content="#005490">
       </head>
       <body>`;
-
+  
   return html;
 }
 

@@ -1,9 +1,17 @@
-// src > admin > lib > construction > documentEnd.js
+/**
+ * documentEnd.js
+ * This module returns the closing tags for an HTML document.
+ */
 
+/**
+ * Returns the closing tags for an HTML document.
+ * @return {string} The closing tags for an HTML document.
+ */
 const documentEnd = () => {
-  html = `</body>
+  const html = `
+  </body>
   </html>`;
-
+  
   return html;
 }
 

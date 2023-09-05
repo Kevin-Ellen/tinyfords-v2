@@ -1,10 +1,24 @@
-// src > admin > lib > templates > carSearch.js - Car search template
+/**
+ * carSearch.js
+ *
+ * This module provides the template for the "Search Car" page of the admin interface.
+ * It contains the logic for rendering the search form, displaying the search results
+ * in a table format, and providing an edit option for the listed cars.
+ * The module also checks for an authentication status to determine what content to display.
+ */
 
+// External Dependencies
 import fragmentContent from '../../../lib/fragments/content';
 import fragmentFormCarSearch from '../fragments/formCarSearch';
-
 import { quickLogin } from '../utils/misc';
 
+/**
+ * Generates the HTML template for the "Search Car" admin page.
+ *
+ * @param {Request} request - The incoming request object.
+ * @param {Object} options - Additional optional parameters, including feedback and car search results.
+ * @return {string} The HTML template of the "Search Car" page.
+ */
 const templateAdminCarSearch = async (request, options = {}) => {
   
   const contentTop = [
@@ -25,6 +39,12 @@ const templateAdminCarSearch = async (request, options = {}) => {
 }
 export default templateAdminCarSearch;
 
+/**
+ * Constructs the HTML segment for displaying the feedback and search results table.
+ *
+ * @param {Object} options - Contains feedback and car search results.
+ * @return {string} The HTML segment for the feedback and search results.
+ */
 const addedDetail = (options) => {
 
   const sections = [
@@ -32,10 +52,15 @@ const addedDetail = (options) => {
     createTable(options.data),
   ].join('');
 
-
   return sections;
 }
 
+/**
+ * Constructs the HTML table for displaying the car search results.
+ *
+ * @param {Array} data - Contains the car search results.
+ * @return {string} The HTML table displaying the car search results.
+ */
 const createTable = (data) => {
 
   const svg = {
@@ -101,9 +126,6 @@ const createTable = (data) => {
             </thead>
             <tbody>
               ${rows}
-              <tr>
-                <td><<input type="radio" name="carId" id="car99" value="99">
-              </tr>
             </tbody>
           </table>
         </div>
@@ -114,6 +136,12 @@ const createTable = (data) => {
   return html;
 }
 
+/**
+ * Constructs the SVG icons for displaying certain car attributes.
+ *
+ * @param {string} value - The attribute value (true, false, or null).
+ * @return {string} The SVG icon corresponding to the attribute value.
+ */
 const generateSVG = (value) => {
   const svgData = {
     true:{
