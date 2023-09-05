@@ -8,10 +8,9 @@ import handlerTemplate from './template';
 
 import utilCarConstruct from '../../../lib/utils/carConstruct';
 
-const handlerCarAdd = async (request) => {
+const handlerAdminCarAdd = async (request) => {
   const formData = await request.formData();
   const formDataObject = Object.fromEntries(formData.entries());
-
 
   const dataCarsAll = await adminGitHubGetCarsData();
 
@@ -46,5 +45,5 @@ const handlerCarAdd = async (request) => {
     data:newCar
   });
 }
-export default handlerCarAdd;
+export default handlerAdminCarAdd;
 

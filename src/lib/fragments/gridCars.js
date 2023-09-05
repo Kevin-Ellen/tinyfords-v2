@@ -36,7 +36,7 @@ const createCard = (car) => {
     <div class="fragmentGridCard">
       <img src="${imageUrl}" height="150" width="150" alt="${car.brand} ${car.name} - ${car.code}" loading="lazy">
       <ul class="fragmentGridCardContent">
-        <li><h3>${car.brand} ${car.name}</h3></li>
+        <li><h3>${car.name}</h3></li>
         <li><strong>Make:</strong> ${car.make}</li>
         ${car.code ? `<li><strong>Code:</strong> ${car.code}</li>` : ''}
         ${car.base ? `<li><strong>Base:</strong> ${car.base}</li>` : ''}

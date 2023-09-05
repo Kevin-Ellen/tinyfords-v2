@@ -636,13 +636,67 @@ main {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin: 20px 0;
 }
 .formContainer .adminForm button:hover {
   background-color: #cb1116;
 }
 
-.adminCenter h1 {
+.adminCenter h1,
+.adminCenter h2 {
   text-align: center;
+}
+
+.tableAdmin .tableWrapper {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+.tableAdmin table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+}
+.tableAdmin table thead {
+  background-color: rgb(0, 84, 144);
+  color: white;
+}
+.tableAdmin table th, .tableAdmin table td {
+  padding: 10px 20px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+.tableAdmin table th:first-child, .tableAdmin table td:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.tableAdmin table th:last-child, .tableAdmin table td:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.tableAdmin table tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+.tableAdmin table tbody tr:hover {
+  background-color: rgba(248, 238, 37, 0.1);
+}
+.tableAdmin table label {
+  display: block;
+}
+.tableAdmin button {
+  padding: 10px;
+  background-color: rgb(237, 34, 40);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 20px 0;
+}
+.tableAdmin button:hover {
+  background-color: #cb1116;
 }
 
 .carCard {

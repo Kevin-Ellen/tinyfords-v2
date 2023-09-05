@@ -12,8 +12,8 @@ const pageHead = (request,options) => {
       name: 'Add car',
       slug: '/admin/add-car'
     },{
-      name: 'Edit car',
-      slug: '/admin/edit-car'
+      name: 'Search car',
+      slug: '/admin/search-car'
     },{
       name: 'Log out',
       slug: '/admin/logout'
@@ -21,7 +21,7 @@ const pageHead = (request,options) => {
   ].map(page => `<li><a href="${page.slug}">${page.name}</a></li>`)
   .join('') : '<a href="/">Back to public home</a>';
 
-  const html = `<header role="banner" class="siteHeader">
+  const html = `<header class="siteHeader">
     <div class="siteHeaderContainer">
 
       <label class="siteNavLabel" for="siteNavBox">
@@ -36,7 +36,7 @@ const pageHead = (request,options) => {
       <p class="siteNavName"><a href="/">Tiny Fords</a></p>
 
       <input type="checkbox" class="siteNavBox" id="siteNavBox">
-      <nav class="siteNavMenu" role="navigation" aria-label="Main menu">
+      <nav class="siteNavMenu" aria-label="Main menu">
         <ul class="mainMenu">
           ${links}
         </ul>

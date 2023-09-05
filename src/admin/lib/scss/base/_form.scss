@@ -109,6 +109,7 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s;
+      margin: 20px 0;
 
       &:hover {
         background-color: darken(map-get(v.$colours, primary), 10%);

@@ -13,9 +13,6 @@ const fragmentFormCarAdd = async (options={}) => {
 
   const dataCar = (!options.feedback || options.feedback.success ) ? utilCarConstruct({},dataCarsAll) : options.data;
 
-  console.log(dataCar);
-
-
   const categories = generateOptions(getUniqueCarCategories(dataCarsAll), dataCar.categoryDetails.id);
   const cases = generateOptions(getUniqueCarCaseTypes(dataCarsAll), dataCar.caseDetails.id);
   

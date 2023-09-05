@@ -8,9 +8,9 @@ import pageBreadcrumbs from '../construction/pageBreadcrumbs';
 import pageAFooter from '../construction/pageFooter';
 
 
-
 import templateHome from '../templates/home';
-import templateCarAdd from '../templates/carAdd';
+import templateAdminCarAdd from '../templates/carAdd';
+import templateAdminCarSearch from '../templates/carSearch';
 
 
 const handlerTemplate = async (request, options = {}) => {
@@ -18,12 +18,14 @@ const handlerTemplate = async (request, options = {}) => {
 
   const pageNames = {
     '/admin': 'home',
-    '/admin/add-car': 'addCar',
+    '/admin/add-car': 'carAdd',
+    '/admin/search-car': 'carSearch',
   }
 
   switch(url.pathname){
     case '/admin':
     case '/admin/add-car':
+    case '/admin/search-car':
 
       return new Response(
         await createPage(pageNames[url.pathname], request, options),
@@ -54,7 +56,8 @@ const createPage = async (templateName,request, options = {}) => {
 
   const templates = {
     home: templateHome,
-    addCar: templateCarAdd,
+    carAdd: templateAdminCarAdd,
+    carSearch: templateAdminCarSearch,
   }
 
   const sections = [

@@ -38,3 +38,11 @@ export const duplicateChecker = (dataArray, keys, values) => {
     message: 'No duplicates found'
   };
 }
+
+export const generateOptions = (items, selectedValue, valueProp = 'id', nameProp = 'name') => {
+  return items.map(item => `
+    <option value="${item[valueProp]}" ${item[valueProp] === selectedValue ? 'selected' : ''}>
+      ${item[nameProp]}
+    </option>
+  `).join('');
+}
