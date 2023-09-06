@@ -75,20 +75,20 @@ const createCard = (car) => {
  * @returns {string} - image path
  */
 const createImgPath = (car) => {
-  const pathObject = {
-    folder: `/images/${car.categoryDetails.folder}/front-250/`,
-    path : null,
-    postfix: `-front-250.jpg`,
+  const baseFolder = `/images/${car.categoryDetails.folder}/front-250/`;
+  const postfix = `-front-250.jpg`;
+
+  let imagePath;
+
+  if (car.hasPhoto) {
+    if (car.categoryDetails.id === 'ot') {
+      imagePath = `${car.categoryDetails.id}-${car.id}`;
+    } else {
+      imagePath = `${car.categoryDetails.id}-${car.code}`;
+    }
+  } else {
+    imagePath = 'coming-soon';
   }
-  if(car.categoryDetails.id==='ot' && car.hasPhoto){
-    pathObject.path = `${car.categoryDetails.id}-${car.id}`;
-  }
-  if(!car.hasPhoto){
-    pathObject.path = `coming-soon`;
-  }
-  if(car.categoryDetails.id!=='ot' && car.hasPhoto){
-    pathObject.path = `${car.categoryDetails.id}-${car.code}`;
-  }
-  const imageUrl = `${pathObject.folder}${pathObject.path}${pathObject.postfix}`;
-  return imageUrl;
+
+  return `${baseFolder}${imagePath}${postfix}`;
 }
