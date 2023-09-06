@@ -55,7 +55,7 @@ const createCard = (car) => {
 
   return `
     <div class="fragmentGridCard">
-      <img src="${imageUrl}" height="150" width="150" alt="${car.brand} ${car.name} - ${car.code}" loading="lazy">
+      <img src="${imageUrl}" height="150" width="150" alt="${car.brand} ${car.name} ${car.code ? `- ${car.code}` : ''}" loading="lazy">
       <ul class="fragmentGridCardContent">
         <li><h3>${car.name}</h3></li>
         <li><strong>Make:</strong> ${car.make}</li>
@@ -75,7 +75,20 @@ const createCard = (car) => {
  * @returns {string} - image path
  */
 const createImgPath = (car) => {
-  const file = car.hasPhoto ? `${car.categoryDetails.id}-${car.code || car.id}-front-250.jpg` : `coming-soon-front-250.jpg`;
-  const imageUrl = `/images/${car.categoryDetails.folder}/front-250/${file}`;
+  const pathObject = {
+    folder: `/images/${car.categoryDetails.folder}/front-250/`,
+    path : null,
+    postfix: `-front-250.jpg`,
+  }
+  if(car.categoryDetails.id==='ot' && car.hasPhoto){
+    pathObject.path = `${car.categoryDetails.id}-${car.id}`;
+  }
+  if(!car.hasPhoto){
+    pathObject.path = `coming-soon`;
+  }
+  if(car.categoryDetails.id!=='ot' && car.hasPhoto){
+    pathObject.path = `${car.categoryDetails.id}-${car.code}`;
+  }
+  const imageUrl = `${pathObject.folder}${pathObject.path}${pathObject.postfix}`;
   return imageUrl;
 }
