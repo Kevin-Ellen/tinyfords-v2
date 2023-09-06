@@ -19,6 +19,16 @@ export const base64Decode = (str) => {
       .join('')
   );
 }
+/**
+ * Retrieves the nested value from an object based on a string path.
+ * 
+ * @param {Object} obj - The object to retrieve the value from.
+ * @param {string} path - The string path, e.g., 'addedDetails.date'.
+ * @returns {*} - The value at the specified path.
+ */
+const getValueByPath = (obj, path) => {
+  return path.split('.').reduce((acc, part) => acc && acc[part], obj);
+}
 
 /**
  * Sort an array of objects by multiple fields.
@@ -27,18 +37,19 @@ export const base64Decode = (str) => {
  * @param {Array} fields - An array of fields to sort by in priority order.
  * @param {Object} directions - An object specifying the direction for each field ('asc' or 'desc').
  * @returns {Array} - The sorted array.
- * 
- * Example: const sortedData = multiSort(data, ['dateAdded', 'id'], { dateAdded: 'desc', id: 'desc' });
  */
 export const multiSort = (data, fields, directions) => {
   return data.sort((a, b) => {
     for (const field of fields) {
+      const valueA = getValueByPath(a, field);
+      const valueB = getValueByPath(b, field);
+
       let comparison;
       // Check if we're dealing with dates
-      if (a[field] && b[field] && Date.parse(a[field]) && Date.parse(b[field])) {
-        comparison = new Date(b[field]) - new Date(a[field]);
+      if (valueA && valueB && Date.parse(valueA) && Date.parse(valueB)) {
+        comparison = new Date(valueB) - new Date(valueA);
       } else {
-        comparison = a[field] < b[field] ? -1 : a[field] > b[field] ? 1 : 0;
+        comparison = valueA < valueB ? -1 : valueA > valueB ? 1 : 0;
       }
       if (directions[field] === 'asc') {
         comparison *= -1;

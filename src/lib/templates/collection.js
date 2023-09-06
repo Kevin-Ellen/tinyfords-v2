@@ -24,8 +24,11 @@ const templateCollection = async (dataPageCurrent) => {
 
   const dataCarsAll = await servicesGithubDataCarsAll();
 
-  const dataCarsFiltered = getCarsByCategoryId(dataCarsAll, dataPageCurrent.id);
-  const dataCarsSorted =   multiSort(dataCarsFiltered, ['dateAdded', 'id'], { dateAdded: 'desc', id: 'desc' });
+  // If the page ID is 'all', use the data for all cars
+  const dataCarsFiltered = dataPageCurrent.id === 'all' ? dataCarsAll : getCarsByCategoryId(dataCarsAll, dataPageCurrent.id) 
+
+  // Sort the cars, newest (dateAdded) 
+  const dataCarsSorted =   multiSort(dataCarsFiltered, ['addedDetails.date', 'id'], { 'addedDetails.date': 'desc', 'id': 'desc' });
 
 
   const content = [
@@ -34,8 +37,11 @@ const templateCollection = async (dataPageCurrent) => {
   ].join('');
 
   const sections = [
-    fragmentContent(content),
-    fragmentSearchCard(),
+    `<main>`,
+      fragmentContent(content),
+      fragmentSearchCard(),
+      fragmentGridCars('Results',2,dataCarsSorted),
+    `</main>`,
   ].join('');
 
   return sections;

@@ -41,7 +41,7 @@ const handleRequest = async (request) => {
       return handlerStatic(url) || handlerError();
 
     case '/':
-    case '/hot-wheels':
+    case '/hotwheels':
     case '/matchbox':
     case '/other':
     case '/all':
