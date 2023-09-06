@@ -42,6 +42,9 @@ const handleRequest = async (request) => {
 
     case '/':
     case '/hot-wheels':
+    case '/matchbox':
+    case '/other':
+    case '/all':
       return handlerTemplate(url) || handlerError();
   }
 

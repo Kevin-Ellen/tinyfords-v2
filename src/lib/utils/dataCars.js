@@ -95,3 +95,14 @@ export const getCategoryById = (dataCarsAll, categoryId) => {
 export const getCarById = (dataCarsAll, carId) => {
   return dataCarsAll.find(car => car.id === parseInt(carId, 10));
 }
+
+/**
+ * Fetches all car objects from the list by their category ID.
+ * 
+ * @param {Array} dataCarsAll - The list of all cars data.
+ * @param {number|string} categoryId - The ID of the category.
+ * @returns {Array} - The list of cars that belong to the given category.
+ */
+export const getCarsByCategoryId = (dataCarsAll, categoryId) => {
+  return dataCarsAll.filter(car => car.categoryDetails.id === categoryId);
+}

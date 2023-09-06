@@ -28,7 +28,10 @@ const handlerTemplate = async (url) => {
 
   switch (url.pathname) {
     case '/':
-    case '/hot-wheels':
+    case '/hotwheels':
+    case '/matchbox':
+    case '/other':
+    case '/all':
       const dataPageCurrent = findDataPageCurrent(url.pathname, dataPageAll);
       dataPageCurrent.url = url;
       
