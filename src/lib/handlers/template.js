@@ -15,6 +15,7 @@ import pageHead from '../construction/pageHead';
 import pageBreadcrumbs from '../construction/pageBreadcrumbs';
 import pageFooter from '../construction/pageFooter';
 import templateHome from '../templates/home';
+import templateCollection from '../templates/collection';
 
 /**
  * Main handler for templates. Determines which template to use based on the URL.
@@ -27,6 +28,7 @@ const handlerTemplate = async (url) => {
 
   switch (url.pathname) {
     case '/':
+    case '/hot-wheels':
       const dataPageCurrent = findDataPageCurrent(url.pathname, dataPageAll);
       dataPageCurrent.url = url;
       
@@ -92,10 +94,17 @@ const generateBreadcrumbs = (dataPageCurrent, dataPageAll) => {
 const createPage = async (dataPageCurrent, dataPageAll) => {
   const templates = {
     home: templateHome,
+    collection: templateCollection,
   }
 
   const resolvedSections = await Promise.all(
-    [documentHead, pageHead, pageBreadcrumbs, templates[dataPageCurrent.template], pageFooter, documentEnd].map(section => section(dataPageCurrent, dataPageAll))
+    [
+      documentHead, 
+      pageHead, 
+      pageBreadcrumbs, 
+      templates[dataPageCurrent.template], 
+      pageFooter, 
+      documentEnd].map(section => section(dataPageCurrent, dataPageAll))
   )
 
   return resolvedSections.join('');

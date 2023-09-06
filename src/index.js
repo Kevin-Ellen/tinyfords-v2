@@ -41,14 +41,15 @@ const handleRequest = async (request) => {
       return handlerStatic(url) || handlerError();
 
     case '/':
+    case '/hot-wheels':
       return handlerTemplate(url) || handlerError();
   }
 
   // If none of the above paths match, return an error response.
-  return handlerError();
+  return new Response('not done yet', {status: 404});
 }
 
 // A generic error handler for unmatched routes or other errors.
 const handlerError = () => {
-  return new Response('not done yet', {status:404});
+  return new Response('error', {status:404});
 }

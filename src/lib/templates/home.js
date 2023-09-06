@@ -16,10 +16,9 @@ import { utilDataCarsLatest } from '../utils/dataCars';
  * Generate the HTML content for the homepage.
  * 
  * @param {Object} dataPageCurrent - The current page's data.
- * @param {Array} dataPageAll - The data for all pages.
  * @returns {string} - The constructed homepage as an HTML string.
  */
-const templateHome = async (dataPageCurrent, dataPageAll) => {
+const templateHome = async (dataPageCurrent) => {
 
   // Fetch all car data from the GitHub repository.
   const dataCarsAll = await servicesGithubDataCarsAll();
