@@ -536,3 +536,41 @@ main {
   font-size: 1.2em;
   margin: 0 0 8px;
 }
+
+.fragmentPaginationControls {
+  padding: 20px 0;
+}
+.fragmentPaginationControls ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.fragmentPaginationControls ul li {
+  margin: 15px 5px;
+  padding: 5px 10px;
+  border-top-right-radius: 8px;
+  transition: background-color 0.3s;
+}
+.fragmentPaginationControls ul li a {
+  text-decoration: none;
+}
+.fragmentPaginationControls ul li:hover, .fragmentPaginationControls ul li:focus {
+  background-color: #eee;
+}
+.fragmentPaginationControls ul li.active, .fragmentPaginationControls ul li.active a {
+  background-color: #eee;
+}
+.fragmentPaginationControls a[aria-label="Next page"], .fragmentPaginationControls a[aria-label="Previous page"] {
+  padding: 5px 15px;
+}
+.fragmentPaginationControls a[aria-label="Next page"] {
+  margin-right: 0;
+}
+.fragmentPaginationControls a[aria-label="Previous page"] {
+  margin-left: 0;
+}

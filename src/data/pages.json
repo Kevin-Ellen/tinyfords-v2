@@ -210,7 +210,7 @@
       "description": "Discover how to find the toy number of a car at Tiny Fords. Learn how to navigate our collection and find the cars you are looking for."
     },
     "status": 200,
-    "template": "toy-number",
+    "template": "content",
     "active": true,
     "mainNav":false,
     "xmlSitemap": false,
@@ -231,7 +231,7 @@
       "description": "Learn more about Tiny Fords and our Ford die-cast car collection. Find out how we keep track of our collection and avoid buying duplicates."
     },
     "status": 200,
-    "template": "about",
+    "template": "content",
     "active": true,
     "mainNav":true,
     "xmlSitemap": true,
@@ -252,7 +252,7 @@
       "description": "[to do]]"
     },
     "status": 503,
-    "template": "about",
+    "template": "content",
     "active": false,
     "mainNav":false,
     "xmlSitemap": false,

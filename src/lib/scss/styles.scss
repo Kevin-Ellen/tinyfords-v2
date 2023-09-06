@@ -13,6 +13,7 @@
 // Importing fragment styles
 @use 'fragments/_content';    // Generic content block styles
 @use 'fragments/_grid';       // Grid system styles
+@use 'fragments/_pagination';       // Pagination control styles
 
 // Commented out component imports (to be enabled as needed)
 // @use 'components/buttons';  // Button styles

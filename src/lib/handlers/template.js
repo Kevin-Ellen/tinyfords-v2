@@ -26,12 +26,16 @@ import templateCollection from '../templates/collection';
 const handlerTemplate = async (url) => {
   const dataPageAll = await servicesGithubDataPageAll();
 
+  // Check if the URL should not be indexed.
+  const noIndex = shouldNoIndex(url.params);
+
   switch (url.pathname) {
     case '/':
     case '/hotwheels':
     case '/matchbox':
     case '/other':
     case '/all':
+    case '/about':
       const dataPageCurrent = findDataPageCurrent(url.pathname, dataPageAll);
       dataPageCurrent.url = url;
       
@@ -41,13 +45,19 @@ const handlerTemplate = async (url) => {
 
       dataPageCurrent.breadcrumbList = generateBreadcrumbs(dataPageCurrent, dataPageAll);
 
+      // Set the headers, including x-robots-tag if needed.
+      const headers = {
+        'Content-Type': 'text/html'
+      };
+      if (noIndex) {
+        headers['x-robots-tag'] = 'noindex';
+      }
+
       return new Response(
         await createPage(dataPageCurrent, dataPageAll),
         {
           status: 200,
-          headers: {
-            'Content-Type': 'text/html'
-          }
+          headers: headers
         }
       );
   }
@@ -111,4 +121,19 @@ const createPage = async (dataPageCurrent, dataPageAll) => {
   )
 
   return resolvedSections.join('');
+}
+
+/**
+ * Determines whether a URL should be indexed based on its parameters.
+ *
+ * @param {URLSearchParams} params - The query parameters of the URL.
+ * @returns {boolean} - True if the page should not be indexed, false otherwise.
+ */
+const shouldNoIndex = (params) => {
+  for (const [key, value] of params.entries()) {
+    if (key !== 'page' || isNaN(value) || parseInt(value, 10) != value) {
+      return true;
+    }
+  }
+  return false;
 }

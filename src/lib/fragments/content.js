@@ -1,5 +1,5 @@
 /**
- * fragmentContent.js
+ * content.js
  * 
  * This module provides a function to wrap content inside a specific HTML structure.
  * The content is placed within a <section> element with the class "fragmentContent".

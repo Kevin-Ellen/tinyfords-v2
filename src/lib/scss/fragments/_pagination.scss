@@ -1,0 +1,58 @@
+// Importing necessary tools and abstracts
+@use 'sass:map';
+@use '../abstracts/_variables' as v;
+@use '../abstracts/_functions' as f;
+@use '../abstracts/_mixins' as m;
+
+// Styling for the pagination control fragment
+.fragmentPaginationControls {
+  // Main padding for the pagination container
+  padding: 20px 0;
+
+  ul {
+    // Remove default list styles and apply flexbox
+    @include m.removeListStyle;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; // Allow the items to wrap to the next line if needed
+    margin: 20px 0; // Vertical margin
+
+    li {
+      margin: 15px 5px;
+      padding: 5px 10px;
+      @include m.roundedTop;
+      transition: background-color 0.3s;
+
+      a {
+        // Remove underlines from links
+        text-decoration: none;
+      }
+
+      // Hover and focus styles for list items
+      &:hover, &:focus {
+        background-color: #eee;
+      }
+
+      // Active state styles (for the current page)
+      &.active, &.active a {
+        background-color: #eee;
+      }
+    }
+  }
+
+  // Specific styles for Next and Previous page buttons
+  a[aria-label="Next page"], a[aria-label="Previous page"] {
+    padding: 5px 15px;
+  }
+
+  // Remove right margin for Next button
+  a[aria-label="Next page"] {
+    margin-right: 0;
+  }
+
+  // Remove left margin for Previous button
+  a[aria-label="Previous page"] {
+    margin-left: 0;
+  }
+}

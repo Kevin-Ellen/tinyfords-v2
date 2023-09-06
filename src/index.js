@@ -45,6 +45,10 @@ const handleRequest = async (request) => {
     case '/matchbox':
     case '/other':
     case '/all':
+    case '/about':
+      if(url.params.get('page')==='1'){
+        return new Response(null, {status: 308, headers: { Location: url.pathname}});
+      }
       return handlerTemplate(url) || handlerError();
   }
 
