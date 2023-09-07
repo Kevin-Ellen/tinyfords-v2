@@ -84,5 +84,36 @@
 
 
     }
+    .contentWithImage {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      img{
+        height:100%;
+        width:100%;
+      }
+    
+      @include m.desktop {
+        flex-direction: row;
+        align-items: center;
+    
+        img {
+          width:50%;
+          max-width:300px;
+          height:auto;
+          margin-left: auto;  // To push the image to the right
+        }
+    
+        &.contentRight {
+          flex-direction: row-reverse;  // Reverse the order for right alignment
+    
+          img {
+            margin-left: 0;
+            margin-right: auto;  // To push the image to the left when content is on the right
+          }
+        }
+      }
+    }
   }
 }

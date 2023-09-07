@@ -12,8 +12,8 @@
  */
 export const dataContentAbout = {
   image:{
-    mobile: '/images/about/about/mobile/about-top-500-250.jpg',
-    desktop: '/images/about/about/desktop/about-top-250-650.jpg',
+    mobile: '/images/about/about/mobile/about-top-500x250.jpg',
+    desktop: '/images/about/about/desktop/about-top-250x650.jpg',
   },
   intro: `<section>
     <h2 class="a11y">Intro</h2>
@@ -67,8 +67,8 @@ export const dataContentAbout = {
  */
  export const dataContentHowToFindToyNumber = {
   image:{
-    mobile: '/images/about/how-to-find-toy-number/mobile/how-to-top-500-250.jpg',
-    desktop: '/images/about/how-to-find-toy-number/desktop/how-to-top-250-650.jpg',
+    mobile: '/images/about/how-to-find-toy-number/mobile/how-to-top-500x250.jpg',
+    desktop: '/images/about/how-to-find-toy-number/desktop/how-to-top-250x650.jpg',
   },
   intro: `<section>
     <h2 class="a11y">Intro</h2>
@@ -96,24 +96,42 @@ export const dataContentAbout = {
         type: 'hw-mb',
         content: `<section>
           <h2>Normal Hot Wheels and Matchbox</h2>
-          <p>Matchbox and Hot Wheels cars have a code on the back of their packaging, sometimes also on the front. Usually, it is found at the top of the backcard, and is a combination of three letters and two numbers (e.g. 'GTB91').</p>
-          <img src="/about/how-to-find-toy-number/how-to-hw-example-500x500.jpg" alt="Rear packaging of a Hot Wheels case with the toy code encircled in red" height="1" width="1" />
+          <div class="contentWithImage">
+            <p>Matchbox and Hot Wheels cars have a code on the back of their packaging, sometimes also on the front. Usually, it is found at the top of the backcard, and is a combination of three letters and two numbers (e.g. 'GTB91').</p>
+            <img src="/images/about/how-to-find-toy-number/how-to-hw-example-500x500.jpg" alt="Rear packaging of a Hot Wheels case with the toy code encircled in red" height="1" width="1" />
+          </div>
         </section>`
       },{
         type: 'premium',
         content: `<section>
           <h2>Premium</h2>
-          <p>Premium cars may have their code located differently, such as closer to the barcode on the back of the packaging.</p>
-          <img src="/about/how-to-find-toy-number/how-to-premium-example-500x500.jpg" alt="Rear packaging of a Hot Wheels Premium case with the toy code encircled in red" height="1" width="1" />
+          <div class="contentWithImage contentRight">
+            <p>Premium cars may have their code located differently, such as closer to the barcode on the back of the packaging.</p>
+            <img src="/images/about/how-to-find-toy-number/how-to-premium-example-500x500.jpg" alt="Rear packaging of a Hot Wheels Premium case with the toy code encircled in red" height="1" width="1" />
+          </div>
         </section>`
       },{
         type: 'mb-power-grabs',
         content: `<section>
           <h2>Matchbox Power Grabs</h2>
-          <p>Matchbox Power Grab boxes don't have the usual backcard. Instead, the code can be found on the bottom near the barcode.</p>
-          <img src="/about/how-to-find-toy-number/how-to-mb-power-grab-example-500x500.jpg" alt="Rear packaging of a Matchbox Power Grab box with the toy code encircled in red" height="1" width="1" />
+          <div class="contentWithImage">
+            <p>Matchbox Power Grab boxes don't have the usual backcard. Instead, the code can be found on the bottom near the barcode.</p>
+            <img src="/images/about/how-to-find-toy-number/how-to-mb-power-grab-example-500x500.jpg" alt="Rear packaging of a Matchbox Power Grab box with the toy code encircled in red" height="1" width="1" />
+          </div>
         </section>`
       }
     ]
   }
 };
+
+ /**
+ * Content for the KLAS Car Keepers page
+ * 
+ * @returns {array} - Array with all the different sections
+ */
+ export const dataContentKlasCarKeepers = {
+  image:{
+    mobile: '/images/about/klas-car-keepers/mobile/klas-top-500x250.jpg',
+    desktop: '/images/about/klas-car-keepers/desktop/klas-top-250x650.jpg',
+  },
+ }

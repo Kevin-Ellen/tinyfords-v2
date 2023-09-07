@@ -38,14 +38,31 @@ export default pageFooter;
  */
 const createLinks = (data) => {
   
-  // Filter the pages that should appear in the footer based on certain criteria
-  // and then map them to HTML links.
-  const entries = data.filter(page => 
-    page.status === 200 
-    && page.active === true 
-    && page.footer === true)
-  .map(page => `<li><a href="${page.slug}">${page.name}</a></li><li aria-hidden="true">/</li>`)
-  .join('');
-  
-  return entries;
+  // Define link categories and their corresponding slugs
+  const categories = {
+    'Collections': ['/hotwheels', '/matchbox', '/other', '/all'],
+    'About': ['/about', '/about/how-to-find-toy-number', '/about/klas-protectors'] // Add '/about/klas-protectors' if it's part of your data
+  };
+
+  // Process each category and generate HTML for its links
+  const entries = Object.entries(categories).map(([categoryName, slugs]) => {
+    const links = data.filter(page => 
+      page.status === 200 
+      && page.active === true 
+      && page.footer === true 
+      && slugs.includes(page.slug))
+    .map(page => `<li><a href="${page.slug}">${page.name}</a></li><li aria-hidden="true">/</li>`)
+    .join('');
+
+    return `
+      <li>${categoryName} <span> > </span>
+        <ul>
+          ${links}
+        </ul>
+      </li>
+    `;
+  }).join('');
+
+  // Return the Home link along with other categories
+  return `<li><a href="/">Home</a></li>${entries}`;
 }

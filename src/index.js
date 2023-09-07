@@ -12,6 +12,7 @@ import indexAdmin from './admin/indexAdmin';
 import handlerStatic from './lib/handlers/static';
 import handlerTemplate from './lib/handlers/template';
 import handlerSearch from './lib/handlers/search';
+import handlerError from './lib/handlers/error';
 
 // Adding an event listener to listen for 'fetch' events. This event is triggered for every HTTP request coming to the service.
 addEventListener('fetch', event => {
@@ -33,7 +34,7 @@ const handleRequest = async (request) => {
 
   // Check if the path starts with '/images/' or '/fonts/' to handle static assets.
   if((url.pathname.startsWith('/images/')) || (url.pathname.startsWith('/fonts/'))){
-    return handlerStatic(url) || handlerError();
+    return handlerStatic(url) || handlerError(404, 'Not found');
   }
 
   // Handling GET requests
@@ -71,9 +72,4 @@ const handleRequest = async (request) => {
     }
   }
   return handlerError(405, 'Method not allowed');
-}
-
-// A generic error handler for unmatched routes or other errors.
-const handlerError = (status, message) => {
-  return new Response(`Error: ${message}`, {status:status});
 }

@@ -79,10 +79,8 @@ export const servicesGithubImageGetter = async (path) => {
     }
   });
 
-  console.log(BASE_URL + path);
-
   if (!response.ok) {
-    return new Response('Github: 404',{status: 404});
+    throw new Error('Image not found on Github');
   }
 
   return response.blob();

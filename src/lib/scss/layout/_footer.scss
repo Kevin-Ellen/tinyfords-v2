@@ -19,14 +19,33 @@
   }
 
   // Styling for the list of footer links
+  // Styling for the list of footer links
   .siteFooterLinks {
     @include m.removeListStyle; // Mixin to remove default list styles
-    display: flex; // Use flexbox for layout
-    flex-wrap: wrap; // Allow wrapping for the links
+    display: block; // Each list item takes full width
     gap: calc(map.get(v.$spacing, padding) / 2); // Space between links
     margin: calc(map.get(v.$spacing, padding) * 2) 0; // Margin for the list of links
     padding: map.get(v.$spacing, padding) 0; // Padding for the list
     border-top: 1px solid f.map-deep-get(v.$colours, footer, accent); // Separator line
+
+    // Make first one bold and flexbox to appear on a single line
+    > li{
+      display:flex;
+      font-weight: bold;
+
+      span{
+        font-weight:normal;
+        margin-left:5px;
+      }
+
+      ul{
+        @include m.removeListStyle; // Mixin to remove default list styles
+        display: flex;
+        gap: 5px;
+        margin: 0 5px;
+        font-weight:normal;
+      }
+    }
 
     // Styling for each footer link
     li a {
@@ -44,5 +63,10 @@
         text-decoration: underline;
       }
     }
+
+    // // Make the category name bold
+    // > li {
+    //   font-weight: bold;
+    // }
   }
 }

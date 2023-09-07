@@ -410,12 +410,28 @@ main {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
   gap: 8px;
   margin: 32px 0;
   padding: 16px 0;
   border-top: 1px solid white;
+}
+.siteFooter .siteFooterLinks > li {
+  display: flex;
+  font-weight: bold;
+}
+.siteFooter .siteFooterLinks > li span {
+  font-weight: normal;
+  margin-left: 5px;
+}
+.siteFooter .siteFooterLinks > li ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 5px;
+  margin: 0 5px;
+  font-weight: normal;
 }
 .siteFooter .siteFooterLinks li a {
   color: white;
@@ -536,6 +552,34 @@ main {
 @media only screen and (min-width: 500px) {
   .fragmentContentLongForm .contentLongFormContainer .contentLongForm .contentText {
     flex-basis: 75%;
+  }
+}
+.fragmentContentLongForm .contentLongFormContainer .contentWithImage {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.fragmentContentLongForm .contentLongFormContainer .contentWithImage img {
+  height: 100%;
+  width: 100%;
+}
+@media only screen and (min-width: 500px) {
+  .fragmentContentLongForm .contentLongFormContainer .contentWithImage {
+    flex-direction: row;
+    align-items: center;
+  }
+  .fragmentContentLongForm .contentLongFormContainer .contentWithImage img {
+    width: 50%;
+    max-width: 300px;
+    height: auto;
+    margin-left: auto;
+  }
+  .fragmentContentLongForm .contentLongFormContainer .contentWithImage.contentRight {
+    flex-direction: row-reverse;
+  }
+  .fragmentContentLongForm .contentLongFormContainer .contentWithImage.contentRight img {
+    margin-left: 0;
+    margin-right: auto;
   }
 }
 

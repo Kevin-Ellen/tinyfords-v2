@@ -8,6 +8,7 @@
 // Import necessary modules and utilities.
 import outputRobotsTxt from '../output/robotsTxt';
 import { servicesGithubImageGetter } from '../services/github';
+import handlerError from './error';
 
 /**
  * Handle requests for static assets.
@@ -45,26 +46,35 @@ export default handlerStatic;
  * @returns {Promise<Response>} - The response object.
  */
 const routerFonts = async (url) => {
-  const newUrl = new URL(url);
-  newUrl.host = 'fonts.gstatic.com';
-  newUrl.port = '';
-  newUrl.pathname = `/s/${newUrl.pathname.replace('/fonts/', '')}`;
+  try{
+    const newUrl = new URL(url);
+    newUrl.host = 'fonts.gstatic.com';
+    newUrl.port = '';
+    newUrl.pathname = `/s/${newUrl.pathname.replace('/fonts/', '')}`;
 
-  const cacheTime = 604800;
+    const cacheTime = 604800;
 
-  let response = await fetch(newUrl.toString(), {
-    cf: {
-      cacheTtl: cacheTime,
-      cacheEverything: true,
-      cacheKey: newUrl.toString()
+    let response = await fetch(newUrl.toString(), {
+      cf: {
+        cacheTtl: cacheTime,
+        cacheEverything: true,
+        cacheKey: newUrl.toString()
+      }
+    });
+
+    response = new Response(response.body, response);
+
+    if (!response.ok) {
+      throw new Error(`Error fetching font: ${response.statusText}`);
     }
-  });
 
-  response = new Response(response.body, response);
+    response.headers.set('Cache-Control', `max-age=${cacheTime}`);
 
-  response.headers.set('Cache-Control', `max-age=${cacheTime}`);
+    return response;
 
-  return response;
+  }catch (error){
+    return handlerError(404, `Font not found: ${error}`)
+  }
 }
 
 /**
@@ -74,19 +84,28 @@ const routerFonts = async (url) => {
  * @returns {Promise<Response>} - The response object with the image.
  */
 const imageRouter = async (url) => {
-  const imageBlob = await servicesGithubImageGetter(url.pathname);
-  const response = new Response(imageBlob);
+  try {
+    const imageBlob = await servicesGithubImageGetter(url.pathname);
+    const response = new Response(imageBlob);
 
-  const fileExtension = url.pathname.split('.').pop().toLowerCase();
-  const mimeTypes = {
-    'jpg': 'image/jpeg',
-    'jpeg': 'image/jpeg',
-    'png': 'image/png',
-    'gif': 'image/gif',
-    'webp': 'image/webp'
-    // ... add other extensions and MIME types as needed
-  };
-  response.headers.set('Content-Type', mimeTypes[fileExtension] || 'application/octet-stream');
+    if (!response.ok) {
+      throw new Error(`Error fetching image: ${response.statusText}`);
+    }
 
-  return response;
+    const fileExtension = url.pathname.split('.').pop().toLowerCase();
+    const mimeTypes = {
+      'jpg': 'image/jpeg',
+      'jpeg': 'image/jpeg',
+      'png': 'image/png',
+      'gif': 'image/gif',
+      'webp': 'image/webp'
+      // ... add other extensions and MIME types as needed
+    };
+
+    response.headers.set('Content-Type', mimeTypes[fileExtension] || 'application/octet-stream');
+
+    return response;
+  } catch (error) {
+      return handlerError(404, `Image not found: ${error}`)
+  }
 }

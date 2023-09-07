@@ -14,6 +14,7 @@ import handlerAdminLogout from './lib/handlers/adminLogout';
 import handlerAdminCarAdd from './lib/handlers/carAdd';
 import handlerAdminCarSearch from './lib/handlers/carSearch';
 import handlerAdminCarEdit from './lib/handlers/carEdit';
+import handlerError from '../lib/handlers/error';
 
 /**
  * Main function to handle incoming admin requests.
@@ -33,8 +34,8 @@ const indexAdmin = async (request) => {
         return await handlerTemplate(request);
       case '/admin/logout':
         return handlerAdminLogout(request);
-      default: 
-        return new Response('GET: not done yet'); // requires error handler
+      
+      default: return handlerError(404, 'GET: Not Found');
     }
   }
 
@@ -49,12 +50,12 @@ const indexAdmin = async (request) => {
         return handlerAdminCarSearch(request);
       case '/admin/edit-car': 
         return handlerAdminCarEdit(request);
-      default:
-        return new Response('POST: not done yet'); // requires error handler
+      
+      default: return handlerError(404, 'POST: Not Found');
     }
   }
 
   // If none of the above methods match, return method not allowed
-  return new Response('Method not allowed', { status: 405 });
+  return handlerError(405,'Method not allowed');
 }
 export default indexAdmin;
