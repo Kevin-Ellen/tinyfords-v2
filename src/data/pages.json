@@ -243,24 +243,24 @@
       "image": "social-media-about-codes"
     }
   },{
-    "id": "klasProtector",
-    "name": "Klas Protectors",
-    "slug": "/klas-protectors",
-    "h1": "Klas Protectors",
+    "id": "klasCarKeeper",
+    "name": "KLAS Car Keepers",
+    "slug": "/klas-car-keepers",
+    "h1": "KLAS Car Keepers",
     "metadata":{
-      "title": "🚗 [To do] - Ford Die-Cast Car Collection",
-      "description": "[to do]]"
+      "title": "⛑️ KLAS Car Keepers - Ford Die-Cast Car Collection",
+      "description": "Keeping my collection safe with KLAS Car keepers. Sustainable and strong: perfect protection for my collection!"
     },
-    "status": 503,
+    "status": 200,
     "template": "content",
-    "active": false,
+    "active": true,
     "mainNav":false,
-    "xmlSitemap": false,
-    "footer":false,
+    "xmlSitemap": true,
+    "footer":true,
     "breadcrumbList": ["Home", "About"],
     "socialMedia": {
-      "title": "🚗 [to do]]",
-      "description": "[to do]]",
+      "title": "⛑️ Protecting my collection with KLAS Car Keepers",
+      "description": "The perfect solution to keep your die-cast (1:64) collection is pristine condition - the strong and sustainable Car Keepers from KLAS.",
       "image": "social-media-about"
     }
   },{
