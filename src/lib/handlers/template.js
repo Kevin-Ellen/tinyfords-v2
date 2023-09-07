@@ -39,6 +39,7 @@ const handlerTemplate = async (url, options = {}) => {
     case '/all':
     case '/about':
     case '/about/how-to-find-toy-number':
+    case '/about/klas-car-keepers':
       const dataPageCurrent = findDataPageCurrent(url.pathname, dataPageAll);
       dataPageCurrent.url = url;
       

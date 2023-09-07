@@ -432,6 +432,7 @@ main {
   gap: 5px;
   margin: 0 5px;
   font-weight: normal;
+  flex-wrap: wrap;
 }
 .siteFooter .siteFooterLinks li a {
   color: white;

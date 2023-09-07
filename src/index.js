@@ -51,6 +51,7 @@ const handleRequest = async (request) => {
       case '/all':
       case '/about':
       case '/about/how-to-find-toy-number':
+      case '/about/klas-car-keepers':
         if(url.params.get('page')==='1'){
           return new Response(null, {status: 308, headers: { Location: url.pathname}});
         }

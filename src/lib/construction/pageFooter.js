@@ -41,7 +41,7 @@ const createLinks = (data) => {
   // Define link categories and their corresponding slugs
   const categories = {
     'Collections': ['/hotwheels', '/matchbox', '/other', '/all'],
-    'About': ['/about', '/about/how-to-find-toy-number', '/about/klas-protectors'] // Add '/about/klas-protectors' if it's part of your data
+    'About': ['/about', '/about/how-to-find-toy-number', '/about/klas-car-keepers'] // Add '/about/klas-protectors' if it's part of your data
   };
 
   // Process each category and generate HTML for its links

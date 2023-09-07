@@ -7,7 +7,7 @@
  */
 
 // Importing necessary modules
-import { dataContentAbout, dataContentHowToFindToyNumber } from '../../data/content';
+import { dataContentAbout, dataContentHowToFindToyNumber, dataContentKlasCarKeepers } from '../../data/content';
 import fragmentContentLongForm from '../fragments/contentLongForm';
 
  /**
@@ -21,7 +21,7 @@ const templateContent = (dataPageCurrent) => {
   const pages = {
     'about': dataContentAbout,
     'toynumber': dataContentHowToFindToyNumber,
-
+    'klasCarKeepers': dataContentKlasCarKeepers,
   }
 
   // Get the specific content for the current page
