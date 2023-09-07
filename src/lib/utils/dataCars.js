@@ -69,8 +69,10 @@ export const getUniqueCarCaseTypes = (data) => {
  * @returns {Object|false} - The car case details or false if not found.
  */
 export const getCaseById = (dataCarsAll, caseId) => {
-  if(!caseId){return false;}
-  return dataCarsAll.find(item => item.caseDetails.id === caseId).caseDetails;
+  if(caseId === undefined || caseId === false){return false;}
+  
+  const foundItem = dataCarsAll.find(item => item.caseDetails.id === caseId);
+  return foundItem ? foundItem.caseDetails : false;
 }
 
 /**
@@ -81,7 +83,7 @@ export const getCaseById = (dataCarsAll, caseId) => {
  * @returns {Object|false} - The car category details or false if not found.
  */
 export const getCategoryById = (dataCarsAll, categoryId) => {
-  if(!categoryId){return false;}
+  if(caseId === undefined){return false;}
   return dataCarsAll.find(item => item.categoryDetails.id === categoryId).categoryDetails;
 }
 

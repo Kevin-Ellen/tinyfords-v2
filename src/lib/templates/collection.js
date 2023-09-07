@@ -16,6 +16,8 @@ import { getCarsByCategoryId } from '../utils/dataCars';
 import { multiSort } from '../utils/misc';
 import utilPaginationData from '../utils/pagination';
 
+import { getCaseById } from '../utils/dataCars';
+
 // Define the constant for the number of items per grid
 const ITEMS_PER_GRID = 21;
 
@@ -26,10 +28,13 @@ const ITEMS_PER_GRID = 21;
  * @returns {string} - The constructed collection as an HTML string.
  */
 const templateCollection = async (dataPageCurrent, dataPageAll = {}, options = {}) => {
+  
   // Fetch data for all cars
   const data = {
     all: await servicesGithubDataCarsAll(),
   }
+
+  console.log(getCaseById(data.all,null));
 
   // Check if the current page ID is 'all' to decide which cars to display
   data.filtered = dataPageCurrent.id === 'all' ? data.all : getCarsByCategoryId(data.all, dataPageCurrent.id);
@@ -42,9 +47,14 @@ const templateCollection = async (dataPageCurrent, dataPageAll = {}, options = {
     data.sorted = searchCars(data.sorted, options.data.searchValue);
   }
 
+
   // Get the paginated details based on the number of items and the current page
   const paginationDetails = getPaginationDetails(data.sorted, dataPageCurrent.url);
   paginationDetails.slug = dataPageCurrent.slug;
+
+  if(dataPageCurrent.url.params.get('page')){
+    dataPageCurrent.h1 = `${dataPageCurrent.h1} - Page: ${dataPageCurrent.url.params.get('page')}`;
+  }
 
   // Construct the main content of the collection
   const content = [

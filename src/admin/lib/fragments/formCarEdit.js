@@ -25,8 +25,6 @@ const fragmentFormCarEdit = async (data, options = {}) => {
   const dataCarsAll = await servicesGithubDataCarsAll();
   const dataCar = {...data};
 
-  console.log(getUniqueCarCaseTypes(dataCarsAll));
-
   const categories = generateOptions(getUniqueCarCategories(dataCarsAll), dataCar.categoryDetails.id);
   const cases = generateOptions(getUniqueCarCaseTypes(dataCarsAll), dataCar.caseDetails.id);
 
