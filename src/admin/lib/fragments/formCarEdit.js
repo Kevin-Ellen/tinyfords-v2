@@ -25,6 +25,8 @@ const fragmentFormCarEdit = async (data, options = {}) => {
   const dataCarsAll = await servicesGithubDataCarsAll();
   const dataCar = {...data};
 
+  console.log(getUniqueCarCaseTypes(dataCarsAll));
+
   const categories = generateOptions(getUniqueCarCategories(dataCarsAll), dataCar.categoryDetails.id);
   const cases = generateOptions(getUniqueCarCaseTypes(dataCarsAll), dataCar.caseDetails.id);
 
@@ -67,7 +69,7 @@ const fragmentFormCarEdit = async (data, options = {}) => {
         <div class="inputGroup">
           <label for="category">Category:</label>
           <select id="category" name="category" required>
-            <option value="" selected disabled>Select a category</option>
+            <option value="" disabled>Select a category</option>
             ${categories}
           </select>
         </div>
@@ -87,7 +89,7 @@ const fragmentFormCarEdit = async (data, options = {}) => {
         
           <label for="caseType">Case Type:</label>
           <select id="caseType" name="caseType" required>
-            <option value="" selected disabled>Select a type</option>
+            <option value="" disabled>Select a type</option>
             ${cases}
           </select>
           

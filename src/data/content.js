@@ -98,7 +98,7 @@ export const dataContentAbout = {
           <h2>Normal Hot Wheels and Matchbox</h2>
           <div class="contentWithImage">
             <p>Matchbox and Hot Wheels cars have a code on the back of their packaging, sometimes also on the front. Usually, it is found at the top of the backcard, and is a combination of three letters and two numbers (e.g. 'GTB91').</p>
-            <img src="/images/about/how-to-find-toy-number/how-to-hw-example-500x500.jpg" alt="Rear packaging of a Hot Wheels case with the toy code encircled in red" height="1" width="1" />
+            <img src="/images/about/how-to-find-toy-number/how-to-hw-example-500x500.jpg" alt="Rear packaging of a Hot Wheels case with the toy code encircled in red" height="1" width="1">
           </div>
         </section>`
       },{
@@ -107,7 +107,7 @@ export const dataContentAbout = {
           <h2>Premium</h2>
           <div class="contentWithImage contentRight">
             <p>Premium cars may have their code located differently, such as closer to the barcode on the back of the packaging.</p>
-            <img src="/images/about/how-to-find-toy-number/how-to-premium-example-500x500.jpg" alt="Rear packaging of a Hot Wheels Premium case with the toy code encircled in red" height="1" width="1" />
+            <img src="/images/about/how-to-find-toy-number/how-to-premium-example-500x500.jpg" alt="Rear packaging of a Hot Wheels Premium case with the toy code encircled in red" height="1" width="1">
           </div>
         </section>`
       },{
@@ -116,7 +116,7 @@ export const dataContentAbout = {
           <h2>Matchbox Power Grabs</h2>
           <div class="contentWithImage">
             <p>Matchbox Power Grab boxes don't have the usual backcard. Instead, the code can be found on the bottom near the barcode.</p>
-            <img src="/images/about/how-to-find-toy-number/how-to-mb-power-grab-example-500x500.jpg" alt="Rear packaging of a Matchbox Power Grab box with the toy code encircled in red" height="1" width="1" />
+            <img src="/images/about/how-to-find-toy-number/how-to-mb-power-grab-example-500x500.jpg" alt="Rear packaging of a Matchbox Power Grab box with the toy code encircled in red" height="1" width="1">
           </div>
         </section>`
       }
@@ -145,7 +145,7 @@ export const dataContentAbout = {
         content: `<section>
           <h2>About KLAS</h2>
           <p>Nestled in Essex (UK), KLAS is not just any company - it's a passion project by a fellow collector who totally gets our collectible obsession! Their protectors? Top-tier, if you ask me. And here's the cherry on top: KLAS is all about going green. Every protector is made from recyclable materials, and even their packaging gets the eco-friendly nod with recycled boxes and padding; a perfect blend of quality and eco-consciousness!</p>
-        </section`,
+        </section>`,
       },{
         type: 'features',
         content: `<section>
@@ -181,7 +181,7 @@ export const dataContentAbout = {
               <li><strong>Easy Access:</strong> For those moments when you want a closer look, the case can be easily opened and resealed without compromising its integrity.</li>
               <li><strong>Storage & Display:</strong> Designed for convenience, these cases are stackable and come equipped with a hanger holder hole for those who love to display.</li>
             </ul>
-            <img src="/images/about/klas-car-keepers/klas-example-short-500x500.jpg" alt="Example of a short card KLAS car keeper" height="1" width="1" />
+            <img src="/images/about/klas-car-keepers/klas-example-short-500x500.jpg" alt="Example of a short card KLAS car keeper" height="1" width="1">
           </div>
         </section>`
       },{
@@ -200,7 +200,7 @@ export const dataContentAbout = {
               <li><strong>Easy Access:</strong> Collector-friendly design allows for easy opening and resealing, balancing accessibility with top-notch protection.</li>
               <li><strong>Storage & Display:</strong> These cases are not only stackable for efficient storage but also come with a hanger holder hole for proud display.</li>
             </ul>
-            <img src="/images/about/klas-car-keepers/klas-example-long-500x500.jpg" alt="Example of a long card KLAS car keeper" height="1" width="1" />
+            <img src="/images/about/klas-car-keepers/klas-example-long-500x500.jpg" alt="Example of a long card KLAS car keeper" height="1" width="1">
           </div>
         </section>`
       },{
@@ -219,7 +219,7 @@ export const dataContentAbout = {
               <li><strong>Easy Access:</strong> Collector-centric design ensures ease of access with simple opening and resealing mechanisms.</li>
               <li><strong>Storage & Display:</strong> With a stackable design for streamlined storage, these cases also sport a hanger holder hole for those who prefer to display.</li>
             </ul>
-            <img src="/images/about/klas-car-keepers/klas-example-transport-500x500.jpg" alt="Example of a team transport KLAS car keeper" height="1" width="1" />
+            <img src="/images/about/klas-car-keepers/klas-example-transport-500x500.jpg" alt="Example of a team transport KLAS car keeper" height="1" width="1">
           </div>
         </section>`
       },{
@@ -238,7 +238,7 @@ export const dataContentAbout = {
               <li><strong>Easy Access:</strong> Designed for collectors, it is easy to open and reseal, ensuring both accessibility and protection.</li>
               <li><strong>Storage & Display:</strong> Stackable design for optimal storage space, and comes with a hanger holder hole for display enthusiasts.</li>
             </ul>
-            <img src="/images/about/klas-car-keepers/klas-example-premium-500x500.jpg" alt="Example of a premium KLAS car keeper" height="1" width="1" />
+            <img src="/images/about/klas-car-keepers/klas-example-premium-500x500.jpg" alt="Example of a premium KLAS car keeper" height="1" width="1">
           </div>
         </section>`
       }

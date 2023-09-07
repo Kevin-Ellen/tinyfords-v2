@@ -68,7 +68,7 @@ const generateLinks = (request, options = {}) => {
 
   // Return the appropriate set of navigation links based on the authentication status.
   if (!loggedIn) {
-    return `<a href="/">Back to public home</a>`;
+    return `<li><a href="/">Back to public home</a></li>`;
   } else {
     return [
       { name: 'Admin home', slug: '/admin' },

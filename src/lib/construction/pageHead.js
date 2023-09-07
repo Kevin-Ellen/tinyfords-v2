@@ -24,7 +24,7 @@ const pageHead =  (dataPageCurrent, dataPageAll, options = {})  => {
   siteSearchUrl.pathname = '/all';;
 
   // Construct the full HTML for the head section.
-  const html = `<header role="banner" class="siteHeader">
+  const html = `<header class="siteHeader">
     <div class="siteHeaderContainer">
 
       <label class="siteNavLabel" for="siteNavBox">
@@ -48,7 +48,7 @@ const pageHead =  (dataPageCurrent, dataPageAll, options = {})  => {
       </div>
 
       <input type="checkbox" class="siteNavBox" id="siteNavBox">
-      <nav class="siteNavMenu" role="navigation" aria-label="Main menu">
+      <nav class="siteNavMenu" aria-label="Main menu">
         <ul class="mainMenu">
           ${links}
         </ul>

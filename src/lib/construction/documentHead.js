@@ -34,37 +34,37 @@ const documentHead = (dataPageCurrent, dataPageAll) => {
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-        <link rel="preload" href="/fonts/montserratalternates/v17/mFTiWacfw6zH4dthXcyms1lPpC8I_b0juU0xQIXFB7xG-GNxkg.woff2" as="font" type="font/woff2" crossorigin />
-        <link rel="preload" href="/fonts/montserratalternates/v17/mFTiWacfw6zH4dthXcyms1lPpC8I_b0juU0xNIPFB7xG-GNxkg.woff2" as="font" type="font/woff2" crossorigin />
-        <link rel="preload" href="/fonts/quicksand/v30/6xKtdSZaM9iE8KbpRA_hK1QNYuDyPw.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/fonts/montserratalternates/v17/mFTiWacfw6zH4dthXcyms1lPpC8I_b0juU0xQIXFB7xG-GNxkg.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/fonts/montserratalternates/v17/mFTiWacfw6zH4dthXcyms1lPpC8I_b0juU0xNIPFB7xG-GNxkg.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/fonts/quicksand/v30/6xKtdSZaM9iE8KbpRA_hK1QNYuDyPw.woff2" as="font" type="font/woff2" crossorigin>
         <style>
           ${css}
         </style>
         <title>${dataPageCurrent.metadata.title}</title>
-        <meta property="og:locale" content="en_GB" />
-        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_GB">
+        <meta property="og:type" content="website">
         <meta property="og:site_name" content="Tiny Fords">
         ${dataPageCurrent.status===200 && dataPageCurrent.template!=='offline' && dataPageCurrent.template!=='admin'? 
-          `<meta name="description" content="${dataPageCurrent.metadata.description}" />
-          <link rel="canonical" href="${dataPageCurrent.canonical}" />
-          <meta property="og:title" content="${dataPageCurrent.socialMedia.title}" />
-          <meta property="og:description" content="${dataPageCurrent.socialMedia.description}" />
-          <meta property="og:url" content="${dataPageCurrent.canonical}" />
-          <meta property="og:image" content="${dataPageCurrent.url.protocol}//${dataPageCurrent.url.host}/images/social-media/4080-2142/${dataPageCurrent.socialMedia.image}-4080-2142.jpg" />
-          <meta property="og:image:width" content="4080" />
-          <meta property="og:image:height" content="2142" />
+          `<meta name="description" content="${dataPageCurrent.metadata.description}">
+          <link rel="canonical" href="${dataPageCurrent.canonical}">
+          <meta property="og:title" content="${dataPageCurrent.socialMedia.title}">
+          <meta property="og:description" content="${dataPageCurrent.socialMedia.description}">
+          <meta property="og:url" content="${dataPageCurrent.canonical}">
+          <meta property="og:image" content="${dataPageCurrent.url.protocol}//${dataPageCurrent.url.host}/images/social-media/4080-2142/${dataPageCurrent.socialMedia.image}-4080-2142.jpg">
+          <meta property="og:image:width" content="4080">
+          <meta property="og:image:height" content="2142">
           <meta property="og:image:type" content="image/jpeg">
 
-          <meta property="og:image" content="${dataPageCurrent.url.protocol}//${dataPageCurrent.url.host}/images/social-media/256/${dataPageCurrent.socialMedia.image}-256.jpg" />
-          <meta property="og:image:width" content="256" />
-          <meta property="og:image:height" content="256" />
+          <meta property="og:image" content="${dataPageCurrent.url.protocol}//${dataPageCurrent.url.host}/images/social-media/256/${dataPageCurrent.socialMedia.image}-256.jpg">
+          <meta property="og:image:width" content="256">
+          <meta property="og:image:height" content="256">
           <meta property="og:image:type" content="image/jpeg">
 
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:creator" content="@kevin_ellen_" />
-          <meta name="twitter:title" content="${dataPageCurrent.socialMedia.title}" />
-          <meta name="twitter:description" ontent="${dataPageCurrent.socialMedia.description}" />
-          <meta name="twitter:image" content="${dataPageCurrent.url.protocol}//${dataPageCurrent.url.host}/images/social-media/4080-2142/${dataPageCurrent.socialMedia.imageName}-4080-2142.jpg" />
+          <meta name="twitter:card" content="summary_large_image">
+          <meta name="twitter:creator" content="@kevin_ellen_">
+          <meta name="twitter:title" content="${dataPageCurrent.socialMedia.title}">
+          <meta name="twitter:description" content="${dataPageCurrent.socialMedia.description}">
+          <meta name="twitter:image" content="${dataPageCurrent.url.protocol}//${dataPageCurrent.url.host}/images/social-media/4080-2142/${dataPageCurrent.socialMedia.imageName}-4080-2142.jpg">
           ` 
         : ''}
         <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">

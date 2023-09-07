@@ -61,7 +61,6 @@ const createAsideImage = (data, image) => {
      srcset="${image.mobile} 250w, 
       ${image.desktop} 500w"
      sizes="(min-width: 500px) 250px, 100vw"
-     role="presentation"
      class="contentLongFormSideImage" width="16" height="9">
     <div class="contentText">
       ${content}
