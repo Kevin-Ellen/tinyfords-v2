@@ -79,8 +79,10 @@ export const servicesGithubImageGetter = async (path) => {
     }
   });
 
+  console.log(BASE_URL + path);
+
   if (!response.ok) {
-    throw new Error(`GitHub API returned ${response.status}: ${response.statusText}`);
+    return new Response('Github: 404',{status: 404});
   }
 
   return response.blob();

@@ -11,9 +11,9 @@
  * @returns {array} - Array with all the different sections
  */
 export const dataContentAbout = {
-  images:{
-    mobile: '/about/about/mobile/about-top-500-250.jpg',
-    desktop: '/about/about/desktop/about-top-250-650.jpg',
+  image:{
+    mobile: '/images/about/about/mobile/about-top-500-250.jpg',
+    desktop: '/images/about/about/desktop/about-top-250-650.jpg',
   },
   intro: `<section>
     <h2 class="a11y">Intro</h2>
@@ -66,9 +66,9 @@ export const dataContentAbout = {
  * @returns {array} - Array with all the different sections
  */
  export const dataContentHowToFindToyNumber = {
-  images:{
-    mobile: '/about/how-to-find-toy-number/mobile/how-to-top-500-250.jpg',
-    desktop: '/about/how-to-find-toy-number/desktop/how-to-top-250-650.jpg',
+  image:{
+    mobile: '/images/about/how-to-find-toy-number/mobile/how-to-top-500-250.jpg',
+    desktop: '/images/about/how-to-find-toy-number/desktop/how-to-top-250-650.jpg',
   },
   intro: `<section>
     <h2 class="a11y">Intro</h2>
