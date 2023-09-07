@@ -9,6 +9,7 @@
 
 // Import necessary modules and templates
 import { servicesGithubDataPageAll } from '../services/github';
+import { findDataPageCurrent } from '../utils/dataPages';
 import documentHead from '../construction/documentHead';
 import documentEnd from '../construction/documentEnd';
 import pageHead from '../construction/pageHead';
@@ -16,6 +17,7 @@ import pageBreadcrumbs from '../construction/pageBreadcrumbs';
 import pageFooter from '../construction/pageFooter';
 import templateHome from '../templates/home';
 import templateCollection from '../templates/collection';
+import templateContent from '../templates/content';
 
 /**
  * Main handler for templates. Determines which template to use based on the URL.
@@ -23,7 +25,7 @@ import templateCollection from '../templates/collection';
  * @param {URL} url - The URL of the request.
  * @returns {Response} - The constructed page as a response.
  */
-const handlerTemplate = async (url) => {
+const handlerTemplate = async (url, options = {}) => {
   const dataPageAll = await servicesGithubDataPageAll();
 
   // Check if the URL should not be indexed.
@@ -36,6 +38,7 @@ const handlerTemplate = async (url) => {
     case '/other':
     case '/all':
     case '/about':
+    case '/about/how-to-find-toy-number':
       const dataPageCurrent = findDataPageCurrent(url.pathname, dataPageAll);
       dataPageCurrent.url = url;
       
@@ -54,7 +57,7 @@ const handlerTemplate = async (url) => {
       }
 
       return new Response(
-        await createPage(dataPageCurrent, dataPageAll),
+        await createPage(dataPageCurrent, dataPageAll, options),
         {
           status: 200,
           headers: headers
@@ -63,17 +66,6 @@ const handlerTemplate = async (url) => {
   }
 }
 export default handlerTemplate;
-
-/**
- * Find the page data for the current page based on its slug.
- * 
- * @param {string} slug - The slug of the current page.
- * @param {Array} dataPageAll - The list of all page data objects.
- * @returns {Object|null} - The data for the current page, or null if not found.
- */
-const findDataPageCurrent = (slug, dataPageAll) => {
-  return dataPageAll.find(page => page.slug === slug) || false;
-}
 
 /**
  * Generate the breadcrumb trail for the current page.
@@ -104,10 +96,11 @@ const generateBreadcrumbs = (dataPageCurrent, dataPageAll) => {
  * @param {Array} dataPageAll - The list of all page data objects.
  * @returns {string} - The constructed page as an HTML string.
  */
-const createPage = async (dataPageCurrent, dataPageAll) => {
+const createPage = async (dataPageCurrent, dataPageAll, options = {}) => {
   const templates = {
     home: templateHome,
     collection: templateCollection,
+    content: templateContent,
   }
 
   const resolvedSections = await Promise.all(
@@ -117,7 +110,7 @@ const createPage = async (dataPageCurrent, dataPageAll) => {
       pageBreadcrumbs, 
       templates[dataPageCurrent.template], 
       pageFooter, 
-      documentEnd].map(section => section(dataPageCurrent, dataPageAll))
+      documentEnd].map(section => section(dataPageCurrent, dataPageAll, options))
   )
 
   return resolvedSections.join('');

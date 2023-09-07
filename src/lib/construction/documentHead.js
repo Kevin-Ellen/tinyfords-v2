@@ -29,7 +29,7 @@ const documentHead = (dataPageCurrent, dataPageAll) => {
   }
 
   // Construct the HTML markup
-  const html = `
+  const html = `<!doctype html>
     <html lang="en">
       <head>
         <meta charset="utf-8">

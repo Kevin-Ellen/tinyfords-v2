@@ -24,7 +24,7 @@
     "id": "hw",
     "name": "Hot Wheels",
     "slug": "/hotwheels",
-    "h1": "HotWheels collection",
+    "h1": "Hot Wheels collection",
     "metadata":{
       "title": "🔥 Hot Wheels Collection - Tiny Fords",
       "description": "Discover our Hot Wheels collection at Tiny Fords. Find your favorite Ford die-cast cars with our easy-to-use Hot Wheels collection."
@@ -201,27 +201,6 @@
       "image": "social-media-about-contact"
     }
   },{
-    "id": "toynumber",
-    "name": "How to find the toy number",
-    "slug": "/about/how-to-find-toy-number",
-    "h1": "How to find the toy number",
-    "metadata":{
-      "title": "🔍 How to find the toy number of a car - Tiny Fords",
-      "description": "Discover how to find the toy number of a car at Tiny Fords. Learn how to navigate our collection and find the cars you are looking for."
-    },
-    "status": 200,
-    "template": "content",
-    "active": true,
-    "mainNav":false,
-    "xmlSitemap": false,
-    "footer":true,
-    "breadcrumbList": ["Home", "About", "How to find the toy number"],
-    "socialMedia": {
-      "title": "🔍 Find Your Favorite Cars in a Snap",
-      "description": "Quickly find the die-cast cars you love (and in our collection) with our easy search tips.",
-      "image": "social-media-about-codes"
-    }
-  },{
     "id": "about",
     "name": "About",
     "slug": "/about",
@@ -241,6 +220,27 @@
       "title": "🚗 Tiny Fords: The Story Behind Our Die-Cast Obsession",
       "description": "Learn the story behind why we created Tiny Fords and our die-cast car collection.",
       "image": "social-media-about"
+    }
+  },{
+    "id": "toynumber",
+    "name": "How to find the toy number",
+    "slug": "/about/how-to-find-toy-number",
+    "h1": "How to find the toy number",
+    "metadata":{
+      "title": "🔍 How to find the toy number of a car - Tiny Fords",
+      "description": "Discover how to find the toy number of a car at Tiny Fords. Learn how to navigate our collection and find the cars you are looking for."
+    },
+    "status": 200,
+    "template": "content",
+    "active": true,
+    "mainNav":false,
+    "xmlSitemap": false,
+    "footer":true,
+    "breadcrumbList": ["Home", "About", "How to find the toy number"],
+    "socialMedia": {
+      "title": "🔍 Find Your Favorite Cars in a Snap",
+      "description": "Quickly find the die-cast cars you love (and in our collection) with our easy search tips.",
+      "image": "social-media-about-codes"
     }
   },{
     "id": "klasProtector",

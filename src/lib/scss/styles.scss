@@ -1,19 +1,21 @@
 // Main stylesheet - Central hub for all SCSS components
 
 // Importing foundational styles
-@use 'base/_reset';           // Resetting default browser styles for consistency
-@use 'base/_typography';      // Default typography styles
-@use 'base/_base';            // Fundamental base styles for the entire site
+@use 'base/_reset';                 // Resetting default browser styles for consistency
+@use 'base/_typography';            // Default typography styles
+@use 'base/_base';                  // Fundamental base styles for the entire site
 
 // Importing layout styles
-@use 'layout/_header';        // Styles for the site header
-@use 'layout/_footer';        // Styles for the site footer
-@use 'layout/_breadcrumbs';   // Styles for breadcrumb navigation
+@use 'layout/_header';              // Styles for the site header
+@use 'layout/_footer';              // Styles for the site footer
+@use 'layout/_breadcrumbs';         // Styles for breadcrumb navigation
 
 // Importing fragment styles
-@use 'fragments/_content';    // Generic content block styles
-@use 'fragments/_grid';       // Grid system styles
+@use 'fragments/_content';          // Generic content block styles
+@use 'fragments/_contentLongForm';  // Long Form content block styles
+@use 'fragments/_grid';             // Grid system styles
 @use 'fragments/_pagination';       // Pagination control styles
+@use 'fragments/_searchBar';        // search bar styles
 
 // Commented out component imports (to be enabled as needed)
 // @use 'components/buttons';  // Button styles

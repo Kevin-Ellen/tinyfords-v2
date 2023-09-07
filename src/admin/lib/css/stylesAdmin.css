@@ -320,52 +320,7 @@ main {
   transition: all 0.5s;
 }
 .siteHeader .siteSearch {
-  background: white;
-  display: flex;
   justify-content: flex-end;
-  overflow: hidden;
-}
-.siteHeader .siteSearch .searchBar {
-  margin: 16px 0;
-  flex-grow: 1;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: hidden;
-  border-radius: 9px;
-  max-width: 500px;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-}
-.siteHeader .siteSearch .searchBar input[type=text],
-.siteHeader .siteSearch .searchBar input[type=search] {
-  background: white;
-  height: 35px;
-}
-.siteHeader .siteSearch .searchBar input[type=text],
-.siteHeader .siteSearch .searchBar input[type=search],
-.siteHeader .siteSearch .searchBar button {
-  border: none;
-  font-family: "Montserrat Alternates", sans-serif;
-}
-.siteHeader .siteSearch .searchBar input[type=text],
-.siteHeader .siteSearch .searchBar input[type=search] {
-  flex-grow: 1;
-  border: none;
-  padding-left: 5px;
-}
-.siteHeader .siteSearch .searchBar button {
-  transition: all 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background: black;
-  width: 35px;
-}
-.siteHeader .siteSearch .searchBar button:hover {
-  background: rgb(237, 34, 40);
-}
-.siteHeader .siteSearch .searchBar button svg {
-  height: 60%;
-  fill: rgb(248, 238, 37);
 }
 .siteHeader .siteNavMenu {
   overflow: hidden;
@@ -382,6 +337,14 @@ main {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+.siteHeader .siteNavMenu .mainMenu .divider {
+  display: none;
+}
+@media only screen and (min-width: 500px) {
+  .siteHeader .siteNavMenu .mainMenu .divider {
+    display: revert;
+  }
 }
 @media only screen and (min-width: 500px) {
   .siteHeader .siteNavMenu .mainMenu {

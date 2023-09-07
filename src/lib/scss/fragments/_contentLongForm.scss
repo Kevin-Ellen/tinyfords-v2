@@ -1,0 +1,88 @@
+// Importing necessary tools and abstracts
+@use 'sass:map';
+@use '../abstracts/_variables' as v;
+@use '../abstracts/_functions' as f;
+@use '../abstracts/_mixins' as m;
+
+// Main container style for the long form content
+.fragmentContentLongForm {
+  background: white;  // Set the background color to white
+  padding: 16px 0 80px;  // Provide padding to separate the content from its boundaries
+  margin: 16px 0 80px;  // Provide margin to separate the element from others
+  
+  // Container for the long form content to provide additional layout control
+  .contentLongFormContainer {
+    margin: 16px 0 80px;  // Set margin to position content within the page
+
+    // Additional styles specific to desktop screens for the content container
+    @include m.desktop {
+      width: 80%;  // Set the width of the content container to 80% of its parent
+      margin: 0 auto;  // Center the content container horizontally within its parent
+    }
+    
+    // Styling for the header element inside the content container
+    header {
+      text-align: center;  // Center-align the header text
+      margin: 20px 8px;  // Margin to position the header
+    }
+    
+    // Styling for each section inside the content container
+    section {
+      margin: 0 8px;  // Margin to position each section
+    }
+
+    // Main flexbox container for the long form content
+    .contentLongForm {
+      display: flex;  // Use flexbox for layout
+      box-sizing: border-box;  // Make sure padding and border are included in the element's total width and height
+      flex-direction: column;  // Stack child elements vertically by default
+      align-items: stretch;  // Stretch child elements to fill the container width
+      gap: 20px;  // Space between child elements
+
+      // Styles specific to desktop screens
+      @include m.desktop {
+        flex-direction: row;  // Lay out child elements horizontally
+        align-items: stretch;  // Stretch child elements to fill the container height
+      }
+
+      // Styles for the side image in the content layout
+      .contentLongFormSideImage {
+        @include m.roundedTop;  // Apply rounded top corners
+        width: 100%;  // Make the image take the full width of its container by default
+        height:100%; // for mobile devices
+        max-height: 650px;  // Restrict the maximum height of the image
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  // Add a subtle shadow for a lift effect
+        object-fit: cover;  // Ensure the image covers its container without distortion
+        object-position: left;  // Position the image to the left
+
+        // Styles for the image on desktop
+        @include m.desktop {
+          flex-basis: 25%;  // Make the image take up 25% of the container's width
+          width: 25%;  // Explicitly set the image width
+          height: auto; // set the heigth to auto to comply to stretch
+        }
+          
+      }
+
+      // Styles for the text content
+      .contentText {
+        order: 2;  // Ensure text is displayed below the image by default
+
+        ol{
+          margin-left: 16px;
+
+          li::marker {
+            font-weight: bold;
+          }
+        }
+
+        // Styles for the text content on desktop
+        @include m.desktop {
+          flex-basis: 75%;  // Make the text content take up 75% of the container's width
+        }
+      }
+
+
+    }
+  }
+}

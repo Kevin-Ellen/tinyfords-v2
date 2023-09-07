@@ -11,6 +11,7 @@
 import indexAdmin from './admin/indexAdmin';
 import handlerStatic from './lib/handlers/static';
 import handlerTemplate from './lib/handlers/template';
+import handlerSearch from './lib/handlers/search';
 
 // Adding an event listener to listen for 'fetch' events. This event is triggered for every HTTP request coming to the service.
 addEventListener('fetch', event => {
@@ -35,28 +36,44 @@ const handleRequest = async (request) => {
     return handlerStatic(url) || handlerError();
   }
 
-  // Handling dynamic routes using template handler. You can add more paths as your application grows.
-  switch (url.pathname){
-    case '/robots.txt': 
-      return handlerStatic(url) || handlerError();
+  // Handling GET requests
+  if (request.method === 'GET') {
+    // Handling dynamic routes using template handler. You can add more paths as your application grows.
+    switch (url.pathname){
+      case '/robots.txt': 
+        return handlerStatic(url) || handlerError();
 
-    case '/':
-    case '/hotwheels':
-    case '/matchbox':
-    case '/other':
-    case '/all':
-    case '/about':
-      if(url.params.get('page')==='1'){
-        return new Response(null, {status: 308, headers: { Location: url.pathname}});
-      }
-      return handlerTemplate(url) || handlerError();
+      case '/':
+      case '/hotwheels':
+      case '/matchbox':
+      case '/other':
+      case '/all':
+      case '/about':
+      case '/about/how-to-find-toy-number':
+        if(url.params.get('page')==='1'){
+          return new Response(null, {status: 308, headers: { Location: url.pathname}});
+        }
+        return handlerTemplate(url) || handlerError(404, 'GET: Not Found');
+      
+      default: return handlerError(404, 'GET: Not Found');
+    }
   }
 
-  // If none of the above paths match, return an error response.
-  return new Response('not done yet', {status: 404});
+  if (request.method === 'POST'){
+    switch (url.pathname){
+      case '/hotwheels':
+      case '/matchbox':
+      case '/other':
+      case '/all':
+        return handlerSearch(request);
+        
+      default: return handlerError(404, 'POST: Not Found');
+    }
+  }
+  return handlerError(405, 'Method not allowed');
 }
 
 // A generic error handler for unmatched routes or other errors.
-const handlerError = () => {
-  return new Response('error', {status:404});
+const handlerError = (status, message) => {
+  return new Response(`Error: ${message}`, {status:status});
 }

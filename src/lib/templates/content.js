@@ -2,13 +2,13 @@
  * content.js
  * 
  * This module provides the template for content pages.
- * The content is different per site and infromation is
- * stored within /data/contentPages.js
+ * Each content page may have different structure and information,
+ * which are stored within /data/contentPages.js.
  */
 
 // Importing necessary modules
-import { dataContentAbout } from '../../data/content';
-import fragmentContent from '../fragments/content';
+import { dataContentAbout, dataContentHowToFindToyNumber } from '../../data/content';
+import fragmentContentLongForm from '../fragments/contentLongForm';
 
  /**
  * Generate the HTML content for the collection page.
@@ -17,27 +17,72 @@ import fragmentContent from '../fragments/content';
  * @returns {string} - The constructed template as an HTML string.
  */
 const templateContent = (dataPageCurrent) => {
-  const sections = [
-    `<main>`,
-    `<h1>About Tiny Fords</h1>`,
-    arrayToSections(dataContentAbout),
-    `</main>`,
-  ].join('');
+  // Define the pages and their associated content data
+  const pages = {
+    'about': dataContentAbout,
+    'toynumber': dataContentHowToFindToyNumber,
 
-  return sections;
+  }
+
+  // Get the specific content for the current page
+  const content = pages[dataPageCurrent.id];
+
+  // Generate the main template, combining the intro and other content sections
+  return `<main>
+    <section class="fragmentContentLongForm">
+      <div class="contentLongFormContainer">
+        <h1>${dataPageCurrent.h1}</h1>
+        ${content.intro}
+        ${createAsideImage(content.body.asideImage, content.image)}
+        ${createBelowImage(content.body.belowImage)}
+      </div>
+    </section>
+  </main>`;
 }
 export default templateContent;
 
 /**
- * Turn an array into a string of content
+ * Create the section of content that appears alongside an image.
  * 
- * @param {array} arr - The array that needs to be split in content fragments
- * @returns {string} - The constructed content as an HTML string.
+ * @param {Array} data - Array of content sections.
+ * @param {string} image - Image URL.
+ * @returns {string} - The constructed HTML for the content alongside the image.
  */
-const arrayToSections = (arr) => {
-  // Use the map function to apply the fragmentContent function to each entry in the array
-  const sections = arr.map(entry => fragmentContent(entry));
+const createAsideImage = (data, image) => {
+  // Return early if no data is provided
+  if(!data){ return ''; }
 
-  // Use the join method to join the array of sections into a single string
-  return sections.join('');
+  // Compile the content sections into a single string
+  const content = data.map(section => section.content).join('');
+
+  // Construct the HTML for the image and its accompanying content
+  const html = `<div class="contentLongForm">
+    <img src="${image}" alt="" class="contentLongFormSideImage" width="16" height="9">
+    <div class="contentText">
+      ${content}
+    </div>
+  </div>`;
+
+  return html;
+}
+
+/**
+ * Create the section of content that appears below the main image.
+ * 
+ * @param {Array} data - Array of content sections.
+ * @returns {string} - The constructed HTML for the content below the image.
+ */
+const createBelowImage = (data) => {
+  // Return early if no data is provided
+  if(!data){ return ''; }
+
+  // Compile the content sections into a single string
+  const content = data.map(section => section.content).join('');
+
+  // Construct the HTML for the content below the image
+  const html = `<div>
+    ${content}
+  </div>`;
+
+  return html;
 }
