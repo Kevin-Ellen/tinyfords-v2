@@ -68,13 +68,17 @@
       .contentText {
         order: 2;  // Ensure text is displayed below the image by default
 
-        ol{
+        ol, ul{
           margin-left: 16px;
 
           li::marker {
             font-weight: bold;
           }
         }
+        ul li{
+          margin-bottom: 8px;
+        }
+
 
         // Styles for the text content on desktop
         @include m.desktop {

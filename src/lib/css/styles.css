@@ -544,11 +544,14 @@ main {
 .fragmentContentLongForm .contentLongFormContainer .contentLongForm .contentText {
   order: 2;
 }
-.fragmentContentLongForm .contentLongFormContainer .contentLongForm .contentText ol {
+.fragmentContentLongForm .contentLongFormContainer .contentLongForm .contentText ol, .fragmentContentLongForm .contentLongFormContainer .contentLongForm .contentText ul {
   margin-left: 16px;
 }
-.fragmentContentLongForm .contentLongFormContainer .contentLongForm .contentText ol li::marker {
+.fragmentContentLongForm .contentLongFormContainer .contentLongForm .contentText ol li::marker, .fragmentContentLongForm .contentLongFormContainer .contentLongForm .contentText ul li::marker {
   font-weight: bold;
+}
+.fragmentContentLongForm .contentLongFormContainer .contentLongForm .contentText ul li {
+  margin-bottom: 8px;
 }
 @media only screen and (min-width: 500px) {
   .fragmentContentLongForm .contentLongFormContainer .contentLongForm .contentText {
