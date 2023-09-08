@@ -23,11 +23,12 @@ const pageBreadcrumbs = (dataPageCurrent, dataPageAll) => {
 
   // Construct the full HTML for the breadcrumb navigation
   const html = `
-    <nav class="breadcrumbsContainer" aria-label="breadcrumb">
-      <ul class="breadcrumbs">
-        ${breadcrumbs}
-      </ul>
-    </nav>
+    <div id="pageContent">
+      <nav class="breadcrumbsContainer" aria-label="breadcrumb">
+        <ul class="breadcrumbs">
+          ${breadcrumbs}
+        </ul>
+      </nav>
   `;
 
   return html;

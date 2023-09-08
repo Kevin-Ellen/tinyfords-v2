@@ -13,6 +13,7 @@ import handlerStatic from './lib/handlers/static';
 import handlerTemplate from './lib/handlers/template';
 import handlerSearch from './lib/handlers/search';
 import handlerError from './lib/handlers/error';
+import handlerTemplateSPA from './lib/handlers/spa';
 
 // Adding an event listener to listen for 'fetch' events. This event is triggered for every HTTP request coming to the service.
 addEventListener('fetch', event => {
@@ -42,6 +43,8 @@ const handleRequest = async (request) => {
     // Handling dynamic routes using template handler. You can add more paths as your application grows.
     switch (url.pathname){
       case '/robots.txt': 
+      case '/manifest.json':
+      case '/sitemap.xml':
         return handlerStatic(url) || handlerError();
 
       case '/':
@@ -55,10 +58,21 @@ const handleRequest = async (request) => {
         if(url.params.get('page')==='1'){
           return new Response(null, {status: 308, headers: { Location: url.pathname}});
         }
-        return handlerTemplate(url) || handlerError(404, 'GET: Not Found');
+        return handlerTemplate(url) || handlerError(404, 'GET: Not Found - index');
       
-      default: return handlerError(404, 'GET: Not Found');
+      
     }
+
+    if (url.pathname.startsWith('/content-only/')) {
+      const headerValue = request.headers.get('x-tf-spa');
+      if(headerValue){
+        const slug = url.pathname.replace('/content-only', '');
+        return handlerTemplateSPA(slug) || handlerError(404, 'Content Not Found');
+      }else{
+        return handlerError(403, 'Forbidden');
+      }
+    }
+    return handlerError(404, 'GET: Not Found - index 62');
   }
 
   if (request.method === 'POST'){

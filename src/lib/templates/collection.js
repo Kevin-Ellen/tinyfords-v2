@@ -15,6 +15,7 @@ import { servicesGithubDataCarsAll } from '../services/github';
 import { getCarsByCategoryId } from '../utils/dataCars';
 import { multiSort } from '../utils/misc';
 import utilPaginationData from '../utils/pagination';
+import handlerError from '../handlers/error';
 
 import { getCaseById } from '../utils/dataCars';
 
@@ -34,8 +35,6 @@ const templateCollection = async (dataPageCurrent, dataPageAll = {}, options = {
     all: await servicesGithubDataCarsAll(),
   }
 
-  console.log(getCaseById(data.all,null));
-
   // Check if the current page ID is 'all' to decide which cars to display
   data.filtered = dataPageCurrent.id === 'all' ? data.all : getCarsByCategoryId(data.all, dataPageCurrent.id);
 
@@ -52,8 +51,13 @@ const templateCollection = async (dataPageCurrent, dataPageAll = {}, options = {
   const paginationDetails = getPaginationDetails(data.sorted, dataPageCurrent.url);
   paginationDetails.slug = dataPageCurrent.slug;
 
+
   if(dataPageCurrent.url.params.get('page')){
     dataPageCurrent.h1 = `${dataPageCurrent.h1} - Page: ${dataPageCurrent.url.params.get('page')}`;
+
+    if(parseInt(dataPageCurrent.url.params.get('page'),10) > paginationDetails.totalPages){
+      throw new Error('Pagination exceeded number of pages');
+    }
   }
 
   // Construct the main content of the collection

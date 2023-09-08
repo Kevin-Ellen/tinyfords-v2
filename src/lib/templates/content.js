@@ -57,11 +57,12 @@ const createAsideImage = (data, image) => {
 
   // Construct the HTML for the image and its accompanying content
   const html = `<div class="contentLongForm">
-    <img src="${image.mobile}" alt=""
-     srcset="${image.mobile} 250w, 
-      ${image.desktop} 500w"
-     sizes="(min-width: 500px) 250px, 100vw"
-     class="contentLongFormSideImage" width="16" height="9">
+     <picture class="contentLongFormSideImage" >
+      <source media="(min-width: 500px)" srcset="${image.desktop}">
+      <source media="(min-width: 0px)" srcset="${image.mobile}">
+      <img src="${image.mobile}" alt="About Top" width="16" height="9">
+    </picture>
+
     <div class="contentText">
       ${content}
     </div>

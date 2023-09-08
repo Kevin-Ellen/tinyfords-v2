@@ -19,6 +19,7 @@ const pageFooter = (dataPageCurrent, dataPageAll) => {
   
   // Construct the full HTML for the footer section
   return(`
+    </div>
     <footer class="siteFooter">
       <ul class="siteFooterLinks">
         ${links}

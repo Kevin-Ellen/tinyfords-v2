@@ -5,6 +5,8 @@
  * It closes the body and html tags that were opened in the beginning of the document.
  */
 
+import rawJS from '../js/spa-engine-raw-js.js';
+
 /**
  * Generates the closing HTML markup for the page.
  * 
@@ -15,7 +17,10 @@
 const documentEnd = (dataPageCurrent, dataPageAll) => {
   // The closing tags for body and html
   const html = `
-    </body>
+        <script>
+          ${rawJS}
+        </script>
+      </body>
     </html>
   `;
 

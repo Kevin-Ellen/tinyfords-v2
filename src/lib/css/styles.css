@@ -534,6 +534,10 @@ main {
   -o-object-position: left;
      object-position: left;
 }
+.fragmentContentLongForm .contentLongFormContainer .contentLongForm .contentLongFormSideImage img {
+  width: 100%;
+  height: 100%;
+}
 @media only screen and (min-width: 500px) {
   .fragmentContentLongForm .contentLongFormContainer .contentLongForm .contentLongFormSideImage {
     flex-basis: 25%;

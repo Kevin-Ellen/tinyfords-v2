@@ -7,6 +7,8 @@
 
 // Import necessary modules and utilities.
 import outputRobotsTxt from '../output/robotsTxt';
+import outputManifest from '../output/manifest';
+import outputXmlSitemap from '../output/sitemap';
 import { servicesGithubImageGetter } from '../services/github';
 import handlerError from './error';
 
@@ -33,8 +35,14 @@ const handlerStatic = (url) => {
     case '/robots.txt':
       return outputRobotsTxt(url);
 
+    case '/manifest.json':
+      return outputManifest();
+
+    case '/sitemap.xml':
+      return outputXmlSitemap(url);
+
     default:
-      return new Response('Not Found', { status: 404 });
+      return new Response('Not Found - static', { status: 404 });
   }
 }
 export default handlerStatic;

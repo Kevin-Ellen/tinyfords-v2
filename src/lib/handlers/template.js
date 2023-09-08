@@ -18,6 +18,7 @@ import pageFooter from '../construction/pageFooter';
 import templateHome from '../templates/home';
 import templateCollection from '../templates/collection';
 import templateContent from '../templates/content';
+import handlerError from './error';
 
 /**
  * Main handler for templates. Determines which template to use based on the URL.
@@ -26,44 +27,48 @@ import templateContent from '../templates/content';
  * @returns {Response} - The constructed page as a response.
  */
 const handlerTemplate = async (url, options = {}) => {
-  const dataPageAll = await servicesGithubDataPageAll();
+  try{
+    const dataPageAll = await servicesGithubDataPageAll();
 
-  // Check if the URL should not be indexed.
-  const noIndex = shouldNoIndex(url.params);
+    // Check if the URL should not be indexed.
+    const noIndex = shouldNoIndex(url.params);
 
-  switch (url.pathname) {
-    case '/':
-    case '/hotwheels':
-    case '/matchbox':
-    case '/other':
-    case '/all':
-    case '/about':
-    case '/about/how-to-find-toy-number':
-    case '/about/klas-car-keepers':
-      const dataPageCurrent = findDataPageCurrent(url.pathname, dataPageAll);
-      dataPageCurrent.url = url;
-      
-      if (!dataPageCurrent) {
-        return new Response('Not Found', { status: 404 });
-      }
-
-      dataPageCurrent.breadcrumbList = generateBreadcrumbs(dataPageCurrent, dataPageAll);
-
-      // Set the headers, including x-robots-tag if needed.
-      const headers = {
-        'Content-Type': 'text/html'
-      };
-      if (noIndex) {
-        headers['x-robots-tag'] = 'noindex';
-      }
-
-      return new Response(
-        await createPage(dataPageCurrent, dataPageAll, options),
-        {
-          status: 200,
-          headers: headers
+    switch (url.pathname) {
+      case '/':
+      case '/hotwheels':
+      case '/matchbox':
+      case '/other':
+      case '/all':
+      case '/about':
+      case '/about/how-to-find-toy-number':
+      case '/about/klas-car-keepers':
+        const dataPageCurrent = findDataPageCurrent(url.pathname, dataPageAll);
+        dataPageCurrent.url = url;
+        
+        if (!dataPageCurrent) {
+          return new Response('Not Found', { status: 404 });
         }
-      );
+
+        dataPageCurrent.breadcrumbList = generateBreadcrumbs(dataPageCurrent, dataPageAll);
+
+        // Set the headers, including x-robots-tag if needed.
+        const headers = {
+          'Content-Type': 'text/html'
+        };
+        if (noIndex) {
+          headers['x-robots-tag'] = 'noindex';
+        }
+
+        return new Response(
+          await createPage(dataPageCurrent, dataPageAll, options),
+          {
+            status: 200,
+            headers: headers
+          }
+        );
+    }
+  }catch(error){
+    return handlerError(404, `Not found: ${error.message}`);
   }
 }
 export default handlerTemplate;
