@@ -58,7 +58,8 @@ const pageHead =  (dataPageCurrent, dataPageAll, options = {})  => {
       ${fragmentSearchBar(siteSearchUrl, options)}
 
     </div>
-  </header>`;
+  </header>
+  <div id="pageContent">`;
   return html;
 }
 export default pageHead;

@@ -9,6 +9,7 @@
 import outputRobotsTxt from '../output/robotsTxt';
 import outputManifest from '../output/manifest';
 import outputXmlSitemap from '../output/sitemap';
+import outputJson from '../output/outputJon';
 import { servicesGithubImageGetter } from '../services/github';
 import handlerError from './error';
 
@@ -18,7 +19,7 @@ import handlerError from './error';
  * @param {URL} url - The request URL object.
  * @returns {Response} - The response object.
  */
-const handlerStatic = (url) => {
+const handlerStatic = (url, request = {}) => {
 
   // Handle image requests.
   if (url.pathname.startsWith('/images/')) {
@@ -28,6 +29,11 @@ const handlerStatic = (url) => {
   // Handle font requests.
   if (url.pathname.startsWith('/fonts/')) {
     return routerFonts(url);
+  }
+
+  // Handle JSON
+  if (url.pathname.startsWith('/json/')) {
+    return outputJson(url);
   }
 
   // Handle specific paths.

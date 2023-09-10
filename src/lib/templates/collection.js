@@ -15,9 +15,6 @@ import { servicesGithubDataCarsAll } from '../services/github';
 import { getCarsByCategoryId } from '../utils/dataCars';
 import { multiSort } from '../utils/misc';
 import utilPaginationData from '../utils/pagination';
-import handlerError from '../handlers/error';
-
-import { getCaseById } from '../utils/dataCars';
 
 // Define the constant for the number of items per grid
 const ITEMS_PER_GRID = 21;

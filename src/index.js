@@ -63,11 +63,20 @@ const handleRequest = async (request) => {
       
     }
 
-    if (url.pathname.startsWith('/content-only/')) {
-      const headerValue = request.headers.get('x-tf-spa');
+    if (url.pathname.startsWith('/json/')) {
+      const headerValue = true; //request.headers.get('x-tf-spa');
       if(headerValue){
-        const slug = url.pathname.replace('/content-only', '');
-        return handlerTemplateSPA(slug) || handlerError(404, 'Content Not Found');
+        return handlerStatic(url) || handlerError();
+      }else{
+        return handlerError(403, 'Forbidden');
+      }
+    }
+
+    if (url.pathname.startsWith('/content-only/')) {
+      const headerValue = true; //request.headers.get('x-tf-spa');
+      url.pathname = url.pathname.replace('/content-only', '');
+      if(headerValue){
+        return handlerTemplateSPA(url) || handlerError(404, 'Content Not Found');
       }else{
         return handlerError(403, 'Forbidden');
       }

@@ -83,7 +83,7 @@ export const getCaseById = (dataCarsAll, caseId) => {
  * @returns {Object|false} - The car category details or false if not found.
  */
 export const getCategoryById = (dataCarsAll, categoryId) => {
-  if(caseId === undefined){return false;}
+  if(categoryId === undefined){return false;}
   return dataCarsAll.find(item => item.categoryDetails.id === categoryId).categoryDetails;
 }
 

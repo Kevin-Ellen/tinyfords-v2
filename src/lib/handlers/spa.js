@@ -21,13 +21,12 @@ import pageBreadcrumbs from '../construction/pageBreadcrumbs';
  * @param {Object} dataPageCurrent - The current page's data.
  * @returns {string} - The constructed SPA content as an HTML string.
  */
-const handlerTemplateSPA = async (slug, options = {}) => {
+const handlerTemplateSPA = async (url, options = {}) => {
+
   const dataPageAll = await servicesGithubDataPageAll();
 
-  // console.log(dataPagesAll);
-
-
-  const dataPageCurrent = determinePageBasedOnURL(slug, dataPageAll);
+  const dataPageCurrent = determinePageBasedOnURL(url.pathname, dataPageAll);
+  dataPageCurrent.url = url;
   dataPageCurrent.breadcrumbList = generateBreadcrumbs(dataPageCurrent, dataPageAll);
   
   const templates = {
