@@ -12,14 +12,14 @@
  * @param {Object} dataPageAll - Data that is common to all pages.
  * @return {string} The HTML markup for the breadcrumb navigation.
  */
-const pageBreadcrumbs = (dataPageCurrent, dataPageAll) => {
+const pageBreadcrumbs = (data) => {
   // If there's no breadcrumb data for the current page, return an empty breadcrumb container.
-  if (!dataPageCurrent.breadcrumbList) {
+  if (!data.pages.current.breadcrumbList) {
     return `<nav class="breadcrumbsContainer" aria-label="breadcrumb"></nav>`;
   }
 
   // Generate the breadcrumb entries
-  const breadcrumbs = createBreadcrumbs(dataPageCurrent.breadcrumbList);
+  const breadcrumbs = createBreadcrumbs(data.pages.current.breadcrumbList);
 
   // Construct the full HTML for the breadcrumb navigation
   const html = `

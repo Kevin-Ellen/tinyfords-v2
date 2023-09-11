@@ -11,14 +11,14 @@
  * @returns {array} - Array with all the different sections
  */
 export const dataContentAbout = {
-  image:{
-    mobile: '/images/about/about/mobile/about-top-500x250.jpg',
-    desktop: '/images/about/about/desktop/about-top-250x650.jpg',
-  },
-  intro: `<section>
-    <h2 class="a11y">Intro</h2>
-    <p>Welcome to Tiny Fords. My name is Kevin, and I'm the creator of this website. I've been collecting Ford die-cast cars for years, and I created this website as a tool to keep track of my collection.</p>
-  </section>`,
+  // image:{
+  //   mobile: '/images/about/about/mobile/about-top-500x250.jpg',
+  //   desktop: '/images/about/about/desktop/about-top-250x650.jpg',
+  // },
+  // intro: `<section>
+  //   <h2 class="a11y">Intro</h2>
+  //   <p>Welcome to Tiny Fords. My name is Kevin, and I'm the creator of this website. I've been collecting Ford die-cast cars for years, and I created this website as a tool to keep track of my collection.</p>
+  // </section>`,
   body:{
     asideImage: [
       {

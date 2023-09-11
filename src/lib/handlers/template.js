@@ -8,7 +8,7 @@
  */
 
 // Import necessary modules and templates
-import { servicesGithubDataPageAll } from '../services/github';
+import { servicesGithubDataCarsAll, servicesGithubDataPageAll } from '../services/github';
 import { findDataPageCurrent } from '../utils/dataPages';
 import documentHead from '../construction/documentHead';
 import documentEnd from '../construction/documentEnd';
@@ -28,7 +28,13 @@ import handlerError from './error';
  */
 const handlerTemplate = async (url, options = {}) => {
   try{
-    const dataPageAll = await servicesGithubDataPageAll();
+    const dataAll = {
+      pages: {
+        all: await servicesGithubDataPageAll(),
+        current: null,
+      },
+      cars: await servicesGithubDataCarsAll(),
+    }
 
     // Check if the URL should not be indexed.
     const noIndex = shouldNoIndex(url.params);
@@ -42,14 +48,14 @@ const handlerTemplate = async (url, options = {}) => {
       case '/about':
       case '/about/how-to-find-toy-number':
       case '/about/klas-car-keepers':
-        const dataPageCurrent = findDataPageCurrent(url.pathname, dataPageAll);
-        dataPageCurrent.url = url;
+        dataAll.pages.current = findDataPageCurrent(url.pathname, dataAll.pages.all);
+        dataAll.pages.current.url = url;
         
-        if (!dataPageCurrent) {
-          return new Response('Not Found', { status: 404 });
+        if (!dataAll.pages.current) {
+          return new Response('Current page not found', { status: 404 });
         }
 
-        dataPageCurrent.breadcrumbList = generateBreadcrumbs(dataPageCurrent, dataPageAll);
+        dataAll.pages.current.breadcrumbList = generateBreadcrumbs(dataAll);
 
         // Set the headers, including x-robots-tag if needed.
         const headers = {
@@ -60,7 +66,7 @@ const handlerTemplate = async (url, options = {}) => {
         }
 
         return new Response(
-          await createPage(dataPageCurrent, dataPageAll, options),
+          await createPage(dataAll, options),
           {
             status: 200,
             headers: headers
@@ -68,7 +74,7 @@ const handlerTemplate = async (url, options = {}) => {
         );
     }
   }catch(error){
-    return handlerError(404, `Not found: ${error.message}`);
+    return handlerError(404, `Handler template catch - Not found: ${error.message}`);
   }
 }
 export default handlerTemplate;
@@ -76,13 +82,12 @@ export default handlerTemplate;
 /**
  * Generate the breadcrumb trail for the current page.
  * 
- * @param {Object} dataPageCurrent - The data for the current page.
- * @param {Array} dataPageAll - The list of all page data objects.
+ * @param {Object} data - The data containing current page and all pages.
  * @returns {Array} - The breadcrumb trail for the current page.
  */
-const generateBreadcrumbs = (dataPageCurrent, dataPageAll) => {
-  return dataPageCurrent.breadcrumbList.map((breadcrumbName, index) => {
-    const breadcrumbPage = dataPageAll.find(page => page.name === breadcrumbName);
+const generateBreadcrumbs = (data) => {
+  return data.pages.current.breadcrumbList.map((breadcrumbName, index) => {
+    const breadcrumbPage = data.pages.all.find(page => page.name === breadcrumbName);
     if (breadcrumbPage) {
       return {
         name: breadcrumbName,
@@ -95,6 +100,7 @@ const generateBreadcrumbs = (dataPageCurrent, dataPageAll) => {
   }).filter(item => item);
 };
 
+
 /**
  * Construct the full page using various templates and components.
  * 
@@ -102,7 +108,7 @@ const generateBreadcrumbs = (dataPageCurrent, dataPageAll) => {
  * @param {Array} dataPageAll - The list of all page data objects.
  * @returns {string} - The constructed page as an HTML string.
  */
-const createPage = async (dataPageCurrent, dataPageAll, options = {}) => {
+const createPage = async (data, options = {}) => {
   const templates = {
     home: templateHome,
     collection: templateCollection,
@@ -114,9 +120,10 @@ const createPage = async (dataPageCurrent, dataPageAll, options = {}) => {
       documentHead, 
       pageHead, 
       pageBreadcrumbs, 
-      templates[dataPageCurrent.template], 
+      templates[data.pages.current.template], 
       pageFooter, 
-      documentEnd].map(section => section(dataPageCurrent, dataPageAll, options))
+      documentEnd
+    ].map(section => section(data, options))
   )
 
   return resolvedSections.join('');

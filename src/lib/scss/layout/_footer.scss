@@ -32,6 +32,7 @@
     > li{
       display:flex;
       font-weight: bold;
+      align-items:center;
 
       span{
         font-weight:normal;
@@ -49,10 +50,14 @@
     }
 
     // Styling for each footer link
+    li[aria-hidden="true"]{
+      padding:10px 0;
+    }
     li a {
       color: f.map-deep-get(v.$colours, footer, text); // Link color
       display: block; // Each link takes full space
       text-decoration: none; // Remove default link underline
+      padding:10px 0;
 
       // Keep the color consistent for visited links
       &:visited {

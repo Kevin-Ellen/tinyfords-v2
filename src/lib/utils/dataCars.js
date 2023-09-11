@@ -16,7 +16,7 @@ import { multiSort } from './misc';
  * @param {number} number - The number of latest cars to retrieve.
  * @returns {Array} - The sorted list of latest cars.
  */
-export const utilDataCarsLatest = async (data, number) => {
+export const utilDataCarsLatest = (data, number) => {
   const sortedCars = multiSort(data, ['date', 'id'], { dateAdded: 'desc', id: 'desc' });
   return sortedCars.slice(0, number);
 }

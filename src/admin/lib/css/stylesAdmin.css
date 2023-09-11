@@ -419,6 +419,7 @@ main {
 .siteFooter .siteFooterLinks > li {
   display: flex;
   font-weight: bold;
+  align-items: center;
 }
 .siteFooter .siteFooterLinks > li span {
   font-weight: normal;
@@ -434,10 +435,14 @@ main {
   font-weight: normal;
   flex-wrap: wrap;
 }
+.siteFooter .siteFooterLinks li[aria-hidden=true] {
+  padding: 10px 0;
+}
 .siteFooter .siteFooterLinks li a {
   color: white;
   display: block;
   text-decoration: none;
+  padding: 10px 0;
 }
 .siteFooter .siteFooterLinks li a:visited {
   color: white;

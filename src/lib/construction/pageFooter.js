@@ -12,10 +12,10 @@
  * @param {Array} dataPageAll - Array containing data for all pages.
  * @return {string} The HTML markup for the footer section.
  */
-const pageFooter = (dataPageCurrent, dataPageAll) => {
+const pageFooter = (data) => {
   
   // Generate the links that should appear in the footer.
-  const links = createLinks(dataPageAll);
+  const links = createLinks(data.pages.all);
   
   // Construct the full HTML for the footer section
   return(`

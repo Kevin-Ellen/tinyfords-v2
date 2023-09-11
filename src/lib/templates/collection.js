@@ -11,7 +11,6 @@ import fragmentContent from '../fragments/content';
 import fragmentGridCars from '../fragments/gridCars';
 import fragmentPaginationControls from '../fragments/paginationControls';
 import fragmentSearchBar from '../fragments/searchBar';
-import { servicesGithubDataCarsAll } from '../services/github';
 import { getCarsByCategoryId } from '../utils/dataCars';
 import { multiSort } from '../utils/misc';
 import utilPaginationData from '../utils/pagination';
@@ -22,47 +21,44 @@ const ITEMS_PER_GRID = 21;
  /**
  * Generate the HTML content for the collection page.
  * 
- * @param {Object} dataPageCurrent - The current page's data.
+ * @param {Object} - all the cars and page data
  * @returns {string} - The constructed collection as an HTML string.
  */
-const templateCollection = async (dataPageCurrent, dataPageAll = {}, options = {}) => {
-  
-  // Fetch data for all cars
-  const data = {
-    all: await servicesGithubDataCarsAll(),
-  }
+const templateCollection = async (data, options = {}) => {
+
+  const tempCars = {
+    filtered: null,
+    sorted: null,
+  };
 
   // Check if the current page ID is 'all' to decide which cars to display
-  data.filtered = dataPageCurrent.id === 'all' ? data.all : getCarsByCategoryId(data.all, dataPageCurrent.id);
+  tempCars.filtered = data.pages.current.id === 'all' ? data.cars : getCarsByCategoryId(data.cars, data.pages.current.id);
 
   // Sort the cars based on the added date and ID
-  data.sorted = multiSort(data.filtered, ['addedDetails.date', 'id'], { 'addedDetails.date': 'desc', 'id': 'desc' });
+  tempCars.sorted = multiSort(tempCars.filtered, ['addedDetails.date', 'id'], { 'addedDetails.date': 'desc', 'id': 'desc' });
 
   // Filter the sorted cars based on the search term if provided
   if (options.feedback && options.feedback.success && options.feedback.action === 'search') {
-    data.sorted = searchCars(data.sorted, options.data.searchValue);
+    tempCars.sorted = searchCars(tempCars.sorted, options.data.searchValue);
   }
 
-
   // Get the paginated details based on the number of items and the current page
-  const paginationDetails = getPaginationDetails(data.sorted, dataPageCurrent.url);
-  paginationDetails.slug = dataPageCurrent.slug;
+  const paginationDetails = getPaginationDetails(tempCars.sorted, data.pages.current.url);
+  paginationDetails.slug = data.pages.current.slug;
 
 
-  if(dataPageCurrent.url.params.get('page')){
-    dataPageCurrent.h1 = `${dataPageCurrent.h1} - Page: ${dataPageCurrent.url.params.get('page')}`;
+  if(data.pages.current.url.params.get('page')){
+    data.pages.current.h1 = `${data.pages.current.h1} - Page: ${data.pages.current.url.params.get('page')}`;
 
-    if(parseInt(dataPageCurrent.url.params.get('page'),10) > paginationDetails.totalPages){
+    if(parseInt(data.pages.current.url.params.get('page'),10) > paginationDetails.totalPages){
       throw new Error('Pagination exceeded number of pages');
     }
   }
 
   // Construct the main content of the collection
-  const content = [
-    `<h1>${dataPageCurrent.h1}</h1>`,
-    createCollectionContent(data.sorted, options),
-    fragmentSearchBar(dataPageCurrent.url, options),
-  ].join('');
+  const content = data.pages.current.content.intro
+    .replace('<strong id="countCollection"></strong>', `<strong id="countCollection">${data.cars.length}</strong>`)
+    .replace(`<h1></h1>`,`<h1>${data.pages.current.h1}</h1>`);
 
   // Construct the sections including the main content, grid of cars, and pagination controls
   const sections = [

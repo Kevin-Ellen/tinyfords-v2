@@ -12,19 +12,21 @@ import css from '../css/styles.css';
 /**
  * Generates the opening HTML markup for the page.
  * 
- * @param {Object} dataPageCurrent - Data specific to the current page.
- * @param {Object} dataPageAll - Data that is common to all pages.
+ * @param {Object} data - All the cars and pages (current and all) data
  * @return {string} The opening HTML markup.
  */
-const documentHead = (dataPageCurrent, dataPageAll) => {
+const documentHead = (data) => {
+
+  console.log(data);
   // If the current page status is 200 and the template is not offline or admin
-  if(dataPageCurrent.status === 200 && dataPageCurrent.template !== 'offline') {
+  if(data.pages.current.status === 200 && data.pages.current.template !== 'offline') {
+
     // Set the canonical URL
-    dataPageCurrent.canonical = `${dataPageCurrent.url.protocol}//${dataPageCurrent.url.host}${dataPageCurrent.slug}`;
+    data.pages.current.canonical = `${data.pages.current.url.protocol}//${data.pages.current.url.host}${data.pages.current.slug}`;
 
     // Append the page parameter if it's a collection and not the first page
-    if(dataPageCurrent.template === 'collection' && dataPageCurrent.url.params.get('page') && dataPageCurrent.url.params.get('page') != 1) {
-      dataPageCurrent.canonical += `?page=${dataPageCurrent.url.params.get('page')}`;
+    if(data.pages.current.template === 'collection' && data.pages.current.url.params.get('page') && data.pages.current.url.params.get('page') != 1) {
+      data.pages.current.canonical += `?page=${data.pages.current.url.params.get('page')}`;
     }
   }
 
@@ -40,31 +42,31 @@ const documentHead = (dataPageCurrent, dataPageAll) => {
         <style>
           ${css}
         </style>
-        <title>${dataPageCurrent.metadata.title}</title>
+        <title>${data.pages.current.metadata.title}</title>
         <meta property="og:locale" content="en_GB">
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="Tiny Fords">
-        ${dataPageCurrent.status===200 && dataPageCurrent.template!=='offline' && dataPageCurrent.template!=='admin'? 
-          `<meta name="description" content="${dataPageCurrent.metadata.description}">
-          <link rel="canonical" href="${dataPageCurrent.canonical}">
-          <meta property="og:title" content="${dataPageCurrent.socialMedia.title}">
-          <meta property="og:description" content="${dataPageCurrent.socialMedia.description}">
-          <meta property="og:url" content="${dataPageCurrent.canonical}">
-          <meta property="og:image" content="${dataPageCurrent.url.protocol}//${dataPageCurrent.url.host}/images/social-media/4080-2142/${dataPageCurrent.socialMedia.image}-4080-2142.jpg">
+        ${data.pages.current.status===200 && data.pages.current.template!=='offline' && data.pages.current.template!=='admin'? 
+          `<meta name="description" content="${data.pages.current.metadata.description}">
+          <link rel="canonical" href="${data.pages.current.canonical}">
+          <meta property="og:title" content="${data.pages.current.socialMedia.title}">
+          <meta property="og:description" content="${data.pages.current.socialMedia.description}">
+          <meta property="og:url" content="${data.pages.current.canonical}">
+          <meta property="og:image" content="${data.pages.current.url.protocol}//${data.pages.current.url.host}/images/social-media/4080-2142/${data.pages.current.socialMedia.image}-4080-2142.jpg">
           <meta property="og:image:width" content="4080">
           <meta property="og:image:height" content="2142">
           <meta property="og:image:type" content="image/jpeg">
 
-          <meta property="og:image" content="${dataPageCurrent.url.protocol}//${dataPageCurrent.url.host}/images/social-media/256/${dataPageCurrent.socialMedia.image}-256.jpg">
+          <meta property="og:image" content="${data.pages.current.url.protocol}//${data.pages.current.url.host}/images/social-media/256/${data.pages.current.socialMedia.image}-256.jpg">
           <meta property="og:image:width" content="256">
           <meta property="og:image:height" content="256">
           <meta property="og:image:type" content="image/jpeg">
 
           <meta name="twitter:card" content="summary_large_image">
           <meta name="twitter:creator" content="@kevin_ellen_">
-          <meta name="twitter:title" content="${dataPageCurrent.socialMedia.title}">
-          <meta name="twitter:description" content="${dataPageCurrent.socialMedia.description}">
-          <meta name="twitter:image" content="${dataPageCurrent.url.protocol}//${dataPageCurrent.url.host}/images/social-media/4080-2142/${dataPageCurrent.socialMedia.imageName}-4080-2142.jpg">
+          <meta name="twitter:title" content="${data.pages.current.socialMedia.title}">
+          <meta name="twitter:description" content="${data.pages.current.socialMedia.description}">
+          <meta name="twitter:image" content="${data.pages.current.url.protocol}//${data.pages.current.url.host}/images/social-media/4080-2142/${data.pages.current.socialMedia.imageName}-4080-2142.jpg">
           ` 
         : ''}
         <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">

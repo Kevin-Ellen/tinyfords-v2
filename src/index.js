@@ -59,8 +59,6 @@ const handleRequest = async (request) => {
           return new Response(null, {status: 308, headers: { Location: url.pathname}});
         }
         return handlerTemplate(url) || handlerError(404, 'GET: Not Found - index');
-      
-      
     }
 
     if (url.pathname.startsWith('/json/')) {

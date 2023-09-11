@@ -11,14 +11,13 @@ import spaWorkerInit from '../csr-js/worker/init-worker-spa.js';
 /**
  * Generates the closing HTML markup for the page.
  * 
- * @param {Object} dataPageCurrent - Data specific to the current page (not used in the current implementation).
- * @param {Object} dataPageAll - Data that is common to all pages (not used in the current implementation).
+ * @param {Object} data - All the cars and pages data
  * @return {string} The closing HTML markup.
  */
-const documentEnd = (dataPageCurrent, dataPageAll) => {
+const documentEnd = (data) => {
   // The closing tags for body and html
   const html = `
-        ${templateGrid(dataPageCurrent)}
+        ${templateGrid()}
         <script>
           const workerCode = \`${spaWorkerInit}\`;
 
@@ -33,8 +32,10 @@ const documentEnd = (dataPageCurrent, dataPageAll) => {
 
         </script>
         <script>
-          
+          const pagesData = ${JSON.stringify(data.pages.all)};
         </script>
+        <script>
+          const carsData = ${JSON.stringify(data.cars)}
       </body>
     </html>
   `;

@@ -11,16 +11,15 @@ import fragmentSearchBar from '../fragments/searchBar';
 /**
  * Generates the HTML for the head section based on the given data.
  * 
- * @param {Object} dataPageCurrent - Data specific to the current page.
- * @param {Array} dataPageAll - Array containing data for all pages.
+ * @param {Object} data - all the cars and pages data
  * @return {string} The HTML markup for the head section.
  */
-const pageHead =  (dataPageCurrent, dataPageAll, options = {})  => {
+const pageHead =  (data, options = {})  => {
 
   // Generate the links that should appear in the head section based on certain criteria.
-  const links = createLinks(dataPageAll);
+  const links = createLinks(data.pages.all);
 
-  const siteSearchUrl = {...dataPageCurrent.url};
+  const siteSearchUrl = {...data.pages.current.url};
   siteSearchUrl.pathname = '/all';
 
   // Construct the full HTML for the head section.
