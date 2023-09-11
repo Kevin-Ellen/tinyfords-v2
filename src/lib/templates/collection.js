@@ -57,18 +57,13 @@ const templateCollection = async (data, options = {}) => {
   // Construct the main content of the collection
   const content = data.pages.current.content.intro
     .replace('<strong id="countCollection"></strong>', `<strong id="countCollection">${tempCars.filtered.length}</strong>`)
-    .replace(`<h1></h1>`,`<h1>${data.pages.current.h1}</h1>`);
-
-  const searchBar = `<section class="fragmentContent">
-    <h2>Search</h2>
-    ${fragmentSearchBar(data.pages.current.url, tempCars.sorted)}
-  </section>`;
+    .replace(`<h1></h1>`,`<h1>${data.pages.current.h1}</h1>`)
+    .replace(`<search></search>`,fragmentSearchBar(data.pages.current.url, tempCars.sorted));
 
   // Construct the sections including the main content, grid of cars, and pagination controls
   const sections = [
     `<main>`,
       content,
-      searchBar,
       fragmentGridCars('Results', 2, paginationDetails.data),
       paginationDetails.totalPages > 1 ? fragmentPaginationControls(paginationDetails) : null,
     `</main>`,

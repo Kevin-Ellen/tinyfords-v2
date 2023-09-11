@@ -8,7 +8,7 @@
  */
 
 // External Dependencies
-import fragmentContent from '../../../lib/fragments/content';
+import fragmentContent from '../fragments/content';
 import fragmentFormCarSearch from '../fragments/formCarSearch';
 import fragmentFormCarEdit from '../fragments/formCarEdit';
 import { quickLogin } from '../utils/misc';
