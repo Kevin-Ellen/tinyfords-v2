@@ -76,7 +76,7 @@
         "mobile":null,
         "desktop": null
       },
-      "intro":"<section class=\"fragmentContent\"><h1></h1><p>Welcome to the Hot Wheels section of Tiny Fords! This space is dedicated to showcasing my passion for these iconic die-cast cars. From classic designs to the newest additions, each model tells a unique story. Dive in and explore the world of Hot Wheels through my collection.</p><p>Currently there are <strong id=\"countCollection\"></strong> items within the various collections!</p></section>",
+      "intro":"<section class=\"fragmentContent\"><h1></h1><p>Welcome to the Hot Wheels section of Tiny Fords! This space is dedicated to showcasing my passion for these iconic die-cast cars. From classic designs to the newest additions, each model tells a unique story. Dive in and explore the world of Hot Wheels through my collection.</p><p>Currently there are <strong id=\"countCollection\"></strong> items within the  collection!</p></section>",
       "body":{
         "asideImage":[
         ]
@@ -127,7 +127,7 @@
         "mobile":null,
         "desktop": null
       },
-      "intro":"<section class=\"fragmentContent\"><h1></h1><p>Step into the realm of Matchbox at Tiny Fords! This section celebrates the rich heritage and diverse range of Matchbox die-cast models. From vintage treasures to modern-day classics, discover the intricate details and stories behind each car in my collection.</p><p>Currently there are <strong id=\"countCollection\"></strong> items within the various collections!</p></section>",
+      "intro":"<section class=\"fragmentContent\"><h1></h1><p>Step into the realm of Matchbox at Tiny Fords! This section celebrates the rich heritage and diverse range of Matchbox die-cast models. From vintage treasures to modern-day classics, discover the intricate details and stories behind each car in my collection.</p><p>Currently there are <strong id=\"countCollection\"></strong> items within the collection!</p></section>",
       "body":{
         "asideImage":[
         ]
@@ -178,7 +178,7 @@
         "mobile":null,
         "desktop": null
       },
-      "intro":"<section class=\"fragmentContent\"><h1></h1><p>Welcome to the 'Other' section of Tiny Fords, where we venture beyond Hot Wheels and Matchbox. Here, you'll find a curated selection of other cherished die-cast brands and models that have found a place in my collection. Each piece, unique in its own right, adds a special touch to the overall ensemble.</p><p>Currently there are <strong id=\"countCollection\"></strong> items within the various collections!</p></section>",
+      "intro":"<section class=\"fragmentContent\"><h1></h1><p>Welcome to the 'Other' section of Tiny Fords, where we venture beyond Hot Wheels and Matchbox. Here, you'll find a curated selection of other cherished die-cast brands and models that have found a place in my collection. Each piece, unique in its own right, adds a special touch to the overall ensemble.</p><p>Currently there are <strong id=\"countCollection\"></strong> items within the collection!</p></section>",
       "body":{
         "asideImage":[
         ]

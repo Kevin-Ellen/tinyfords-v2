@@ -57,7 +57,7 @@ const templateCollection = async (data, options = {}) => {
 
   // Construct the main content of the collection
   const content = data.pages.current.content.intro
-    .replace('<strong id="countCollection"></strong>', `<strong id="countCollection">${data.cars.length}</strong>`)
+    .replace('<strong id="countCollection"></strong>', `<strong id="countCollection">${tempCars.filtered.length}</strong>`)
     .replace(`<h1></h1>`,`<h1>${data.pages.current.h1}</h1>`);
 
   // Construct the sections including the main content, grid of cars, and pagination controls
