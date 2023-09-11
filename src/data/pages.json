@@ -19,6 +19,17 @@
       "title": "🚗 Ford Die-Cast Collection at Tiny Fords",
       "description": "Drive into the world of Ford die-cast cars with Tiny Fords! Hot Wheels, Matchbox and more, all in one place.",
       "image": "social-media-home"
+    },
+    "content":{
+      "topImage":{
+        "mobile":null,
+        "desktop": null
+      },
+      "intro":"Home intro",
+      "body":{
+        "asideImage":[
+        ]
+      }
     }
   },
   {
@@ -200,7 +211,7 @@
         "mobile":null,
         "desktop": null
       },
-      "intro":"Home intro",
+      "intro":"Dupes intro",
       "body":{
         "asideImage":[
         ]
@@ -468,7 +479,7 @@
         "mobile":null,
         "desktop": null
       },
-      "intro":"Home intro",
+      "intro":"404 intro",
       "body":{
         "asideImage":[
         ]
