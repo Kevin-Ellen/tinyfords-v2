@@ -8,7 +8,6 @@
 
 // Importing necessary modules
 import { dataContentAbout, dataContentHowToFindToyNumber, dataContentKlasCarKeepers } from '../../data/content';
-import fragmentContentLongForm from '../fragments/contentLongForm';
 
  /**
  * Generate the HTML content for the collection page.

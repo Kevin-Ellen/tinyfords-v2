@@ -7,7 +7,6 @@
  */
 
 // Importing required modules and utilities.
-import fragmentContent from '../fragments/content';
 import fragmentGridCars from '../fragments/gridCars';
 import fragmentPaginationControls from '../fragments/paginationControls';
 import fragmentSearchBar from '../fragments/searchBar';
@@ -60,39 +59,24 @@ const templateCollection = async (data, options = {}) => {
     .replace('<strong id="countCollection"></strong>', `<strong id="countCollection">${tempCars.filtered.length}</strong>`)
     .replace(`<h1></h1>`,`<h1>${data.pages.current.h1}</h1>`);
 
+  const searchBar = `<section class="fragmentContent">
+    <h2>Search</h2>
+    ${fragmentSearchBar(data.pages.current.url, tempCars.sorted)}
+  </section>`;
+
   // Construct the sections including the main content, grid of cars, and pagination controls
   const sections = [
     `<main>`,
-    fragmentContent(content),
-    fragmentGridCars('Results', 2, paginationDetails.data),
-    paginationDetails.totalPages > 1 ? fragmentPaginationControls(paginationDetails) : null,
+      content,
+      searchBar,
+      fragmentGridCars('Results', 2, paginationDetails.data),
+      paginationDetails.totalPages > 1 ? fragmentPaginationControls(paginationDetails) : null,
     `</main>`,
   ].join('');
 
   return sections;
 }
 export default templateCollection;
-
-/**
- * Generate the content and counter for the number of items in collection
- * 
- * @param {Array} data - The cars for the collection.
- * @param {Object} options - The additional options for feedback.
- * @returns {string} - The constructed content for the collection.
- */
-const createCollectionContent = (data, options = {}) => {
-  // Construct a message based on the number of items in the collection
-  const content = [
-    data.length === 1 ? `<p>There is <strong>${data.length}</strong> item within this collection.</p>` : `<p>There are <strong>${data.length}</strong> items within this collection.</p>`
-  ];
-
-  // Add feedback about the search term if available
-  if (options.feedback && options.feedback.success && options.feedback.action === 'search') {
-    content.push(`<p>Search term used: <strong>${options.data.searchValue}</strong>.</p>`);
-  }
-
-  return content.join('');
-}
 
 /**
  * Fetches paginated data based on the URL's page parameter.
