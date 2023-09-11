@@ -20,8 +20,8 @@ const pageHead =  (dataPageCurrent, dataPageAll, options = {})  => {
   // Generate the links that should appear in the head section based on certain criteria.
   const links = createLinks(dataPageAll);
 
-  const siteSearchUrl = dataPageCurrent.url;
-  siteSearchUrl.pathname = '/all';;
+  const siteSearchUrl = {...dataPageCurrent.url};
+  siteSearchUrl.pathname = '/all';
 
   // Construct the full HTML for the head section.
   const html = `<header class="siteHeader">

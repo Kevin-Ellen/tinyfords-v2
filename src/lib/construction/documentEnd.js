@@ -5,11 +5,8 @@
  * It closes the body and html tags that were opened in the beginning of the document.
  */
 
-import spaGlobals from '../js/spaGlobals-raw-js.js';
-import spaNav from '../js/spaNavigation-raw-js.js';
-import spaSearch from '../js/spaSearch-raw-js.js';
-import spaEventListeners from '../js/spaEventListeners-raw-js.js';
-import spaPagination from '../js/spaPagination-raw-js.js';
+import spaEntry from '../csr-js/entry-spa.js';
+import spaWorkerInit from '../csr-js/worker/init-worker-spa.js';
 
 /**
  * Generates the closing HTML markup for the page.
@@ -21,14 +18,23 @@ import spaPagination from '../js/spaPagination-raw-js.js';
 const documentEnd = (dataPageCurrent, dataPageAll) => {
   // The closing tags for body and html
   const html = `
-        <script>
-          ${spaGlobals}
-          ${spaNav}
-          ${spaSearch}
-          ${spaEventListeners}
-          ${spaPagination}
-        </script>
         ${templateGrid(dataPageCurrent)}
+        <script>
+          const workerCode = \`${spaWorkerInit}\`;
+
+          // Create a Blob from the code
+          const blob = new Blob([workerCode], { type: 'application/javascript' });
+
+          // Generate a Blob URL from the Blob
+          const blobURL = URL.createObjectURL(blob);
+
+          // Initialize the Web Worker using the Blob URL
+          const worker = new Worker(blobURL);
+
+        </script>
+        <script>
+          
+        </script>
       </body>
     </html>
   `;

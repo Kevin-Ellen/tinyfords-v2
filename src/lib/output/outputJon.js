@@ -7,6 +7,7 @@
 
 // Import necessary services
 import { servicesGithubDataCarsAll } from '../services/github';
+import { servicesGithubDataPageAll } from '../services/github';
 
 /**
  * Generate and return a Response object containing JSON content based on the URL.
@@ -22,6 +23,8 @@ const outputJson = (url) => {
   switch (type){
     case 'cars': 
       return getData(servicesGithubDataCarsAll);
+    case 'pages':
+      return getData(servicesGithubDataPageAll);
     default:
       return new Response('Not Found', {status: 404, headers: {'content-type':'text/plain'}});
   }

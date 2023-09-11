@@ -35,3 +35,9 @@ const updateHeading = (currentPage, totalPages) => {
   const heading = document.querySelector('.fragmentContent h1');
   heading.textContent = `Page ${currentPage} of ${totalPages}`;
 }
+
+addSearchTermToURL = (searchTerm) => {
+  const currentURL = new URL(window.location.href);
+  currentURL.searchParams.set('q', searchTerm);
+  history.pushState({ url: currentURL.toString() }, '', currentURL.toString());
+};

@@ -1,18 +1,7 @@
 
 
 // This function fetches and stores cars data
-const fetchCarsData = async () => {
-  try {
-    const response = await fetch('/json/cars');
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    carsData = await response.json();
-    return multiSort(carsData, ['addedDetails.date', 'id'], { 'addedDetails.date': 'desc', 'id': 'desc' });
-  } catch (error) {
-    console.error('Failed to fetch cars data:', error.message);
-  }
-};
+
 
 // This function performs a simple search on the cars data
 const performSearch = async (term, collection) => {
@@ -44,23 +33,32 @@ const performSearch = async (term, collection) => {
 const handleSearchSubmit = async (event) => {
   event.preventDefault();
 
+  const urlParams = new URLSearchParams(window.location.search);
+  let currentPage = urlParams.get('page') ? parseInt(urlParams.get('page')) : 1;
+
   const query = event.target.querySelector('input[name="q"]').value;
   const collection = event.target.getAttribute('action');
   const results = await performSearch(query, collection);
+  
+
+  carsData = results;
+
 
   const totalPages = Math.ceil(carsData.length / ITEMS_PER_PAGE);
-  const paginatedResults = getPaginatedResults(carsData, collection); // Assume currentPage is defined
+
+  const paginatedResults = getPaginatedResults(carsData, currentPage); // Assume currentPage is defined
   renderResults(paginatedResults);  // Modify renderResults to handle paginated data
 
   // Render the results in #pageContent or handle it as per your app's design
-  if (results.length) {
-    renderResults(results);
+  if (paginatedResults.length) {
+    renderResults(paginatedResults);
   } else {
     document.querySelector('.fragmentCarsGrid').innerHTML = '<p>No results found.</p>';
   }
 
   // Update search details
   updateSearchDetails(results.length, query);
+  addSearchTermToURL(query);
 
   // Close the search box after performing the search
   const siteSearch = document.querySelector('#siteSearch');
@@ -88,7 +86,6 @@ const renderResults = (results) => {
   // 3. For each car in the results:
   results.forEach(car => {
 
-    console.log(car);
     // Clone the template
     const clone = document.importNode(template, true);
     const carImage = createImgPath(car);
