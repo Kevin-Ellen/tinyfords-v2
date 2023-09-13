@@ -153,7 +153,7 @@
         },
         "text": [
           "Step into the realm of Matchbox at Tiny Fords! This section celebrates the rich heritage and diverse range of Matchbox die-cast models. From vintage treasures to modern-day classics, discover the intricate details and stories behind each car in my collection.",
-          "Currently there are <strong id=\"countCollection\"></strong> items within the  collection!</p><search></search>"
+          "Currently there are <strong id=\"countCollection\"></strong> items within the  collection!<search></search>"
         ]
       },
       "body":{
