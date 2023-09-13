@@ -32,7 +32,7 @@
         },
         "text": [
           "Welcome to Tiny Fords, the website of a Ford die-cast car enthusiast. Here, you'll find my collection of Hot Wheels, Matchbox, and other small scale models of your many Ford cars. Our easy-to-use website makes it simple to navigate and find the cars, this is mainly so we can avoid buying duplicates and keep our collection up-to-date. Let's dive in and explore the collection together!",
-          "Currently there are <strong id=\"countCollection\"></strong> items within the various collections!"
+          "Currently there are <strong id=\"countCollection\"></strong> items within the various collections!<search></search>"
         ]
       },
       "body":{
@@ -93,7 +93,7 @@
         },
         "text": [
           "Welcome to the Hot Wheels section of Tiny Fords! This space is dedicated to showcasing my passion for these iconic die-cast cars. From classic designs to the newest additions, each model tells a unique story. Dive in and explore the world of Hot Wheels through my collection.",
-          "Currently there are <strong id=\"countCollection\"></strong> items within the  collection!</p><search></search></section>"
+          "Currently there are <strong id=\"countCollection\"></strong> items within the  collection!<search></search></section>"
         ]
       },
       "body":{
