@@ -507,7 +507,7 @@
             ],
             "textContainer":{
               "element":"div",
-              "cssClass": "contentWithImage"
+              "cssClass": "contentWithImage contentRight"
             },
             "textImage":{
               "src": "/images/about/how-to-find-toy-number/how-to-premium-example-500x500.jpg",
