@@ -14,7 +14,11 @@
       "active": true,
       "mainNav":true,
       "footer":true,
-      "xmlSitemap": true
+      "xmlSitemap": true,
+      "robots":{
+        "noindex": false,
+        "nofollow": false
+      }
     },
     "hasCars":true,
     "breadcrumbList": ["Home"],
