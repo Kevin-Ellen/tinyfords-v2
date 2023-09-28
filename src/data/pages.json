@@ -78,10 +78,16 @@
     },
     "status": 200,
     "template": "collection",
-    "active": true,
-    "mainNav":true,
-    "xmlSitemap": true,
-    "footer":true,
+    "visibility":{
+      "active": true,
+      "mainNav":true,
+      "footer":true,
+      "xmlSitemap": true,
+      "robots":{
+        "noindex": false,
+        "nofollow": false
+      }
+    },
     "hasCars":true,
     "breadcrumbList": ["Home", "All", "Hot Wheels"],
     "attributes":[
@@ -140,10 +146,16 @@
     },
     "status": 200,
     "template": "collection",
-    "active": true,
-    "mainNav":true,
-    "xmlSitemap": true,
-    "footer":true,
+    "visibility":{
+      "active": true,
+      "mainNav":true,
+      "footer":true,
+      "xmlSitemap": true,
+      "robots":{
+        "noindex": false,
+        "nofollow": false
+      }
+    },
     "hasCars":true,
     "breadcrumbList": ["Home", "All", "Matchbox"],
     "attributes":[
@@ -201,10 +213,16 @@
     },
     "status": 200,
     "template": "collection",
-    "active": true,
-    "mainNav":true,
-    "xmlSitemap": true,
-    "footer":true,
+    "visibility":{
+      "active": true,
+      "mainNav":true,
+      "footer":true,
+      "xmlSitemap": true,
+      "robots":{
+        "noindex": false,
+        "nofollow": false
+      }
+    },
     "hasCars":true,
     "breadcrumbList": ["Home", "All", "Other"],
     "attributes":[
@@ -260,12 +278,18 @@
       "title": "🔁 Duplicate Cars - Tiny Fords",
       "description": "View our duplicate cars collection at Tiny Fords. Find the cars we have duplicates of and contact us to buy or swap."
     },
-    "status": 200,
+    "status": 404,
     "template": "collection",
-    "active": false,
-    "mainNav":false,
-    "xmlSitemap": false,
-    "footer":false,
+    "visibility":{
+      "active": false,
+      "mainNav":false,
+      "footer":false,
+      "xmlSitemap": false,
+      "robots":{
+        "noindex": true,
+        "nofollow": true
+      }
+    },
     "hasCars":true,
     "breadcrumbList": ["Home", "All", "Duplicates"],
     "socialMedia": {
@@ -305,10 +329,16 @@
     },
     "status": 200,
     "template": "collection",
-    "active": true,
-    "mainNav":false,
-    "xmlSitemap": true,
-    "footer":true,
+    "visibility":{
+      "active": true,
+      "mainNav":false,
+      "footer":true,
+      "xmlSitemap": true,
+      "robots":{
+        "noindex": false,
+        "nofollow": false
+      }
+    },
     "hasCars":true,
     "breadcrumbList": ["Home", "All"],
     "socialMedia": {
@@ -346,12 +376,18 @@
       "title": "📞 Contact Tiny Fords - Ford Die-Cast Car Collection",
       "description": "Get in touch with Tiny Fords and our Ford die-cast car collection. Contact us for any inquiries or feedback."
     },
-    "status": 200,
+    "status": 404,
     "template": "content",
-    "active": false,
-    "mainNav":false,
-    "xmlSitemap": false,
-    "footer":false,
+    "visibility":{
+      "active": false,
+      "mainNav":false,
+      "footer":false,
+      "xmlSitemap": false,
+      "robots":{
+        "noindex": true,
+        "nofollow": true
+      }
+    },
     "hasCars":false,
     "breadcrumbList": ["Home", "About", "Contact"],
     "socialMedia": {
@@ -386,10 +422,16 @@
     },
     "status": 200,
     "template": "content",
-    "active": true,
-    "mainNav":true,
-    "xmlSitemap": true,
-    "footer":true,
+    "visibility":{
+      "active": true,
+      "mainNav":true,
+      "footer":true,
+      "xmlSitemap": true,
+      "robots":{
+        "noindex": false,
+        "nofollow": false
+      }
+    },
     "hasCars":false,
     "breadcrumbList": ["Home", "About"],
     "socialMedia": {
@@ -474,10 +516,16 @@
     },
     "status": 200,
     "template": "content",
-    "active": true,
-    "mainNav":false,
-    "xmlSitemap": false,
-    "footer":true,
+    "visibility":{
+      "active": true,
+      "mainNav":false,
+      "footer":true,
+      "xmlSitemap": true,
+      "robots":{
+        "noindex": false,
+        "nofollow": false
+      }
+    },
     "hasCars":false,
     "breadcrumbList": ["Home", "About", "How to find the toy number"],
     "socialMedia": {
@@ -583,7 +631,11 @@
       "active": true,
       "mainNav":false,
       "footer":true,
-      "xmlSitemap": true
+      "xmlSitemap": true,
+      "robots":{
+        "noindex": false,
+        "nofollow": false
+      }
     },
     "hasCars":false,
     "breadcrumbList": ["Home", "About", "KLAS Car Keeper"],
@@ -1014,10 +1066,16 @@
     },
     "status": 200,
     "template": "offline",
-    "active": true,
-    "mainNav":false,
-    "xmlSitemap": false,
-    "footer":false,
+    "visibility":{
+      "active": false,
+      "mainNav":false,
+      "footer":false,
+      "xmlSitemap": false,
+      "robots":{
+        "noindex": true,
+        "nofollow": true
+      }
+    },
     "hasCars":false,
     "breadcrumbList": ["Home"],
     "breadcrumbs": []
@@ -1028,10 +1086,16 @@
     "h1": "Not found :(",
     "status": 404,
     "template": "404",
-    "active": true,
-    "mainNav":false,
-    "xmlSitemap": false,
-    "footer":false,
+    "visibility":{
+      "active": false,
+      "mainNav":false,
+      "footer":false,
+      "xmlSitemap": false,
+      "robots":{
+        "noindex": true,
+        "nofollow": true
+      }
+    },
     "hasCars":false,
     "breadcrumbList": ["Home"],
     "breadcrumbs": [],
