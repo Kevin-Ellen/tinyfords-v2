@@ -16,6 +16,7 @@
       "footer":true,
       "xmlSitemap": true
     },
+    "hasCars":true,
     "breadcrumbList": ["Home"],
     "socialMedia": {
       "title": "🚗 Ford Die-Cast Collection at Tiny Fords",
@@ -77,6 +78,7 @@
     "mainNav":true,
     "xmlSitemap": true,
     "footer":true,
+    "hasCars":true,
     "breadcrumbList": ["Home", "All", "Hot Wheels"],
     "attributes":[
       {
@@ -138,6 +140,7 @@
     "mainNav":true,
     "xmlSitemap": true,
     "footer":true,
+    "hasCars":true,
     "breadcrumbList": ["Home", "All", "Matchbox"],
     "attributes":[
       {
@@ -198,6 +201,7 @@
     "mainNav":true,
     "xmlSitemap": true,
     "footer":true,
+    "hasCars":true,
     "breadcrumbList": ["Home", "All", "Other"],
     "attributes":[
       {
@@ -258,6 +262,7 @@
     "mainNav":false,
     "xmlSitemap": false,
     "footer":false,
+    "hasCars":true,
     "breadcrumbList": ["Home", "All", "Duplicates"],
     "socialMedia": {
       "title": "🔁 Trade or Buy: Check Out Our Duplicate Collection",
@@ -300,6 +305,7 @@
     "mainNav":false,
     "xmlSitemap": true,
     "footer":true,
+    "hasCars":true,
     "breadcrumbList": ["Home", "All"],
     "socialMedia": {
       "title": "🚗 Our Ultimate Die-Cast Destination: Tiny Fords",
@@ -342,6 +348,7 @@
     "mainNav":false,
     "xmlSitemap": false,
     "footer":false,
+    "hasCars":false,
     "breadcrumbList": ["Home", "About", "Contact"],
     "socialMedia": {
       "title": "📞 Get in Touch with Tiny Fords",
@@ -379,6 +386,7 @@
     "mainNav":true,
     "xmlSitemap": true,
     "footer":true,
+    "hasCars":false,
     "breadcrumbList": ["Home", "About"],
     "socialMedia": {
       "title": "🚗 Tiny Fords: The Story Behind Our Die-Cast Obsession",
@@ -466,6 +474,7 @@
     "mainNav":false,
     "xmlSitemap": false,
     "footer":true,
+    "hasCars":false,
     "breadcrumbList": ["Home", "About", "How to find the toy number"],
     "socialMedia": {
       "title": "🔍 Find Your Favorite Cars in a Snap",
@@ -572,6 +581,7 @@
       "footer":true,
       "xmlSitemap": true
     },
+    "hasCars":false,
     "breadcrumbList": ["Home", "About", "KLAS Car Keeper"],
     "socialMedia": {
       "title": "⛑️ Protecting my collection with KLAS Car Keepers",
@@ -1004,6 +1014,7 @@
     "mainNav":false,
     "xmlSitemap": false,
     "footer":false,
+    "hasCars":false,
     "breadcrumbList": ["Home"],
     "breadcrumbs": []
   },
@@ -1017,6 +1028,7 @@
     "mainNav":false,
     "xmlSitemap": false,
     "footer":false,
+    "hasCars":false,
     "breadcrumbList": ["Home"],
     "breadcrumbs": [],
     "content":{
