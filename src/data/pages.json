@@ -637,7 +637,7 @@
               "cssClass": "contentWithImage"
             },
             "textImage":{
-              "src": "images/about/klas-car-keepers/klas-example-long-500x500.jpg",
+              "src": "/images/about/klas-car-keepers/klas-example-long-500x500.jpg",
               "alt": "Example of a long card KLAS car keeper"
             }
           },
