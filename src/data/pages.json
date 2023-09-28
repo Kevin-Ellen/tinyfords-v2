@@ -328,6 +328,10 @@
       "image": "social-media-about-contact"
     },
     "content":{
+      "container": {
+        "element": "section",
+        "cssClass": "fragmentContentLongForm"
+      },
       "topImage":{
         "mobile":null,
         "desktop": null
@@ -448,28 +452,83 @@
       "image": "social-media-about-codes"
     },
     "content":{
+      "container": {
+        "element": "section",
+        "cssClass": "fragmentContentLongForm"
+      },
       "topImage":{
         "mobile": "/images/about/how-to-find-toy-number/mobile/how-to-top-500x250.jpg",
         "desktop": "/images/about/how-to-find-toy-number/desktop/how-to-top-250x650.jpg"
       },
-      "intro":"<section><h2 class=\"a11y\">Intro</h2> collection. These codes can also be used on other websites such as eBay to quickly locate the car.</p></section>",
+      "intro":{
+        "heading": {
+          "element": "h2",
+          "cssClass": "a11y",
+          "content": "Intro"
+        },
+        "text": [
+          "You can use various codes to search for and identify cars in our collection. These codes can also be used on other websites such as eBay to quickly locate the car."
+        ]
+      },
       "body":{
         "asideImage":[
           {
-            "type": "searching",
-            "content":"<section><h2>Searching on Tiny Fords</h2><p>To get the best results, follow these steps:</p><ol><li>Locate the toy code</li><li>Enter the code in the search bar</li><li>Check if the returned results match the car you're looking for</li><li>If no results are returned, the car may not be in the collection yet</li><li>If you're not sure, search for the car's name to confirm its absence</li></ol></section>"
+            "heading": {
+              "content": "Searching on Tiny Fords"
+            },
+            "text":[
+              "To get the best results, follow these steps:</p><ol><li>Locate the toy code</li><li>Enter the code in the search bar</li><li>Check if the returned results match the car you're looking for</li><li>If no results are returned, the car may not be in the collection yet</li><li>If you're not sure, search for the car's name to confirm its absence</li></ol>"
+            ]
           }
         ],
         "belowImage": [
           {
-            "type": "hw-mb",
-            "content": "<section><h2>Normal Hot Wheels and Matchbox</h2><div class=\"contentWithImage\"><p>Matchbox and Hot Wheels cars have a code on the back of their packaging, sometimes also on the front. Usually, it is found at the top of the backcard, and is a combination of three letters and two numbers (e.g. 'GTB91').</p><img src=\"/images/about/how-to-find-toy-number/how-to-hw-example-500x500.jpg\" alt=\"Rear packaging of a Hot Wheels case with the toy code encircled in red\" height=\"1\" width=\"1\"></div></section>"
-          },{
-            "type": "premium",
-            "content": "<section><h2>Premium</h2><div class=\"contentWithImage contentRight\"><p>Premium cars may have their code located differently, such as closer to the barcode on the back of the packaging.</p><img src=\"/images/about/how-to-find-toy-number/how-to-premium-example-500x500.jpg\" alt=\"Rear packaging of a Hot Wheels Premium case with the toy code encircled in red\" height=\"1\" width=\"1\"></div></section>"
-          },{
-            "type": "mb-power-grabs",
-            "content": "<section><h2>Matchbox Power Grabs</h2><div class=\"contentWithImage\"><p>Matchbox Power Grab boxes don't have the usual backcard. Instead, the code can be found on the bottom near the barcode.</p><img src=\"/images/about/how-to-find-toy-number/how-to-mb-power-grab-example-500x500.jpg\" alt=\"Rear packaging of a Matchbox Power Grab box with the toy code encircled in red\" height=\"1\" width=\"1\"></div></section>"
+            "heading": {
+              "content": "Normal Hot Wheels and Matchbox"
+            },
+            "text":[
+              "Matchbox and Hot Wheels cars have a code on the back of their packaging, sometimes also on the front. Usually, it is found at the top of the backcard, and is a combination of three letters and two numbers (e.g. '<em>GTB91</em>')."
+            ],
+            "textContainer":{
+              "element":"div",
+              "cssClass": "contentWithImage"
+            },
+            "textImage":{
+              "src": "/images/about/how-to-find-toy-number/how-to-hw-example-500x500.jpg",
+              "alt": "Rear packaging of a Hot Wheels case with the toy code encircled in red"
+            }
+          },
+          {
+            "heading": {
+              "content": "Premium"
+            },
+            "text":[
+              "Premium cars may have their code located differently, such as closer to the barcode on the back of the packaging."
+            ],
+            "textContainer":{
+              "element":"div",
+              "cssClass": "contentWithImage"
+            },
+            "textImage":{
+              "src": "/images/about/how-to-find-toy-number/how-to-premium-example-500x500.jpg",
+              "alt": "Rear packaging of a Hot Wheels Premium case with the toy code encircled in red"
+            }
+          },
+          {
+            "heading": {
+              "content": "Matchbox Power Grabs"
+            },
+            "text":[
+              "Matchbox Power Grab boxes don't have the usual backcard. Instead, the code can be found on the bottom near the barcode."
+            ],
+            "textContainer":{
+              "element":"div",
+              "cssClass": "contentWithImage"
+            },
+            "textImage":{
+              "src": "/images/about/how-to-find-toy-number/how-to-mb-power-grab-example-500x500.jpg",
+              "alt": "Bottom packaging of a Matchbox Power Grab box with the toy code encircled in red"
+            }
           }
         ]
       }
@@ -497,19 +556,41 @@
       "image": "social-media-about"
     },
     "content":{
+      "container": {
+        "element": "section",
+        "cssClass": "fragmentContentLongForm"
+      },
       "topImage":{
         "mobile": "/images/about/klas-car-keepers/mobile/klas-top-500x250.jpg",
         "desktop": "/images/about/klas-car-keepers/desktop/klas-top-250x650.jpg"
       },
-      "intro":"<section><h2 class=\"a11y\">Intro</h2><p>If you're anything like me, you'll understand the importance of keeping our prized die-cast cars in pristine condition. That's where KLAS Car Keepers come in. Based in Essex, KLAS has created these top-quality protectors that I've come to rely on for my collection. Not only do they offer stellar protection, but they're also eco-friendly – a big thumbs up in my book! Whether you're a seasoned collector or just starting out, let's explore how KLAS Car Keepers can make a difference for our tiny treasures.</p></section>",
+      "intro":{
+        "heading": {
+          "element": "h2",
+          "cssClass": "a11y",
+          "content": "Intro"
+        },
+        "text": [
+          "If you're anything like me, you'll understand the importance of keeping our prized die-cast cars in pristine condition. That's where KLAS Car Keepers come in. Based in Essex, KLAS has created these top-quality protectors that I've come to rely on for my collection. Not only do they offer stellar protection, but they're also eco-friendly - a big thumbs up in my book! Whether you're a seasoned collector or just starting out, let's explore how KLAS Car Keepers can make a difference for our tiny treasures."
+        ]
+      },
       "body":{
         "asideImage":[
           {
-            "type": "about",
-            "content": "<section><h2>About KLAS</h2><p>Nestled in Essex (UK), KLAS is not just any company - it's a passion project by a fellow collector who totally gets our collectible obsession! Their protectors? Top-tier, if you ask me. And here's the cherry on top: KLAS is all about going green. Every protector is made from recyclable materials, and even their packaging gets the eco-friendly nod with recycled boxes and padding; a perfect blend of quality and eco-consciousness!</p></section>"
-          },{
-            "type": "features",
-            "content": "<section><h2>General features</h2><ul><li>High-Quality Material: KLAS Car Keepers are made from thick recyclable PET plastic, ensuring they are durable and protective.</li><li>Sustainability: Unlike other manufacturers who use non-recyclable PVC, KLAS uses fully recyclable polyethylene terephthalate (PET), the same material used in drinking bottles.</li><li>Clamshell Folding Design: This design offers complete and secure protection for unopened collectable cars, encasing both the blister and card, shielding them from damage, condensation, and dust.</li><li>Easy Access: Each protector is easy to open and reseal, offering a crystal clear window to view the model inside.</li><li>Storage & Display: KLAS Car Keepers are stackable for easy storage. They also come with a hanger holder hole for those who wish to display their collection.</li></ul></section>"
+            "heading": {
+              "content": "About KLAS"
+            },
+            "text":[
+              "Nestled in Essex (UK), KLAS is not just any company - it's a passion project by a fellow collector who totally gets our collectible obsession! Their protectors? Top-tier, if you ask me. And here's the cherry on top: KLAS is all about going green. Every protector is made from recyclable materials, and even their packaging gets the eco-friendly nod with recycled boxes and padding; a perfect blend of quality and eco-consciousness!"
+            ]
+          },
+          {
+            "heading": {
+              "content": "General features"
+            },
+            "text":[
+              "<ul><li>High-Quality Material: KLAS Car Keepers are made from thick recyclable PET plastic, ensuring they are durable and protective.</li><li>Sustainability: Unlike other manufacturers who use non-recyclable PVC, KLAS uses fully recyclable polyethylene terephthalate (PET), the same material used in drinking bottles.</li><li>Clamshell Folding Design: This design offers complete and secure protection for unopened collectable cars, encasing both the blister and card, shielding them from damage, condensation, and dust.</li><li>Easy Access: Each protector is easy to open and reseal, offering a crystal clear window to view the model inside.</li><li>Storage & Display: KLAS Car Keepers are stackable for easy storage. They also come with a hanger holder hole for those who wish to display their collection.</li></ul>"
+            ]
           }
         ],
         "belowImage":[
