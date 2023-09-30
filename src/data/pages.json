@@ -487,8 +487,15 @@
           "className": "a11y",
           "content": "Intro"
         },
-        "text": [
-          "Welcome to Tiny Fords. My name is Kevin, and I'm the creator of this website. I've been collecting Ford die-cast cars for years, and I created this website as a tool to keep track of my collection."
+        "entries": [
+          {
+            "type": "text",
+            "element": "p",
+            "attributes": {
+              "className": null
+            },
+            "content": "Welcome to Tiny Fords. My name is Kevin, and I'm the creator of this website. I've been collecting Ford die-cast cars for years, and I created this website as a tool to keep track of my collection."
+          }
         ]
       },
         "asideImage": [
