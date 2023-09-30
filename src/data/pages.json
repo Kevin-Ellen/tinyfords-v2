@@ -867,7 +867,7 @@
           "wrapper": {
             "element": "div",
             "attributes": {
-              "className": "contentWithImage"
+              "className": "contentWithImage contentRight"
             }
           },
           "intro": {
