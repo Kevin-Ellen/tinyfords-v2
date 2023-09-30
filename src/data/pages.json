@@ -688,7 +688,7 @@
     "content": {
       "container": {
         "element": "section",
-        "className": "contentLongFormContainer"
+        "className": "fragmentContentLongForm"
       },
       "intro": {
         "container": {
