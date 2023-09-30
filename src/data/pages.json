@@ -477,10 +477,6 @@
         "element": "section",
         "className": "fragmentContentLongForm"
       },
-      "topImage": {
-        "mobile": "/images/about/about/mobile/about-top-500x250.jpg",
-        "desktop": "/images/about/about/desktop/about-top-250x650.jpg"
-      },
       "intro": {
         "heading": {
           "element": "h2",
@@ -498,50 +494,113 @@
           }
         ]
       },
-        "asideImage": [
-          {
-            "heading": {
-              "content": "The Challenge"
-            },
-            "text": [
-              "As my collection grew, I found myself buying duplicates and missing out on cars I wanted to add to my collection. I realized that I needed a way to easily and quickly navigate my collection online, so I wouldn't make these mistakes anymore. That's when I decided to create Tiny Fords."
-            ]
+      "sections": [
+        {
+          "type": "asideImage",
+          "container": {
+            "element": "div",
+            "attributes": {
+              "className": "contentLongForm"
+            }
           },
-          {
-            "heading": {
-              "content": "Why Tiny Fords?"
+          "image": {
+            "type": "sideImage",
+            "element": "picture",
+            "attributes": {
+              "className": "contentLongFormSideImage"
             },
-            "text": [
-              "The website is a non-commercial site and it was created by me for myself, but I decided to share it with others as I thought we might be able to swap duplicates or identify cars I have not yet in my collection. With Tiny Fords, I can browse Hot Wheels, Matchbox, and other car models easily, and avoid buying duplicates."
-            ]
+            "images": {
+              "mobile": "/images/about/about/mobile/about-top-500x250.jpg",
+              "desktop": "/images/about/about/desktop/about-top-250x650.jpg"
+            }
           },
-          {
-            "heading": {
-              "content": "Behind the scenes"
+          "children": {
+            "wrapper": {
+              "element": "div",
+              "attributes": {
+                "className": "contentText"
+              }
             },
-            "text": [
-              "The website was created using a Cloudflare Worker on a free account. I chose this platform because it was easy to use and it was free. I'm proud to say it was made in 2023. I didn't use any framework, it was all done by me. It was challenging, but I was determined to make it happen."
-            ]
-          },
-          {
-            "heading": {
-              "content": "What's next?"
-            },
-            "text": [
-              "In the future, I plan to add more features and improvements to the website, such as a <em>\"Want List\"</em> page, where I can keep track of the cars I'm looking for. I also plan to keep the collection up-to-date with new additions."
-            ]
-          },
-          {
-            "heading": {
-              "content": "Closing words",
-              "className": "a11y"
-            },
-            "text": [
-              "Thank you for visiting Tiny Fords. I hope you enjoy exploring my collection as much as I do. If you have any questions or feedback, please don't hesitate to reach out to me via the <a href=\"/about/contact\">contact page</a>."
+            "entries": [
+              {
+                "heading": {
+                  "element": null,
+                  "content": "The Challenge",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "type": "text",
+                "element": "p",
+                "attributes": {
+                  "className": null
+                },
+                "content": "As my collection grew, I found myself buying duplicates and missing out on cars I wanted to add to my collection. I realized that I needed a way to easily and quickly navigate my collection online, so I wouldn't make these mistakes anymore. That's when I decided to create Tiny Fords."
+              },
+              {
+                "heading": {
+                  "element": null,
+                  "content": "Why Tiny Fords?",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "type": "text",
+                "element": "p",
+                "attributes": {
+                  "className": null
+                },
+                "content": "The website is a non-commercial site and it was created by me for myself, but I decided to share it with others as I thought we might be able to swap duplicates or identify cars I have not yet in my collection. With Tiny Fords, I can browse Hot Wheels, Matchbox, and other car models easily, and avoid buying duplicates."
+              },
+              {
+                "heading": {
+                  "element": null,
+                  "content": "Behind the scenes",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "type": "text",
+                "element": "p",
+                "attributes": {
+                  "className": null
+                },
+                "content": "The website was created using a Cloudflare Worker on a free account. I chose this platform because it was easy to use and it was free. I'm proud to say it was made in 2023. I didn't use any framework, it was all done by me. It was challenging, but I was determined to make it happen."
+              },
+              {
+                "heading": {
+                  "element": null,
+                  "content": "What's next?",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "type": "text",
+                "element": "p",
+                "attributes": {
+                  "className": null
+                },
+                "content": "In the future, I plan to add more features and improvements to the website, such as a <em>\"Want List\"</em> page, where I can keep track of the cars I'm looking for. I also plan to keep the collection up-to-date with new additions."
+              },
+              {
+                "heading": {
+                  "element": null,
+                  "content": "Closing words",
+                  "attributes": {
+                    "className": "a11y"
+                  }
+                },
+                "type": "text",
+                "element": "p",
+                "attributes": {
+                  "className": null
+                },
+                "content": "Thank you for visiting Tiny Fords. I hope you enjoy exploring my collection as much as I do. If you have any questions or feedback, please don't hesitate to reach out to me via the <a href=\"/about/contact\">contact page</a>."
+              }
             ]
           }
-        ]
-      
+        }
+      ]
     }
   },
   {
@@ -595,68 +654,66 @@
           "You can use various codes to search for and identify cars in our collection. These codes can also be used on other websites such as eBay to quickly locate the car."
         ]
       },
-      
-        "asideImage": [
-          {
-            "heading": {
-              "content": "Searching on Tiny Fords"
-            },
-            "text": [
-              "To get the best results, follow these steps:</p><ol><li>Locate the toy code</li><li>Enter the code in the search bar</li><li>Check if the returned results match the car you're looking for</li><li>If no results are returned, the car may not be in the collection yet</li><li>If you're not sure, search for the car's name to confirm its absence</li></ol>"
-            ]
-          }
-        ],
-        "belowImage": [
-          {
-            "heading": {
-              "content": "Normal Hot Wheels and Matchbox"
-            },
-            "text": [
-              "Matchbox and Hot Wheels cars have a code on the back of their packaging, sometimes also on the front. Usually, it is found at the top of the backcard, and is a combination of three letters and two numbers (e.g. '<em>GTB91</em>')."
-            ],
-            "textContainer": {
-              "element": "div",
-              "className": "contentWithImage"
-            },
-            "textImage": {
-              "src": "/images/about/how-to-find-toy-number/how-to-hw-example-500x500.jpg",
-              "alt": "Rear packaging of a Hot Wheels case with the toy code encircled in red"
-            }
+      "asideImage": [
+        {
+          "heading": {
+            "content": "Searching on Tiny Fords"
           },
-          {
-            "heading": {
-              "content": "Premium"
-            },
-            "text": [
-              "Premium cars may have their code located differently, such as closer to the barcode on the back of the packaging."
-            ],
-            "textContainer": {
-              "element": "div",
-              "className": "contentWithImage contentRight"
-            },
-            "textImage": {
-              "src": "/images/about/how-to-find-toy-number/how-to-premium-example-500x500.jpg",
-              "alt": "Rear packaging of a Hot Wheels Premium case with the toy code encircled in red"
-            }
+          "text": [
+            "To get the best results, follow these steps:</p><ol><li>Locate the toy code</li><li>Enter the code in the search bar</li><li>Check if the returned results match the car you're looking for</li><li>If no results are returned, the car may not be in the collection yet</li><li>If you're not sure, search for the car's name to confirm its absence</li></ol>"
+          ]
+        }
+      ],
+      "belowImage": [
+        {
+          "heading": {
+            "content": "Normal Hot Wheels and Matchbox"
           },
-          {
-            "heading": {
-              "content": "Matchbox Power Grabs"
-            },
-            "text": [
-              "Matchbox Power Grab boxes don't have the usual backcard. Instead, the code can be found on the bottom near the barcode."
-            ],
-            "textContainer": {
-              "element": "div",
-              "className": "contentWithImage"
-            },
-            "textImage": {
-              "src": "/images/about/how-to-find-toy-number/how-to-mb-power-grab-example-500x500.jpg",
-              "alt": "Bottom packaging of a Matchbox Power Grab box with the toy code encircled in red"
-            }
+          "text": [
+            "Matchbox and Hot Wheels cars have a code on the back of their packaging, sometimes also on the front. Usually, it is found at the top of the backcard, and is a combination of three letters and two numbers (e.g. '<em>GTB91</em>')."
+          ],
+          "textContainer": {
+            "element": "div",
+            "className": "contentWithImage"
+          },
+          "textImage": {
+            "src": "/images/about/how-to-find-toy-number/how-to-hw-example-500x500.jpg",
+            "alt": "Rear packaging of a Hot Wheels case with the toy code encircled in red"
           }
-        ]
-      
+        },
+        {
+          "heading": {
+            "content": "Premium"
+          },
+          "text": [
+            "Premium cars may have their code located differently, such as closer to the barcode on the back of the packaging."
+          ],
+          "textContainer": {
+            "element": "div",
+            "className": "contentWithImage contentRight"
+          },
+          "textImage": {
+            "src": "/images/about/how-to-find-toy-number/how-to-premium-example-500x500.jpg",
+            "alt": "Rear packaging of a Hot Wheels Premium case with the toy code encircled in red"
+          }
+        },
+        {
+          "heading": {
+            "content": "Matchbox Power Grabs"
+          },
+          "text": [
+            "Matchbox Power Grab boxes don't have the usual backcard. Instead, the code can be found on the bottom near the barcode."
+          ],
+          "textContainer": {
+            "element": "div",
+            "className": "contentWithImage"
+          },
+          "textImage": {
+            "src": "/images/about/how-to-find-toy-number/how-to-mb-power-grab-example-500x500.jpg",
+            "alt": "Bottom packaging of a Matchbox Power Grab box with the toy code encircled in red"
+          }
+        }
+      ]
     }
   },
   {
