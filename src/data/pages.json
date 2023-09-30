@@ -491,7 +491,6 @@
           "Welcome to Tiny Fords. My name is Kevin, and I'm the creator of this website. I've been collecting Ford die-cast cars for years, and I created this website as a tool to keep track of my collection."
         ]
       },
-      "body": {
         "asideImage": [
           {
             "heading": {
@@ -535,7 +534,7 @@
             ]
           }
         ]
-      }
+      
     }
   },
   {
@@ -589,7 +588,7 @@
           "You can use various codes to search for and identify cars in our collection. These codes can also be used on other websites such as eBay to quickly locate the car."
         ]
       },
-      "body": {
+      
         "asideImage": [
           {
             "heading": {
@@ -650,7 +649,7 @@
             }
           }
         ]
-      }
+      
     }
   },
   {
@@ -1023,7 +1022,7 @@
           "wrapper": {
             "element": "div",
             "attributes": {
-              "className": "contentWithImage"
+              "className": "contentWithImage contentRight"
             }
           },
           "intro": {
