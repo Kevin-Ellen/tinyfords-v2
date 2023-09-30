@@ -640,77 +640,253 @@
         "element": "section",
         "className": "fragmentContentLongForm"
       },
-      "topImage": {
-        "mobile": "/images/about/how-to-find-toy-number/mobile/how-to-top-500x250.jpg",
-        "desktop": "/images/about/how-to-find-toy-number/desktop/how-to-top-250x650.jpg"
-      },
       "intro": {
         "heading": {
           "element": "h2",
           "className": "a11y",
           "content": "Intro"
         },
-        "text": [
-          "You can use various codes to search for and identify cars in our collection. These codes can also be used on other websites such as eBay to quickly locate the car."
+        "entries": [
+          {
+            "type": "text",
+            "element": "p",
+            "attributes": {
+              "className": null
+            },
+            "content": "You can use various codes to search for and identify cars in our collection. These codes can also be used on other websites such as eBay to quickly locate the car."
+          }
         ]
       },
-      "asideImage": [
+      "sections": [
         {
-          "heading": {
-            "content": "Searching on Tiny Fords"
-          },
-          "text": [
-            "To get the best results, follow these steps:</p><ol><li>Locate the toy code</li><li>Enter the code in the search bar</li><li>Check if the returned results match the car you're looking for</li><li>If no results are returned, the car may not be in the collection yet</li><li>If you're not sure, search for the car's name to confirm its absence</li></ol>"
-          ]
-        }
-      ],
-      "belowImage": [
-        {
-          "heading": {
-            "content": "Normal Hot Wheels and Matchbox"
-          },
-          "text": [
-            "Matchbox and Hot Wheels cars have a code on the back of their packaging, sometimes also on the front. Usually, it is found at the top of the backcard, and is a combination of three letters and two numbers (e.g. '<em>GTB91</em>')."
-          ],
-          "textContainer": {
+          "type": "asideImage",
+          "container": {
             "element": "div",
-            "className": "contentWithImage"
+            "attributes": {
+              "className": "contentLongForm"
+            }
           },
-          "textImage": {
-            "src": "/images/about/how-to-find-toy-number/how-to-hw-example-500x500.jpg",
-            "alt": "Rear packaging of a Hot Wheels case with the toy code encircled in red"
+          "image": {
+            "type": "sideImage",
+            "element": "picture",
+            "attributes": {
+              "className": "contentLongFormSideImage"
+            },
+            "images": {
+              "mobile": "/images/about/how-to-find-toy-number/mobile/how-to-top-500x250.jpg",
+              "desktop": "/images/about/how-to-find-toy-number/desktop/how-to-top-250x650.jpg"
+            }
+          },
+          "children": {
+            "wrapper": {
+              "element": "div",
+              "attributes": {
+                "className": "contentText"
+              }
+            },
+            "entries": [
+              {
+                "heading": {
+                  "element": null,
+                  "content": "How to use",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "type": "text",
+                "element": "p",
+                "attributes": {
+                  "className": null
+                },
+                "content": "To get the best results, follow these steps:"
+              },
+              {
+                "heading": {
+                  "element": null,
+                  "content": "General features",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "type": "list",
+                "element": "ol",
+                "attributes": {
+                  "className": null
+                },
+                "content": [
+                  "Locate the toy code",
+                  "Enter the code in the search bar",
+                  "Check if the returned results match the car you're looking for",
+                  "If no results are returned, the car may not be in the collection yet",
+                  "If you're not sure, search for the car's name or model to confirm its absence"
+                ]
+              }
+            ]
           }
         },
         {
-          "heading": {
-            "content": "Premium"
+          "type": "twoColumnWithImages",
+          "container": {
+            "element": "section",
+            "attributes": {
+              "className": null
+            }
           },
-          "text": [
-            "Premium cars may have their code located differently, such as closer to the barcode on the back of the packaging."
-          ],
-          "textContainer": {
+          "wrapper": {
             "element": "div",
-            "className": "contentWithImage contentRight"
+            "attributes": {
+              "className": "contentWithImage"
+            }
           },
-          "textImage": {
-            "src": "/images/about/how-to-find-toy-number/how-to-premium-example-500x500.jpg",
-            "alt": "Rear packaging of a Hot Wheels Premium case with the toy code encircled in red"
+          "intro": {
+            "heading": {
+              "element": null,
+              "content": null,
+              "attributes": {
+                "className": null
+              }
+            },
+            "type": "text",
+            "element": "p",
+            "attributes": {
+              "className": null
+            },
+            "content": ""
+          },
+          "imageColumn": {
+            "image": {
+              "src": "/images/about/how-to-find-toy-number/how-to-hw-example-500x500.jpg",
+              "alt": "Rear packaging of a Hot Wheels case with the toy code encircled in red"
+            }
+          },
+          "contentColumn": {
+            "entries": [
+              {
+                "type": "text",
+                "element": "p",
+                "attributes": {
+                  "className": null
+                },
+                "heading": {
+                  "element": "h3",
+                  "content": "Normal Hot Wheels and Matchbox",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "content": "Matchbox and Hot Wheels cars have a code on the back of their packaging, sometimes also on the front. Usually, it is found at the top of the backcard, and is a combination of three letters and two numbers (e.g. '<em>GTB91</em>')."
+              }
+            ]
           }
         },
         {
-          "heading": {
-            "content": "Matchbox Power Grabs"
+          "type": "twoColumnWithImages",
+          "container": {
+            "element": "section",
+            "attributes": {
+              "className": null
+            }
           },
-          "text": [
-            "Matchbox Power Grab boxes don't have the usual backcard. Instead, the code can be found on the bottom near the barcode."
-          ],
-          "textContainer": {
+          "wrapper": {
             "element": "div",
-            "className": "contentWithImage"
+            "attributes": {
+              "className": "contentWithImage"
+            }
           },
-          "textImage": {
-            "src": "/images/about/how-to-find-toy-number/how-to-mb-power-grab-example-500x500.jpg",
-            "alt": "Bottom packaging of a Matchbox Power Grab box with the toy code encircled in red"
+          "intro": {
+            "heading": {
+              "element": null,
+              "content": null,
+              "attributes": {
+                "className": null
+              }
+            },
+            "type": "text",
+            "element": "p",
+            "attributes": {
+              "className": null
+            },
+            "content": ""
+          },
+          "imageColumn": {
+            "image": {
+              "src": "/images/about/how-to-find-toy-number/how-to-hw-premium-500x500.jpg",
+              "alt": "Rear packaging of a Hot Wheels Premium case with the toy code encircled in red"
+            }
+          },
+          "contentColumn": {
+            "entries": [
+              {
+                "type": "text",
+                "element": "p",
+                "attributes": {
+                  "className": null
+                },
+                "heading": {
+                  "element": "h3",
+                  "content": "Premium Hot Wheels",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "content": "Premium cars may have their code located differently, such as closer to the barcode on the back of the packaging."
+              }
+            ]
+          }
+        },
+        {
+          "type": "twoColumnWithImages",
+          "container": {
+            "element": "section",
+            "attributes": {
+              "className": null
+            }
+          },
+          "wrapper": {
+            "element": "div",
+            "attributes": {
+              "className": "contentWithImage"
+            }
+          },
+          "intro": {
+            "heading": {
+              "element": null,
+              "content": null,
+              "attributes": {
+                "className": null
+              }
+            },
+            "type": "text",
+            "element": "p",
+            "attributes": {
+              "className": null
+            },
+            "content": ""
+          },
+          "imageColumn": {
+            "image": {
+              "src": "/images/about/how-to-find-toy-number/how-to-mb-power-grab-example-500x500.jpg",
+              "alt": "Bottom packaging of a Matchbox Power Grab box with the toy code encircled in red"
+            }
+          },
+          "contentColumn": {
+            "entries": [
+              {
+                "type": "text",
+                "element": "p",
+                "attributes": {
+                  "className": null
+                },
+                "heading": {
+                  "element": "h3",
+                  "content": "Matchbox Power Grabs",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "content": "Matchbox Power Grab boxes don't have the usual backcard. Instead, the code can be found on the bottom near the barcode."
+              }
+            ]
           }
         }
       ]
