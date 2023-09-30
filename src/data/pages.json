@@ -688,7 +688,7 @@
     "content": {
       "container": {
         "element": "section",
-        "className": "fragmentContentLongForm"
+        "className": "contentLongFormContainer"
       },
       "intro": {
         "container": {
@@ -768,11 +768,11 @@
                   "className": null
                 },
                 "content": [
-                  "<li>High-Quality Material: KLAS Car Keepers are made from thick recyclable PET plastic, ensuring they are durable and protective.</li>",
-                  "<li>Sustainability: Unlike other manufacturers who use non-recyclable PVC, KLAS uses fully recyclable polyethylene terephthalate (PET), the same material used in drinking bottles.</li>",
-                  "<li>Clamshell Folding Design: This design offers complete and secure protection for unopened collectable cars, encasing both the blister and card, shielding them from damage, condensation, and dust.</li>",
-                  "<li>Easy Access: Each protector is easy to open and reseal, offering a crystal clear window to view the model inside.</li>",
-                  "<li>Storage & Display: KLAS Car Keepers are stackable for easy storage. They also come with a hanger holder hole for those who wish to display their collection.</li>"
+                  "High-Quality Material: KLAS Car Keepers are made from thick recyclable PET plastic, ensuring they are durable and protective.",
+                  "Sustainability: Unlike other manufacturers who use non-recyclable PVC, KLAS uses fully recyclable polyethylene terephthalate (PET), the same material used in drinking bottles.",
+                  "Clamshell Folding Design: This design offers complete and secure protection for unopened collectable cars, encasing both the blister and card, shielding them from damage, condensation, and dust.",
+                  "Easy Access: Each protector is easy to open and reseal, offering a crystal clear window to view the model inside.",
+                  "Storage & Display: KLAS Car Keepers are stackable for easy storage. They also come with a hanger holder hole for those who wish to display their collection."
                 ]
               }
             ]
