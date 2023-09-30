@@ -703,7 +703,7 @@
               {
                 "heading": {
                   "element": null,
-                  "content": "General features",
+                  "content": null,
                   "attributes": {
                     "className": null
                   }
@@ -735,7 +735,7 @@
           "wrapper": {
             "element": "div",
             "attributes": {
-              "className": "contentWithImage"
+              "className": "contentWithImage contentRight"
             }
           },
           "intro": {
@@ -810,7 +810,7 @@
           },
           "imageColumn": {
             "image": {
-              "src": "/images/about/how-to-find-toy-number/how-to-hw-premium-500x500.jpg",
+              "src": "/images/about/how-to-find-toy-number/how-to-premium-500x500.jpg",
               "alt": "Rear packaging of a Hot Wheels Premium case with the toy code encircled in red"
             }
           },
@@ -845,7 +845,7 @@
           "wrapper": {
             "element": "div",
             "attributes": {
-              "className": "contentWithImage"
+              "className": "contentWithImage contentRight"
             }
           },
           "intro": {
