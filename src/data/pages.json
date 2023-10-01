@@ -36,9 +36,9 @@
       },
       "intro": {
         "heading": {
-          "element": null,
-          "className": null,
-          "content": null
+          "element": "h2",
+          "className": "a11y",
+          "content": "Intro"
         },
         "entries": [
           {
