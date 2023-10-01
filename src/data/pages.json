@@ -55,7 +55,7 @@
             "attributes": {
               "className": null
             },
-            "content": "urrently there are <strong id=\"countCollection\"></strong> items within the various collections!"
+            "content": "Currently there are <strong id=\"countCollection\"></strong> items within the various collections!"
           }
         ]
       }
