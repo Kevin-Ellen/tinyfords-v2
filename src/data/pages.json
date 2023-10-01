@@ -688,10 +688,10 @@
               },
               {
                 "heading": {
-                  "element": null,
-                  "content": null,
+                  "element": "h3",
+                  "content": "Steps to use toy number",
                   "attributes": {
-                    "className": null
+                    "className": "a11y"
                   }
                 },
                 "type": "list",
