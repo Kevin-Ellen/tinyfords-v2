@@ -1,0 +1,441 @@
+{
+  "id": "klasCarKeepers",
+  "name": "KLAS Car Keepers",
+  "slug": "/about/klas-car-keepers",
+  "h1": "KLAS Car Keepers",
+  "metadata": {
+    "title": "⛑️ KLAS Car Keepers - Ford Die-Cast Car Collection",
+    "description": "Keeping my collection safe with KLAS Car keepers. Sustainable and strong: perfect protection for my collection!"
+  },
+  "status": 200,
+  "template": "content",
+  "visibility": {
+    "active": true,
+    "mainNav": false,
+    "footer": true,
+    "xmlSitemap": true
+  },
+  "breadcrumbList": [
+    "Home",
+    "About",
+    "KLAS Car Keeper"
+  ],
+  "socialMedia": {
+    "title": "⛑️ Protecting my collection with KLAS Car Keepers",
+    "description": "The perfect solution to keep your die-cast (1:64) collection is pristine condition - the strong and sustainable Car Keepers from KLAS.",
+    "image": "social-media-about"
+  },
+  "content": {
+    "container": {
+      "element": "section",
+      "className": "fragmentContentLongForm"
+    },
+    "intro": {
+      "container": {
+        "className": null,
+        "element": null
+      },
+      "heading": {
+        "element": null,
+        "className": "a11y",
+        "content": "Intro"
+      },
+      "entries": [
+        {
+          "type": "text",
+          "element": "p",
+          "attributes": {
+            "className": null
+          },
+          "content": "If you're anything like me, you'll understand the importance of keeping our prized die-cast cars in pristine condition. That's where KLAS Car Keepers come in. Based in Essex, KLAS has created these top-quality protectors that I've come to rely on for my collection. Not only do they offer stellar protection, but they're also eco-friendly - a big thumbs up in my book! Whether you're a seasoned collector or just starting out, let's explore how KLAS Car Keepers can make a difference for our tiny treasures."
+        }
+      ]
+    },
+    "body": {
+      "container": {
+        "className": null,
+        "element": null
+      },
+      "sections": [
+        {
+          "type": "asideImage",
+          "container": {
+            "element": "div",
+            "attributes": {
+              "className": "contentLongForm"
+            }
+          },
+          "image": {
+            "type": "sideImage",
+            "element": "picture",
+            "attributes": {
+              "className": "contentLongFormSideImage"
+            },
+            "images": {
+              "mobile": "/images/about/klas-car-keepers/mobile/klas-top-500x250.jpg",
+              "desktop": "/images/about/klas-car-keepers/desktop/klas-top-250x650.jpg"
+            }
+          },
+          "children": {
+            "wrapper": {
+              "element": "div",
+              "attributes": {
+                "className": "contentText"
+              }
+            },
+            "entries": [
+              {
+                "heading": {
+                  "element": null,
+                  "content": "About KLAS",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "type": "text",
+                "element": "p",
+                "attributes": {
+                  "className": null
+                },
+                "content": "Nestled in Essex (UK), KLAS is not just any company - it's a passion project by a fellow collector who totally gets our collectible obsession! Their protectors? Top-tier, if you ask me. And here's the cherry on top: KLAS is all about going green. Every protector is made from recyclable materials, and even their packaging gets the eco-friendly nod with recycled boxes and padding; a perfect blend of quality and eco-consciousness!"
+              },
+              {
+                "heading": {
+                  "element": null,
+                  "content": "General features",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "type": "list",
+                "element": "ul",
+                "attributes": {
+                  "className": null
+                },
+                "content": [
+                  "<li>High-Quality Material: KLAS Car Keepers are made from thick recyclable PET plastic, ensuring they are durable and protective.</li>",
+                  "<li>Sustainability: Unlike other manufacturers who use non-recyclable PVC, KLAS uses fully recyclable polyethylene terephthalate (PET), the same material used in drinking bottles.</li>",
+                  "<li>Clamshell Folding Design: This design offers complete and secure protection for unopened collectable cars, encasing both the blister and card, shielding them from damage, condensation, and dust.</li>",
+                  "<li>Easy Access: Each protector is easy to open and reseal, offering a crystal clear window to view the model inside.</li>",
+                  "<li>Storage & Display: KLAS Car Keepers are stackable for easy storage. They also come with a hanger holder hole for those who wish to display their collection.</li>"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "twoColumnWithImages",
+          "container": {
+            "element": "section",
+            "attributes": {
+              "className": null
+            }
+          },
+          "wrapper": {
+            "element": "div",
+            "attributes": {
+              "className": "contentWithImage"
+            }
+          },
+          "intro": {
+            "heading": {
+              "element": "h3",
+              "content": "Short Card",
+              "attributes": {
+                "className": null
+              }
+            },
+            "type": "text",
+            "element": "p",
+            "attributes": {
+              "className": null
+            },
+            "content": "KLAS Car Keepers Short Card protective cases are a must-have for every Hot Wheels or Matchbox car aficionado. These cases are meticulously crafted to fit the Hot Wheels or Matchbox short card collections, ensuring your prized possessions remain in mint condition."
+          },
+          "imageColumn": {
+            "image": {
+              "src": "/images/about/klas-car-keepers/klas-example-short-500x500.jpg",
+              "alt": "Example of a short card KLAS car keeper"
+            }
+          },
+          "contentColumn": {
+            "entries": [
+              {
+                "type": "list",
+                "element": "ul",
+                "attributes": {
+                  "className": null
+                },
+                "heading": {
+                  "element": "h4",
+                  "content": "Size",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "content": [
+                  "<strong>Size:</strong> 1:64 suitable for Hot Wheels or Matchbox short cards.",
+                  "<strong>Card Dimensions:</strong> 10.8cm x 10.8cm."
+                ]
+              },
+              {
+                "type": "list",
+                "element": "ul",
+                "attributes": {
+                  "className": null
+                },
+                "heading": {
+                  "element": "h4",
+                  "content": "General features",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "content": [
+                  "<strong>High-Quality Material:</strong> Crafted from 0.5mm thick recyclable PET plastic, the Short Card Keeper is durable and eco-friendly.",
+                  "<strong>Full Protection:</strong> Each case snugly encloses the car and its card, while the crystal clear window perfectly showcases your collectible.",
+                  "<strong>Easy Access:</strong> For those moments when you want a closer look, the case can be easily opened and resealed without compromising its integrity.",
+                  "<strong>Storage & Display:</strong> Designed for convenience, these cases are stackable and come equipped with a hanger holder hole for those who love to display."
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "twoColumnWithImages",
+          "container": {
+            "element": "section",
+            "attributes": {
+              "className": null
+            }
+          },
+          "wrapper": {
+            "element": "div",
+            "attributes": {
+              "className": "contentWithImage"
+            }
+          },
+          "intro": {
+            "heading": {
+              "element": "h3",
+              "content": "Long Card",
+              "attributes": {
+                "className": null
+              }
+            },
+            "type": "text",
+            "element": "p",
+            "attributes": {
+              "className": null
+            },
+            "content": "KLAS Car Keepers Long Card protective cases are the epitome of protection for the serious Hot Wheels car collector. Specifically designed for the Hot Wheel long card collections, these cases are the perfect blend of style and security."
+          },
+          "imageColumn": {
+            "image": {
+              "src": "/images/about/klas-car-keepers/klas-example-long-500x500.jpg",
+              "alt": "Example of a long card KLAS car keeper"
+            }
+          },
+          "contentColumn": {
+            "entries": [
+              {
+                "type": "list",
+                "element": "ul",
+                "attributes": {
+                  "className": null
+                },
+                "heading": {
+                  "element": "h4",
+                  "content": "Size",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "content": [
+                  "<strong>Size:</strong> 1:64 suitable for Hot Wheels long cards.",
+                  "<strong>Card Dimensions:</strong> 16.5cm x 10.8cm."
+                ]
+              },
+              {
+                "type": "list",
+                "element": "ul",
+                "attributes": {
+                  "className": null
+                },
+                "heading": {
+                  "element": "h4",
+                  "content": "General features",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "content": [
+                  "<strong>High-Quality Material:</strong> Made from robust 0.5mm thick recyclable PET plastic, ensuring longevity and sustainability.",
+                  "<strong>Full Protection:</strong> With a snug fit for both the card and car, the transparent window offers an unobstructed view of your cherished collectible.",
+                  "<strong>Easy Access:</strong> Collector-friendly design allows for easy opening and resealing, balancing accessibility with top-notch protection.",
+                  "<strong>Storage & Display:</strong> These cases are not only stackable for efficient storage but also come with a hanger holder hole for proud display."
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "twoColumnWithImages",
+          "container": {
+            "element": "section",
+            "attributes": {
+              "className": null
+            }
+          },
+          "wrapper": {
+            "element": "div",
+            "attributes": {
+              "className": "contentWithImage"
+            }
+          },
+          "intro": {
+            "heading": {
+              "element": "h3",
+              "content": "Team Transport",
+              "attributes": {
+                "className": null
+              }
+            },
+            "type": "text",
+            "element": "p",
+            "attributes": {
+              "className": null
+            },
+            "content": "KLAS Car Keepers Team Transporter protective cases are the dream of every Hot Wheels enthusiast. Tailor-made for the Hot Wheels Team Transport cars and trucks collection, these cases are a testament to KLAS's commitment to quality and precision."
+          },
+          "imageColumn": {
+            "image": {
+              "src": "/images/about/klas-car-keepers/klas-example-transport-500x500.jpg",
+              "alt": "Example of a team transport card KLAS car keeper"
+            }
+          },
+          "contentColumn": {
+            "entries": [
+              {
+                "type": "list",
+                "element": "ul",
+                "attributes": {
+                  "className": null
+                },
+                "heading": {
+                  "element": "h4",
+                  "content": "Size",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "content": [
+                  "<strong>Size:</strong> 1:64 suitable for Hot Wheels Team Transport cars and trucks.",
+                  "<strong>Card Dimensions:</strong> 20.3cm x 16.5cm."
+                ]
+              },
+              {
+                "type": "list",
+                "element": "ul",
+                "attributes": {
+                  "className": null
+                },
+                "heading": {
+                  "element": "h4",
+                  "content": "General features",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "content": [
+                  "<strong>High-Quality Material:</strong> Crafted from 0.7mm thick recyclable PET plastic, these protectors are built to last.",
+                  "<strong>Full Protection:</strong>  Each case is designed to offer secure protection for both the card and the vehicle, complemented by a crystal clear viewing window.",
+                  "<strong>Easy Access:</strong> Collector-centric design ensures ease of access with simple opening and resealing mechanisms.",
+                  "<strong>Storage & Display:</strong> With a stackable design for streamlined storage, these cases also sport a hanger holder hole for those who prefer to display."
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "twoColumnWithImages",
+          "container": {
+            "element": "section",
+            "attributes": {
+              "className": null
+            }
+          },
+          "wrapper": {
+            "element": "div",
+            "attributes": {
+              "className": "contentWithImage"
+            }
+          },
+          "intro": {
+            "heading": {
+              "element": "h3",
+              "content": "Premium",
+              "attributes": {
+                "className": null
+              }
+            },
+            "type": "text",
+            "element": "p",
+            "attributes": {
+              "className": null
+            },
+            "content": "KLAS Car Keepers Premium Car Culture protective cases are tailor-made for the dedicated Hot Wheels car collector. These protectors are specially designed for the Hot Wheel Premium Car Culture or Boulevard car collections."
+          },
+          "imageColumn": {
+            "image": {
+              "src": "/images/about/klas-car-keepers/klas-example-premium-500x500.jpg",
+              "alt": "Example of a premium case card KLAS car keeper"
+            }
+          },
+          "contentColumn": {
+            "entries": [
+              {
+                "type": "list",
+                "element": "ul",
+                "attributes": {
+                  "className": null
+                },
+                "heading": {
+                  "element": "h4",
+                  "content": "Size",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "content": [
+                  "<strong>Size:</strong> 1:64 suitable for Hot Wheels Premium Car Culture cars.",
+                  "<strong>Card Dimensions:</strong> 16.5cm x 13.5cm."
+                ]
+              },
+              {
+                "type": "list",
+                "element": "ul",
+                "attributes": {
+                  "className": null
+                },
+                "heading": {
+                  "element": "h4",
+                  "content": "General features",
+                  "attributes": {
+                    "className": null
+                  }
+                },
+                "content": [
+                  "<strong>High-Quality Material:</strong> Like other KLAS protectors, the Premium Car Culture Keeper is made from 0.5mm thick recyclable PET plastic.",
+                  "<strong>Full Protection:</strong>  Each case offers complete and secure protection for both the card and the car, providing a crystal clear window to showcase your model.",
+                  "<strong>Easy Access:</strong> Designed for collectors, it is easy to open and reseal, ensuring both accessibility and protection.",
+                  "<strong>Storage & Display:</strong> Stackable design for optimal storage space, and comes with a hanger holder hole for display enthusiasts."
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

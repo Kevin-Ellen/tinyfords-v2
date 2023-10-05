@@ -15,7 +15,7 @@ import { servicesGithubDataPageAll } from '../services/github';
  * @param {URL} url - The request URL to determine the type of JSON content required.
  * @returns {Response} - A Response object with the required JSON content.
  */
-const outputJson = (url) => {
+const apiJson = (url) => {
   // Extract the type of JSON content needed from the URL
   const type = url.pathname.replace('/json/', '');
 
@@ -29,7 +29,7 @@ const outputJson = (url) => {
       return new Response('Not Found', {status: 404, headers: {'content-type':'text/plain'}});
   }
 }
-export default outputJson;
+export default apiJson;
 
 /**
  * Fetch and return the desired data in a Response object.

@@ -10,10 +10,10 @@
  * 
  * @returns {Response} - A Response object with the content of manifest.json.
  */
-const outputManifest = () => {
+const apiManifest = () => {
   return new Response(content, {status: 200, headers:{'content-type':'application/json'}});
 }
-export default outputManifest;
+export default apiManifest;
 
 /**
  * Generate the content for the manifest.json file.

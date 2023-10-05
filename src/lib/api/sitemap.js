@@ -13,11 +13,11 @@ import { servicesGithubDataPageAll } from '../services/github';
  * 
  * @returns {Response} - A Response object with the content of sitemap.xml.
  */
-const outputXmlSitemap = async (url) => {
+const apiXmlSitemap = async (url) => {
   const dataPagesAll = await servicesGithubDataPageAll();
   return new Response(content(dataPagesAll, url), {status: 200, headers:{'content-type':'application/xml'}});
 }
-export default outputXmlSitemap;
+export default apiXmlSitemap;
 
 /**
  * Generate the content for the sitemap.xml file.

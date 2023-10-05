@@ -59,3 +59,27 @@ export const multiSort = (data, fields, directions) => {
     return 0;
   });
 };
+
+export const deepMerge = (obj1, obj2) => {
+  let merged = Array.isArray(obj1) ? [] : {};
+  for (let key in obj1) {
+    if (obj1.hasOwnProperty(key)) {
+      if (obj2.hasOwnProperty(key)) {
+        if (typeof obj1[key] === 'object' && obj1[key] !== null && typeof obj2[key] === 'object' && obj2[key] !== null) {
+          merged[key] = deepMerge(obj1[key], obj2[key]);
+        } else {
+          merged[key] = obj2[key];
+        }
+      } else {
+        merged[key] = obj1[key];
+      }
+    }
+  }
+  // If it's an array, fill in the rest of the items from obj2
+  if (Array.isArray(obj1) && Array.isArray(obj2)) {
+    for (let i = obj1.length; i < obj2.length; i++) {
+      merged[i] = obj2[i];
+    }
+  }
+  return merged;
+}

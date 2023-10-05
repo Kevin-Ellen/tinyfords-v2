@@ -14,8 +14,8 @@
  * @param {string} message - A descriptive error message.
  * @returns {Response} - A constructed error Response object with the provided status and message.
  */
-const handlerError = (status, message) => {
+const handleError = (status, message) => {
   return new Response(`Error: ${message}`, {status:status});
 }
 
-export default handlerError;
+export default handleError;

@@ -1,3 +1,5 @@
+import { appData } from '../services/appData';
+
 /**
  * Find the page data for the current page based on its slug.
  * 
@@ -5,6 +7,6 @@
  * @param {Array} dataPageAll - The list of all page data objects.
  * @returns {Object|null} - The data for the current page, or null if not found.
  */
-export const findDataPageCurrent = (slug, data) => {
+export const getPageBySlug = (slug, data = appData.pages.all) => {
   return data.find(page => page.slug === slug) || false;
 }

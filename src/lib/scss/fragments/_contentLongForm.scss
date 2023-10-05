@@ -9,6 +9,14 @@
   background: white;  // Set the background color to white
   padding: 16px 0 80px;  // Provide padding to separate the content from its boundaries
   margin: 16px 0 80px;  // Provide margin to separate the element from others
+
+  h1{
+    margin: 40px 8px;
+    @include m.desktop {
+      width:80%;
+      margin: 40px auto;
+    }
+  }
   
   // Container for the long form content to provide additional layout control
   .contentLongFormContainer {

@@ -8,6 +8,7 @@
 
 // Import necessary utilities
 import { multiSort } from './misc';
+import { appData } from '../services/appData';
 
 /**
  * Retrieves the latest cars based on the added date and ID.
@@ -90,21 +91,48 @@ export const getCategoryById = (dataCarsAll, categoryId) => {
 /**
  * Fetches a car object from the list by its ID.
  * 
- * @param {Array} dataCarsAll - The list of all cars data.
- * @param {number|string} carId - The ID of the car to retrieve.
+ * @param {Array} cars - The list of all cars data.
+ * @param {number|string} id - The ID of the car to retrieve.
  * @returns {Object} - The car object.
  */
-export const getCarById = (dataCarsAll, carId) => {
-  return dataCarsAll.find(car => car.id === parseInt(carId, 10));
+export const getCarById = (id, cars = appData.cars.all) => {
+  return cars.find(car => car.id === parseInt(id, 10));
 }
 
 /**
  * Fetches all car objects from the list by their category ID.
  * 
- * @param {Array} dataCarsAll - The list of all cars data.
- * @param {number|string} categoryId - The ID of the category.
+ * @param {Array} cars - The list of all cars data.
+ * @param {number|string} id - The ID of the category.
  * @returns {Array} - The list of cars that belong to the given category.
  */
-export const getCarsByCategoryId = (dataCarsAll, categoryId) => {
-  return dataCarsAll.filter(car => car.categoryDetails.id === categoryId);
+export const getCarsByCategoryId = (id, cars = appData.cars.all) => {
+  return cars.filter(car => car.categoryDetails.id === id);
 }
+
+/**
+ * Filters the dataset of cars based on a search term.
+ * 
+ * @param {Array} data - The dataset of cars.
+ * @param {string} term - The search term.
+ * @returns {Array} - The filtered list of cars.
+ */
+export const searchCars = (term, data = appData.cars.current) => {
+  
+  if(!term) return data;
+  
+  // Convert the search term to lowercase for case-insensitive search
+  term = term.toLowerCase();
+
+  
+
+  // Return only those cars that have the search term in their name, brand, or code
+  return data.filter(car => {
+    return (
+      car.name && car.name.toLowerCase().includes(term) ||           // Check if name exists and includes the term
+      car.brand && car.brand.toLowerCase().includes(term) ||         // Check if brand exists and includes the term
+      car.code && car.code.toLowerCase().includes(term) ||              // Check if code exists and includes the term
+      car.make && car.make.toLowerCase().includes(term)              // Check if code exists and includes the term
+    );
+  });
+};

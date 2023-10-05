@@ -464,6 +464,10 @@ main {
 .breadcrumbsContainer .breadcrumbs li:first-of-type a {
   padding-left: 0;
 }
+.breadcrumbsContainer .breadcrumbs li:last-of-type {
+  padding-left: 0.5em;
+  text-decoration: underline;
+}
 .breadcrumbsContainer .breadcrumbs li a {
   color: black;
   text-decoration: none;
@@ -478,9 +482,6 @@ main {
   text-decoration: underline;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
-}
-.breadcrumbsContainer .breadcrumbs li a[aria-current=page] {
-  font-weight: 600;
 }
 @media only screen and (min-width: 500px) {
   .breadcrumbsContainer {

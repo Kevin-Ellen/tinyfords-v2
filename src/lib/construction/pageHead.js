@@ -7,6 +7,7 @@
 
 // Import modules
 import fragmentSearchBar from '../fragments/searchBar';
+import { appData } from '../services/appData';
 
 /**
  * Generates the HTML for the head section based on the given data.
@@ -14,7 +15,7 @@ import fragmentSearchBar from '../fragments/searchBar';
  * @param {Object} data - all the cars and pages data
  * @return {string} The HTML markup for the head section.
  */
-const pageHead =  (data, options = {})  => {
+const pageHead =  (data = appData)  => {
 
   // Generate the links that should appear in the head section based on certain criteria.
   const links = createLinks(data.pages.all);
@@ -54,7 +55,7 @@ const pageHead =  (data, options = {})  => {
       </nav>
 
       <input type="checkbox" class="siteNavBox" id="siteSearch">
-      ${fragmentSearchBar(siteSearchUrl, options)}
+      ${fragmentSearchBar(siteSearchUrl.pathname, data.options)}
 
     </div>
   </header>
@@ -75,8 +76,8 @@ const createLinks = (data) => {
   // and then map them to HTML links.
   const entries = data.filter(page => 
     page.status === 200 
-    && page.active === true 
-    && page.mainNav === true)
+    && page.visibility.active === true 
+    && page.visibility.mainNav === true)
   .map(page => `<li><a href="${page.slug}">${page.name}</a></li><li aria-hidden="true" class="divider">/</li>`)
   .join('');
   

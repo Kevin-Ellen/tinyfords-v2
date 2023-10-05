@@ -13,56 +13,49 @@ import handlerTemplate from '../handlers/template';
 
 // This function handles search requests
 const handlerSearch = async (request) => {
-  // Fetch all page data from GitHub
   const dataPageAll = await servicesGithubDataPageAll();
-
-  // Convert the request's form data into a JavaScript object
-  const formData = await request.formData();
-  const formDataObject = Object.fromEntries(formData.entries());
-
-  // Extract the URL and any associated query parameters from the request
   const url = new URL(request.url);
   url.params = new URLSearchParams(url.search);
 
-  // Check the request's path to determine the type of search and handle it accordingly
+  let params;
+  if (request.method === 'POST') {
+    const formData = await request.formData();
+    params = Object.fromEntries(formData.entries());
+  } else if (request.method === 'GET') {
+    params = Object.fromEntries(url.params.entries());
+  }
+
   switch (url.pathname) {
+    // your existing cases here...
     case '/hotwheels':
     case '/matchbox':
     case '/other':
     case '/all':
-      // Find the current page's data based on the request's path
       const dataPageCurrent = findDataPageCurrent(url.pathname, dataPageAll);
       dataPageCurrent.url = url;
-
-      // If the current page's data is not found, return a 404 response
       if (!dataPageCurrent) {
         return new Response('Not Found', { status: 404 });
       }
-
-      // Create and return the search response
-      return createResponse(request, dataPageCurrent, formDataObject);
+      return createResponse(request, dataPageCurrent, params);
   }
 
-  // Default response for unmatched search paths
   return new Response('Search Handler');
-}
-export default handlerSearch;
+};
 
-// This function creates a search response based on the current page's data and form data
-const createResponse = (request, dataPageCurrent, formDataObject) => {
-  // Construct the options for the response
-  const options = {
+const createResponse = (request, dataPageCurrent, params) => {
+  const search = {
     feedback: {
-      success: true,           // Indicate the search was successful
-      message: 'hello world',  // Placeholder message (this should be updated based on actual search results)
-      action: 'search',        // Indicate that this feedback is related to a search action
+      success: true,
+      message: '',
+      action: 'search',
     },
     data: {
-      searchValue: formDataObject.q, // Extract the search value from the form data
-      page: dataPageCurrent,         // Pass the current page's data
+      searchValue: params.q,
+      page: dataPageCurrent,
     }
-  }
+  };
 
-  // Use the template handler to create the final response based on the options
-  return handlerTemplate(dataPageCurrent.url, options);
-}
+  return handlerTemplate(dataPageCurrent.url, search);
+};
+
+export default handlerSearch;

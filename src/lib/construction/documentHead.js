@@ -8,6 +8,7 @@
 
 // Importing the styles
 import css from '../css/styles.css';
+import { appData } from '../services/appData';
 
 /**
  * Generates the opening HTML markup for the page.
@@ -15,20 +16,8 @@ import css from '../css/styles.css';
  * @param {Object} data - All the cars and pages (current and all) data
  * @return {string} The opening HTML markup.
  */
-const documentHead = (data) => {
-
-  console.log(data);
-  // If the current page status is 200 and the template is not offline or admin
-  if(data.pages.current.status === 200 && data.pages.current.template !== 'offline') {
-
-    // Set the canonical URL
-    data.pages.current.canonical = `${data.pages.current.url.protocol}//${data.pages.current.url.host}${data.pages.current.slug}`;
-
-    // Append the page parameter if it's a collection and not the first page
-    if(data.pages.current.template === 'collection' && data.pages.current.url.params.get('page') && data.pages.current.url.params.get('page') != 1) {
-      data.pages.current.canonical += `?page=${data.pages.current.url.params.get('page')}`;
-    }
-  }
+const documentHead = (data = appData) => {
+  const { pages: { current } } = data;
 
   // Construct the HTML markup
   const html = `<!doctype html>
@@ -36,37 +25,34 @@ const documentHead = (data) => {
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-        <link rel="preload" href="/fonts/montserratalternates/v17/mFTiWacfw6zH4dthXcyms1lPpC8I_b0juU0xQIXFB7xG-GNxkg.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="/fonts/montserratalternates/v17/mFTiWacfw6zH4dthXcyms1lPpC8I_b0juU0xNIPFB7xG-GNxkg.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="/fonts/quicksand/v30/6xKtdSZaM9iE8KbpRA_hK1QNYuDyPw.woff2" as="font" type="font/woff2" crossorigin>
         <style>
           ${css}
         </style>
-        <title>${data.pages.current.metadata.title}</title>
+        <title>${current.metadata.title}</title>
         <meta property="og:locale" content="en_GB">
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="Tiny Fords">
-        ${data.pages.current.status===200 && data.pages.current.template!=='offline' && data.pages.current.template!=='admin'? 
-          `<meta name="description" content="${data.pages.current.metadata.description}">
-          <link rel="canonical" href="${data.pages.current.canonical}">
-          <meta property="og:title" content="${data.pages.current.socialMedia.title}">
-          <meta property="og:description" content="${data.pages.current.socialMedia.description}">
-          <meta property="og:url" content="${data.pages.current.canonical}">
-          <meta property="og:image" content="${data.pages.current.url.protocol}//${data.pages.current.url.host}/images/social-media/4080-2142/${data.pages.current.socialMedia.image}-4080-2142.jpg">
+        ${current.status===200 && current.template!=='offline' && current.template!=='admin'? 
+          `<meta name="description" content="${current.metadata.description}">
+          <link rel="canonical" href="${current.canonical}">
+          <meta property="og:title" content="${current.socialMedia.title}">
+          <meta property="og:description" content="${current.socialMedia.description}">
+          <meta property="og:url" content="${current.canonical}">
+          <meta property="og:image" content="${current.url.protocol}//${current.url.host}/images/social-media/4080-2142/${current.socialMedia.image}-4080-2142.jpg">
           <meta property="og:image:width" content="4080">
           <meta property="og:image:height" content="2142">
           <meta property="og:image:type" content="image/jpeg">
 
-          <meta property="og:image" content="${data.pages.current.url.protocol}//${data.pages.current.url.host}/images/social-media/256/${data.pages.current.socialMedia.image}-256.jpg">
+          <meta property="og:image" content="${current.url.protocol}//${current.url.host}/images/social-media/256/${current.socialMedia.image}-256.jpg">
           <meta property="og:image:width" content="256">
           <meta property="og:image:height" content="256">
           <meta property="og:image:type" content="image/jpeg">
 
           <meta name="twitter:card" content="summary_large_image">
           <meta name="twitter:creator" content="@kevin_ellen_">
-          <meta name="twitter:title" content="${data.pages.current.socialMedia.title}">
-          <meta name="twitter:description" content="${data.pages.current.socialMedia.description}">
-          <meta name="twitter:image" content="${data.pages.current.url.protocol}//${data.pages.current.url.host}/images/social-media/4080-2142/${data.pages.current.socialMedia.imageName}-4080-2142.jpg">
+          <meta name="twitter:title" content="${current.socialMedia.title}">
+          <meta name="twitter:description" content="${current.socialMedia.description}">
+          <meta name="twitter:image" content="${current.url.protocol}//${current.url.host}/images/social-media/4080-2142/${current.socialMedia.imageName}-4080-2142.jpg">
           ` 
         : ''}
         <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">

@@ -6,10 +6,12 @@
  */
 
 // Import necessary modules and utilities.
-import outputRobotsTxt from '../output/robotsTxt';
-import outputManifest from '../output/manifest';
-import outputXmlSitemap from '../output/sitemap';
-import outputJson from '../output/outputJon';
+import apiRobotsTxt from '../api/robotsTxt';
+import apiManifest from '../api/manifest';
+import apiSw from '../api/sw';
+import apiXmlSitemap from '../api/sitemap';
+import apiJson from '../api/outputJson';
+import apiCreator from '../api/api';
 import { servicesGithubImageGetter } from '../services/github';
 import handlerError from './error';
 
@@ -19,7 +21,7 @@ import handlerError from './error';
  * @param {URL} url - The request URL object.
  * @returns {Response} - The response object.
  */
-const handlerStatic = (url, request = {}) => {
+const handleStatic = (url, request = {}) => {
 
   // Handle image requests.
   if (url.pathname.startsWith('/images/')) {
@@ -33,25 +35,33 @@ const handlerStatic = (url, request = {}) => {
 
   // Handle JSON
   if (url.pathname.startsWith('/json/')) {
-    return outputJson(url);
+    return apiJson(url);
   }
+
+    // Handle API
+    if (url.pathname.startsWith('/api/')) {
+      return apiCreator(url);
+    }
 
   // Handle specific paths.
   switch (url.pathname) {
     case '/robots.txt':
-      return outputRobotsTxt(url);
+      return apiRobotsTxt(url);
 
     case '/manifest.json':
-      return outputManifest();
+      return apiManifest();
 
     case '/sitemap.xml':
-      return outputXmlSitemap(url);
+      return apiXmlSitemap(url);
+
+    case '/service-worker.js':
+      return apiSw(url);
 
     default:
       return new Response('Not Found - static', { status: 404 });
   }
 }
-export default handlerStatic;
+export default handleStatic;
 
 /**
  * Route requests for fonts to their appropriate location.

@@ -38,6 +38,10 @@
       &.active, &.active a {
         background-color: #eee;
       }
+      &.disabled, &.disabled a{
+        color: #aaa; /* or any other styling to indicate that the link is not clickable */
+        pointer-events: none;
+      }
     }
   }
 

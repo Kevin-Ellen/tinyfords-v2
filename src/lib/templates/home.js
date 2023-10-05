@@ -7,8 +7,11 @@
  */
 
 // Importing required modules and utilities.
+import { appData } from '../services/appData';
+import { assembleHTML, assignClassName } from '../utils/helpersRenders';
+import { createIntroTemplate } from '../fragments/fragmentCreators';
+import fragmentSearchBar from '../fragments/searchBar';
 import fragmentGridCars from '../fragments/gridCars';
-import { utilDataCarsLatest } from '../utils/dataCars';
 
 /**
  * Generate the HTML content for the homepage.
@@ -16,24 +19,27 @@ import { utilDataCarsLatest } from '../utils/dataCars';
  * @param {Object} data - All the pages and cars data
  * @returns {string} - The constructed homepage as an HTML string.
  */
-const templateHome = async (data) => {
+const templateHome = (data = appData.pages.current) => {
+  const html = ['<main>'];
 
-  // Get the content for the homepage and adjust the counter
-  const content = data.pages.current.content.intro
-    .replace('<strong id="countCollection"></strong>', `<strong id="countCollection">${data.cars.length}</strong>`)
-    .replace(`<h1></h1>`,`<h1>${data.pages.current.h1}</h1>`);
+  const container = {
+    element: data.content.container?.element || 'section',
+    className: assignClassName(data.content.container?.className), 
+  }
 
-  // Fetch the latest cars to display in a grid.
-  const dataCarsLatest =  utilDataCarsLatest(data.cars, 14);
-  
-  // Combine the main content and grid of latest cars to form the complete homepage.
-  const sections = [
-    `<main>`,
-      content,
-      fragmentGridCars('Latest additions', 2, dataCarsLatest),
-    `</main>`,
-  ].join('');
+  html.push(`<${container.element} ${container.className}>`);
+  html.push(`<h1>${data.h1}</h1>`);
 
-  return sections;
+  if(data.content.intro){
+    html.push(createIntroTemplate(data.content.intro));
+  }
+
+  html.push(fragmentSearchBar('/all'));
+
+  html.push(`</${container.element}>`);
+  html.push(fragmentGridCars({heading:{element: 'h2', content: 'Results'}, data: appData.cars.current}));
+
+  html.push('</main>');
+  return assembleHTML(html);
 }
 export default templateHome;

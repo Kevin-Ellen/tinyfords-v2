@@ -5,6 +5,8 @@
  * The grid displays information about each car in a card format.
  */
 
+import { assignClassName, assembleHTML } from '../utils/helpersRenders';
+
 /**
  * Create an HTML grid of cars with a heading.
  * 
@@ -13,16 +15,22 @@
  * @param {Array} dataCars - The list of car data objects to display in the grid.
  * @returns {string} - The constructed grid as an HTML string.
  */
-const fragmentGridCars = (heading, headingLevel, dataCars) => {
+const fragmentGridCars = (data) => {
+  const html = ['<section>'];
+  if(data.heading){
+    const heading = {
+      element: data.heading.element || 'h2',
+      content: data.heading.content || 'Results',
+      className: assignClassName(data.heading.attributes?.className),
+    }
+    html.push(`<${heading.element} ${heading.className}>${heading.content}</${heading.element}>`);
 
-  const levelNumber = Number(headingLevel);
-  headingLevel = !isNaN(levelNumber) ? Math.min(6, Math.max(2, Math.round(levelNumber))) : 2;
+    html.push(createGrid(data.data));
+  }
+  html.push('</section>');
+  return assembleHTML(html);
 
-  const html = `<section>
-    <h${headingLevel}>${heading}</h${headingLevel}>
-    ${createGrid(dataCars)}
-  </section>`;
-  return html;
+
 }
 export default fragmentGridCars;
 
@@ -32,9 +40,9 @@ export default fragmentGridCars;
  * @param {Array} dataCars - The list of car data objects to display in the grid.
  * @returns {string} - The HTML for the grid.
  */
-const createGrid = (dataCars) => {
+const createGrid = (content) => {
 
-  const cards = dataCars.map(createCard).join('');
+  const cards = content.map(createCard).join('');
 
   const html = `<div class="fragmentCarsGrid">
     ${cards}
@@ -59,8 +67,7 @@ const createCard = (car) => {
       <ul class="fragmentGridCardContent">
         <li><h3>${car.name}</h3></li>
         <li><strong>Make:</strong> ${car.make}</li>
-        ${car.code ? `<li><strong>Code:</strong> ${car.code}</li>` : ''}
-        ${car.base ? `<li><strong>Base:</strong> ${car.base}</li>` : ''}
+        ${car.code ? `<li><strong>Code:</strong> ${car.code.toUpperCase()}</li>` : ''}
         <li><strong>Added:</strong> ${car.addedDetails.date}</li>
       </ul>
     </div>`;
@@ -74,7 +81,7 @@ const createCard = (car) => {
  * @param {Object} car - The car data object.
  * @returns {string} - image path
  */
-const createImgPath = (car) => {
+export const createImgPath = (car) => {
   const baseFolder = `/images/${car.categoryDetails.folder}/front-250/`;
   const postfix = `-front-250.jpg`;
 

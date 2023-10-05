@@ -13,10 +13,10 @@
  * @param {URL} url - The URL object representing the current request.
  * @returns {Response} - A Response object with the content of robots.txt.
  */
-const outputRobotsTxt = (url) => {
+const apiRobotsTxt = (url) => {
   return new Response(robotstxtcontent(url), {status: 200});
 }
-export default outputRobotsTxt;
+export default apiRobotsTxt;
 
 /**
  * Generate the content for the robots.txt file.

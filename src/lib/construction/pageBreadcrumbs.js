@@ -5,6 +5,8 @@
  * Breadcrumbs are hierarchical links that allow users to navigate back to previous pages or sections.
  */
 
+import { appData } from "../services/appData";
+
 /**
  * Generates the HTML for the breadcrumb navigation based on the given data.
  * 
@@ -12,20 +14,17 @@
  * @param {Object} dataPageAll - Data that is common to all pages.
  * @return {string} The HTML markup for the breadcrumb navigation.
  */
-const pageBreadcrumbs = (data) => {
+const pageBreadcrumbs = (data = appData) => {
   // If there's no breadcrumb data for the current page, return an empty breadcrumb container.
   if (!data.pages.current.breadcrumbList) {
     return `<nav class="breadcrumbsContainer" aria-label="breadcrumb"></nav>`;
   }
 
-  // Generate the breadcrumb entries
-  const breadcrumbs = createBreadcrumbs(data.pages.current.breadcrumbList);
-
   // Construct the full HTML for the breadcrumb navigation
   const html = `
       <nav class="breadcrumbsContainer" aria-label="breadcrumb">
         <ul class="breadcrumbs">
-          ${breadcrumbs}
+          ${createBreadcrumbs(data.breadcrumbs)}
         </ul>
       </nav>
   `;
@@ -43,9 +42,10 @@ export default pageBreadcrumbs;
 const createBreadcrumbs = (data) => {
   return data.map((obj, index, arr) => {
     const isLastItem = index === arr.length - 1;
+    const content = isLastItem ? `${obj.name}` : `<a href="${obj.slug}">${obj.name}</a>`;
     return `
-      <li ${isLastItem ? 'aria-current="page"' : ''}>
-        <a href="${obj.slug}">${obj.name}</a>
+      <li ${isLastItem ? 'class="lastItem" aria-current="page"' : ''}>
+        ${content}
       </li>
       ${isLastItem ? '' : `<li aria-hidden="true">/</li>`}
     `;
