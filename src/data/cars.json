@@ -8590,5 +8590,101 @@
       "by": "Kevin"
     },
     "quantity": 1
+  },
+  {
+    "id": 359,
+    "name": "Ford Focus",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "28770",
+    "base": null,
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-10-17",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 360,
+    "name": "2018 Ford Mustang GT",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "fyd37",
+    "base": "l50",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-10-17",
+      "by": "Kevin"
+    },
+    "quantity": 2
+  },
+  {
+    "id": 361,
+    "name": "'65 Mustang 2+2 Fastback",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "fyd08",
+    "base": "l39",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-10-17",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 362,
+    "name": "'65 Mustang 2+2 Fastback",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "cfj19",
+    "base": "h19",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-10-17",
+      "by": "Kevin"
+    },
+    "quantity": 1
   }
 ]
