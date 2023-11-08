@@ -36,6 +36,13 @@ const fetchFromGitHub = async (path) => {
   });
 
   if (!response.ok) {
+    console.log("Headers:");
+    for (let [key, value] of response.headers.entries()) {
+        console.log(`${key}: ${value}`);
+    }
+    response.text().then(text => {
+      console.log("Response body:", text);
+  });
     throw new Error(`GitHub API returned ${response.status}: ${response.statusText}`);
   }
 
@@ -83,5 +90,11 @@ export const servicesGithubImageGetter = async (path) => {
     throw new Error('Image not found on Github');
   }
 
-  return response.blob();
+  const eTag = response.headers.get('etag');
+  const blob = await response.blob();
+
+  return {
+    headers: { etag: eTag },
+    data: blob
+  };
 }

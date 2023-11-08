@@ -15,6 +15,8 @@ import apiCreator from '../api/api';
 import { servicesGithubImageGetter } from '../services/github';
 import handlerError from './error';
 
+const STATIC_CACHE_TIME = 30 * 24 * 60 * 60 * 1000;
+
 /**
  * Handle requests for static assets.
  * 
@@ -45,6 +47,10 @@ const handleStatic = (url, request = {}) => {
 
   // Handle specific paths.
   switch (url.pathname) {
+    case '/favicon.ico':
+      url.pathname = `/images/icons${url.pathname}`;
+      return imageRouter(url);
+
     case '/robots.txt':
       return apiRobotsTxt(url);
 
@@ -72,15 +78,14 @@ export default handleStatic;
 const routerFonts = async (url) => {
   try{
     const newUrl = new URL(url);
+    newUrl.protocol = 'https:';
     newUrl.host = 'fonts.gstatic.com';
     newUrl.port = '';
-    newUrl.pathname = `/s/${newUrl.pathname.replace('/fonts/', '')}`;
-
-    const cacheTime = 604800;
+    newUrl.pathname = `${newUrl.pathname.replace('/fonts/', '')}`;
 
     let response = await fetch(newUrl.toString(), {
       cf: {
-        cacheTtl: cacheTime,
+        cacheTtl: STATIC_CACHE_TIME,
         cacheEverything: true,
         cacheKey: newUrl.toString()
       }
@@ -92,7 +97,7 @@ const routerFonts = async (url) => {
       throw new Error(`Error fetching font: ${response.statusText}`);
     }
 
-    response.headers.set('Cache-Control', `max-age=${cacheTime}`);
+    response.headers.set('Cache-Control', `public, max-age=${STATIC_CACHE_TIME}`);
 
     return response;
 
@@ -109,27 +114,40 @@ const routerFonts = async (url) => {
  */
 const imageRouter = async (url) => {
   try {
-    const imageBlob = await servicesGithubImageGetter(url.pathname);
-    const response = new Response(imageBlob);
+    const { headers, data } = await servicesGithubImageGetter(url.pathname);
+    const response = new Response(data, {
+      headers: {
+        'Content-Type': determineContentType(url),
+        'Cache-Control': `public, max-age=${STATIC_CACHE_TIME}`,
+        'Etag': headers.etag
+      },
+      cf: {
+        cacheTtl: STATIC_CACHE_TIME,
+        cacheEverything: true,
+        cacheKey: url.toString()
+      }
+    });
 
     if (!response.ok) {
       throw new Error(`Error fetching image: ${response.statusText}`);
     }
 
-    const fileExtension = url.pathname.split('.').pop().toLowerCase();
-    const mimeTypes = {
-      'jpg': 'image/jpeg',
-      'jpeg': 'image/jpeg',
-      'png': 'image/png',
-      'gif': 'image/gif',
-      'webp': 'image/webp'
-      // ... add other extensions and MIME types as needed
-    };
-
-    response.headers.set('Content-Type', mimeTypes[fileExtension] || 'application/octet-stream');
-
     return response;
   } catch (error) {
       return handlerError(404, `Image not found: ${error}`)
   }
+}
+
+const determineContentType = (url) => {
+  const fileExtension = url.pathname.split('.').pop().toLowerCase();
+  const mimeTypes = {
+    'jpg': 'image/jpeg',
+    'jpeg': 'image/jpeg',
+    'png': 'image/png',
+    'gif': 'image/gif',
+    'webp': 'image/webp'
+    // ... add other extensions and MIME types as needed
+  };
+
+  return mimeTypes[fileExtension] || 'application/octet-stream';
 }

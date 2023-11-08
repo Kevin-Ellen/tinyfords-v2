@@ -3,6 +3,7 @@ const handleSearch = (searchTerm = null, url = '/all') => {
   const newUrl = new URL(appData.pages.current.url);
   const urlChanged = newUrl.pathname !== appData.pages.current.url.pathname;
   newUrl.pathname = url;
+  newUrl.searchParams.delete('page');
 
   prepareAppData(newUrl, searchTerm, urlChanged);
   setSearchText();
@@ -14,6 +15,10 @@ const handleSearch = (searchTerm = null, url = '/all') => {
   }
 
   disableAndClose();
+  console.log(newUrl);
+  newUrl.searchParams.set('q', appData.search.searchTerm);
+  console.log(appData);
+  setUrl(newUrl);
 };
 
 const prepareAppData = (newUrl, searchTerm, urlChanged) => {

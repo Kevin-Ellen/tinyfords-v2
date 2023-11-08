@@ -18,7 +18,7 @@ import { appData } from '../services/appData';
  * @returns {Array} - The sorted list of latest cars.
  */
 export const utilDataCarsLatest = (data, number) => {
-  const sortedCars = multiSort(data, ['date', 'id'], { dateAdded: 'desc', id: 'desc' });
+  const sortedCars = multiSort(data, ['addedDetails.date', 'id'], { 'addedDetails.date': 'desc', id: 'desc' });
   return sortedCars.slice(0, number);
 }
 

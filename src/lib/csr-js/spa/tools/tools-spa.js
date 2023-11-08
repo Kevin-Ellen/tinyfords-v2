@@ -26,3 +26,10 @@ const closeMenus = () => {
       checkbox.checked = false;
   });
 };
+
+const setUrl = (url) => {
+  if(parseInt(url.searchParams.get('page'))===1){
+    url.searchParams.delete('page');
+  }
+  history.pushState({}, '', url);
+}

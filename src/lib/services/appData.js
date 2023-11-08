@@ -95,7 +95,6 @@ export const initAppData = async (url) => {
 }
 
 export const setPageForApi = (url) => {
-  setCurrentPage(url);
   setCurrentCars(appData.pages.current.id);
   setPagination(1);
 }

@@ -26,6 +26,7 @@ const disableLinks = () => {
 
 const handleLinkClick = (event) => {
   event.preventDefault();
+  console.log('handleLinkClick called');
   handlerNavigate(event.currentTarget);
 };
 
@@ -39,6 +40,7 @@ const disableSearch = () => {
 
 const handleSearchSubmit = (event) => {
   event.preventDefault();
+  console.log('handleSearchSubmit called');
   const searchQuery = event.target.querySelector('input[name="q"]').value;
   const formAction = event.target.getAttribute('action');
   handleSearch(searchQuery, formAction);
@@ -51,6 +53,3 @@ const disableAndClose = () => {
 }
 
 appInit();
-
-console.log(appData);
-

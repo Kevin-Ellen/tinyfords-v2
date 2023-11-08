@@ -3,10 +3,13 @@ const handlerNavigate = (link) => {
   const currentUrl = new URL(appData.pages.current.url);
 
   const newSearchTerm = newUrl.searchParams.get('q');
-  const currentSearchTerm = currentUrl.searchParams.get('q');
+  const currentSearchTerm = appData.search.searchTerm;
   const samePage = newUrl.pathname === currentUrl.pathname;
   const sameSearch = newSearchTerm === currentSearchTerm;
-  const samePagination = newUrl.searchParams.get('page') === currentUrl.searchParams.get('page');
+  if(!newUrl.searchParams.get('page')){
+    newUrl.searchParams.set('page',1);
+  }
+  const samePagination = parseInt(newUrl.searchParams.get('page')) === appData.pagination.page;
 
   if (samePage) {
     if (sameSearch) {
@@ -14,26 +17,33 @@ const handlerNavigate = (link) => {
         handleNavigateSamePage();
       } else {
         handleNavigatePagination(newUrl);
+        console.log('newUrl page',parseInt(newUrl.searchParams.get('page')));
       }
     } else {
-      return;
+      handleSamePageDifferentSearch(newUrl);
     }
   } else {
     if (newSearchTerm) {
-      return;
     } else {
       handleNavigateDifferentPageNoSearch(newUrl);
     }
   }
   disableAndClose();
+  setUrl(newUrl);
 };
 
+const handleSamePageDifferentSearch = (url) => {
+  console.log('handleSamePageDifferentSearch - called');
+  handleNavigateDifferentPageNoSearch(url)
+}
+
 const handleNavigateSamePage = () => {
-  return;
+  console.log('handleNavigateSamePage - called');
+  // setAppSearch(null);
 }
 
 const handleNavigatePagination = (url) => {
-  // Handle pagination navigation
+  console.log('handleNavigatePagination - called');
   setAppDataPagination(url.searchParams.get('page'));
   createPaginationControls();
   disableAndClose();
@@ -43,6 +53,7 @@ const handleNavigatePagination = (url) => {
 }
 
 const handleNavigateDifferentPageNoSearch = (url) => {
+  console.log('handleNavigateDifferentPageNoSearch - called');
   setAppCurrent(url);
   setAppSearch(null);
   removeSearchTextEntries();

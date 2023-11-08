@@ -23,7 +23,7 @@ const handleRequest = async (request) => {
       case '/manifest.json':
       case '/sitemap.xml':
       case '/favicon.ico':
-      case '/sw.js':
+      case '/service-worker.js':
         return handleStatic(url);
     }
 

@@ -5,25 +5,24 @@
  * It closes the body and html tags that were opened in the beginning of the document.
  */
 
-import spaInit from '../csr-js/src/init/init-spa.js';
+import spaInit from '../csr-js/spa/init/init-spa.js';
 
-import spaNavigateHandler from '../csr-js/src/handlers/navigation-spa.js';
-import spaAppState from '../csr-js/src/handlers/appstate-spa.js';
-import spaTemplateHandler from '../csr-js/src/handlers/template-spa.js';
-import spaSearchHandler from '../csr-js/src/handlers/search-spa.js';
+import spaNavigateHandler from '../csr-js/spa/handlers/navigation-spa.js';
+import spaAppState from '../csr-js/spa/handlers/appstate-spa.js';
+import spaTemplateHandler from '../csr-js/spa/handlers/template-spa.js';
+import spaSearchHandler from '../csr-js/spa/handlers/search-spa.js';
 
-import spaCreatePagination from '../csr-js/src/ui/createPagination-spa.js';
-import spaUpdateHeadings from '../csr-js/src/ui/updateHeadings-spa.js';
-import spaCreateGrid from '../csr-js/src/ui/createGrid-spa.js';
-import spaCreateBreadcrumbs from '../csr-js/src/ui/createBreadcrumbs-spa.js';
+import spaCreatePagination from '../csr-js/spa/ui/createPagination-spa.js';
+import spaUpdateHeadings from '../csr-js/spa/ui/updateHeadings-spa.js';
+import spaCreateGrid from '../csr-js/spa/ui/createGrid-spa.js';
+import spaCreateBreadcrumbs from '../csr-js/spa/ui/createBreadcrumbs-spa.js';
 
+import spaHomeRender from '../csr-js/spa/ui/renderHome-spa.js';
+import spaCollectionRender from '../csr-js/spa/ui/renderCollection-spa.js';
+import spaContentRender from '../csr-js/spa/ui/renderContent-spa.js';
+import spaCommonItemsRender from '../csr-js/spa/ui/renderCommentItems-spa.js';
 
-import spaHomeRender from '../csr-js/src/ui/renderHome-spa.js';
-import spaCollectionRender from '../csr-js/src/ui/renderCollection-spa.js';
-import spaContentRender from '../csr-js/src/ui/renderContent-spa.js';
-import spaCommonItemsRender from '../csr-js/src/ui/renderCommentItems-spa.js';
-
-import spaTools from '../csr-js/src/tools/tools-spa.js';
+import spaTools from '../csr-js/spa/tools/tools-spa.js';
 
 import pwaInit from '../csr-js/pwa/init-pwa.js';
 

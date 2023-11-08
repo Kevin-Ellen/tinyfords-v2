@@ -7,8 +7,9 @@ import { createImgPath } from '../fragments/gridCars.js';
 const apiSw = async (url) => {
   const cacheData = await buildPageCache(url);
   const carImageUrls = buildCarImageCache();
+  // const carImageUrls = ['/images/hotwheels/front-250/hw-grn84-front-250.jpg','/images/hotwheels/front-250/coming-soon-front-250.jpg'];
   const pageImages = extractImageUrls(appData.pages.all);
-  const allUrlsToCache = [...cacheData, ...carImageUrls, ...pageImages];
+  const allUrlsToCache = [...carImageUrls, ...pageImages, ...cacheData, ...carImageUrls];
   const uniqueUrlsToCache = [...new Set(allUrlsToCache)];
 
   const urlsToCacheString = `const urlsToCache = ${JSON.stringify(uniqueUrlsToCache)};`;

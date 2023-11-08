@@ -1,32 +1,47 @@
-const CACHE_NAME = 'my-pwa-cache-v1';
 
-self.addEventListener('install', (event) => {
+
+const VERSION = 0.1;
+
+self.addEventListener('install', function(event) {
+  console.log('SW version: '+ VERSION);
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        return cache.addAll(urlsToCache);
+    Promise.all(
+      endpoints.map(endpoint =>
+        fetch(endpoint)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Request for ' + endpoint + ' failed with status ' + response.status);
+            }
+            return response;
+          })
+          .catch(error => {
+            console.error('Fetch error for ' + endpoint + ':', error);
+            return Promise.reject(error);
+          })
+      )
+    )
+      .then(responses => Promise.all(responses.map(res => res.json())))
+      .then(assets => [].concat(...assets))
+      .then(urls => {
+        console.log('URLs to be cached:');
+        return urls.reduce((promise, url) => {
+          return promise.then(() => {
+            console.log(url);
+            return caches.open('cache-v'+VERSION)
+              .then(cache => cache.add(url));
+          });
+        }, Promise.resolve());
+      })
+      .catch(error => {
+        console.error('Cache.addAll error:', error);
       })
   );
 });
 
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.filter(function(cacheName) {
-          return cacheName !== CACHE_NAME;
-        }).map((cacheName) => {
-          return caches.delete(cacheName);
-        })
-      );
-    })
-  );
-});
-
-self.addEventListener('fetch', (event) => {
+self.addEventListener('fetch', function(event) {
   event.respondWith(
-    fetch(event.request).catch(() => {
-      return caches.match(event.request);
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
     })
   );
 });
