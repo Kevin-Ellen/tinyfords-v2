@@ -15,9 +15,7 @@ const handleSearch = (searchTerm = null, url = '/all') => {
   }
 
   disableAndClose();
-  console.log(newUrl);
   newUrl.searchParams.set('q', appData.search.searchTerm);
-  console.log(appData);
   setUrl(newUrl);
 };
 

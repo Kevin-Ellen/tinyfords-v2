@@ -9,13 +9,16 @@ const apiSw = async (url) => {
   const carImageUrls = buildCarImageCache();
   // const carImageUrls = ['/images/hotwheels/front-250/hw-grn84-front-250.jpg','/images/hotwheels/front-250/coming-soon-front-250.jpg'];
   const pageImages = extractImageUrls(appData.pages.all);
-  const allUrlsToCache = [...carImageUrls, ...pageImages, ...cacheData, ...carImageUrls];
+  const allUrlsToCache = [...pageImages, ...cacheData, ...assets];
   const uniqueUrlsToCache = [...new Set(allUrlsToCache)];
+  const uniqueCarImagesToCache = [...new Set(carImageUrls)];
 
   const urlsToCacheString = `const urlsToCache = ${JSON.stringify(uniqueUrlsToCache)};`;
+  const carImagesToCacheString = `const imagesToCache = ${JSON.stringify(uniqueCarImagesToCache)};`;
 
   const swCode = [
     urlsToCacheString,
+    carImagesToCacheString,
     init,
   ].join('');
 
@@ -43,6 +46,13 @@ const buildPageCache = async (url) => {
 
   return slugs;
 }
+
+const assets = [
+  '/fonts/s/montserratalternates/v17/mFTiWacfw6zH4dthXcyms1lPpC8I_b0juU0xNIPFB7xG-GNxkg.woff2',
+  '/fonts/s/montserratalternates/v17/mFTiWacfw6zH4dthXcyms1lPpC8I_b0juU0xQIXFB7xG-GNxkg.woff2',
+  '/fonts/s/quicksand/v30/6xKtdSZaM9iE8KbpRA_hK1QNYuDyPw.woff2',
+  '/manifest.json',
+];
 
 const init = pwaSw;
 

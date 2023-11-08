@@ -17,7 +17,6 @@ const handlerNavigate = (link) => {
         handleNavigateSamePage();
       } else {
         handleNavigatePagination(newUrl);
-        console.log('newUrl page',parseInt(newUrl.searchParams.get('page')));
       }
     } else {
       handleSamePageDifferentSearch(newUrl);
@@ -33,17 +32,14 @@ const handlerNavigate = (link) => {
 };
 
 const handleSamePageDifferentSearch = (url) => {
-  console.log('handleSamePageDifferentSearch - called');
   handleNavigateDifferentPageNoSearch(url)
 }
 
 const handleNavigateSamePage = () => {
-  console.log('handleNavigateSamePage - called');
   // setAppSearch(null);
 }
 
 const handleNavigatePagination = (url) => {
-  console.log('handleNavigatePagination - called');
   setAppDataPagination(url.searchParams.get('page'));
   createPaginationControls();
   disableAndClose();
@@ -53,7 +49,6 @@ const handleNavigatePagination = (url) => {
 }
 
 const handleNavigateDifferentPageNoSearch = (url) => {
-  console.log('handleNavigateDifferentPageNoSearch - called');
   setAppCurrent(url);
   setAppSearch(null);
   removeSearchTextEntries();

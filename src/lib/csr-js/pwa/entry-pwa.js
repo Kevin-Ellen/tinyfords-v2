@@ -5,32 +5,67 @@ const VERSION = 0.1;
 self.addEventListener('install', function(event) {
   console.log('SW version: ' + VERSION);
   event.waitUntil(
-    Promise.all(
-      urlsToCache.map(url =>
-        fetch(url)
-          .then(response => {
-            if (!response.ok) {
-              throw new Error('Request for ' + url + ' failed with status ' + response.status);
-            }
-            return response;
-          })
-          .catch(error => {
-            console.error('Fetch error for ' + url + ':', error);
-            return Promise.reject(error);
-          })
-      )
-    )
-      .then(responses => Promise.all(responses.map(res => res.json())))
-      .then(assets => [].concat(...assets))
-      .then(urls => {
-        console.log('URLs to be cached:');
-        return urls.reduce((promise, url) => {
-          return promise.then(() => {
-            console.log(url);
-            return caches.open('cache-v' + VERSION)
-              .then(cache => cache.add(url));
-          });
-        }, Promise.resolve());
+    caches.open('cache-v' + VERSION)
+      .then(cache => {
+        // Cache non-image URLs
+        const nonImageUrlsToCache = urlsToCache.filter(url => !url.endsWith('.jpg')); // Add any other extensions as needed
+        
+        // Cache images
+        const imageUrlsToCache = imagesToCache.filter(url => url.endsWith('.jpg')); // Change the extension as needed
+        
+        return Promise.all([
+          // Cache non-image URLs
+          Promise.all(
+            nonImageUrlsToCache.map(url => {
+              return cache.match(url)
+                .then(response => {
+                  if (!response) {
+                    return fetch(url)
+                      .then(response => {
+                        if (!response.ok) {
+                          throw new Error('Request for ' + url + ' failed with status ' + response.status);
+                        }
+                        return cache.put(url, response); // Cache the non-image
+                      })
+                      .catch(error => {
+                        console.error('Fetch error for ' + url + ':', error);
+                        throw error;
+                      });
+                  }
+                  return; // Non-image URL is already in the cache, no need to cache it again
+                });
+            })
+          ),
+
+          // Cache images
+          Promise.all(
+            imageUrlsToCache.map(url => {
+              return cache.match(url)
+                .then(response => {
+                  if (!response) {
+                    return fetch(url)
+                      .then(response => {
+                        if (!response.ok) {
+                          throw new Error('Request for ' + url + ' failed with status ' + response.status);
+                        }
+                        return cache.put(url, response); // Cache the image
+                      })
+                      .catch(error => {
+                        console.error('Fetch error for ' + url + ':', error);
+                        throw error;
+                      });
+                  }
+                  return; // Image URL is already in the cache, no need to cache it again
+                });
+            })
+          ),
+        ]);
+      })
+      .then(() => {
+        console.log('All assets have been cached.');
+      })
+      .catch(error => {
+        console.error('Cache.open error:', error);
       })
   );
 });
