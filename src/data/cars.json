@@ -1428,8 +1428,8 @@
     "code": "c3550",
     "base": "e32",
     "caseDetails": {
-      "id": "none",
-      "name": "None",
+      "id": null,
+      "name": null,
       "status": false
     },
     "hasPhoto": true,
@@ -3540,8 +3540,8 @@
     "code": "w4254",
     "base": "e49",
     "caseDetails": {
-      "id": "none",
-      "name": "None",
+      "id": null,
+      "name": null,
       "status": false
     },
     "hasPhoto": true,
@@ -3564,8 +3564,8 @@
     "code": "x1862",
     "base": "f20",
     "caseDetails": {
-      "id": "none",
-      "name": "None",
+      "id": null,
+      "name": null,
       "status": false
     },
     "hasPhoto": true,
@@ -3588,8 +3588,8 @@
     "code": "dtw84",
     "base": "k15",
     "caseDetails": {
-      "id": "none",
-      "name": "None",
+      "id": null,
+      "name": null,
       "status": false
     },
     "hasPhoto": true,
@@ -3612,8 +3612,8 @@
     "code": "dhx63",
     "base": "j25",
     "caseDetails": {
-      "id": "none",
-      "name": "None",
+      "id": null,
+      "name": null,
       "status": false
     },
     "hasPhoto": true,
@@ -3636,8 +3636,8 @@
     "code": "dtw87",
     "base": "k02",
     "caseDetails": {
-      "id": "none",
-      "name": "None",
+      "id": null,
+      "name": null,
       "status": false
     },
     "hasPhoto": true,
@@ -7692,8 +7692,8 @@
     "code": null,
     "base": null,
     "caseDetails": {
-      "id": "none",
-      "name": "None",
+      "id": null,
+      "name": null,
       "status": false
     },
     "hasPhoto": true,
@@ -7716,8 +7716,8 @@
     "code": "mb21",
     "base": null,
     "caseDetails": {
-      "id": "none",
-      "name": "None",
+      "id": null,
+      "name": null,
       "status": false
     },
     "hasPhoto": true,
@@ -7740,8 +7740,8 @@
     "code": "mb70",
     "base": null,
     "caseDetails": {
-      "id": "none",
-      "name": "None",
+      "id": null,
+      "name": null,
       "status": false
     },
     "hasPhoto": true,
@@ -7764,8 +7764,8 @@
     "code": "mb3",
     "base": null,
     "caseDetails": {
-      "id": "none",
-      "name": "None",
+      "id": null,
+      "name": null,
       "status": false
     },
     "hasPhoto": true,
@@ -7797,7 +7797,7 @@
       "date": "2023-09-04",
       "by": "Kevin"
     },
-    "quantity": 1
+    "quantity": 2
   },
   {
     "id": 326,
@@ -8161,7 +8161,7 @@
   },
   {
     "id": 341,
-    "name": "89 Mercedes-Benz 560 SEC AMG",
+    "name": "'89 Mercedes-Benz 560 SEC AMG",
     "make": "Mercedes-Benz",
     "brand": "Hot Wheels",
     "categoryDetails": {
@@ -8185,7 +8185,7 @@
   },
   {
     "id": 342,
-    "name": "65 Ford Ranchero",
+    "name": "'65 Ford Ranchero",
     "make": "Ford",
     "brand": "Hot Wheels",
     "categoryDetails": {
@@ -8209,7 +8209,7 @@
   },
   {
     "id": 343,
-    "name": "79 Ford Truck",
+    "name": "'79 Ford Truck",
     "make": "Ford",
     "brand": "Hot Wheels",
     "categoryDetails": {
@@ -8233,7 +8233,7 @@
   },
   {
     "id": 344,
-    "name": "41 Ford Pickup",
+    "name": "'41 Ford Pickup",
     "make": "Ford",
     "brand": "Hot Wheels",
     "categoryDetails": {
@@ -8329,7 +8329,7 @@
   },
   {
     "id": 348,
-    "name": "29 Ford Pickup",
+    "name": "'29 Ford Pickup",
     "make": "Ford",
     "brand": "Hot Wheels",
     "categoryDetails": {
@@ -8497,7 +8497,7 @@
   },
   {
     "id": 355,
-    "name": "70 Ford Escort RS600",
+    "name": "'70 Ford Escort RS600",
     "make": "Ford",
     "brand": "Hot Wheels",
     "categoryDetails": {
@@ -8545,7 +8545,7 @@
   },
   {
     "id": 357,
-    "name": "21 Ford Bronco",
+    "name": "'21 Ford Bronco",
     "make": "Ford",
     "brand": "Hot Wheels",
     "categoryDetails": {
@@ -8569,7 +8569,7 @@
   },
   {
     "id": 358,
-    "name": "40 Ford Coupe",
+    "name": "'40 Ford Coupe",
     "make": "Ford",
     "brand": "Hot Wheels",
     "categoryDetails": {
@@ -8683,6 +8683,558 @@
     "hasPhoto": false,
     "addedDetails": {
       "date": "2023-10-17",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 363,
+    "name": "Ford 1932",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "B3842",
+    "base": null,
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 364,
+    "name": "'33 Ford Lo Boy",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "grr14",
+    "base": "p11",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 365,
+    "name": "'40 Ford",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "18674",
+    "base": null,
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 366,
+    "name": "1941 Ford Pickup",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "56393",
+    "base": null,
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 367,
+    "name": "Ford Mustang Cobra",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "djk90",
+    "base": "j06",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 368,
+    "name": "'03 Ford Mustang Cobra",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "bdl75",
+    "base": "f44",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 369,
+    "name": "1936 Ford Coupe",
+    "make": "Ford",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hlc76",
+    "base": "s14",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 370,
+    "name": "Tesla Model Y",
+    "make": "Tesla",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkk20",
+    "base": "s03",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 371,
+    "name": "FIAT 500e",
+    "make": "FIAT",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkh59",
+    "base": "s03",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 372,
+    "name": "1962 Volkswagen Beetle",
+    "make": "Volkswagen",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hpc59",
+    "base": "r51",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 373,
+    "name": "Mercedez-Benz W 123",
+    "make": "Mercedes-Benz",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hpc60",
+    "base": "s12",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 374,
+    "name": "Renault Kangoo",
+    "make": "Renault",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hpc56",
+    "base": "s12",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 375,
+    "name": "Porsche 911 Carrera Cabriolet",
+    "make": "Porsche",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hpc63",
+    "base": "s12",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 376,
+    "name": "1962 Volkswagen Beetle",
+    "make": "Volkswagen",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hpc62",
+    "base": "s12",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 377,
+    "name": "Porsche Cayenne Turbo",
+    "make": "Porsche",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hpc66",
+    "base": "r51",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 378,
+    "name": "2019 Audi TT RS Coupé",
+    "make": "Audi",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hpc64",
+    "base": "r51",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 379,
+    "name": "1985 Porsche 911 Rally",
+    "make": "Porsche",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hpc58",
+    "base": "r51",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 380,
+    "name": "Mercedes-Benz GLE Coupe",
+    "make": "Mercedes-Benz",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hpc61",
+    "base": "s01",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 381,
+    "name": "Volkswagen EV4",
+    "make": "Volkswagen",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hpc67",
+    "base": "r51",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 382,
+    "name": "Peugeot 205 Turbo 16",
+    "make": "Peugeot",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "mb15",
+    "base": null,
+    "caseDetails": {
+      "id": null,
+      "name": null,
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 383,
+    "name": "Ford Escort RS2000",
+    "make": "Ford",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "mb9",
+    "base": null,
+    "caseDetails": {
+      "id": null,
+      "name": null,
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 384,
+    "name": "Ford RS200",
+    "make": "Ford",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "mb34",
+    "base": null,
+    "caseDetails": {
+      "id": null,
+      "name": null,
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 385,
+    "name": "Mini Ha Ha",
+    "make": "Mini",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "mb14",
+    "base": null,
+    "caseDetails": {
+      "id": null,
+      "name": null,
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2023-11-08",
       "by": "Kevin"
     },
     "quantity": 1
