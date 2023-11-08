@@ -3,19 +3,19 @@
 const VERSION = 0.1;
 
 self.addEventListener('install', function(event) {
-  console.log('SW version: '+ VERSION);
+  console.log('SW version: ' + VERSION);
   event.waitUntil(
     Promise.all(
-      endpoints.map(endpoint =>
-        fetch(endpoint)
+      urlsToCache.map(url =>
+        fetch(url)
           .then(response => {
             if (!response.ok) {
-              throw new Error('Request for ' + endpoint + ' failed with status ' + response.status);
+              throw new Error('Request for ' + url + ' failed with status ' + response.status);
             }
             return response;
           })
           .catch(error => {
-            console.error('Fetch error for ' + endpoint + ':', error);
+            console.error('Fetch error for ' + url + ':', error);
             return Promise.reject(error);
           })
       )
@@ -27,20 +27,17 @@ self.addEventListener('install', function(event) {
         return urls.reduce((promise, url) => {
           return promise.then(() => {
             console.log(url);
-            return caches.open('cache-v'+VERSION)
+            return caches.open('cache-v' + VERSION)
               .then(cache => cache.add(url));
           });
         }, Promise.resolve());
       })
-      .catch(error => {
-        console.error('Cache.addAll error:', error);
-      })
   );
 });
 
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request).then(function(response) {
+    caches.match(event.request).then((response) => {
       return response || fetch(event.request);
     })
   );

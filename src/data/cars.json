@@ -6880,7 +6880,7 @@
       "name": "Box",
       "status": false
     },
-    "hasPhoto": true,
+    "hasPhoto": false,
     "addedDetails": {
       "date": "2023-08-26",
       "by": "Kevin"
@@ -6928,7 +6928,7 @@
       "name": "Box",
       "status": false
     },
-    "hasPhoto": true,
+    "hasPhoto": false,
     "addedDetails": {
       "date": "2023-08-26",
       "by": "Kevin"
@@ -6952,7 +6952,7 @@
       "name": "Box",
       "status": false
     },
-    "hasPhoto": true,
+    "hasPhoto": false,
     "addedDetails": {
       "date": "2023-08-26",
       "by": "Kevin"
@@ -6976,7 +6976,7 @@
       "name": "Box",
       "status": false
     },
-    "hasPhoto": true,
+    "hasPhoto": false,
     "addedDetails": {
       "date": "2023-08-26",
       "by": "Kevin"
@@ -7000,7 +7000,7 @@
       "name": "Box",
       "status": false
     },
-    "hasPhoto": true,
+    "hasPhoto": false,
     "addedDetails": {
       "date": "2023-08-26",
       "by": "Kevin"
@@ -9231,6 +9231,54 @@
       "id": null,
       "name": null,
       "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 386,
+    "name": "Ford Puma Rally1 #19",
+    "make": "Ford",
+    "brand": "Other",
+    "categoryDetails": {
+      "id": "ot",
+      "name": "Other",
+      "folder": "other"
+    },
+    "code": "533",
+    "base": null,
+    "caseDetails": {
+      "id": "box",
+      "name": "Box",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 387,
+    "name": "1962 Ford F100",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hnl11",
+    "base": null,
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {

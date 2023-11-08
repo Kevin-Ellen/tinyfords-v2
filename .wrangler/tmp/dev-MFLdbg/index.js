@@ -1,5 +1,5 @@
 (() => {
-  // .wrangler/tmp/bundle-TsDCq2/checked-fetch.js
+  // .wrangler/tmp/bundle-NSBAD8/checked-fetch.js
   var urls = /* @__PURE__ */ new Set();
   function checkURL(request, init2) {
     const url2 = request instanceof URL ? request : new URL(
@@ -240,7 +240,7 @@
   };
   var middleware_miniflare3_json_error_default = jsonError;
 
-  // .wrangler/tmp/bundle-TsDCq2/middleware-insertion-facade.js
+  // .wrangler/tmp/bundle-NSBAD8/middleware-insertion-facade.js
   __facade_registerInternal__([middleware_miniflare3_json_error_default]);
 
   // wrangler-module-Text:./85008cc904f6dc5e036b86886e0d4798dbb8ea85-stylesAdmin.css
@@ -1863,8 +1863,8 @@ sitemap: ${url2.protocol}//${url2.host}/sitemap.xml
   ]
 }`;
 
-  // wrangler-module-Text:./771f8965b7e32f40b8967e4beee8bd93c023b128-entry-pwa.js
-  var f8965b7e32f40b8967e4beee8bd93c023b128_entry_pwa_default = __771f8965b7e32f40b8967e4beee8bd93c023b128_entry_pwa_js;
+  // wrangler-module-Text:./5d2b6670b7a20b48d407323ea9471fa05579d093-entry-pwa.js
+  var d2b6670b7a20b48d407323ea9471fa05579d093_entry_pwa_default = __5d2b6670b7a20b48d407323ea9471fa05579d093_entry_pwa_js;
 
   // src/lib/utils/helpersRenders.js
   var assembleHTML = (strings) => strings.join("");
@@ -1952,7 +1952,7 @@ sitemap: ${url2.protocol}//${url2.host}/sitemap.xml
     const slugs = slugsPromises;
     return slugs;
   };
-  var init = f8965b7e32f40b8967e4beee8bd93c023b128_entry_pwa_default;
+  var init = d2b6670b7a20b48d407323ea9471fa05579d093_entry_pwa_default;
   var generatePagedSlugs = (slug, carCount, itemsPerPage) => {
     const totalPages = Math.ceil(carCount / itemsPerPage);
     const slugs = [];
