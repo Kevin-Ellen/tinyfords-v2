@@ -59,13 +59,18 @@ const clearPaginationControls = (paginationControls) => {
 
 const createPageURL = (page = null) => {
   const { searchTerm } = appData.search;
+  console.log(appData);
+  console.log(appData.search);
+  console.log('SearchTerm', searchTerm);
   const link = new URL(appData.pages.current.url);
   if (page === 1 || !page) {
     link.searchParams.delete('page');
   } else {
     link.searchParams.set('page', page);
   }
-  link.searchParams.set('q', searchTerm);
+  if(searchTerm){
+    link.searchParams.set('q', searchTerm);
+  }
   return link;
 };
 
