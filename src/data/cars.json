@@ -861,7 +861,7 @@
       "date": "2023-01-08",
       "by": "Kevin"
     },
-    "quantity": 1
+    "quantity": 2
   },
   {
     "id": 37,
@@ -5733,7 +5733,7 @@
       "date": "2023-04-11",
       "by": "Kevin"
     },
-    "quantity": 1
+    "quantity": 2
   },
   {
     "id": 240,
@@ -5805,7 +5805,7 @@
       "date": "2023-04-11",
       "by": "Kevin"
     },
-    "quantity": 1
+    "quantity": 2
   },
   {
     "id": 243,
@@ -6021,7 +6021,7 @@
       "date": "2023-04-27",
       "by": "Kevin"
     },
-    "quantity": 2
+    "quantity": 3
   },
   {
     "id": 252,
@@ -6141,7 +6141,7 @@
       "date": "2023-06-12",
       "by": "Kevin"
     },
-    "quantity": 1
+    "quantity": 2
   },
   {
     "id": 257,
@@ -6597,7 +6597,7 @@
       "date": "2023-06-12",
       "by": "Kevin"
     },
-    "quantity": 2
+    "quantity": 3
   },
   {
     "id": 276,
@@ -6880,7 +6880,7 @@
       "name": "Box",
       "status": false
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2023-08-26",
       "by": "Kevin"
@@ -6909,7 +6909,7 @@
       "date": "2023-08-26",
       "by": "Kevin"
     },
-    "quantity": 2
+    "quantity": 3
   },
   {
     "id": 289,
@@ -6928,7 +6928,7 @@
       "name": "Box",
       "status": false
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2023-08-26",
       "by": "Kevin"
@@ -6945,14 +6945,14 @@
       "name": "Matchbox",
       "folder": "matchbox"
     },
-    "code": "hlfd75",
+    "code": "hld75",
     "base": null,
     "caseDetails": {
       "id": "box",
       "name": "Box",
       "status": false
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2023-08-26",
       "by": "Kevin"
@@ -6976,7 +6976,7 @@
       "name": "Box",
       "status": false
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2023-08-26",
       "by": "Kevin"
@@ -7000,7 +7000,7 @@
       "name": "Box",
       "status": false
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2023-08-26",
       "by": "Kevin"
@@ -7821,7 +7821,7 @@
       "date": "2023-09-04",
       "by": "Kevin"
     },
-    "quantity": 1
+    "quantity": 2
   },
   {
     "id": 327,
@@ -8416,7 +8416,7 @@
       "name": "Long",
       "status": false
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2023-09-30",
       "by": "Kevin"
@@ -8440,7 +8440,7 @@
       "name": "Special",
       "status": false
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2023-09-30",
       "by": "Kevin"
@@ -8497,7 +8497,7 @@
   },
   {
     "id": 355,
-    "name": "'70 Ford Escort RS600",
+    "name": "'70 Ford Escort RS1600",
     "make": "Ford",
     "brand": "Hot Wheels",
     "categoryDetails": {
@@ -9243,7 +9243,7 @@
     "id": 386,
     "name": "Ford Puma Rally1 #19",
     "make": "Ford",
-    "brand": "Other",
+    "brand": "MiniGT",
     "categoryDetails": {
       "id": "ot",
       "name": "Other",
@@ -9283,6 +9283,654 @@
     "hasPhoto": true,
     "addedDetails": {
       "date": "2023-11-08",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 388,
+    "name": "Ford Transit",
+    "make": "Ford",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "mb60",
+    "base": null,
+    "caseDetails": {
+      "id": null,
+      "name": null,
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 389,
+    "name": "Volvo V60 Wagon, '89 Jeep Grand Wagoneer & Austin MINI Van",
+    "make": "Various",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hlc07",
+    "base": null,
+    "caseDetails": {
+      "id": "3-pack",
+      "name": "3-Pack",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 390,
+    "name": "'62 Volkswagen Beetle, 2016 Alfa Romeo Giulia & Mercedez-Benz W123 Wagon",
+    "make": "Various",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hlc10",
+    "base": null,
+    "caseDetails": {
+      "id": "3-pack",
+      "name": "3-Pack",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 391,
+    "name": "2019 Ford Ranger",
+    "make": "Ford",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hlg19",
+    "base": "r45",
+    "caseDetails": {
+      "id": "moving-parts",
+      "name": "Moving-Parts",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 392,
+    "name": "1994 Chevy Caprica Classic, Pierce Arrow XT Fire Engine & 1989 Chevy Blazer 4x4",
+    "make": "Various",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hlc09",
+    "base": null,
+    "caseDetails": {
+      "id": "3-pack",
+      "name": "3-Pack",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 393,
+    "name": "2021 Ford Bronco",
+    "make": "Ford",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hld22",
+    "base": "r35",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 394,
+    "name": "2022 Hummer EV",
+    "make": "Hummer",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hmv15",
+    "base": "s04",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 395,
+    "name": "2020 Chevy Corvette",
+    "make": "Chevy",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hmv14",
+    "base": "s04",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 396,
+    "name": "2021 Mazda MX",
+    "make": "Mazda",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hmv16",
+    "base": "s04",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 397,
+    "name": "2019 Ram Ambulance",
+    "make": "Ram",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hmv17",
+    "base": "s04",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 398,
+    "name": "'69 Alfa Romeo 33 Stradale",
+    "make": "Alfa Romeo",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hcj91",
+    "base": "r25",
+    "caseDetails": {
+      "id": "premium",
+      "name": "Premium",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 399,
+    "name": "'94 AMG-Mercedes C-Class DTM Touring Car",
+    "make": "AMG-Mercedes",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkc62",
+    "base": "s29",
+    "caseDetails": {
+      "id": "premium",
+      "name": "Premium",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 400,
+    "name": "Porsche 959",
+    "make": "Porsche",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hnl18",
+    "base": null,
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 401,
+    "name": "'69 Ford Torino Talladega",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "bfv58",
+    "base": "g08",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 402,
+    "name": "Ford GT-40",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "50668",
+    "base": null,
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 403,
+    "name": "'72 Ford Gran Torino Sport",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "bff24",
+    "base": "g03",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 404,
+    "name": "'72 Ford Gran Torino Sport",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "x1809",
+    "base": "e34",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 405,
+    "name": "T-Bird 1990",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "27069",
+    "base": null,
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 406,
+    "name": "Ford Thunderbird",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "v5418",
+    "base": "e94",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 407,
+    "name": "'70 Ford Escort RS1600",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "cfh18",
+    "base": "h09",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 408,
+    "name": "'70 Ford Escort RS1600",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "cfl30",
+    "base": "h36",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 409,
+    "name": "Honda Super Cub Custom",
+    "make": "Honda",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkk33",
+    "base": "s29",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 410,
+    "name": "Honda Super Cub Custom",
+    "make": "Honda",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkk32",
+    "base": "s30",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 411,
+    "name": "Datsun Bluebird Wagon (510)",
+    "make": "Datsun",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkh72",
+    "base": "s80",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 412,
+    "name": "Batman: The Animated Series",
+    "make": "Batman",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkj76",
+    "base": "s30",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 413,
+    "name": "Volvo 240 Drift Wagon",
+    "make": "Volvo",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkj07",
+    "base": "s30",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 414,
+    "name": "'71 Porsche 911",
+    "make": "Porsche",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkh06",
+    "base": "s04",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2023-11-27",
       "by": "Kevin"
     },
     "quantity": 1
