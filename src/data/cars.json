@@ -4921,7 +4921,7 @@
   },
   {
     "id": 206,
-    "name": "Ford Mustang GT - TH",
+    "name": "Ford Mustang GT -TH",
     "make": "Ford",
     "brand": "Hot Wheels",
     "categoryDetails": {
@@ -5185,7 +5185,7 @@
   },
   {
     "id": 217,
-    "name": "Duck N' Roll - TH",
+    "name": "Duck N' Roll -TH",
     "make": "Hot Wheels",
     "brand": "Hot Wheels",
     "categoryDetails": {
@@ -5305,7 +5305,7 @@
   },
   {
     "id": 222,
-    "name": "'71 Mustang Funny Car - TH",
+    "name": "'71 Mustang Funny Car -TH",
     "make": "Ford",
     "brand": "Hot Wheels",
     "categoryDetails": {
@@ -5353,7 +5353,7 @@
   },
   {
     "id": 224,
-    "name": "Mustang Funny Car - TH",
+    "name": "Mustang Funny Car -TH",
     "make": "Ford",
     "brand": "Hot Wheels",
     "categoryDetails": {
@@ -7873,7 +7873,7 @@
   },
   {
     "id": 329,
-    "name": "'17 Jeep Wrangler - TH",
+    "name": "'17 Jeep Wrangler -TH",
     "make": "Jeep",
     "brand": "Hot Wheels",
     "categoryDetails": {
@@ -9931,6 +9931,582 @@
     "hasPhoto": true,
     "addedDetails": {
       "date": "2023-11-27",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 415,
+    "name": "Ferrari F40",
+    "make": "Ferrari",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "mb24",
+    "base": null,
+    "caseDetails": {
+      "id": null,
+      "name": null,
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 416,
+    "name": "Ferrari  308 GTB",
+    "make": "Ferrari",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "mp-803",
+    "base": null,
+    "caseDetails": {
+      "id": null,
+      "name": null,
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 417,
+    "name": "'93 Ford Explorer",
+    "make": "Ford",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hbg99",
+    "base": "r04",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 418,
+    "name": "Jeep Wrangler",
+    "make": "Jeep",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hbh01",
+    "base": "r04",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 419,
+    "name": "'14 Mercedes-Benz G 550",
+    "make": "Mercedes-Benz",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hbg98",
+    "base": "r04",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 420,
+    "name": "1985 Porsche 911 Rally",
+    "make": "Porsche",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hld32",
+    "base": "s02",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 421,
+    "name": "Humvee",
+    "make": "Hummer",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "htb58",
+    "base": "s36",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 422,
+    "name": "'07 Ford Mustang",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkj43",
+    "base": "s20",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 423,
+    "name": "Mitsubishi Pajero Evolution",
+    "make": "Mitsubishi",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkg47",
+    "base": "s09",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 424,
+    "name": "Honda CB750 Café",
+    "make": "Honda",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "htc61",
+    "base": "s41",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 425,
+    "name": "Rise 'N Climb  -TH",
+    "make": "Hot Wheels",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkl03",
+    "base": "s04",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 426,
+    "name": "'58 Ford Thunderbird",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "l7883",
+    "base": null,
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 427,
+    "name": "Porsche 935",
+    "make": "Porsche",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkh96",
+    "base": "s27",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 428,
+    "name": "Volkswagen \"Baja Bug\" -TH",
+    "make": "Volkswagen",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkk93",
+    "base": "s30",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 429,
+    "name": "Audi '90 Quattro",
+    "make": "Audi",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkj81",
+    "base": "s30",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 430,
+    "name": "'87 Ford Sierra Cosworth",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkj59",
+    "base": "s14",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 431,
+    "name": "Alfa Romeo GTV6 3.0",
+    "make": "Alfa Romeo",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkj83",
+    "base": "s30",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 432,
+    "name": "2018 Bentley Continental GT3",
+    "make": "Bentley",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkl45",
+    "base": "s01",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 433,
+    "name": "Porsche 964",
+    "make": "Porsche",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hnl26",
+    "base": null,
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 434,
+    "name": "Audi R8 LMS",
+    "make": "Audi",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkc61",
+    "base": "s29",
+    "caseDetails": {
+      "id": "premium",
+      "name": "Premium",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 435,
+    "name": "Audi S4 Quattro",
+    "make": "Audi",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkf30",
+    "base": "s33",
+    "caseDetails": {
+      "id": "premium",
+      "name": "Premium",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 436,
+    "name": "Aston Martin Vantage GTE",
+    "make": "Aston Martin",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkc60",
+    "base": "s29",
+    "caseDetails": {
+      "id": "premium",
+      "name": "Premium",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 437,
+    "name": "Ford Focus RS",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "fkc05",
+    "base": null,
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 438,
+    "name": "'67 Ford GT40 Mk.IV",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "gtb67",
+    "base": null,
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": false,
+    "addedDetails": {
+      "date": "2024-01-23",
       "by": "Kevin"
     },
     "quantity": 1
