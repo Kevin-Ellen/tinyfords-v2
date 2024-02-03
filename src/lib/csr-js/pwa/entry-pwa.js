@@ -1,6 +1,6 @@
 
 
-const VERSION = 0.1;
+const VERSION = 0.2;
 
 self.addEventListener('install', function(event) {
   console.log('SW version: ' + VERSION);

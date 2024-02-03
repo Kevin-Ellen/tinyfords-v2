@@ -10480,7 +10480,7 @@
       "name": "Long",
       "status": false
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-01-23",
       "by": "Kevin"
@@ -10498,15 +10498,111 @@
       "folder": "hotwheels"
     },
     "code": "gtb67",
-    "base": null,
+    "base": "p11",
     "caseDetails": {
       "id": "long",
       "name": "Long",
       "status": false
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 439,
+    "name": "Ford GT40",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hrw39",
+    "base": "s43",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-02-03",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 440,
+    "name": "'08 Ford Focus",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "x1909",
+    "base": "f12",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": false
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-02-03",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 441,
+    "name": "Audi RS7 Sportback",
+    "make": "Audi",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hgw11",
+    "base": null,
+    "caseDetails": {
+      "id": "premium",
+      "name": "Premium",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-02-03",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 442,
+    "name": "2021 Ford Bronco",
+    "make": "Ford",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "hlj78",
+    "base": null,
+    "caseDetails": {
+      "id": "box",
+      "name": "Box",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-02-03",
       "by": "Kevin"
     },
     "quantity": 1
