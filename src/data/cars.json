@@ -110,7 +110,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -134,7 +134,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -158,7 +158,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -206,7 +206,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -230,7 +230,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -254,7 +254,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -326,7 +326,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -350,7 +350,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -422,7 +422,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -446,7 +446,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -470,7 +470,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -542,7 +542,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -590,7 +590,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -614,7 +614,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -638,7 +638,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -662,7 +662,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -686,7 +686,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -710,7 +710,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -734,7 +734,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -758,7 +758,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -830,7 +830,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -854,7 +854,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -902,7 +902,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -926,7 +926,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -974,7 +974,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1118,7 +1118,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1142,7 +1142,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1166,7 +1166,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1190,7 +1190,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1214,7 +1214,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1238,7 +1238,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1286,7 +1286,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1334,7 +1334,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1382,7 +1382,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1454,7 +1454,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1478,7 +1478,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1502,7 +1502,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1550,7 +1550,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1622,7 +1622,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1646,7 +1646,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1694,7 +1694,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1742,7 +1742,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1766,7 +1766,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1790,7 +1790,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1814,7 +1814,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1838,7 +1838,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1862,7 +1862,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1886,7 +1886,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -1982,7 +1982,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2006,7 +2006,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2030,7 +2030,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2054,7 +2054,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2102,7 +2102,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2126,7 +2126,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2150,7 +2150,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2174,7 +2174,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2198,7 +2198,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2222,7 +2222,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2270,7 +2270,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2366,7 +2366,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2414,7 +2414,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2438,7 +2438,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2510,7 +2510,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2582,7 +2582,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2798,7 +2798,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2822,7 +2822,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2846,7 +2846,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2870,7 +2870,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2894,7 +2894,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -2966,7 +2966,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -3134,7 +3134,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -3158,7 +3158,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -3182,7 +3182,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -3206,7 +3206,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -3230,7 +3230,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -3254,7 +3254,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -3278,7 +3278,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -3302,7 +3302,7 @@
     "caseDetails": {
       "id": "box",
       "name": "Box",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -3324,8 +3324,8 @@
     "code": "gwl28",
     "base": "p05",
     "caseDetails": {
-      "id": "long",
-      "name": "Long",
+      "id": "mb-long",
+      "name": "MB-long",
       "status": false
     },
     "hasPhoto": true,
@@ -3350,7 +3350,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -3444,61 +3444,13 @@
     "code": "dvg08",
     "base": null,
     "caseDetails": {
-      "id": "long",
-      "name": "Long",
+      "id": "special",
+      "name": "Special",
       "status": false
     },
     "hasPhoto": true,
     "addedDetails": {
       "date": "2023-01-09",
-      "by": "Kevin"
-    },
-    "quantity": 1
-  },
-  {
-    "id": 145,
-    "name": "MINI Countryman",
-    "make": "MINI",
-    "brand": "siku",
-    "categoryDetails": {
-      "id": "ot",
-      "name": "Other",
-      "folder": "other"
-    },
-    "code": "1454",
-    "base": null,
-    "caseDetails": {
-      "id": "short",
-      "name": "Short",
-      "status": false
-    },
-    "hasPhoto": true,
-    "addedDetails": {
-      "date": "2023-01-08",
-      "by": "Kevin"
-    },
-    "quantity": 1
-  },
-  {
-    "id": 146,
-    "name": "Lotus Elise",
-    "make": "Lotus",
-    "brand": "siku",
-    "categoryDetails": {
-      "id": "ot",
-      "name": "Other",
-      "folder": "other"
-    },
-    "code": "1531",
-    "base": null,
-    "caseDetails": {
-      "id": "short",
-      "name": "Short",
-      "status": false
-    },
-    "hasPhoto": true,
-    "addedDetails": {
-      "date": "2023-01-08",
       "by": "Kevin"
     },
     "quantity": 1
@@ -3854,7 +3806,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -4022,7 +3974,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -4092,8 +4044,8 @@
     "code": "gmr60",
     "base": "n04",
     "caseDetails": {
-      "id": "long",
-      "name": "Long",
+      "id": "special",
+      "name": "Special",
       "status": false
     },
     "hasPhoto": true,
@@ -4142,7 +4094,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -4382,7 +4334,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -4406,7 +4358,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -4430,7 +4382,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -4454,7 +4406,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -4526,7 +4478,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -4598,7 +4550,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -4622,7 +4574,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -4646,7 +4598,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -4670,7 +4622,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -4694,7 +4646,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5006,7 +4958,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5054,7 +5006,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5102,7 +5054,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5198,7 +5150,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5222,7 +5174,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5246,7 +5198,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5270,7 +5222,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5318,7 +5270,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5366,7 +5318,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5390,7 +5342,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5486,7 +5438,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5534,7 +5486,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5582,7 +5534,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5606,7 +5558,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5654,7 +5606,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5678,7 +5630,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5702,7 +5654,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5726,7 +5678,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -5750,7 +5702,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -7094,7 +7046,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -7454,7 +7406,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -7574,7 +7526,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -7670,7 +7622,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -7958,7 +7910,7 @@
     "caseDetails": {
       "id": "premium",
       "name": "Premium",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -7980,9 +7932,9 @@
     "code": "hkc27",
     "base": null,
     "caseDetails": {
-      "id": "premium",
-      "name": "Premium",
-      "status": false
+      "id": "special",
+      "name": "Special",
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8078,7 +8030,7 @@
     "caseDetails": {
       "id": "premium",
       "name": "Premium",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8102,7 +8054,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8126,7 +8078,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8150,7 +8102,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8174,7 +8126,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8198,7 +8150,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8222,7 +8174,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8246,7 +8198,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8270,7 +8222,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8294,7 +8246,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8318,7 +8270,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8342,7 +8294,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8366,7 +8318,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8414,7 +8366,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8462,7 +8414,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8486,7 +8438,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8510,7 +8462,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8534,7 +8486,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8558,7 +8510,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8582,7 +8534,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8606,7 +8558,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8630,7 +8582,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8654,7 +8606,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8678,7 +8630,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8702,7 +8654,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8726,7 +8678,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8750,7 +8702,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8774,7 +8726,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8798,7 +8750,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8822,7 +8774,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8846,7 +8798,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8870,7 +8822,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8894,7 +8846,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -8916,8 +8868,8 @@
     "code": "hpc59",
     "base": "r51",
     "caseDetails": {
-      "id": "long",
-      "name": "Long",
+      "id": "mb-long",
+      "name": "MB-long",
       "status": false
     },
     "hasPhoto": true,
@@ -8940,8 +8892,8 @@
     "code": "hpc60",
     "base": "s12",
     "caseDetails": {
-      "id": "long",
-      "name": "Long",
+      "id": "mb-long",
+      "name": "MB-long",
       "status": false
     },
     "hasPhoto": true,
@@ -8964,8 +8916,8 @@
     "code": "hpc56",
     "base": "s12",
     "caseDetails": {
-      "id": "long",
-      "name": "Long",
+      "id": "mb-long",
+      "name": "MB-long",
       "status": false
     },
     "hasPhoto": true,
@@ -8988,8 +8940,8 @@
     "code": "hpc63",
     "base": "s12",
     "caseDetails": {
-      "id": "long",
-      "name": "Long",
+      "id": "mb-long",
+      "name": "MB-long",
       "status": false
     },
     "hasPhoto": true,
@@ -9012,8 +8964,8 @@
     "code": "hpc62",
     "base": "s12",
     "caseDetails": {
-      "id": "long",
-      "name": "Long",
+      "id": "mb-long",
+      "name": "MB-long",
       "status": false
     },
     "hasPhoto": true,
@@ -9036,8 +8988,8 @@
     "code": "hpc66",
     "base": "r51",
     "caseDetails": {
-      "id": "long",
-      "name": "Long",
+      "id": "mb-long",
+      "name": "MB-long",
       "status": false
     },
     "hasPhoto": true,
@@ -9060,8 +9012,8 @@
     "code": "hpc64",
     "base": "r51",
     "caseDetails": {
-      "id": "long",
-      "name": "Long",
+      "id": "mb-long",
+      "name": "MB-long",
       "status": false
     },
     "hasPhoto": true,
@@ -9084,8 +9036,8 @@
     "code": "hpc58",
     "base": "r51",
     "caseDetails": {
-      "id": "long",
-      "name": "Long",
+      "id": "mb-long",
+      "name": "MB-long",
       "status": false
     },
     "hasPhoto": true,
@@ -9108,8 +9060,8 @@
     "code": "hpc61",
     "base": "s01",
     "caseDetails": {
-      "id": "long",
-      "name": "Long",
+      "id": "mb-long",
+      "name": "MB-long",
       "status": false
     },
     "hasPhoto": true,
@@ -9132,8 +9084,8 @@
     "code": "hpc67",
     "base": "r51",
     "caseDetails": {
-      "id": "long",
-      "name": "Long",
+      "id": "mb-long",
+      "name": "MB-long",
       "status": false
     },
     "hasPhoto": true,
@@ -9422,7 +9374,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -9446,7 +9398,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -9470,7 +9422,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -9494,7 +9446,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -9518,7 +9470,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -9542,7 +9494,7 @@
     "caseDetails": {
       "id": "premium",
       "name": "Premium",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -9566,7 +9518,7 @@
     "caseDetails": {
       "id": "premium",
       "name": "Premium",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -9758,7 +9710,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -9782,7 +9734,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -9806,7 +9758,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -9830,7 +9782,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -9854,7 +9806,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -9878,7 +9830,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -9902,7 +9854,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -9926,7 +9878,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -9996,8 +9948,8 @@
     "code": "hbg99",
     "base": "r04",
     "caseDetails": {
-      "id": "long",
-      "name": "Long",
+      "id": "mb-long",
+      "name": "MB-long",
       "status": false
     },
     "hasPhoto": true,
@@ -10020,8 +9972,8 @@
     "code": "hbh01",
     "base": "r04",
     "caseDetails": {
-      "id": "long",
-      "name": "Long",
+      "id": "mb-long",
+      "name": "MB-long",
       "status": false
     },
     "hasPhoto": true,
@@ -10044,8 +9996,8 @@
     "code": "hbg98",
     "base": "r04",
     "caseDetails": {
-      "id": "long",
-      "name": "Long",
+      "id": "mb-long",
+      "name": "MB-long",
       "status": false
     },
     "hasPhoto": true,
@@ -10070,7 +10022,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10094,7 +10046,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10118,7 +10070,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10142,7 +10094,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10166,7 +10118,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10190,7 +10142,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10214,7 +10166,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10238,7 +10190,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10262,7 +10214,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10286,7 +10238,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10310,7 +10262,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10334,7 +10286,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10358,7 +10310,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10406,7 +10358,7 @@
     "caseDetails": {
       "id": "premium",
       "name": "Premium",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10430,7 +10382,7 @@
     "caseDetails": {
       "id": "premium",
       "name": "Premium",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10454,7 +10406,7 @@
     "caseDetails": {
       "id": "premium",
       "name": "Premium",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10478,7 +10430,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10502,7 +10454,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10526,7 +10478,7 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10550,7 +10502,7 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
     "hasPhoto": true,
     "addedDetails": {
@@ -10622,9 +10574,9 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -10646,9 +10598,9 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -10670,9 +10622,9 @@
     "caseDetails": {
       "id": "transport",
       "name": "Transport",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -10694,9 +10646,9 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -10718,9 +10670,9 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -10742,9 +10694,9 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -10766,9 +10718,9 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -10790,9 +10742,9 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -10814,9 +10766,9 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -10838,9 +10790,9 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -10862,9 +10814,9 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -10886,9 +10838,9 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -10910,9 +10862,9 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -10934,9 +10886,9 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -10958,9 +10910,9 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -10982,9 +10934,9 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -11006,9 +10958,9 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -11030,9 +10982,9 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -11054,9 +11006,9 @@
     "caseDetails": {
       "id": "short",
       "name": "Short",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -11078,9 +11030,9 @@
     "caseDetails": {
       "id": "premium",
       "name": "Premium",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -11102,9 +11054,9 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -11126,9 +11078,9 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -11150,9 +11102,9 @@
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
       "by": "Kevin"
@@ -11169,16 +11121,280 @@
       "name": "Hot Wheels",
       "folder": "hotwheels"
     },
-    "code": "They 8320",
+    "code": "t8320",
     "base": "d21",
     "caseDetails": {
       "id": "long",
       "name": "Long",
-      "status": false
+      "status": true
     },
-    "hasPhoto": false,
+    "hasPhoto": true,
     "addedDetails": {
       "date": "2024-03-04",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 467,
+    "name": "'58 Ford Thunderbird",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "m3075",
+    "base": null,
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-01-23",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 468,
+    "name": "'72 Ford Gran Torino Sport",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "gjr70",
+    "base": "n12",
+    "caseDetails": {
+      "id": "premium",
+      "name": "Premium",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-03-29",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 469,
+    "name": "Ford F-150 SVT Lightning",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "gjr68",
+    "base": "n11",
+    "caseDetails": {
+      "id": "premium",
+      "name": "Premium",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-03-29",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 470,
+    "name": "Ford GT40",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "htc51",
+    "base": "s33",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-03-29",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 471,
+    "name": "Ford Escort RS2000",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "htc48",
+    "base": "s36",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-03-29",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 472,
+    "name": "'87 Ford Sierra Cosworth",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkl51",
+    "base": "k39",
+    "caseDetails": {
+      "id": "long",
+      "name": "Long",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-03-29",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 473,
+    "name": "Custom Ford Bronco",
+    "make": "Ford",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "gtb36",
+    "base": "p07",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-03-29",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 474,
+    "name": "1932 Ford Coupe",
+    "make": "Ford",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "gxm36",
+    "base": "p29",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-03-29",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 475,
+    "name": "'33 Ford Coupe",
+    "make": "Ford",
+    "brand": "Matchbox",
+    "categoryDetails": {
+      "id": "mb",
+      "name": "Matchbox",
+      "folder": "matchbox"
+    },
+    "code": "gkm14",
+    "base": "n33",
+    "caseDetails": {
+      "id": "short",
+      "name": "Short",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-03-29",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 476,
+    "name": "1991 BMW M5",
+    "make": "BMW",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "hkd28",
+    "base": "s36",
+    "caseDetails": {
+      "id": "premium",
+      "name": "Premium",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-03-30",
+      "by": "Kevin"
+    },
+    "quantity": 1
+  },
+  {
+    "id": 477,
+    "name": "Porsche 718 Cayman GT4",
+    "make": "Porsche",
+    "brand": "Hot Wheels",
+    "categoryDetails": {
+      "id": "hw",
+      "name": "Hot Wheels",
+      "folder": "hotwheels"
+    },
+    "code": "gjt68",
+    "base": "t01",
+    "caseDetails": {
+      "id": "premium",
+      "name": "Premium",
+      "status": true
+    },
+    "hasPhoto": true,
+    "addedDetails": {
+      "date": "2024-03-30",
       "by": "Kevin"
     },
     "quantity": 1
